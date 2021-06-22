@@ -3,19 +3,19 @@ package com.myapp.company;
 import java.time.LocalDate;
 
 public class Company {
-	private int companyId;
-	private String companyMainImage;
-	private String companyName;
-	private String companyEmail;
-	private String companyPassword;
-	private String companyAddress;
-	private String companyPhone;
-	private int companyRegistrationNumber;
-	private String companyCountry;
-	private int companySales;
-	private int companyEmployeeNumber;
-	private String companyIntroduce;
-	private LocalDate companyEstablishmentYear;
+	private int companyId; //기업번호
+	private String companyMainImage; //기업대표사진
+	private String companyName; //기업이름
+	private String companyEmail; //기업이메일(아이디)
+	private String companyPassword; //기업비밀번호
+	private String companyAddress; //기업주소
+	private String companyPhone; //기업연락처
+	private int companyRegistrationNumber; //사업자등록번호
+	private String companyCountry; //기업지역(위치)
+	private int companySales; //기업매출액
+	private int companyEmployeeNumber; //직원수
+	private String companyIntroduce; //기업소개
+	private LocalDate companyEstablishmentYear; //설립연도
 
 	public Company(int companyId, String companyMainImage, String companyName, String companyEmail,
 			String companyPassword, String companyAddress, String companyPhone, int companyRegistrationNumber,

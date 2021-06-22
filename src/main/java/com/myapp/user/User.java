@@ -1,17 +1,17 @@
 package com.myapp.user;
 
 public class User {
-	private int userId;
-	private String userProfileImage;
-	private String userEmail;
-	private String userPassword;
-	private String userPhone;
-	private String userJobGroup;
-	private String userJob;
-	private String userCareer;
-	private String resumeTitle;
-	private int wishNumber;
-	private int bookmarkNumber;
+	private int userId; //회원번호
+	private String userProfileImage; //회원프로필사진
+	private String userEmail; //회원이메일(아이디)
+	private String userPassword; //회원비밀번호
+	private String userPhone; //회원연락처
+	private String userJobGroup; //전문분야 직군
+	private String userJob; //전문분야 직업
+	private String userCareer; //경력(작품개수)
+	private String resumeTitle; //이력서제목
+	private int wishNumber; //찜하기번호
+	private int bookmarkNumber; //북마크번호
 
 	public User(int userId, String userProfileImage, String userEmail, String userPassword, String userPhone,
 			String userJobGroup, String userJob, String userCareer, String resumeTitle, int wishNumber,
