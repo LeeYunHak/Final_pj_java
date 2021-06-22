@@ -4,40 +4,39 @@ import java.time.LocalDate;
 
 public class Company {
 	private int companyId; //기업번호(기본키, auto_increment)
-	private String companyMainImage; //기업대표사진
-	private String companyName; //기업이름
+//	private String companyMainImage; //기업대표사진
 	private String companyEmail; //기업이메일(아이디)
 	private String companyPassword; //기업비밀번호
-	private String companyAddress; //기업주소
-	private String companyPhone; //기업연락처
+	private String companyName; //기업이름
 	private int companyRegistrationNumber; //사업자등록번호
-	private String companyCountry; //기업지역(위치)
+	private String companyAddress; //기업주소
 	private int companySales; //기업매출액
 	private int companyEmployeeNumber; //직원수
-	private String companyIntroduce; //기업소개
 	private LocalDate companyEstablishmentYear; //설립연도
+	private String companyIntroduce; //기업소개
+	private String companyPhone; //기업연락처
+//	private String companyCountry; //기업지역(위치)
 
-	public Company(int companyId, String companyMainImage, String companyName, String companyEmail,
-			String companyPassword, String companyAddress, String companyPhone, int companyRegistrationNumber,
-			String companyCountry, int companySales, int companyEmployeeNumber, String companyIntroduce,
-			LocalDate companyEstablishmentYear) {
+	public Company(int companyId, String companyEmail, String companyPassword, String companyName,
+			int companyRegistrationNumber, String companyAddress, int companySales, int companyEmployeeNumber,
+			LocalDate companyEstablishmentYear, String companyIntroduce, String companyPhone) {
 		super();
 		this.companyId = companyId;
-		this.companyMainImage = companyMainImage;
-		this.companyName = companyName;
 		this.companyEmail = companyEmail;
 		this.companyPassword = companyPassword;
-		this.companyAddress = companyAddress;
-		this.companyPhone = companyPhone;
+		this.companyName = companyName;
 		this.companyRegistrationNumber = companyRegistrationNumber;
-		this.companyCountry = companyCountry;
+		this.companyAddress = companyAddress;
 		this.companySales = companySales;
 		this.companyEmployeeNumber = companyEmployeeNumber;
-		this.companyIntroduce = companyIntroduce;
 		this.companyEstablishmentYear = companyEstablishmentYear;
+		this.companyIntroduce = companyIntroduce;
+		this.companyPhone = companyPhone;
 	}
 
-	public Company() {}
+	public Company() {
+		super();
+	}
 
 	public int getCompanyId() {
 		return companyId;
@@ -45,22 +44,6 @@ public class Company {
 
 	public void setCompanyId(int companyId) {
 		this.companyId = companyId;
-	}
-
-	public String getCompanyMainImage() {
-		return companyMainImage;
-	}
-
-	public void setCompanyMainImage(String companyMainImage) {
-		this.companyMainImage = companyMainImage;
-	}
-
-	public String getCompanyName() {
-		return companyName;
-	}
-
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
 	}
 
 	public String getCompanyEmail() {
@@ -79,20 +62,12 @@ public class Company {
 		this.companyPassword = companyPassword;
 	}
 
-	public String getCompanyAddress() {
-		return companyAddress;
+	public String getCompanyName() {
+		return companyName;
 	}
 
-	public void setCompanyAddress(String companyAddress) {
-		this.companyAddress = companyAddress;
-	}
-
-	public String getCompanyPhone() {
-		return companyPhone;
-	}
-
-	public void setCompanyPhone(String companyPhone) {
-		this.companyPhone = companyPhone;
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 
 	public int getCompanyRegistrationNumber() {
@@ -103,12 +78,12 @@ public class Company {
 		this.companyRegistrationNumber = companyRegistrationNumber;
 	}
 
-	public String getCompanyCountry() {
-		return companyCountry;
+	public String getCompanyAddress() {
+		return companyAddress;
 	}
 
-	public void setCompanyCountry(String companyCountry) {
-		this.companyCountry = companyCountry;
+	public void setCompanyAddress(String companyAddress) {
+		this.companyAddress = companyAddress;
 	}
 
 	public int getCompanySales() {
@@ -127,14 +102,6 @@ public class Company {
 		this.companyEmployeeNumber = companyEmployeeNumber;
 	}
 
-	public String getCompanyIntroduce() {
-		return companyIntroduce;
-	}
-
-	public void setCompanyIntroduce(String companyIntroduce) {
-		this.companyIntroduce = companyIntroduce;
-	}
-
 	public LocalDate getCompanyEstablishmentYear() {
 		return companyEstablishmentYear;
 	}
@@ -143,15 +110,29 @@ public class Company {
 		this.companyEstablishmentYear = companyEstablishmentYear;
 	}
 
-	@Override
-	public String toString() {
-		return "Company [companyId=" + companyId + ", companyMainImage=" + companyMainImage + ", companyName="
-				+ companyName + ", companyEmail=" + companyEmail + ", companyPassword=" + companyPassword
-				+ ", companyAddress=" + companyAddress + ", companyPhone=" + companyPhone
-				+ ", companyRegistrationNumber=" + companyRegistrationNumber + ", companyCountry=" + companyCountry
-				+ ", companySales=" + companySales + ", companyEmployeeNumber=" + companyEmployeeNumber
-				+ ", companyIntroduce=" + companyIntroduce + ", companyEstablishmentYear=" + companyEstablishmentYear
-				+ "]";
+	public String getCompanyIntroduce() {
+		return companyIntroduce;
 	}
 
+	public void setCompanyIntroduce(String companyIntroduce) {
+		this.companyIntroduce = companyIntroduce;
+	}
+
+	public String getCompanyPhone() {
+		return companyPhone;
+	}
+
+	public void setCompanyPhone(String companyPhone) {
+		this.companyPhone = companyPhone;
+	}
+
+	@Override
+	public String toString() {
+		return "Company [companyId=" + companyId + ", companyEmail=" + companyEmail + ", companyPassword="
+				+ companyPassword + ", companyName=" + companyName + ", companyRegistrationNumber="
+				+ companyRegistrationNumber + ", companyAddress=" + companyAddress + ", companySales=" + companySales
+				+ ", companyEmployeeNumber=" + companyEmployeeNumber + ", companyEstablishmentYear="
+				+ companyEstablishmentYear + ", companyIntroduce=" + companyIntroduce + ", companyPhone=" + companyPhone
+				+ "]";
+	}
 }

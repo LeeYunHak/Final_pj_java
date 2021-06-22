@@ -3,19 +3,23 @@ package com.myapp.company.job.posting;
 import java.time.LocalDate;
 
 public class CompanyJobPosting {
-	private int companyJobPostingId; // 공고글번호(기본키, auto_increment)
-	private int companyJobPostingNumber; // 구인글번호 외래키
-	private String companyJobPostingImage; // 구인글이미지
-	private String companyJobPostingIntroduce; // 구인회사소개(타입text)
-	private String companyJobPostingManager; // 채용담당자
-	private int companyJobPostingRecruitment; // 모집인원
-	private LocalDate companyJobPostingPeriodStart; // 모집 시작일
-	private LocalDate companyJobPostingPeriodEnd; // 모집 마감일
-	private String companyJobPostingManagerPhone; // 담당자 연락처
-	private String companyJobPostingManagerEmail; // 담당자 이메일
-	private String companyJobPostingQr; // 자격요건
-	private String companyJobPostingPreference; // 우대사항
-	private String companyJobPostingWelfare; // 혜택 및 복지
+	private int companyJobPostingId; //공고글번호(기본키, auto_increment)
+	//있어야하는지 고민중.....?????????
+	private int companyJobPostingNumber; //구인글번호(외래키, auto_increment, null)
+	private String companyJobPostingImage; //구인글이미지
+	private String companyJobPostingIntroduce; //구인회사소개(타입text)
+    //-세부사항시작-
+	private String companyJobPostingManager; //채용담당자
+	private int companyJobPostingRecruitment; //모집인원
+	private LocalDate companyJobPostingPeriodStart; //모집 시작일
+	private LocalDate companyJobPostingPeriodEnd; //모집 마감일
+	private String companyJobPostingManagerPhone; //담당자 연락처
+	private String companyJobPostingManagerEmail; //담당자 이메일
+	//-세부사항끝-
+	private String companyJobPostingQr; //자격요건
+	private String companyJobPostingPreference; //우대사항
+	private String companyJobPostingWelfare; //혜택 및 복지
+//	private String companyJobPostingAddress; //구글로 표시된 채용하는 기업위치
 
 	public CompanyJobPosting(int companyJobPostingId, int companyJobPostingNumber, String companyJobPostingImage,
 			String companyJobPostingIntroduce, String companyJobPostingManager, int companyJobPostingRecruitment,
