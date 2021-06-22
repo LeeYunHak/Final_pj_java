@@ -3,7 +3,7 @@ package com.myapp.company;
 import java.time.LocalDate;
 
 public class Company {
-	private int companyId; //기업번호
+	private int companyId; //기업번호(기본키, auto_increment)
 	private String companyMainImage; //기업대표사진
 	private String companyName; //기업이름
 	private String companyEmail; //기업이메일(아이디)

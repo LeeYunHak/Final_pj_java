@@ -13,12 +13,7 @@ public class CompanyService {
 	@Autowired
 	CompanyMapper companyMapper;
 	
-	@Test
-	public void test() {
-//		System.out.println(companyMapper);
-	}
-
-	// 기업 회원가입
+	// 채용담당자 가입
 	public Company joinCompanyInsert(Company company) {
 		
 		int row = companyMapper.joinCompany(company);
@@ -31,7 +26,10 @@ public class CompanyService {
 	}
 	
 	// 채용담당자 로그인
-	public Company loginSelect
+	public Company loginCompanySelect(String companyEmail, String companyPassword) {
+		String jce = companyMapper.joinCompanyEmailPassword(companyEmail, companyPassword);
+		
+	}
 			
 	// 
 	
