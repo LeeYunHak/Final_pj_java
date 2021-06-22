@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/userMainBefore")
+@RequestMapping("/user")
 public class UserController {
 
 	@Autowired
 	UserService userService;
-
+	
+	@GetMapping("/MainBefore")
+	public String main() {
+		return "userMainBeforePage";
+	}
+	
 	// 회원가입
 	@GetMapping("/joinUser")
 	public String showJoinUser() {
@@ -41,7 +46,7 @@ public class UserController {
 
 		model.addAttribute("loginUser", loginUser);
 
-		return "userMain";
+		return "userMainPage";
 	}
 
 	// 아이디 찾기
