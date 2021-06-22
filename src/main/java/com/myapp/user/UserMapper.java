@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
 import com.myapp.company.Company;
+import com.myapp.company.job.posting.CompanyJobPosting;
 
 @Mapper
 public interface UserMapper {
@@ -36,6 +37,6 @@ public interface UserMapper {
 	
 	// 로그인 후 메인페이지(탐색페이지)
 	// 기업구인글 목록이 쫘르르르르륵
-	@Select("select company_main_image, company_name, ")
-	public List<Company> selectCompany(); 
+	@Select("select company_job_posting_image, company_job_posting_period_end from company_job_posting")
+	public CompanyJobPosting selectCompany(); 
 }
