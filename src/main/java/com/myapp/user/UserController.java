@@ -14,9 +14,16 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	@GetMapping("/MainBefore")
-	public String main() {
+	// 로그인 전 메인페이지
+	@GetMapping("/mainBefore")
+	public String mainBefore() {
 		return "userMainBeforePage";
+	}
+	
+	// 로그인 후 메인페이지
+	@GetMapping("/mainAfter")
+	public String mainAfter() {
+		return "userMainPage";
 	}
 	
 	// 회원가입
@@ -41,11 +48,9 @@ public class UserController {
 	}
 
 	@PostMapping("/loginUser")
-	public String loginUser(Model model, User user) {
-		User loginUser = userService.joinUserInsert(user);
-
-		model.addAttribute("loginUser", loginUser);
-
+	public String loginUser(Model model, String userEmail, String userPassword) {
+		User loginUser = userService.loginUserSelect(userEmail, userPassword);
+		model.addAttribute("loginUser",loginUser);
 		return "userMainPage";
 	}
 
@@ -56,12 +61,10 @@ public class UserController {
 	}
 
 	@PostMapping("/idFindUser")
-	public String idFindUser(Model model, User user) {
-		User idFindUser = userService.joinUserInsert(user);
-
+	public String idFindUser(Model model, String userName, String userPhone) {
+		User idFindUser = userService.idFindUserSelect(userName, userPhone);
 		model.addAttribute("idFindUser", idFindUser);
-
-		return "userMain";
+		return "loginUserPage";
 	}
 
 	// 비밀번호 찾기
@@ -71,11 +74,9 @@ public class UserController {
 	}
 
 	@PostMapping("/pwFindUser")
-	public String pwFindUser(Model model, User user) {
-		User pwFindUser = userService.joinUserInsert(user);
-
+	public String pwFindUser(Model model, String userEmail) {
+		User pwFindUser = userService.pwFindUserSelect(userEmail);
 		model.addAttribute("pwFindUser", pwFindUser);
-
-		return "userMain";
+		return "loginUserPage";
 	}
 }
