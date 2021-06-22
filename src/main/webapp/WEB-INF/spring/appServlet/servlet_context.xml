@@ -19,7 +19,7 @@
 	
 	<!-- 뷰 리졸버 셋팅 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/dreamer/"/>
+		<property name="prefix" value="/WEB-INF/view/dreamer/user/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	

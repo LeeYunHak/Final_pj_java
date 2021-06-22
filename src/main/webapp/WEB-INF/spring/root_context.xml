@@ -22,7 +22,7 @@
 
 	
 	<!-- 디비 정보를 properties파일로 가져옴 -->
-	<context:property-placeholder location="file:src/main/webapp/WEB-INF/config/mysql_db.properties"/><!-- file:src/main/webapp -->
+	<context:property-placeholder location="/WEB-INF/config/mysql_db.properties"/><!-- file:src/main/webapp -->
 	
 	<!-- 스프링 jdbc 연결 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -35,7 +35,7 @@
 	<!-- 마이바티스 접속 -->
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
-		<property name="configLocation" value="file:src/main/webapp/WEB-INF/config/mybatis_config.xml"/>
+		<property name="configLocation" value="/WEB-INF/config/mybatis_config.xml"/>
 	</bean>
 	
 	<!-- 마이바티스 매퍼 빈을 스캔 -->
