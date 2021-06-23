@@ -1,11 +1,15 @@
 package com.myapp.user;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.myapp.company.job.posting.CompanyJobPosting;
 
 @Controller
 @RequestMapping("/user")
@@ -20,18 +24,11 @@ public class UserController {
 		return "userMainBeforePage";
 	}
 	
-	// 로그인 후 메인페이지
-	@GetMapping("/mainAfter")
-	public String mainAfter() {
-		return "userMainPage";
-	}
-	
 	// 회원가입
 	@GetMapping("/joinUser")
 	public String showJoinUser() {
 		return "joinUserPage";
 	}
-
 	@PostMapping("/joinUser")
 	public String joinUser(Model model, User user) {
 		User joinUser = userService.joinUserInsert(user);
@@ -46,7 +43,6 @@ public class UserController {
 	public String showLoginUser() {
 		return "loginUserPage";
 	}
-
 	@PostMapping("/loginUser")
 	public String loginUser(Model model, String userEmail, String userPassword) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
@@ -59,7 +55,6 @@ public class UserController {
 	public String showIdFindUser() {
 		return "idFindUserPage";
 	}
-
 	@PostMapping("/idFindUser")
 	public String idFindUser(Model model, String userName, String userPhone) {
 		User idFindUser = userService.idFindUserSelect(userName, userPhone);
@@ -72,11 +67,25 @@ public class UserController {
 	public String showPwFindUser() {
 		return "pwFindUserPage";
 	}
-
 	@PostMapping("/pwFindUser")
 	public String pwFindUser(Model model, String userEmail) {
 		User pwFindUser = userService.pwFindUserSelect(userEmail);
 		model.addAttribute("pwFindUser", pwFindUser);
 		return "loginUserPage";
 	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	// 로그인 후 메인페이지
+	@GetMapping("/mainAfter")
+	public String mainAfter(Model model) {
+		
+		List<CompanyJobPosting> cjpList = userService.mainCompanyJobPostingList(); 
+		model.addAttribute("cjpList",cjpList);
+		
+		return "userMainPage";
+	}
+	
+	
 }
+

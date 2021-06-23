@@ -1,7 +1,11 @@
 package com.myapp.user;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.myapp.company.job.posting.CompanyJobPosting;
 
 @Service
 public class UserService {
@@ -33,5 +37,12 @@ public class UserService {
 	// 비밀번호 찾기
 	public User pwFindUserSelect(String userEmail) {
 		return userMapper.pwFindUser(userEmail);
+	}
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	// 로그인 후 페이지(탐색창) 구인글 리스트
+	public List<CompanyJobPosting> mainCompanyJobPostingList(){
+		return userMapper.selectCompany();
 	}
 }
