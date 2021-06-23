@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 *{
   box-sizing: border-box;
 }
@@ -99,6 +98,7 @@ section{
   color: rgb(0,206,201);
   font-size: 15px;
   right: 450px;
+  cursor: pointer;
   }
 
 #servicebtn{
@@ -106,6 +106,7 @@ section{
   background-color: rgb(229, 250, 249);
   color: rgb(0, 206, 201);
   font-size: 15px;
+  cursor: pointer;
   
   }
 
@@ -126,7 +127,7 @@ section{
   font-size: 20px;
   height: 80px;
   width: 300px;
-
+  cursor: pointer;
 }
 #startbtn:hover{
   color: rgb(0, 206, 201);

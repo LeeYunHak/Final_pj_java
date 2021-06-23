@@ -23,7 +23,7 @@ public class UserController {
 	public String mainBefore() {
 		return "userMainBeforePage";
 	}
-	// 로그인 폼 요청
+	// 로그인 폼 요청 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
 	@PostMapping("/mainAfter")
 	public String loginUser(Model model, String userEmail, String userPassword) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
@@ -44,6 +44,8 @@ public class UserController {
 
 		return "userMain"; // 내 정보 설정 페이지로 가야함
 	}
+//	@GetMapping("/userMain")
+//	public String userMain()
 
 	// 로그인
 	@GetMapping("/loginUser")

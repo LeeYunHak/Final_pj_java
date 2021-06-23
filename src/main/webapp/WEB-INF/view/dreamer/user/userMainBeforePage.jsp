@@ -99,7 +99,7 @@
 							src="/resources/images/apple_logo.png" alt="">
 						</a>
 					</div>
-					<a href="join.html"><button id="joinBtn">드리머 회원가입 하기</button></a>
+					<a href="/user/joinUser"><button id="joinBtn">드리머 회원가입 하기</button></a>
 				</div>
 			</div>
 		</div>
