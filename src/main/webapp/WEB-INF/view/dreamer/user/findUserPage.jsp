@@ -33,10 +33,10 @@
                             <form action="" method="POST">
                                 <div class="multi-form-group-margin-top-0-margin-bottom-0">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="본명" required>
+                                        <input type="text" class="form-control" name="userName" placeholder="본명" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" class="form-control" placeholder="휴대전화번호" required>
+                                        <input type="tel" class="form-control" name="userPhone" placeholder="휴대전화번호" required>
                                     </div>
                                     <div class="margin-top-15-margin-bottom-15">
                                         <small>본인인증 받으신 정보를 입력해 주세요. SMS로 아이디(이메일 주소)를 보내드립니다.</small>
@@ -53,7 +53,7 @@
                             <form action="" method="POST">
                                 <div class="multi-form-group-margin-top-0-margin-bottom-0">
                                     <div class="form-group">
-                                        <input type="email" id="email" class="form-control" placeholder="이메일" required>
+                                        <input type="email" id="email" name="userEmail" class="form-control" placeholder="이메일" required>
                                     </div>
                                     <div class="margin-top-15-margin-bottom-15">
                                         <small>가입 시 등록하신 이메일 주소를 입력해 주세요. 비밀번호 재설정 링크를 보내드립니다.</small>

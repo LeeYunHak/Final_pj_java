@@ -64,12 +64,12 @@
 					<div class="padding-top-10">
 						<label for="email">이메일</label>
 						<div class="form-group">
-							<input type="email" id="email" name="email"
+							<input type="email" id="email" name="userEmail"
 								placeholder="이메일을 입력해주세요" class="form-control">
 						</div>
 						<label for="password">비밀번호</label>
 						<div class="form-group-pw">
-							<input type="password" id="password" name="password"
+							<input type="password" id="password" name="userPassword"
 								placeholder="비밀번호를 입력해주세요" class="form-control">
 						</div>
 					</div>
@@ -83,8 +83,7 @@
 								<div class="checkBox-text">로그인 유지</div>
 							</label>
 						</div>
-						<a href="/user/findUser" style="font-size: 13px;" class="find-a-tag">아이디ㆍ비밀번호
-							찾기</a>
+						<a href="/user/findUser" style="font-size: 13px;" class="find-a-tag">아이디ㆍ비밀번호 찾기</a>
 					</div>
 				</form>
 				<div>
