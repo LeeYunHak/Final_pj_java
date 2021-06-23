@@ -36,7 +36,11 @@ public class CompanyService {
 	}
 	
 	// 로그인 중 - 회사정보(기업) 수정[업뎃] - 비번수정[업뎃] 제외
-//	loginCompanyUpdate
+	public Company updateCompanyUpdate(Company company) {
+		Company row = companyMapper.updateCompany(company);
+		
+		if()
+	}
 
 	// 로그인 중 - 회사정보(기업) 비번수정[업뎃]
 //	loginCompanyUpdatePasswordByEmail

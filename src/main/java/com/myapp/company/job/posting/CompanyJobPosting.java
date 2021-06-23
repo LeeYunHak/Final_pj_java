@@ -6,7 +6,7 @@ public class CompanyJobPosting {
 	private int companyJobPostingId; //공고글번호(기본키, auto_increment)
 	//있어야하는지 고민중.....?????????
 	private int companyJobPostingNumber; //구인글번호(외래키, auto_increment, null)
-	private String companyJobPostingImage; //구인글이미지
+//	private String companyJobPostingImage; //구인글이미지
 	private String companyJobPostingIntroduce; //구인회사소개(타입text)
     //-세부사항시작-
 	private String companyJobPostingManager; //채용담당자
@@ -20,16 +20,15 @@ public class CompanyJobPosting {
 	private String companyJobPostingPreference; //우대사항
 	private String companyJobPostingWelfare; //혜택 및 복지
 //	private String companyJobPostingAddress; //구글로 표시된 채용하는 기업위치
-
-	public CompanyJobPosting(int companyJobPostingId, int companyJobPostingNumber, String companyJobPostingImage,
-			String companyJobPostingIntroduce, String companyJobPostingManager, int companyJobPostingRecruitment,
-			LocalDate companyJobPostingPeriodStart, LocalDate companyJobPostingPeriodEnd,
-			String companyJobPostingManagerPhone, String companyJobPostingManagerEmail, String companyJobPostingQr,
-			String companyJobPostingPreference, String companyJobPostingWelfare) {
+	
+	public CompanyJobPosting(int companyJobPostingId, int companyJobPostingNumber, String companyJobPostingIntroduce,
+			String companyJobPostingManager, int companyJobPostingRecruitment, LocalDate companyJobPostingPeriodStart,
+			LocalDate companyJobPostingPeriodEnd, String companyJobPostingManagerPhone,
+			String companyJobPostingManagerEmail, String companyJobPostingQr, String companyJobPostingPreference,
+			String companyJobPostingWelfare) {
 		super();
 		this.companyJobPostingId = companyJobPostingId;
 		this.companyJobPostingNumber = companyJobPostingNumber;
-		this.companyJobPostingImage = companyJobPostingImage;
 		this.companyJobPostingIntroduce = companyJobPostingIntroduce;
 		this.companyJobPostingManager = companyJobPostingManager;
 		this.companyJobPostingRecruitment = companyJobPostingRecruitment;
@@ -42,7 +41,9 @@ public class CompanyJobPosting {
 		this.companyJobPostingWelfare = companyJobPostingWelfare;
 	}
 
-	public CompanyJobPosting() {}
+	public CompanyJobPosting() {
+		super();
+	}
 
 	public int getCompanyJobPostingId() {
 		return companyJobPostingId;
@@ -58,14 +59,6 @@ public class CompanyJobPosting {
 
 	public void setCompanyJobPostingNumber(int companyJobPostingNumber) {
 		this.companyJobPostingNumber = companyJobPostingNumber;
-	}
-
-	public String getCompanyJobPostingImage() {
-		return companyJobPostingImage;
-	}
-
-	public void setCompanyJobPostingImage(String companyJobPostingImage) {
-		this.companyJobPostingImage = companyJobPostingImage;
 	}
 
 	public String getCompanyJobPostingIntroduce() {
@@ -151,14 +144,13 @@ public class CompanyJobPosting {
 	@Override
 	public String toString() {
 		return "CompanyJobPosting [companyJobPostingId=" + companyJobPostingId + ", companyJobPostingNumber="
-				+ companyJobPostingNumber + ", companyJobPostingImage=" + companyJobPostingImage
-				+ ", companyJobPostingIntroduce=" + companyJobPostingIntroduce + ", companyJobPostingManager="
-				+ companyJobPostingManager + ", companyJobPostingRecruitment=" + companyJobPostingRecruitment
-				+ ", companyJobPostingPeriodStart=" + companyJobPostingPeriodStart + ", companyJobPostingPeriodEnd="
-				+ companyJobPostingPeriodEnd + ", companyJobPostingManagerPhone=" + companyJobPostingManagerPhone
-				+ ", companyJobPostingManagerEmail=" + companyJobPostingManagerEmail + ", companyJobPostingQr="
-				+ companyJobPostingQr + ", companyJobPostingPreference=" + companyJobPostingPreference
-				+ ", companyJobPostingWelfare=" + companyJobPostingWelfare + "]";
+				+ companyJobPostingNumber + ", companyJobPostingIntroduce=" + companyJobPostingIntroduce
+				+ ", companyJobPostingManager=" + companyJobPostingManager + ", companyJobPostingRecruitment="
+				+ companyJobPostingRecruitment + ", companyJobPostingPeriodStart=" + companyJobPostingPeriodStart
+				+ ", companyJobPostingPeriodEnd=" + companyJobPostingPeriodEnd + ", companyJobPostingManagerPhone="
+				+ companyJobPostingManagerPhone + ", companyJobPostingManagerEmail=" + companyJobPostingManagerEmail
+				+ ", companyJobPostingQr=" + companyJobPostingQr + ", companyJobPostingPreference="
+				+ companyJobPostingPreference + ", companyJobPostingWelfare=" + companyJobPostingWelfare + "]";
 	}
 
 }

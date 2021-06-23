@@ -1,7 +1,7 @@
 package com.myapp.company;
 
 import java.time.LocalDate;
-
+//dto
 public class Company {
 	private int companyId; //기업번호(기본키, auto_increment)
 //	private String companyMainImage; //기업대표사진
