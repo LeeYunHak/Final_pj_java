@@ -23,7 +23,8 @@ public class UserController {
 	public String mainBefore() {
 		return "userMainBeforePage";
 	}
-	@PostMapping("/mainBefore")
+	// 로그인 폼 요청
+	@PostMapping("/mainAfter")
 	public String loginUser(Model model, String userEmail, String userPassword) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
 		model.addAttribute("loginUser",loginUser);
@@ -91,6 +92,7 @@ public class UserController {
 		
 		return "userMainPage";
 	}
+	
 	
 	
 }

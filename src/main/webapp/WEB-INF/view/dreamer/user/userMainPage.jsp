@@ -19,6 +19,9 @@
 			<span><button id="quest">탐색</button></span>
 			  <span><button id="resume">이력서</button></span>  
 		</div>
+		
+		이름:${loginUser.userEmail }
+		
 	</header>
 </body>
 </html>

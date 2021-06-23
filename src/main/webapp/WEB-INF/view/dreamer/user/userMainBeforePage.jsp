@@ -60,7 +60,7 @@
 				</h1>
 			</div>
 			<div class="ModalBody_input">
-				<form action="" method="POST">
+				<form action="/user/mainAfter" method="POST"><!-- ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔ -->
 					<div class="padding-top-10">
 						<label for="email">이메일</label>
 						<div class="form-group">

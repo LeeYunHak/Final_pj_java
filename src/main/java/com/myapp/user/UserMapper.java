@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import com.myapp.company.job.posting.CompanyJobPosting;
@@ -18,10 +19,10 @@ public interface UserMapper {
 	@Options(useGeneratedKeys = true, keyProperty = "userId")
 	public int joinUser(User user);
 	
-	// 구직자 로그인
+	// 구직자 로그인 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
 	@Select("select user_email, user_password from user "
-			+ "where user_email = #{userEmail} and where user_password = #{userPassword}")
-	public User loginUser(String userEmail, String userPassword);
+			+ "where user_email = #{userEmail} and user_password = #{userPassword}")
+	public User loginUser(@Param("userEmail") String userEmail,@Param("userPassword") String userPassword);
 	
 	// 아이디 찾기
 	@Select("select user_name, user_phone from user "
