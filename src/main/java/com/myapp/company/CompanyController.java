@@ -42,24 +42,14 @@ public class CompanyController {
 	// 로그인 전 - 채용담당자 로그인[조회](이메일, 비밀번호 둘다 입력)
 	@GetMapping("/loginCompany")
 	public String showLoginCompany() {
-		return "loginCompanyPage"; //고민중?????????????
+		return "loginCompanyPage"; //고민중????????????? //
 	}
 	
 	@PostMapping("/loginCompany")
 	public String loginCompany(Model model, String companyEmail, String companyPassword) {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		return companyPassword;
-		
+		Company loginCompany = companyService.loginCompanySelect(companyEmail, companyPassword);
+		model.addAttribute("loginCompany", loginCompany);
+		return "companyMain";
 	}
 	
 	// 로그인 중 - 회사정보(기업) 로그인중 수정[업뎃]
