@@ -7,8 +7,18 @@
 <head>
 <meta charset="UTF-8">
 <title>userMainPage.jsp</title>
+<link rel="stylesheet" href="/resources/">
 </head>
 <body>
-	<h1>로그인 후 메인페이지(탐색페이지)</h1>
+	<header>
+		<h2>
+			<span><a href=# class="dreamer">Dreamer</a>
+			</span>&nbsp;
+		</h2>
+		<div class="nav">
+			<span><button id="quest">탐색</button></span>
+			  <span><button id="resume">이력서</button></span>  
+		</div>
+	</header>
 </body>
 </html>
