@@ -51,23 +51,23 @@ public class UserController {
 	}
 
 	// 아이디 찾기
-	@GetMapping("/idFindUser")
+	@GetMapping("/findUser")
 	public String showIdFindUser() {
-		return "idFindUserPage";
+		return "findUserPage";
 	}
-	@PostMapping("/idFindUser")
+	@PostMapping("/findUser")
 	public String idFindUser(Model model, String userName, String userPhone) {
-		User idFindUser = userService.idFindUserSelect(userName, userPhone);
-		model.addAttribute("idFindUser", idFindUser);
+		User findUser = userService.idFindUserSelect(userName, userPhone);
+		model.addAttribute("findUser", findUser);
 		return "loginUserPage";
 	}
 
 	// 비밀번호 찾기
-	@GetMapping("/pwFindUser")
+	@GetMapping("/idFindUser")
 	public String showPwFindUser() {
 		return "pwFindUserPage";
 	}
-	@PostMapping("/pwFindUser")
+	@PostMapping("/idFindUser")
 	public String pwFindUser(Model model, String userEmail) {
 		User pwFindUser = userService.pwFindUserSelect(userEmail);
 		model.addAttribute("pwFindUser", pwFindUser);

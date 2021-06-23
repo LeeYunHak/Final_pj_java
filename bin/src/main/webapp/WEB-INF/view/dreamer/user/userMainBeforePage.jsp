@@ -6,9 +6,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>idFindUserPage.jsp</title>
+<title>userMainBeforePage.jsp</title>
 </head>
 <body>
-	<h1>아이디 찾기 페이지</h1>
+	<h1>로그인 전 메인페이지</h1>
 </body>
 </html>

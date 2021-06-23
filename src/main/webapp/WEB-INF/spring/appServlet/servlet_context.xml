@@ -22,10 +22,6 @@
 		<property name="prefix" value="/WEB-INF/view/dreamer/user/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/dreamer/company/"/>
-		<property name="suffix" value=".jsp"/>
-	</bean>
 	
 	<!-- resource 관련 애들은 바로 서버 안쪽의 특정 폴더에 맵핑되도록 설정 -->
 	<!-- js,css,html,image 와 같은 정적파일을 맵핑시켜줌 -->
