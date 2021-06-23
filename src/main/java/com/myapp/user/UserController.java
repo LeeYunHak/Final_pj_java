@@ -23,6 +23,12 @@ public class UserController {
 	public String mainBefore() {
 		return "userMainBeforePage";
 	}
+	@PostMapping("/mainBefore")
+	public String loginUser(Model model, String userEmail, String userPassword) {
+		User loginUser = userService.loginUserSelect(userEmail, userPassword);
+		model.addAttribute("loginUser",loginUser);
+		return "userMainPage";
+	}
 	
 	// 회원가입
 	@GetMapping("/joinUser")
@@ -43,12 +49,12 @@ public class UserController {
 	public String showLoginUser() {
 		return "loginUserPage";
 	}
-	@PostMapping("/loginUser")
-	public String loginUser(Model model, String userEmail, String userPassword) {
-		User loginUser = userService.loginUserSelect(userEmail, userPassword);
-		model.addAttribute("loginUser",loginUser);
-		return "userMainPage";
-	}
+//	@PostMapping("/loginUser")
+//	public String loginUser(Model model, String userEmail, String userPassword) {
+//		User loginUser = userService.loginUserSelect(userEmail, userPassword);
+//		model.addAttribute("loginUser",loginUser);
+//		return "userMainPage";
+//	}
 
 	// 아이디 찾기
 	@GetMapping("/findUser")
