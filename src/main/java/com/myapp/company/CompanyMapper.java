@@ -61,7 +61,7 @@ public interface CompanyMapper {
 			+ " where company_email=#{companyEmail} and company_password=#{companyPassword}")
 	public Company delete(String companyEmail, String companyPassword);
 
-	
-///////////////////////////////////////////////////////////////////
+//	@
+////////////////////////////////////////////////////////////////////
 	// 로그인 후 - 메인페이지?
 }
