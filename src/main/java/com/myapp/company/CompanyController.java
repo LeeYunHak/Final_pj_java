@@ -44,7 +44,6 @@ public class CompanyController {
     public String showLoginCompany() {
         return "loginCompanyPage"; //고민중????????????? //
     }
-
     @PostMapping("/loginCompany")
     public String loginCompany(Model model, String companyEmail, String companyPassword) {
         Company loginCompany = companyService.loginCompanySelect(companyEmail, companyPassword);
@@ -52,10 +51,10 @@ public class CompanyController {
         return "companyMainAfterPage";
     }
 
-    // 로그인 중 - 회사정보(기업) 로그인중 수정[업뎃]
+    // 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃]
 
-    // 로그인 중 - 회사정보(기업) 비번수정[업뎃] by email
+    // 로그인 후 - 회사정보(기업) 비번수정[업뎃] by email
 
-    // 로그인 중 - 채용담당자(기업) 로그인중 탈퇴[삭제]
+    // 로그인 후 - 채용담당자(기업) 로그인중 탈퇴[삭제]
 
 }

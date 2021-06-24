@@ -37,17 +37,17 @@ public class CompanyService {
 	
 	
 	///////////////////////////////////////////////////////////////////
-	// 로그인 중 - 회사정보(기업) 수정[업뎃] - 비번수정[업뎃] 제외
+	// 로그인 후 - 회사정보(기업) 수정[업뎃] - 비번수정[업뎃] 제외
 	public Company updateCompanyUpdate(Company company) {
 		Company row = companyMapper.updateCompany(company);
 //		if()
 		return null;
 	}
 
-	// 로그인 중 - 회사정보(기업) 비번수정[업뎃]
+	// 로그인 후 - 회사정보(기업) 비번수정[업뎃]
 //	loginCompanyUpdatePasswordByEmail
 	
-	// 로그인 중 - 채용담당자(기업) 탈퇴[삭제]
+	// 로그인 후 - 채용담당자(기업) 탈퇴[삭제]
 //	loginCompanydelete
 	
 }

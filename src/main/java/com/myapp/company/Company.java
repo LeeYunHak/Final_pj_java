@@ -16,6 +16,10 @@ public class Company {
 	private String companyIntroduce; //기업소개
 	private String companyPhone; //기업연락처
 //	private String companyCountry; //기업지역(위치)
+	//구인글
+	//지원자현황
+	//제안현황
+	//찜한현황
 
 	public Company(int companyId, String companyEmail, String companyPassword, String companyName,
 			int companyRegistrationNumber, String companyAddress, int companySales, int companyEmployeeNumber,

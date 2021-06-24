@@ -37,7 +37,7 @@ public interface CompanyMapper {
 	public Company joinCompanyEmailPassword(String companyEmail, String companyPassword);
 	
 	// 정보수정
-	// 로그인 중 - 회사정보(기업) 로그인중 수정[업뎃] - 비번수정[업뎃] 제외
+	// 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃] - 비번수정[업뎃] 제외
 	@Update("update company set company_name=#{companyName},"
 			+ " company_registration_number=#{companyRegistrationNumber},"
 			+ " company_address=#{companyAddress}, "
@@ -50,13 +50,13 @@ public interface CompanyMapper {
 	public Company updateCompany(Company company);
 	
 	// 정보수정 메일보내 수정
-	// 로그인 중 - 회사정보(기업) 비번수정[업뎃] by email
+	// 로그인 후 - 회사정보(기업) 비번수정[업뎃] by email
 	@Update("update company set company_password=#{companyPassword}"
 			+ " where company_email=#{companyEmail}")
 	public Company updatePwdCompany(Company company);
 	
 	// 탈퇴
-	// 로그인 중 - 채용담당자(기업) 로그인중 탈퇴[삭제]
+	// 로그인 후 - 채용담당자(기업) 로그인중 탈퇴[삭제]
 	@Delete("delete from company"
 			+ " where company_email=#{companyEmail} and company_password=#{companyPassword}")
 	public Company delete(String companyEmail, String companyPassword);
