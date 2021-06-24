@@ -60,7 +60,7 @@
 				</h1>
 			</div>
 			<div class="ModalBody_input">
-				<form action="/user/mainAfter" method="POST"><!-- ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔ -->
+				<form action="/user/mainBefore" method="POST"><!-- ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔ -->
 					<div class="padding-top-10">
 						<label for="email">이메일</label>
 						<div class="form-group">
@@ -104,8 +104,12 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="/resources/mainjs.js">
-		
-	</script>
+	<script type="text/javascript" src="/resources/mainjs.js"></script>
+	
+	<c:if test="${loginUser eq '없음' }">
+		<script>
+			alert("일치하는 회원이 없습니다.");
+		</script>
+	</c:if>
 </body>
 </html>

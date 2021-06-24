@@ -21,6 +21,7 @@
 		</div>
 		
 		이름:${loginUser.userEmail }
+		이름:${loginUser.userName }
 		
 	</header>
 </body>

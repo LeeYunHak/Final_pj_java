@@ -24,11 +24,16 @@ public class UserController {
 		return "userMainBeforePage";
 	}
 	// 로그인 폼 요청 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
-	@PostMapping("/mainAfter")
+	@PostMapping("/mainBefore")
 	public String loginUser(Model model, String userEmail, String userPassword) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
-		model.addAttribute("loginUser",loginUser);
-		return "userMainPage";
+		if(loginUser == null) {
+			model.addAttribute("loginUser","없음");
+			return "userMainBeforePage";
+		}else {
+			model.addAttribute("loginUser",loginUser);
+			return "userMainPage";
+		}
 	}
 	
 	// 회원가입
