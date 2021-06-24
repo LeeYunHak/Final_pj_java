@@ -76,7 +76,7 @@
         >Dreamer</button>
     </div>
     <div style="border: 1px solid rgb(170, 170, 170); height: 900px;" class="join1">
-        <form name="join">
+        <form name="join" action="/user/joinUser" method="post">
 
             <div style="font-weight: bolder;" class="join2"> 회원가입</div>
 
@@ -98,7 +98,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="4"><input type="tel" required
+                    <td colspan="4"><input type="text" required
                     style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
@@ -110,7 +110,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="4"><input type="email" required
+                    <td colspan="4"><input type="text" required
                     style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
@@ -137,7 +137,7 @@
                     style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
-                    name="checkpw" placeholder="비밀번호를 한번 더 입력해주세요"/><span id="errcheckpw"></span></td>
+                    placeholder="비밀번호를 한번 더 입력해주세요"/><span id="errcheckpw"></span></td>
                 </tr>
                 <div class="terms__check__all" >
                     <div>
@@ -167,7 +167,7 @@
                             </div>
                         </li>
                     </ul>
-                    <button type="submit" onClick="location.href='/joinUser' "
+                    <button type="submit"
                     value="회원가입하기" class="next-button"
                     style="border: 1px solid rgb(0, 206, 201);cursor: pointer;
                     color: rgb(0, 206, 201);font-size: 25px; background-color: white;
