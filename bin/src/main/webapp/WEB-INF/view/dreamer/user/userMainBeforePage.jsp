@@ -60,7 +60,7 @@
 				</h1>
 			</div>
 			<div class="ModalBody_input">
-				<form action="" method="POST">
+				<form action="/user/mainBefore" method="POST"><!-- ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔ -->
 					<div class="padding-top-10">
 						<label for="email">이메일</label>
 						<div class="form-group">
@@ -99,13 +99,17 @@
 							src="/resources/images/apple_logo.png" alt="">
 						</a>
 					</div>
-					<a href="join.html"><button id="joinBtn">드리머 회원가입 하기</button></a>
+					<a href="/user/joinUser"><button id="joinBtn">드리머 회원가입 하기</button></a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="/resources/mainjs.js">
-		
-	</script>
+	<script type="text/javascript" src="/resources/mainjs.js"></script>
+	
+	<c:if test="${loginUser eq '없음' }">
+		<script>
+			alert("일치하는 회원이 없습니다.");
+		</script>
+	</c:if>
 </body>
 </html>

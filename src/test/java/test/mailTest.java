@@ -23,8 +23,8 @@ public class mailTest {
 
 		String subject = "test 메일";
 		String content = "테스트임요";
-		String from = "devyunhak@gmail.com";
-		String to = "dbsgkr23@naver.com";
+		String from = "royparking0@gmail.com";
+		String to = "royparking0@naver.com";
 
 		try {
 			MimeMessage mail = mailSender.createMimeMessage();

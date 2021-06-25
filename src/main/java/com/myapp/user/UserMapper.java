@@ -29,9 +29,13 @@ public interface UserMapper {
 			+ "where user_name = #{userName} and user_phone = #{userPhone}")
 	public User idFindUser(@Param("userName") String userName, @Param("userPhone") String userPhone);
 
-	// 비밀번호 찾기
+	// 비밀번호!!!!!!!!!!!!!
+	// 찾을 비밀번호 url전송
 	@Select("select user_email from user where user_email = #{userEmail}")
-	public User pwFindUser(String userEmail);
+	public User pwFindUserSend(String userEmail);
+	// url전송된 비밀번호 설정
+	@Select("update user set user_password=#{userPassword}")
+	public User pwFindUserReceive(String userPassword);
 	
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 	

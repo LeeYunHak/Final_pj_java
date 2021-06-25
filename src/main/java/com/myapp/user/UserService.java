@@ -32,9 +32,14 @@ public class UserService {
 		return userMapper.idFindUser(userName, userPhone);
 	}
 
-	// 비밀번호 찾기
+	// 비밀번호!!!!!!!!!!!!!
+	// 찾을 비밀번호 url전송
 	public User pwFindUserSelect(String userEmail) {
-		return userMapper.pwFindUser(userEmail);
+		return userMapper.pwFindUserSend(userEmail);
+	}
+	// url전송된 비밀번호 설정
+	public User pwFindUserUpdate(String userPassword) {
+		return userMapper.pwFindUserReceive(userPassword);
 	}
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
