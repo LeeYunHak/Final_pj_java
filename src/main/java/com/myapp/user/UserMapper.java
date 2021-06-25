@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.myapp.company.job.posting.CompanyJobPosting;
 
@@ -34,8 +35,9 @@ public interface UserMapper {
 	@Select("select user_email from user where user_email = #{userEmail}")
 	public User pwFindUserSend(String userEmail);
 	// url전송된 비밀번호 설정
-	@Select("update user set user_password=#{userPassword}")
+	@Update("update user set user_password=#{userPassword}")
 	public User pwFindUserReceive(String userPassword);
+	
 	
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 	

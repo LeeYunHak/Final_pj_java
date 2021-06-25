@@ -50,7 +50,7 @@
                     <div class="panel-panel-default-margin-bottom-0">
                         <div class="panel-heading">비밀번호 찾기</div>
                         <div class="panel-body">
-                            <form action="" method="POST">
+                            <form action="/user/mainBefore" method="POST">
                                 <div class="multi-form-group-margin-top-0-margin-bottom-0">
                                     <div class="form-group">
                                         <input type="email" id="email" name="userEmail" class="form-control" placeholder="이메일" required>

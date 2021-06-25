@@ -23,8 +23,8 @@ public class mailTest {
 
 		String subject = "test 메일";
 		String content = "테스트임요";
-		String from = "royparking0@gmail.com";
-		String to = "royparking0@naver.com";
+		String from = "testyor32@gmail.com";
+		String to = "testyol32@naver.com";
 
 		try {
 			MimeMessage mail = mailSender.createMimeMessage();
@@ -35,12 +35,16 @@ public class mailTest {
 			mailHelper.setSubject(subject);
 			mailHelper.setText(content, true);
 
+			System.out.println(mail);
 
+			System.out.println(mailHelper);
 			mailSender.send(mail);
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("mail전송이 실패되었습니다.");
 		}
+		System.out.println("mail전송이 성공되었습니다.");
 
 	}
 
