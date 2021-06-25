@@ -28,21 +28,21 @@
             <div class="row-margin-top-15">
                 <div class="col-xs-12">
                     <div class="panel-panel-default">
-                        <div class="panel-heading">아이디 찾기</div>
+                        <div class="panel-heading">이메일 찾기</div>
                         <div class="panel-body">
-                            <form action="" method="POST">
+                            <form action="/user/findUser" method="POST">
                                 <div class="multi-form-group-margin-top-0-margin-bottom-0">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="userName" placeholder="본명" required>
+                                        <input type="text" class="form-control" name="userName" placeholder="이름" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="tel" class="form-control" name="userPhone" placeholder="휴대전화번호" required>
                                     </div>
                                     <div class="margin-top-15-margin-bottom-15">
-                                        <small>본인인증 받으신 정보를 입력해 주세요. SMS로 아이디(이메일 주소)를 보내드립니다.</small>
+                                        <small>이메일을 찾기 위해 가입시 입력한 이름과 연락처를 입력해 주세요.</small>
                                     </div>
                                     <input type="submit" class="btn-btn-primary-btn-sm-btn-block-margin-top-5"
-                                        value="SMS로 이메일 주소 전송">
+                                        value="이메일 찾기">
                                 </div>
                             </form>
                         </div>
@@ -86,5 +86,15 @@
             </div>
         </div>
     </div>
+    <c:if test="${findUser eq '없음' }"> <!-- 여기는 일단 됨. -->
+    	<script>
+    		alert("일치하는 정보가 없습니다.");
+    	</script>
+    </c:if>
+    <c:if test="${findUser eq findUser }">
+    	<script>
+    		alert("회원님의 이메일은 "+ ${userEmail} + " 입니다.");
+    	</script>
+    </c:if>
 </body>
 </html>

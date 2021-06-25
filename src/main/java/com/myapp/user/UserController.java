@@ -120,8 +120,13 @@ public class UserController {
 	@PostMapping("/findUser")
 	public String idFindUser(Model model, String userName, String userPhone) {
 		User findUser = userService.idFindUserSelect(userName, userPhone);
-		model.addAttribute("findUser", findUser);
-		return "loginUserPage";
+		if(findUser == null) {
+			model.addAttribute("findUser", "없음");
+			return "findUserPage";
+		}else {
+			model.addAttribute("findUser", findUser);
+			return "findUserPage";
+		}
 	}
 
 	// 비밀번호 찾기
