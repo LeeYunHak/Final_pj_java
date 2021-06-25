@@ -9,6 +9,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.social.google.connect.GoogleConnectionFactory;
+import org.springframework.social.oauth2.GrantType;
+import org.springframework.social.oauth2.OAuth2Operations;
+import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +29,12 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
+	
+	@Autowired
+	private GoogleConnectionFactory googleConnectionFactory;
+	
+	@Autowired
+	private OAuth2Parameters googleOAuth2Parameters;
 	
 	@Autowired
 	private JavaMailSenderImpl mailSender;
@@ -47,20 +57,20 @@ public class UserController {
 		}
 	}
 	
-	//:heavy_check_mark:구글 로그인 건들지마시오:heavy_check_mark:
+	//✔✔✔✔✔✔✔✔구글 로그인 건들지마시오✔✔✔✔✔✔✔✔
     //로그인 페이지로 이동하는 컨트롤러
      @RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
       public String initLogin(Model model, HttpSession session) throws Exception {
 
-          /* 구글code 발행 /
+           //구글code 발행 
           OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations();
 
-        / 로그인페이지 이동 url생성 /
+        // 로그인페이지 이동 url생성 
           String url = oauthOperations.buildAuthorizeUrl(GrantType.AUTHORIZATION_CODE, googleOAuth2Parameters);
 
           model.addAttribute("google_url", url);
           System.out.println(url);
-          / 생성한 인증 URL을 Model에 담아서 전달 */
+          // 생성한 인증 URL을 Model에 담아서 전달 
           return "login";
       }
 

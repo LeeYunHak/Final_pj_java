@@ -93,7 +93,7 @@
 							src="/resources/images/naver_logo.png" alt="naver_icon">
 						</a> <a id="kakaoLoginBtn" class="sns-btn-kakao"> <img
 							src="/resources/images/kakao_logo.png" alt="kakao_icon">
-						</a> <a id="googleLoginBtn" class="sns-btn-google"> <img
+						</a> <a id="googleLoginBtn" href="/user/login" class="sns-btn-google"> <img
 							src="/resources/images/google_logo.png" alt="google_icon">
 						</a> <a id="appleLoginBtn" class="sns-btn-apple"> <img
 							src="/resources/images/apple_logo.png" alt="">
