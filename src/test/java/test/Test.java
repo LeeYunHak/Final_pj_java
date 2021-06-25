@@ -15,10 +15,9 @@ public class Test {
 
 	@Autowired
 	DataSource dataSource;
-	
+
 	@org.junit.Test
 	public void test() {
 		assertNotNull(dataSource);
 	}
-
 }
