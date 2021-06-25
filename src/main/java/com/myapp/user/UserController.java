@@ -1,8 +1,10 @@
 package com.myapp.user;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -12,6 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.myapp.company.job.posting.CompanyJobPosting;
 
@@ -42,6 +46,33 @@ public class UserController {
 			return "userMainPage";
 		}
 	}
+	
+	//:heavy_check_mark:구글 로그인 건들지마시오:heavy_check_mark:
+    //로그인 페이지로 이동하는 컨트롤러
+     @RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
+      public String initLogin(Model model, HttpSession session) throws Exception {
+
+          /* 구글code 발행 /
+          OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations();
+
+        / 로그인페이지 이동 url생성 /
+          String url = oauthOperations.buildAuthorizeUrl(GrantType.AUTHORIZATION_CODE, googleOAuth2Parameters);
+
+          model.addAttribute("google_url", url);
+          System.out.println(url);
+          / 생성한 인증 URL을 Model에 담아서 전달 */
+          return "login";
+      }
+
+    // 구글 Callback호출 메소드
+      @RequestMapping(value = "oauth2callback.do", method = { RequestMethod.GET, RequestMethod.POST })
+      public String googleCallback(Model model, @RequestParam String code) throws IOException {
+
+        System.out.println("Google login success");
+
+        //저는 성공하면 리턴 페이지로 리다이렉트.
+        return "userMainPage";
+      }
 	
 	// 회원가입
 	@GetMapping("/joinUser")
@@ -95,11 +126,13 @@ public class UserController {
 		return "loginUserPage";
 	}
 	@GetMapping("/sendMail")
-	public void sendMailTest() {
+	public String sendMailTest(Model model, String userEmail) {
+		User sendUserEmail = userService.pwFindUserSelect(userEmail);
 		String subject = "test 메일";
 		String content = "테스트임요";
 		String from = "testyor32@gmail.com";
-		String to = "testyol32@naver.com";
+		String to = (sendUserEmail.toString());
+		System.out.println(to);
 
 		try {
             MimeMessage mail = mailSender.createMimeMessage();
@@ -130,6 +163,7 @@ public class UserController {
             System.out.println("mail전송이 실패되었습니다.");
         }        
 		System.out.println("mail전송이 성공되었습니다.");
+		return to;
 	}
 	
 

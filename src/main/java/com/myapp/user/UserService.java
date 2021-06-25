@@ -38,8 +38,8 @@ public class UserService {
 		return userMapper.pwFindUserSend(userEmail);
 	}
 	// url전송된 비밀번호 설정
-	public User pwFindUserUpdate(String userPassword) {
-		return userMapper.pwFindUserReceive(userPassword);
+	public User pwFindUserUpdate(String userPassword, String userEmail) {
+		return userMapper.pwFindUserReceiveByUserEmail(userPassword, userEmail);
 	}
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
