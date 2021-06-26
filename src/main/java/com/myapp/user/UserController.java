@@ -29,65 +29,67 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
-	
+
 	@Autowired
 	private GoogleConnectionFactory googleConnectionFactory;
-	
+
 	@Autowired
 	private OAuth2Parameters googleOAuth2Parameters;
-	
+
 	@Autowired
 	private JavaMailSenderImpl mailSender;
-	
+
 	// 로그인 전 메인페이지
 	@GetMapping("/mainBefore")
 	public String mainBefore() {
 		return "userMainBeforePage";
 	}
+
 	// 로그인 폼 요청 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
 	@PostMapping("/mainBefore")
 	public String loginUser(Model model, String userEmail, String userPassword) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
-		if(loginUser == null) {
-			model.addAttribute("loginUser","없음");
+		if (loginUser == null) {
+			model.addAttribute("loginUser", "없음");
 			return "userMainBeforePage";
-		}else {
-			model.addAttribute("loginUser",loginUser);
+		} else {
+			model.addAttribute("loginUser", loginUser);
 			return "userMainPage";
 		}
 	}
-	
-	//✔✔✔✔✔✔✔✔구글 로그인 건들지마시오✔✔✔✔✔✔✔✔
-    //로그인 페이지로 이동하는 컨트롤러
-     @RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
-      public String initLogin(Model model, HttpSession session) throws Exception {
 
-           //구글code 발행 
-          OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations();
+	// ✔✔✔✔✔✔✔✔구글 로그인 건들지마시오✔✔✔✔✔✔✔✔
+	// 로그인 페이지로 이동하는 컨트롤러
+	@RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
+	public String initLogin(Model model, HttpSession session) throws Exception {
 
-        // 로그인페이지 이동 url생성 
-          String url = oauthOperations.buildAuthorizeUrl(GrantType.AUTHORIZATION_CODE, googleOAuth2Parameters);
+		// 구글code 발행
+		OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations();
 
-          model.addAttribute("google_url", url);
-          // 생성한 인증 URL을 Model에 담아서 전달 
-          return "login";
-      }
+		// 로그인페이지 이동 url생성
+		String url = oauthOperations.buildAuthorizeUrl(GrantType.AUTHORIZATION_CODE, googleOAuth2Parameters);
 
-    // 구글 Callback호출 메소드
-      @RequestMapping(value = "oauth2callback.do", method = { RequestMethod.GET, RequestMethod.POST })
-      public String googleCallback(Model model, @RequestParam String code) throws IOException {
+		model.addAttribute("google_url", url);
+		// 생성한 인증 URL을 Model에 담아서 전달
+		return "login";
+	}
 
-        System.out.println("Google login success");
+	// 구글 Callback호출 메소드
+	@RequestMapping(value = "oauth2callback.do", method = { RequestMethod.GET, RequestMethod.POST })
+	public String googleCallback(Model model, @RequestParam String code) throws IOException {
 
-        //저는 성공하면 리턴 페이지로 리다이렉트.
-        return "userMainPage";
-      }
-	
+		System.out.println("Google login success");
+
+		// 저는 성공하면 리턴 페이지로 리다이렉트.
+		return "userMainPage";
+	}
+
 	// 회원가입
 	@GetMapping("/joinUser")
 	public String showJoinUser() {
 		return "joinUserPage";
 	}
+
 	@PostMapping("/joinUser")
 	public String joinUser(Model model, User user) {
 		User joinUser = userService.joinUserInsert(user);
@@ -116,15 +118,16 @@ public class UserController {
 	public String showIdFindUser() {
 		return "findUserPage";
 	}
+
 	@PostMapping("/findUser")
 	public String idFindUser(Model model, String userName, String userPhone) {
 		User findUser = userService.idFindUserSelect(userName, userPhone);
-		if(findUser == null) {
+		if (findUser == null) {
 			model.addAttribute("check", 1);
-		}else{
+		} else {
 			model.addAttribute("check", 0);
 			model.addAttribute("find_id", findUser.getUserEmail());
-		}		
+		}
 		return "findUserPage";
 	}
 
@@ -133,67 +136,103 @@ public class UserController {
 //	public String showPwFindUser() {
 //		return "pwFindUserPage";
 //	}
-	@PostMapping("/idFindUser")
+	@PostMapping("/findUserPw")
 	public String pwFindUser(Model model, String userEmail) {
-		User pwFindUser = userService.pwFindUserSelect(userEmail);
-		model.addAttribute("pwFindUser", pwFindUser);
-		return "loginUserPage";
-	}
-	@GetMapping("/sendMail")
-	public String sendMailTest(Model model, String userEmail) {
 		User sendUserEmail = userService.pwFindUserSelect(userEmail);
 		String subject = "test 메일";
-		String content = "테스트임요";
-		String from = "testyor32@gmail.com";
-		String to = (sendUserEmail.toString());
+		String content = sendUserEmail.getUserPassword();
+		String from = "dreamer";
+		String to = sendUserEmail.getUserEmail();
 		System.out.println(to);
 
 		try {
-            MimeMessage mail = mailSender.createMimeMessage();
-            MimeMessageHelper mailHelper = new MimeMessageHelper(mail,true,"UTF-8");
-            // true는 멀티파트 메세지를 사용하겠다는 의미
-            
-            /*
-             * 단순한 텍스트 메세지만 사용시엔 아래의 코드도 사용 가능 
-             * MimeMessageHelper mailHelper = new MimeMessageHelper(mail,"UTF-8");
-             */
-            
-            mailHelper.setFrom(from);
-            // 빈에 아이디 설정한 것은 단순히 smtp 인증을 받기 위해 사용 따라서 보내는이(setFrom())반드시 필요
-            // 보내는이와 메일주소를 수신하는이가 볼때 모두 표기 되게 원하신다면 아래의 코드를 사용하시면 됩니다.
-            //mailHelper.setFrom("보내는이 이름 <보내는이 아이디@도메인주소>");
-            mailHelper.setTo(to);
-            mailHelper.setSubject(subject);
-            mailHelper.setText(content, true);
-            // true는 html을 사용하겠다는 의미입니다.
-            
-            /*
-             * 단순한 텍스트만 사용하신다면 다음의 코드를 사용하셔도 됩니다. mailHelper.setText(content);
-             */
-            
-            mailSender.send(mail);
-        } catch(Exception e) {
-            e.printStackTrace();
-            System.out.println("mail전송이 실패되었습니다.");
-        }        
+			MimeMessage mail = mailSender.createMimeMessage();
+			MimeMessageHelper mailHelper = new MimeMessageHelper(mail, true, "UTF-8");
+			// true는 멀티파트 메세지를 사용하겠다는 의미
+
+			/*
+			 * 단순한 텍스트 메세지만 사용시엔 아래의 코드도 사용 가능 MimeMessageHelper mailHelper = new
+			 * MimeMessageHelper(mail,"UTF-8");
+			 */
+
+			mailHelper.setFrom(from);
+			// 빈에 아이디 설정한 것은 단순히 smtp 인증을 받기 위해 사용 따라서 보내는이(setFrom())반드시 필요
+			// 보내는이와 메일주소를 수신하는이가 볼때 모두 표기 되게 원하신다면 아래의 코드를 사용하시면 됩니다.
+			// mailHelper.setFrom("보내는이 이름 <보내는이 아이디@도메인주소>");
+			mailHelper.setTo(to);
+			mailHelper.setSubject(subject);
+			mailHelper.setText(content, true);
+			// true는 html을 사용하겠다는 의미입니다.
+
+			/*
+			 * 단순한 텍스트만 사용하신다면 다음의 코드를 사용하셔도 됩니다. mailHelper.setText(content);
+			 */
+
+			mailSender.send(mail);
+			model.addAttribute("checked", 1);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("mail전송이 실패되었습니다.");
+		}
 		System.out.println("mail전송이 성공되었습니다.");
-		return to;
+		return "findUserPage";
+		
+//		User pwFindUser = userService.pwFindUserSelect(userEmail);
+//		model.addAttribute("pwFindUser", pwFindUser);
+//		return "loginUserPage";
 	}
-	
+
+//	@GetMapping("/sendMail")
+//	public String sendMailTest(Model model, String userEmail) {
+//		User sendUserEmail = userService.pwFindUserSelect(userEmail);
+//		String subject = "test 메일";
+//		String content = "테스트임요";
+//		String from = "testyor32@gmail.com";
+//		String to = (sendUserEmail.toString());
+//		System.out.println(to);
+//
+//		try {
+//			MimeMessage mail = mailSender.createMimeMessage();
+//			MimeMessageHelper mailHelper = new MimeMessageHelper(mail, true, "UTF-8");
+//			// true는 멀티파트 메세지를 사용하겠다는 의미
+//
+//			/*
+//			 * 단순한 텍스트 메세지만 사용시엔 아래의 코드도 사용 가능 MimeMessageHelper mailHelper = new
+//			 * MimeMessageHelper(mail,"UTF-8");
+//			 */
+//
+//			mailHelper.setFrom(from);
+//			// 빈에 아이디 설정한 것은 단순히 smtp 인증을 받기 위해 사용 따라서 보내는이(setFrom())반드시 필요
+//			// 보내는이와 메일주소를 수신하는이가 볼때 모두 표기 되게 원하신다면 아래의 코드를 사용하시면 됩니다.
+//			// mailHelper.setFrom("보내는이 이름 <보내는이 아이디@도메인주소>");
+//			mailHelper.setTo(to);
+//			mailHelper.setSubject(subject);
+//			mailHelper.setText(content, true);
+//			// true는 html을 사용하겠다는 의미입니다.
+//
+//			/*
+//			 * 단순한 텍스트만 사용하신다면 다음의 코드를 사용하셔도 됩니다. mailHelper.setText(content);
+//			 */
+//
+//			mailSender.send(mail);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			System.out.println("mail전송이 실패되었습니다.");
+//		}
+//		System.out.println("mail전송이 성공되었습니다.");
+//		return to;
+//	}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
+
 	// 로그인 후 메인페이지
 	@GetMapping("/mainAfter")
 	public String mainAfter(Model model) {
-		
-		List<CompanyJobPosting> cjpList = userService.mainCompanyJobPostingList(); 
-		model.addAttribute("cjpList",cjpList);
-		
+
+		List<CompanyJobPosting> cjpList = userService.mainCompanyJobPostingList();
+		model.addAttribute("cjpList", cjpList);
+
 		return "userMainPage";
 	}
-	
-	
-	
-}
 
+}

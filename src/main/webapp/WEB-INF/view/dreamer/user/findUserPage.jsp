@@ -70,7 +70,7 @@
 					<div class="panel-panel-default-margin-bottom-0">
 						<div class="panel-heading">비밀번호 찾기</div>
 						<div class="panel-body">
-							<form action="/user/findUser" method="POST">
+							<form action="/user/findUserPw" method="POST">
 								<div class="multi-form-group-margin-top-0-margin-bottom-0">
 									<div class="form-group">
 										<input type="email" id="email" name="userEmail"
@@ -82,6 +82,11 @@
 									<input type="submit"
 										class="btn-btn-primary-btn-sm-btn-block-margin-top-5"
 										value="비밀번호 변경 URL 전송">
+										<c:if test="${checked == 1 }">
+										<script>
+											alert("전송완료");
+										</script>
+										</c:if>
 								</div>
 							</form>
 						</div>
