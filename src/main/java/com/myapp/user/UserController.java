@@ -82,11 +82,6 @@ public class UserController {
         //저는 성공하면 리턴 페이지로 리다이렉트.
         return "userMainPage";
       }
-      
-      
-      
-      
-      
 	
 	// 회원가입
 	@GetMapping("/joinUser")
@@ -125,12 +120,12 @@ public class UserController {
 	public String idFindUser(Model model, String userName, String userPhone) {
 		User findUser = userService.idFindUserSelect(userName, userPhone);
 		if(findUser == null) {
-			model.addAttribute("findUser", "없음");
-			return "findUserPage";
-		}else {
-			model.addAttribute("findUser", findUser);
-			return "findUserPage";
-		}
+			model.addAttribute("check", 1);
+		}else{
+			model.addAttribute("check", 0);
+			model.addAttribute("find_id", findUser.getUserEmail());
+		}		
+		return "findUserPage";
 	}
 
 	// 비밀번호 찾기

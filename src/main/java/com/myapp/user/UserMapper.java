@@ -26,7 +26,7 @@ public interface UserMapper {
 	public User loginUser(@Param("userEmail") String userEmail,@Param("userPassword") String userPassword);
 	
 	// 아이디 찾기
-	@Select("select user_name, user_phone from user "
+	@Select("select user_email from user "
 			+ "where user_name = #{userName} and user_phone = #{userPhone}")
 	public User idFindUser(@Param("userName") String userName, @Param("userPhone") String userPhone);
 
