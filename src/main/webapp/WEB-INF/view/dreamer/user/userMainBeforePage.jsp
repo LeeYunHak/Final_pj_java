@@ -12,12 +12,11 @@
 <body>
 	<header>
 		<h2>
-			<span><a href=# class="dreamer">Dreamer</a>
-			</span>&nbsp;
+			<span><a href=# class="dreamer">Dreamer</a> </span>&nbsp;
 		</h2>
 		<div class="nav">
-			<span><button id="popup_open_btn">로그인/회원가입</button></span>&nbsp;
-			  <span><button id="servicebtn">기업서비스</button></span> &nbsp;&nbsp; &nbsp;&nbsp; 
+			<span><button id="popup_open_btn">로그인/회원가입</button></span>&nbsp; <span><button
+					id="servicebtn">기업서비스</button></span> &nbsp;&nbsp; &nbsp;&nbsp;
 		</div>
 	</header>
 
@@ -60,7 +59,8 @@
 				</h1>
 			</div>
 			<div class="ModalBody_input">
-				<form action="/user/mainBefore" method="POST"><!-- ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔ -->
+				<form action="/user/mainBefore" method="POST">
+					<!-- ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔ -->
 					<div class="padding-top-10">
 						<label for="email">이메일</label>
 						<div class="form-group">
@@ -83,7 +83,8 @@
 								<div class="checkBox-text">로그인 유지</div>
 							</label>
 						</div>
-						<a href="/user/findUser" style="font-size: 13px;" class="find-a-tag">아이디ㆍ비밀번호 찾기</a>
+						<a href="/user/findUser" style="font-size: 13px;"
+							class="find-a-tag">아이디ㆍ비밀번호 찾기</a>
 					</div>
 				</form>
 				<div>
@@ -91,21 +92,27 @@
 					<div class="sns_login">
 						<a id="naverLoginBtn" class="sns-btn-naver"> <img
 							src="/resources/images/naver_logo.png" alt="naver_icon">
-						</a> <a id="kakaoLoginBtn" class="sns-btn-kakao"> <img
+						</a> <a id="kakaoLoginBtn"
+							href="https://kauth.kakao.com/oauth/authorize
+								    ?client_id=fd1d15422c0c6caf9c050721c91ca6e7
+								    &redirect_uri=http://localhost:8080/login
+								    &response_type=code"
+							class="sns-btn-kakao"> <img
 							src="/resources/images/kakao_logo.png" alt="kakao_icon">
-						</a> <a id="googleLoginBtn" href="/user/login" class="sns-btn-google"> <img
-							src="/resources/images/google_logo.png" alt="google_icon">
+						</a> <a id="googleLoginBtn" href="/user/login" class="sns-btn-google">
+							<img src="/resources/images/google_logo.png" alt="google_icon">
 						</a> <a id="appleLoginBtn" class="sns-btn-apple"> <img
 							src="/resources/images/apple_logo.png" alt="">
 						</a>
 					</div>
-					<a href="/user/joinUser"><button id="joinBtn">드리머 회원가입 하기</button></a>
+					<a href="/user/joinUser"><button id="joinBtn">드리머 회원가입
+							하기</button></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="/resources/mainjs.js"></script>
-	
+
 	<c:if test="${loginUser eq '없음' }">
 		<script>
 			alert("일치하는 회원이 없습니다.");
