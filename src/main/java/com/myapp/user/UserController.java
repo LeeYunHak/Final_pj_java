@@ -139,8 +139,8 @@ public class UserController {
 	@PostMapping("/findUserPw")
 	public String pwFindUser(Model model, String userEmail) {
 		User sendUserEmail = userService.pwFindUserSelect(userEmail);
-		String subject = "test 메일";
-		String content = sendUserEmail.getUserPassword();
+		String subject = "Dreamer 비밀번호 변경 URL 안내";
+		String content = "http://localhost:8080/user/pwUpdate?userEmail="+sendUserEmail.getUserEmail();
 		String from = "dreamer";
 		String to = sendUserEmail.getUserEmail();
 		System.out.println(to);
@@ -181,47 +181,29 @@ public class UserController {
 //		model.addAttribute("pwFindUser", pwFindUser);
 //		return "loginUserPage";
 	}
-
-//	@GetMapping("/sendMail")
-//	public String sendMailTest(Model model, String userEmail) {
-//		User sendUserEmail = userService.pwFindUserSelect(userEmail);
-//		String subject = "test 메일";
-//		String content = "테스트임요";
-//		String from = "testyor32@gmail.com";
-//		String to = (sendUserEmail.toString());
-//		System.out.println(to);
-//
-//		try {
-//			MimeMessage mail = mailSender.createMimeMessage();
-//			MimeMessageHelper mailHelper = new MimeMessageHelper(mail, true, "UTF-8");
-//			// true는 멀티파트 메세지를 사용하겠다는 의미
-//
-//			/*
-//			 * 단순한 텍스트 메세지만 사용시엔 아래의 코드도 사용 가능 MimeMessageHelper mailHelper = new
-//			 * MimeMessageHelper(mail,"UTF-8");
-//			 */
-//
-//			mailHelper.setFrom(from);
-//			// 빈에 아이디 설정한 것은 단순히 smtp 인증을 받기 위해 사용 따라서 보내는이(setFrom())반드시 필요
-//			// 보내는이와 메일주소를 수신하는이가 볼때 모두 표기 되게 원하신다면 아래의 코드를 사용하시면 됩니다.
-//			// mailHelper.setFrom("보내는이 이름 <보내는이 아이디@도메인주소>");
-//			mailHelper.setTo(to);
-//			mailHelper.setSubject(subject);
-//			mailHelper.setText(content, true);
-//			// true는 html을 사용하겠다는 의미입니다.
-//
-//			/*
-//			 * 단순한 텍스트만 사용하신다면 다음의 코드를 사용하셔도 됩니다. mailHelper.setText(content);
-//			 */
-//
-//			mailSender.send(mail);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out.println("mail전송이 실패되었습니다.");
-//		}
-//		System.out.println("mail전송이 성공되었습니다.");
-//		return to;
-//	}
+	
+	@GetMapping("/pwUpdate")
+	public String pwSelect(Model model,String userEmail) {
+		User stUser = userService.pwFindUserSelect(userEmail);
+		System.out.println(stUser);
+		model.addAttribute("stUser",stUser);
+		return "pwFindUserPage";
+	}
+	
+	
+	
+	@PostMapping("/pwUpdate")
+	public String pwUpdate(Model model,User user) {
+		User pwUser = userService.pwFindUserUpdate(user);
+		model.addAttribute("pwUser",pwUser);
+		System.out.println("수정 호출");
+		System.out.println(pwUser);
+		return "pwFindUserPage";
+	}
+	
+	
+	
+	
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 

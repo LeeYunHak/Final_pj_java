@@ -32,11 +32,11 @@ public interface UserMapper {
 
 	// 비밀번호!!!!!!!!!!!!!
 	// 찾을 비밀번호 url전송
-	@Select("select user_password,user_email  from user where user_email=#{userEmail}")
+	@Select("select  user_password,user_email from user where user_email=#{userEmail}")
 	public User pwFindUserSend(String userEmail);
 	// url전송된 비밀번호 설정
 	@Update("update user set user_password=#{userPassword} where user_email=#{userEmail} ")
-	public User pwFindUserReceiveByUserEmail(String userPassword, String userEmail);
+	public int pwFindUserReceiveByUserEmail(User user);
 	
 	
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
