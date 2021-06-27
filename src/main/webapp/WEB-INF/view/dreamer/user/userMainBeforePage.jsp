@@ -93,10 +93,7 @@
 						<a id="naverLoginBtn" class="sns-btn-naver"> <img
 							src="/resources/images/naver_logo.png" alt="naver_icon">
 						</a> <a id="kakaoLoginBtn"
-							href="https://kauth.kakao.com/oauth/authorize
-								    ?client_id=fd1d15422c0c6caf9c050721c91ca6e7
-								    &redirect_uri=http://localhost:8080/login
-								    &response_type=code"
+							href="https://kauth.kakao.com/oauth/authorize?client_id=fd1d15422c0c6caf9c050721c91ca6e7&redirect_uri=http://localhost:8080/user/mainAfter&response_type=code"
 							class="sns-btn-kakao"> <img
 							src="/resources/images/kakao_logo.png" alt="kakao_icon">
 						</a> <a id="googleLoginBtn" href="/user/login" class="sns-btn-google">

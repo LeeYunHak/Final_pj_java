@@ -20,8 +20,9 @@
 			  <span><button id="resume">이력서</button></span>  
 		</div>
 		
-		이름:${loginUser.userEmail }
+		이멜:${loginUser.userEmail }
 		이름:${loginUser.userName }
+		${sessionScope.token}
 		
 	</header>
 </body>

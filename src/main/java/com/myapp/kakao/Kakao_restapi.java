@@ -29,7 +29,7 @@ public class Kakao_restapi {
  
         postParams.add(new BasicNameValuePair("client_id", "fd1d15422c0c6caf9c050721c91ca6e7"));
  
-        postParams.add(new BasicNameValuePair("redirect_uri", "http://localhost:8080/user/login"));
+        postParams.add(new BasicNameValuePair("redirect_uri", "http://localhost:8080/user/mainAfter"));
  
         postParams.add(new BasicNameValuePair("code", autorize_code));
  

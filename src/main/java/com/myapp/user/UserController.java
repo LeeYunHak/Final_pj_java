@@ -21,7 +21,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.myapp.company.job.posting.CompanyJobPosting;
+import com.myapp.kakao.Kakao_restapi;
 
 @Controller
 @RequestMapping("/user")
@@ -38,6 +40,10 @@ public class UserController {
 
 	@Autowired
 	private JavaMailSenderImpl mailSender;
+	
+//	@Autowired
+//	private Kakao_restapi kakao_restapi = new Kakao_restapi();
+
 
 	// 로그인 전 메인페이지
 	@GetMapping("/mainBefore")
@@ -83,6 +89,35 @@ public class UserController {
 		// 저는 성공하면 리턴 페이지로 리다이렉트.
 		return "userMainPage";
 	}
+	
+	@RequestMapping(value = "/oauth", produces = "application/json")
+    public String kakaoLogin(@RequestParam("code") String code, Model model, HttpSession session) {
+        System.out.println("로그인 할때 임시 코드값");
+        //카카오 홈페이지에서 받은 결과 코드
+        System.out.println(code);
+        System.out.println("로그인 후 결과값");
+        
+        //카카오 rest api 객체 선언
+        Kakao_restapi kr = new Kakao_restapi();
+        //결과값을 node에 담아줌
+        JsonNode node = kr.getAccessToken(code);
+        //결과값 출력
+        System.out.println(node);
+        //노드 안에 있는 access_token값을 꺼내 문자열로 변환
+        String token = node.get("access_token").toString();
+        //세션에 담아준다.
+        session.setAttribute("token", token);
+        
+        return "userMainPage";
+    }
+
+
+
+	
+	
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	
 
 	// 회원가입
 	@GetMapping("/joinUser")
