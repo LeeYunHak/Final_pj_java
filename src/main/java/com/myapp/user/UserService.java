@@ -21,6 +21,10 @@ public class UserService {
 			return null;
 		}
 	}
+	// 아이디 중복체크
+	public int idCheck(String userEmail) {
+		return userMapper.idCheck(userEmail);
+	}
 
 	// 구직자 로그인
 	public User loginUserSelect(String userEmail, String userPassword) {

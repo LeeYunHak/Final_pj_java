@@ -168,7 +168,7 @@
                         </li>
                     </ul>
                     <button type="submit"
-                    value="회원가입하기" class="next-button"
+                    value="회원가입하기" class="next-button" id=""
                     style="border: 1px solid rgb(0, 206, 201);cursor: pointer;
                     color: rgb(0, 206, 201);font-size: 25px; background-color: white;
                     border-top-left-radius:5px; border-top-right-radius: 5px;
@@ -179,7 +179,9 @@
 
         </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+    
         // var errname = document.getElementById("errname");
         // var errnum = document.getElementById("errnum");
         // var erremail = document.getElementById("erremail");
@@ -338,7 +340,35 @@
         //     submitButton.disabled = true;
         // }
         // }
-
+	
+    // 아이디 유효성 검사(1 = 중복 / 0 != 중복)
+	$("#userEmail").blur(function() {
+		// id = "id_reg" / name = "userId"
+		var userEmail = $('#userEmail').val();
+		$.ajax({
+			url : '/user/joinUser?userEmail='+ userEmail,
+			type : 'get',
+			success : function(data) {
+				console.log("1 = 중복o / 0 = 중복x : "+ data);							
+				
+				if (data == 1) {
+						// 1 : 아이디가 중복되는 문구
+						$("#id_check").text("사용중인 이메일입니다.");
+						$("#id_check").css("color", "red");
+						$("#reg_submit").attr("disabled", true);
+					} else {
+						
+						if(userEmail == ""){
+							$('#id_check').text('아이디를 입력해주세요 :)');
+							$('#id_check').css('color', 'red');
+							$("#reg_submit").attr("disabled", true);				
+						} 
+					}
+				}, error : function() {
+						console.log("실패");
+				}
+			});
+		});
     </script>
 </body>
 </html>

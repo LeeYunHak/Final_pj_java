@@ -19,6 +19,9 @@ public interface UserMapper {
 			+ " values(#{userId}, #{userName}, #{userEmail}, #{userPassword}, #{userPhone})")
 	@Options(useGeneratedKeys = true, keyProperty = "userId")
 	public int joinUser(User user);
+	// 아이디 중복체크
+	@Select("select user_email from user where user_email = #{userEmail}")
+	public int idCheck(String userEmail);
 	
 	// 구직자 로그인 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
 	@Select("select user_email, user_password from user "

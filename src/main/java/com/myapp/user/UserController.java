@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.myapp.company.job.posting.CompanyJobPosting;
@@ -131,8 +132,16 @@ public class UserController {
 
 		model.addAttribute("joinUser", joinUser);
 
-		return "userMain"; // 내 정보 설정 페이지로 가야함
+		return "userMainPage"; // 내 정보 설정 페이지로 가야함
 	}
+	
+	@RequestMapping(value = "/user/joinUser", method = RequestMethod.GET)
+	@ResponseBody
+	public int idCheck(@RequestParam("userEmail") String userEmail) {
+		
+		return userService.idCheck(userEmail);
+	}
+	
 //	@GetMapping("/userMain")
 //	public String userMain()
 
