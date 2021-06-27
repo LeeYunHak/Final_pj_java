@@ -20,7 +20,7 @@ public interface UserMapper {
 	@Options(useGeneratedKeys = true, keyProperty = "userId")
 	public int joinUser(User user);
 	// 아이디 중복체크
-	@Select("select user_email from user where user_email = #{userEmail}")
+	@Select("select count(*) from user where user_email = #{userEmail}")
 	public int idCheck(String userEmail);
 	
 	// 구직자 로그인 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔

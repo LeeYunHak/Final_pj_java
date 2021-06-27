@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.myapp.company.job.posting.CompanyJobPosting;
@@ -28,6 +29,7 @@ import com.myapp.kakao.Kakao_restapi;
 
 @Controller
 @RequestMapping("/user")
+@SessionAttributes("/user")
 public class UserController {
 
 	@Autowired
@@ -41,10 +43,9 @@ public class UserController {
 
 	@Autowired
 	private JavaMailSenderImpl mailSender;
-	
+
 //	@Autowired
 //	private Kakao_restapi kakao_restapi = new Kakao_restapi();
-
 
 	// 로그인 전 메인페이지
 	@GetMapping("/mainBefore")
@@ -90,35 +91,29 @@ public class UserController {
 		// 저는 성공하면 리턴 페이지로 리다이렉트.
 		return "userMainPage";
 	}
-	
+
 	@RequestMapping(value = "/oauth", produces = "application/json")
-    public String kakaoLogin(@RequestParam("code") String code, Model model, HttpSession session) {
-        System.out.println("로그인 할때 임시 코드값");
-        //카카오 홈페이지에서 받은 결과 코드
-        System.out.println(code);
-        System.out.println("로그인 후 결과값");
-        
-        //카카오 rest api 객체 선언
-        Kakao_restapi kr = new Kakao_restapi();
-        //결과값을 node에 담아줌
-        JsonNode node = kr.getAccessToken(code);
-        //결과값 출력
-        System.out.println(node);
-        //노드 안에 있는 access_token값을 꺼내 문자열로 변환
-        String token = node.get("access_token").toString();
-        //세션에 담아준다.
-        session.setAttribute("token", token);
-        
-        return "userMainPage";
-    }
+	public String kakaoLogin(@RequestParam("code") String code, Model model, HttpSession session) {
+		System.out.println("로그인 할때 임시 코드값");
+		// 카카오 홈페이지에서 받은 결과 코드
+		System.out.println(code);
+		System.out.println("로그인 후 결과값");
 
+		// 카카오 rest api 객체 선언
+		Kakao_restapi kr = new Kakao_restapi();
+		// 결과값을 node에 담아줌
+		JsonNode node = kr.getAccessToken(code);
+		// 결과값 출력
+		System.out.println(node);
+		// 노드 안에 있는 access_token값을 꺼내 문자열로 변환
+		String token = node.get("access_token").toString();
+		// 세션에 담아준다.
+		session.setAttribute("token", token);
 
+		return "userMainPage";
+	}
 
-	
-	
-	
 	//////////////////////////////////////////////////////////////////////////////////////////////////
-	
 
 	// 회원가입
 	@GetMapping("/joinUser")
@@ -134,14 +129,25 @@ public class UserController {
 
 		return "userMainPage"; // 내 정보 설정 페이지로 가야함
 	}
-	
-	@RequestMapping(value = "/user/joinUser", method = RequestMethod.GET)
+
+	// 아이디 중복검사
+	@RequestMapping(value = "/emailChk", method = RequestMethod.POST)
 	@ResponseBody
-	public int idCheck(@RequestParam("userEmail") String userEmail) {
-		
-		return userService.idCheck(userEmail);
+	public String idCheck(String userEmail) {
+		System.out.println("아이디체크");
+		int result = userService.idCheck(userEmail);
+		System.out.println("결과 = " + result);
+		if (result != 0) {
+
+			return "fail"; // 중복 아이디가 존재
+
+		} else {
+
+			return "success"; // 중복 아이디 x
+
+		}
 	}
-	
+
 //	@GetMapping("/userMain")
 //	public String userMain()
 
@@ -184,7 +190,7 @@ public class UserController {
 	public String pwFindUser(Model model, String userEmail) {
 		User sendUserEmail = userService.pwFindUserSelect(userEmail);
 		String subject = "Dreamer 비밀번호 변경 URL 안내";
-		String content = "http://localhost:8080/user/pwUpdate?userEmail="+sendUserEmail.getUserEmail();
+		String content = "http://localhost:8080/user/pwUpdate?userEmail=" + sendUserEmail.getUserEmail();
 		String from = "dreamer";
 		String to = sendUserEmail.getUserEmail();
 		System.out.println(to);
@@ -220,34 +226,28 @@ public class UserController {
 		}
 		System.out.println("mail전송이 성공되었습니다.");
 		return "findUserPage";
-		
+
 //		User pwFindUser = userService.pwFindUserSelect(userEmail);
 //		model.addAttribute("pwFindUser", pwFindUser);
 //		return "loginUserPage";
 	}
-	
+
 	@GetMapping("/pwUpdate")
-	public String pwSelect(Model model,String userEmail) {
+	public String pwSelect(Model model, String userEmail) {
 		User stUser = userService.pwFindUserSelect(userEmail);
 		System.out.println(stUser);
-		model.addAttribute("stUser",stUser);
+		model.addAttribute("stUser", stUser);
 		return "pwFindUserPage";
 	}
-	
-	
-	
+
 	@PostMapping("/pwUpdate")
-	public String pwUpdate(Model model,User user) {
+	public String pwUpdate(Model model, User user) {
 		User pwUser = userService.pwFindUserUpdate(user);
-		model.addAttribute("pwUser",pwUser);
+		model.addAttribute("pwUser", pwUser);
 		System.out.println("수정 호출");
 		System.out.println(pwUser);
 		return "pwFindUserPage";
 	}
-	
-	
-	
-	
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
