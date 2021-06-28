@@ -1,4 +1,4 @@
-package com.myapp.company.job.posting;
+package com.myapp.companyJobPosting;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;

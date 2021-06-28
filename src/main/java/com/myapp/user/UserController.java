@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.myapp.company.job.posting.CompanyJobPosting;
+import com.myapp.companyJobPosting.CompanyJobPosting;
 import com.myapp.kakao.Kakao_restapi;
 
 @Controller
@@ -127,7 +127,7 @@ public class UserController {
 
 		model.addAttribute("joinUser", joinUser);
 
-		return "userMainPage"; // 내 정보 설정 페이지로 가야함
+		return "userMainBeforePage"; // 내 정보 설정 페이지로 가야함
 	}
 
 	// 아이디 중복검사
@@ -250,15 +250,39 @@ public class UserController {
 	}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// 로그인 후 메인페이지
+	// 전체 기업구인글 목록이 나오는 페이지
 	@GetMapping("/mainAfter")
-	public String mainAfter(Model model) {
-
-		List<CompanyJobPosting> cjpList = userService.mainCompanyJobPostingList();
-		model.addAttribute("cjpList", cjpList);
-
-		return "userMainPage";
+	public String mainCompanyJobPostingList(Model model) {
+		List<CompanyJobPosting> comList = userService.mainCompanyJobPostingList();
+		model.addAttribute("comList", comList);
+		return "loginUserPage";
+	}
+	
+	// 직종으로 검색 후 기업구인글 목록이 나오는 페이지
+	@GetMapping("/mainAfter")
+	public String jobGroupCompanyJobPostingList(Model model) {
+		List<CompanyJobPosting> jobGroupList = userService.jobGroupCompanyJobPostingList();
+		model.addAttribute("jobGroupList", jobGroupList);
+		return "loginUserPage";
+	}
+	
+	// 세부직업으로 검색 후 기업구인글 목록이 나오는 페이지
+	@GetMapping("/mainAfter")
+	public String detailJobCompanyJobPostingList(Model model) {
+		List<CompanyJobPosting> detailJobList = userService.detailJobCompanyJobPostingList();
+		model.addAttribute("detailJobList ", detailJobList );
+		return "loginUserPage";
+	}
+	
+	// 경력(작품개수)로 검색 후 기업구인글 목록이 나오는 페이지
+	@GetMapping("/mainAfter")
+	public String careerCompanyJobPostingList(Model model) {
+		List<CompanyJobPosting> careerList = userService.careerCompanyJobPostingList();
+		model.addAttribute("careerList", careerList);
+		return "loginUserPage";
 	}
 
 }

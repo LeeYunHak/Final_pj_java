@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.myapp.company.job.posting.CompanyJobPosting;
+import com.myapp.companyJobPosting.CompanyJobPosting;
 
 @Service
 public class UserService {
@@ -56,5 +56,17 @@ public class UserService {
 	// 로그인 후 페이지(탐색창) 구인글 리스트
 	public List<CompanyJobPosting> mainCompanyJobPostingList(){
 		return userMapper.selectCompany();
+	}
+	// 로그인 후 페이지(탐색창) 직종 선택 후 구인글 조회
+	public List<CompanyJobPosting> jobGroupCompanyJobPostingList(){
+		return userMapper.selectCompanyJobGroup();
+	}
+	// 로그인 후 페이지(탐색창) 세부직무 선택 후 구인글 조회
+	public List<CompanyJobPosting> detailJobCompanyJobPostingList(){
+		return userMapper.selectCompanyDetailJob();
+	}
+	// 로그인 후 페이지(탐색창) 경력(작품개수) 선택 후 구인글 조회
+	public List<CompanyJobPosting> careerCompanyJobPostingList(){
+		return userMapper.selectCompanyCareer();
 	}
 }

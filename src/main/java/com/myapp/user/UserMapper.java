@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.myapp.company.job.posting.CompanyJobPosting;
+import com.myapp.companyJobPosting.CompanyJobPosting;
 
 @Mapper
 public interface UserMapper {
@@ -48,4 +48,19 @@ public interface UserMapper {
 	// 기업구인글 목록이 쫘르르르르륵
 	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number")
 	public List<CompanyJobPosting> selectCompany(); 
+	
+	// 직종 선택 후 구인글 조회하기
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+			+ " where company_job_posting_job_group = #{companyJobPostingJobGroup}")
+	public List<CompanyJobPosting> selectCompanyJobGroup();
+		
+	// 세부직무 선택 후 구인글 조회하기 
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+			+ " where company_job_posting_job = #{companyJobPostingJob}")
+	public List<CompanyJobPosting> selectCompanyDetailJob();
+		
+	// 경력(작품개수) 선택 후 구인글 조회하기 
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+			+ " where company_job_posting_career = #{companyJobPostingCareer}")
+	public List<CompanyJobPosting> selectCompanyCareer(); 
 }

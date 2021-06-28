@@ -1,4 +1,4 @@
-package com.myapp.company.job.posting;
+package com.myapp.companyJobPosting;
 
 public class CompanyJobPostingController {
 
