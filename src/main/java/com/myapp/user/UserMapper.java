@@ -24,7 +24,7 @@ public interface UserMapper {
 	public int idCheck(String userEmail);
 	
 	// 구직자 로그인 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
-	@Select("select user_email, user_password from user "
+	@Select("select * from user "
 			+ "where user_email = #{userEmail} and user_password = #{userPassword}")
 	public User loginUser(@Param("userEmail") String userEmail,@Param("userPassword") String userPassword);
 	
@@ -46,7 +46,6 @@ public interface UserMapper {
 	
 	// 로그인 후 메인페이지(탐색페이지)
 	// 기업구인글 목록이 쫘르르르르륵
-	@Select("select cj.company_job_posting_image_number, c.company_name, c.company_country ,cj.company_job_posting_period_end "
-			+ "from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number")
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number")
 	public List<CompanyJobPosting> selectCompany(); 
 }
