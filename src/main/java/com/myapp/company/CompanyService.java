@@ -1,7 +1,6 @@
 package com.myapp.company;
 
 
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,12 +18,7 @@ public class CompanyService {
 		int row = companyMapper.joinCompany(company);
 		
 		if(row == 1) {
-			return new Company(company.getCompanyId(), company.getCompanyEmail(),
-					company.getCompanyPassword(), company.getCompanyName(),
-					company.getCompanyRegistrationNumber(), company.getCompanyAddress(),
-					company.getCompanySales(), company.getCompanyEmployeeNumber(),
-					company.getCompanyEstablishmentYear(), company.getCompanyIntroduce(),
-					company.getCompanyPhone());
+			return new Company();
 		}else {
 			return null;
 		}

@@ -62,7 +62,7 @@ public class UserController {
 			return "userMainBeforePage";
 		} else {
 			model.addAttribute("loginUser", loginUser);
-			return "userMainPage";
+			return "loginUserPage";
 		}
 	}
 
@@ -110,7 +110,7 @@ public class UserController {
 		// 세션에 담아준다.
 		session.setAttribute("token", token);
 
-		return "userMainPage";
+		return "loginUserPage";
 	}
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -254,7 +254,8 @@ public class UserController {
 
 	// 로그인 후 메인페이지
 	// 전체 기업구인글 목록이 나오는 페이지
-	@GetMapping("/mainAfter")
+	@RequestMapping(value = "/mainAfter", method = RequestMethod.GET)
+	@ResponseBody
 	public String mainCompanyJobPostingList(Model model) {
 		List<CompanyJobPosting> comList = userService.mainCompanyJobPostingList();
 		model.addAttribute("comList", comList);
@@ -262,7 +263,8 @@ public class UserController {
 	}
 	
 	// 직종으로 검색 후 기업구인글 목록이 나오는 페이지
-	@GetMapping("/mainAfter")
+	@RequestMapping(value = "/mainAfterJobGroup", method = RequestMethod.GET)
+	@ResponseBody
 	public String jobGroupCompanyJobPostingList(Model model) {
 		List<CompanyJobPosting> jobGroupList = userService.jobGroupCompanyJobPostingList();
 		model.addAttribute("jobGroupList", jobGroupList);
@@ -270,7 +272,8 @@ public class UserController {
 	}
 	
 	// 세부직업으로 검색 후 기업구인글 목록이 나오는 페이지
-	@GetMapping("/mainAfter")
+	@RequestMapping(value = "/mainAfterDetaliJob", method = RequestMethod.GET)
+	@ResponseBody
 	public String detailJobCompanyJobPostingList(Model model) {
 		List<CompanyJobPosting> detailJobList = userService.detailJobCompanyJobPostingList();
 		model.addAttribute("detailJobList ", detailJobList );
@@ -278,11 +281,29 @@ public class UserController {
 	}
 	
 	// 경력(작품개수)로 검색 후 기업구인글 목록이 나오는 페이지
-	@GetMapping("/mainAfter")
+	@RequestMapping(value = "/mainAfterCareer", method = RequestMethod.GET)
+	@ResponseBody
 	public String careerCompanyJobPostingList(Model model) {
 		List<CompanyJobPosting> careerList = userService.careerCompanyJobPostingList();
 		model.addAttribute("careerList", careerList);
 		return "loginUserPage";
 	}
 
+	// 지역으로 검색 후 기업구인글 목록이 나오는 페이지
+	@RequestMapping(value = "/mainAfterCountry", method = RequestMethod.GET)
+	@ResponseBody
+	public String countryCompanyJobPostingList(Model model) {
+		List<CompanyJobPosting> countryList = userService.countryCompanyJobPostingList();
+		model.addAttribute("countryList", countryList);
+		return "loginUserPage";
+	}
+	
+	// 상세지역으로 검색 후 기업구인글 목록이 나오는 페이지
+	@RequestMapping(value = "/mainAfterDetailCountry", method = RequestMethod.GET)
+	@ResponseBody
+	public String detailCountryCompanyJobPostingList(Model model) {
+		List<CompanyJobPosting> detailCountryList = userService.detailCountryCompanyJobPostingList();
+		model.addAttribute("detailCountryList", detailCountryList);
+		return "loginUserPage";
+	}
 }

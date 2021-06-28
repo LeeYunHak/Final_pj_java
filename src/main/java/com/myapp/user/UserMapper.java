@@ -47,20 +47,31 @@ public interface UserMapper {
 	// 로그인 후 메인페이지(탐색페이지)
 	// 기업구인글 목록이 쫘르르르르륵
 	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number")
-	public List<CompanyJobPosting> selectCompany(); 
+	public List<CompanyJobPosting> selectCompany();
 	
 	// 직종 선택 후 구인글 조회하기
 	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
-			+ " where company_job_posting_job_group = #{companyJobPostingJobGroup}")
+			+ " where cj.company_job_posting_job_group = #{companyJobPostingJobGroup}")
 	public List<CompanyJobPosting> selectCompanyJobGroup();
 		
 	// 세부직무 선택 후 구인글 조회하기 
 	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
-			+ " where company_job_posting_job = #{companyJobPostingJob}")
+			+ " where cj.company_job_posting_job = #{companyJobPostingJob}")
 	public List<CompanyJobPosting> selectCompanyDetailJob();
 		
 	// 경력(작품개수) 선택 후 구인글 조회하기 
 	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
-			+ " where company_job_posting_career = #{companyJobPostingCareer}")
-	public List<CompanyJobPosting> selectCompanyCareer(); 
+			+ " where cj.company_job_posting_career = #{companyJobPostingCareer}")
+	public List<CompanyJobPosting> selectCompanyCareer();
+	
+	// 지역 선택 후 구인글 조회하기 
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+			+ " where c.company_country = #{companyCountry}")
+	public List<CompanyJobPosting> selectCompanyCountry();
+	
+	// 상세지역 선택 후 구인글 조회하기 
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+			+ " where c.company_detail_country = #{companyDetailCountry}")
+	public List<CompanyJobPosting> selectCompanyDetailCountry();
+	
 }

@@ -69,4 +69,13 @@ public class UserService {
 	public List<CompanyJobPosting> careerCompanyJobPostingList(){
 		return userMapper.selectCompanyCareer();
 	}
+	// 로그인 후 페이지(탐색창) 지역 선택 후 구인글 조회
+	public List<CompanyJobPosting> countryCompanyJobPostingList(){
+		return userMapper.selectCompanyCountry();
+	}
+	// 로그인 후 페이지(탐색창) 상세 지역 선택 후 구인글 조회
+	public List<CompanyJobPosting> detailCountryCompanyJobPostingList(){
+		return userMapper.selectCompanyDetailCountry();
+	}
+	
 }
