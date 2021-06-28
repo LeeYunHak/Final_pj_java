@@ -1,9 +1,19 @@
 *{box-sizing: border-box;}
 
+a:link { 
+  color: black;
+  text-decoration: none;}
+
+a:visited{
+  text-decoration: none;
+  color: black;
+}
 
 .full{
     height: 100vh;
     width: 100%;
+    float: left;
+  display: block;
 }
 
 .half{
@@ -15,9 +25,6 @@
   width: 100%;
   padding-left: 14vh;
   padding-right: 14vh;
-}
-
-div{
   float: left;
   display: block;
 }
@@ -26,29 +33,31 @@ header {
     margin: 0;
     position: fixed;
     top: 0;
-    left: -25vh;
+    /* left: -30vh; */
     right: 15vh;
-    height: 7.7vh;
-    width: 202vh;
+    height: 7vh;
+    width: 162vh;
     /* height: 60px; */
     padding: 1vh;
     color: rgb(0,206,201);
-    /* background: rgb(229, 250, 249); */
+    background: white;
     border-bottom: solid 1px rgba(26, 97, 96, 0.219);
     font-weight: bold;
     display: flex;/*한줄로 나오게*/
     justify-content: space-between;/*정렬*/
     align-items: center;
-    font-size: 35px;
+    font-size: 30px;
+    padding-right: 27vh;
+    z-index: 1;
 }
 
 a.dreamer{
-    text-decoration: none; color: rgb(0, 206, 201);
     position: fixed;
-    left: 25vh;
-    top: -1vh;
+    left: 10vh;
+    top: -8vh;
+    max-width: 50%;
     margin-bottom: 50px;
-    text-shadow: 1px 1px rgb(162, 162, 162);
+    /* z-index: 2; */
 }
 
 .bar{
@@ -56,8 +65,10 @@ a.dreamer{
   margin-bottom: 20px;
   width: 170vh;
   height: 10vh;
-  text-align: center;
+  /* text-align: center; */
   cursor: pointer;
+  float: left;
+  display: block;
 }
 
   #selectnavi{
@@ -65,7 +76,7 @@ a.dreamer{
     background-color: rgb(229, 250, 249);
     color: rgb(0,206,201);
     font-size: 2.2vh;
-    /* left: 250vh; */
+    left: 250vh;
     cursor: pointer;
     background-color: white;
     border: 0;
@@ -106,21 +117,27 @@ a.dreamer{
       padding-bottom: 2vh;
       /* margin-top: 40px; */
       /* overflow:hidden; */
+      float: left;
+      display: block;
+      
   }
 
   .mp{
     height: 5vh;
     width: 17vh;
     float: right;
+  display: block;
   }
 
   #search1{
-    margin-top: 2vh;
+    margin-top: 1.7vh;
     cursor: pointer;
+    margin-left: 5vh;
   }
 
   #mypage1{
-    margin-top: 2vh;
+    margin-right: -26vh;
+    margin-top: 1.7vh;
     float: right;
     cursor: pointer;
   }
@@ -144,6 +161,8 @@ a.dreamer{
     height: 10vh;
     text-align: center;
     background-image: url("images/movie.jpg");
+    float: left;
+  display: block;
   }
 
   .prod1, .light1, .acous1, .shoot1, .se1, .manuf1, .actor1, .art1, .makeup1{
@@ -157,10 +176,14 @@ a.dreamer{
   .bot{
     width: 162vh;
     height: 10vh;
+    float: left;
+    display: block;
   }
 
   .sel{
     margin-bottom: 20px;
+    float: left;
+  display: block;
   }
 
   #job{
@@ -272,125 +295,130 @@ a.dreamer{
     cursor: pointer;
   }
 
-  li{
-    list-style: none;
-    margin-left: 8px;
-    margin-top: 5px;
-    color: gray;
-  }
-
   .opennavi{
-    position: absolute;
-    top: -5vh;
-    left: 73vh;
-    z-index: 1;
-    background-color: white;
+    position: fixed;
+    top: 7vh;
+    left: 50vh;
+    z-index: 999;
+    background-color: rgb(235, 240, 235);
     /* border: 1px solid rgb(162, 162, 162); */
     border-top: none;
     display: inline-block;
     display: none;
+    /* box-shadow: 0 0 2px 2px gray; */
+    /* float: left; */
   }
+  a.company-href {
+    margin: 10px;
+    padding: 0;
+    border: 0;
+}
 
-  /* #selectnavi:hover .opennavi{
-    display: block;
-  } */
+div.company-margin {
+    margin-top: 10px;
+    float: left;
+  display: block;
+}
 
-  /* ul {
-      display: block;
-      list-style: none;
-      margin: -10px;
-      padding: 0;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      padding-inline-start: 40px;
-  }
-
-  li {
-    display: list-item; 
-    text-align: -webkit-match-parent;
-    width: 50%;
+.company-job {
+    width: 100%;
     padding: 10px;
     list-style: none;
     display: inline-block;
     vertical-align: top;
-  }
+    height: 10px;
+    /* float: left;
+  display: block; */
+}
 
-  .body{
-    padding: 10px 5px;
-  }
+.company-img {
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: 50%;
+    width: 280px;
+    height: 280px;
+    border-radius: 5px;
+    float: left;
+  display: block;
+}
 
-  .job-card-position {
-    font-size: 15px;
-    line-height: 1.5;
-    max-height: 3em;
-    position: relative;
-    color: #333;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.2;
-    max-height: 2.4em;
-    overflow: hidden;
-    text-align: left;
-    word-break: break-word;
+.jop-card-position {
+    text-align: center;
+    float: left;
+  display: block;
 }
 
 .job-card-company-name {
-  color: #333;
-  font-weight: 600;
-  margin-top: 4px;
-  font-size: 11px;
-  line-height: 1.6;
-  text-align: left;
-  word-break: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    text-align: center;
+    float: left;
+  display: block;
 }
 
 .job-card-company-location {
-  font-weight: 400;
-  margin-top: 6px;
-  color: #999;
-  font-size: 11px;
-  line-height: 1.6;
-  text-align: left;
-  word-break: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    text-align: center;
+    float: left;
+  display: block;
 }
 
-.reward {
-  text-align: left;
-  word-break: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-top: 6px;
-  color: #666;
-  font-size: 13px;
-  font-weight: 400;
-} */
-
-
-
-  /* ul{
-    width: 100%;
-    height: 500%;
-  }
-
-  .d1{
+.job-card-end-date {
+    text-align: center;
     float: left;
-  }
+  display: block;
+}
 
-  .l1{
-    position: relative;
-    float: left;
-    margin-right: 0;
-    margin-left: 0; 
-    width: 15vh;
-    height: 15vh;
-    top: 5vh;
-  } */
+
+.arrow_box {
+width: 20vh; text-align: center;    
+position: fixed;
+background: #ffffff;
+border: 4px solid rgb(0, 201, 206);
+right: 8vh;
+top: 10vh;
+display: none;
+}
+
+.arrow_box:after, .arrow_box:before {
+bottom: 100%;
+left: 50%;
+border: solid transparent;
+content: "";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+}
+
+.arrow_box:after {
+border-color: rgba(255, 255, 255, 0);
+border-bottom-color: #ffffff;
+border-width: 15px;
+margin-left: -15px;
+}
+.arrow_box:before {
+border-color: rgba(96, 185, 245, 0);
+border-bottom-color: rgb(0, 201, 206);
+border-width: 21px;
+margin-left: -21px;
+}
+
+.modal_job{
+	position : relative;
+	border: 1px, solid, #c8c8c8;
+	background-color: white;
+	width: 300px;
+	height: 600px;
+	float: left;
+}
+ .modal_job_header{
+ 	border: 1px, solid, #c8c8c8;
+	background-color: white;
+	width: 300px;
+	height: 50px;
+ }
+ .modal_job_body{
+ 	border: 1px, solid, #c8c8c8;
+	background-color: white;
+	width: 280px;
+	height: 300px;
+	float: left;
+ }
