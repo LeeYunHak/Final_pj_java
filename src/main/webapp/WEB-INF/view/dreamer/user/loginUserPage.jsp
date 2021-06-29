@@ -213,13 +213,13 @@
                 <hr><br>
                 <div class="bot">
                     <div class="sel">
-                    	<table>
+                    	<table style="border-spacing: 5px 10px;">
                     		<tr>
 	                    		<td><span style="font-weight: bold;">&nbsp;직&emsp;종&nbsp;</span></td>
 	                    		<td>
 	                    		<form action="">
 	                    			<select id="job" class="job" onchange="doChange(this, 'detail_job')">
-			                            <option value="allJob" selected>전체</option>
+			                            <option value="allJob" >전체</option>
 			                            <option value="production">연출</option>
 			                            <option value="light">조명</option>
 			                            <option value="acoustics">음향</option>
@@ -236,7 +236,7 @@
 								<td>
 								<form action="">
 									<select id="country" class="country" onchange="doChange(this, 'detail_country')">
-			                            <option value="allCountry" selected>전국</option>
+			                            <option value="allCountry" >전국</option>
 			                            <option value="seoul">서울</option>
 			                            <option value="busan">부산</option>
 			                            <option value="daegu">대구</option>
@@ -261,7 +261,7 @@
 								<td>
 								<form action="">
 									<select id="career" class="career">
-			                            <option value="allCareer" selected>전체</option>
+			                            <option value="allCareer" >전체</option>
 			                            <option value="new">신입</option>
 			                            <option value="one">1개</option>
 			                            <option value="two">2개</option>
@@ -282,7 +282,7 @@
 	                    		<td>
 	                    		<form action="">
 	                    			<select id="detail_job" class="detail_job">
-	                    				<option selected>전체</option>
+	                    				<option >전체</option>
 	                    			</select>
 	                    		</form>
 	                    		</td>
@@ -290,10 +290,13 @@
 	                    		<td>
 	                    		<form action="">
 	                    			<select id="detail_country" class="detail_country">
-	                    				<option selected>전지역</option>
+	                    				<option >전지역</option>
 	                    			</select>
 	                    		</form>
 	                    		</td>
+	                    		<td colspan="2"> 
+                                    <span>&emsp;&emsp;<button type="button" class="select_reset_btn">초 기 화</button></span>
+                                </td>
 							</tr>
                         </table>
                     </div>
@@ -305,7 +308,7 @@
                 </div>
                 <li class="company-job">
                     <li class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
+                        <a class="company-href" href="#">
                             <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
                             </div>
                             <figcaption>

@@ -462,7 +462,17 @@ $('.career').on("change", function(){
 	}); // ajax 종료
 });
 
+/////////////////////////////////////////////////////////////////////
 
+$('.select_reset_btn').on("click", function(){
+    $("#career option:eq(0)").attr("selected", "selected");
+    $("#job option:eq(0)").attr("selected", "selected");
+    $("#country option:eq(0)").attr("selected", "selected");
+    $("#detail_job option:eq(0)").attr("selected", "selected");
+    $("#detail_country option:eq(0)").attr("selected", "selected");
+    alert('선택한 항목을 초기화합니다.');
+
+});
 
 
 

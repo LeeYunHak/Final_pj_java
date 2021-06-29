@@ -176,6 +176,16 @@ select {
 	display: block;
 }
 
+.select_reset_btn{
+	width: 24vh;
+	padding: .6em .5em;
+	border: 1px solid #999;
+	border-radius: 4px;
+	box-shadow: 1px 1px gray;
+	font-size: 16px;
+	z-index: 1;
+}
+
 #job, #detail_job {
 	width: 12vh;
 	padding: .6em .5em;
