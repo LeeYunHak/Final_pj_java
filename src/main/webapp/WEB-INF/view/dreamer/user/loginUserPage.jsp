@@ -25,7 +25,7 @@
                 <span><button id="resume" type="button">이력서</button></span>&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <div class="mp">
-                                    <img id="search1" src="/resources/images/search.png" onclick="javascript:location.href='searchpage.html'" style="width: 30px; height: 30px;">
+                                    <img id="search1" src="/resources/images/search.png" onclick="javascript:location.href='/user/search'" style="width: 30px; height: 30px;">
                                     <img id="mypage1" src="/resources/images/avatar.png" style="width: 30px; height: 30px;">    
                                 </div>
             </div>
@@ -33,7 +33,7 @@
 
         <div class="half">
             <div class="arrow_box">
-                <p><a class="mydreamer" href="http://www.naver.com" style="text-decoration: none;">
+                <p><a class="mydreamer" href="/user/mydreamer" style="text-decoration: none;">
                 MY드리머</a></p>
                 <p><a class="profile" href="http://www.naver.com"style="text-decoration: none;">
                 프로필</a></p>

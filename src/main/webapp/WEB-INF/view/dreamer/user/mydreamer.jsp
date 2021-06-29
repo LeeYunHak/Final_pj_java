@@ -38,9 +38,9 @@
                             </div>
                             <a href="#" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
                                 <dl>
-                                    <dt>이윤학</dt><!-- ${.userName}-->
-                                    <dd>dbsgkr23@naver.com</dd><!--${.userEmail}-->
-                                    <dd>010-0000-0000</dd><!--${.userPhone}-->
+                                    <dt>이윤학</dt>
+                                    <dd>dbsgkr23@naver.com</dd>
+                                    <dd>010-0000-0000</dd>
                                 </dl>
                             </a>
                         </div>

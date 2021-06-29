@@ -305,4 +305,20 @@ public class UserController {
 		model.addAttribute("detailCountryList", detailCountryList);
 		return "loginUserPage";
 	}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//검색창 
+	@GetMapping("search")
+	public String search() {
+		return"searchpage";
+	}
+	//마이 드리머 
+	@GetMapping("mydreamer")
+	public String myDreamerView() {
+		return "mydreamer";
+	}
+	
+	
+	
+	
 }
