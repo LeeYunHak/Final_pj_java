@@ -318,7 +318,12 @@ public class UserController {
 		return "mydreamer";
 	}
 	
-	
+	//로그아웃
+		@RequestMapping("/logOut")
+		public String logout(HttpSession session) {
+			session.invalidate();
+			return "userMainBeforePage";
+		}
 	
 	
 }

@@ -43,7 +43,7 @@
                 제안받기현황</a></p>
                 <p><a class="bookmark" href="http://www.naver.com"style="text-decoration: none;">
                 북마크</a></p>
-                <p><a class="logout" href="mainhtml.html"style="text-decoration: none;">
+                <p><a class="logout" href="/user/logOut"style="text-decoration: none;">
                 로그아웃</a></p>
         </div>
             <div class="bar">
