@@ -10,13 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/loginmain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>로그인 후 메인화면</title>
-<!-- Remember to include jQuery :) -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-	<!-- jQuery Modal -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
 <body>
@@ -213,146 +208,89 @@
                 <hr><br>
                 <div class="bot">
                     <div class="sel">
-                        <button id="job" onclick="document.getElementById('modal_job_id').style.display='block'" >
-                            <span>직종</span>
-                            <span style="color: rgb(0, 206, 201); font-weight: bold;">전체</span>
-                        </button>
-                        <div class="modal_job" id="modal_job_id">
-                        	<div class="modal_job_header">
-                        		<span class="modal_job_header_title">직종</span>
-                        		<button type="button">
-                        			<svg width="24" height="24" viewBox="0 0 24 24" color="#999">
-                        			<path fill="currentColor" d="M17.97 19.03a.75.75 0 001.06-1.06l-6.5-6.5a.75.75 0 00-1.06 0l-6.5 6.5a.75.75 0 001.06 1.06L12 13.06l5.97 5.97zM12 10.94L6.03 4.97a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 00-1.06-1.06L12 10.94z"></path></svg>
-                        		</button>
-                        	</div>
-                        	<div class="modal_job_body">
-                        		<div class="modal_job_body_job_group">
-                        			<h5>직종</h5>
-                        			<ul class="job_group_list">
-                        				<li>
-                        					<button type="button" class="job_group_btn1">연출</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn2">조명</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn3">음향</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn4">촬영</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn5">특수효과</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn6">제작</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn7">배우</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn8">미술</button>
-                        				</li>
-                        				<li>
-                        					<button type="button" class="job_group_btn9">연출</button>
-                        				</li>
-                        			</ul>
-                        		</div>
-                        		<div class="modal_job_body_detail_job">
-                        			<h5>세부직무</h5>
-                        			<ul class="detail_job_list">
-                        				<li>
-                        					<button type="button" class="detail_job_btn1-1">감독</button>
-                        				</li>                           
-                        				<li>                            
-                        					<button type="button" class="detail_job_btn1-2">조감독</button>
-                        				</li>                            
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn1-3">각본</button>
-                        				</li>                            
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn1-4">프로듀서</button>
-                        				</li>                            
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn1-5">연출팀</button>
-                        				</li>                            
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn2-1">조명팀</button>
-                        				</li>                            
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn2-2">발전차</button>
-                        				</li>                            
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn3-1">음향팀</button>
-                        				</li>                            
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn3-2">동시녹음팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn4-1">촬영팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn4-2">그립팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn5-1">특수효과팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn6-1">제작팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn6-2">캐스팀담당팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn7-1">주연</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn7-2">조연</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn7-3">스턴트</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn7-4">단역</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn8-1">미술팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn8-2">미술감독</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn8-3">소품팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn9-1">헤어팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn9-2">의상팀</button>
-                        				</li>
-                        				<li>                             
-                        					<button type="button" class="detail_job_btn9-3">분장팀</button>
-                        				</li>
-                        			</ul>
-                        		</div>
-                        	</div>
-                        	<div class="modal_job_bottom">
-                        		<div class="modal_job_bottom_list_box">
-                        			<ul class="modal_job_bottom_list">
-                        				<li></li>
-                        			</ul>
-                        		</div>
-                        		<button class="modal_job_confirm"  onclick="document.getElementById('modal_job_id').style.display='none'">확 인</button>
-                        	</div>
-                        </div>
-                        <button id="country" type="button" onclick="location.href='https://www.naver.com'">
-                            <span>지역</span>
-                            <span style="color: rgb(0, 206, 201); font-weight: bold;">전국</span>
-                        </button>
-                        <button id="work" type="button" onclick="location.href='https://www.naver.com'">
-                            <span>작품개수</span>
-                            <span style="color: rgb(0, 206, 201); font-weight: bold;">전체</span>
-                        </button>
+                    	<table>
+                    		<tr>
+	                    		<td><span style="font-weight: bold;">&nbsp;직&emsp;종&nbsp;</span></td>
+	                    		<td>
+	                    		<form action="">
+	                    			<select id="job" class="job" onchange="doChange(this, 'detail_job')">
+			                            <option value="allJob" selected>전체</option>
+			                            <option value="production">연출</option>
+			                            <option value="light">조명</option>
+			                            <option value="acoustics">음향</option>
+			                            <option value="photographing">촬영</option>
+			                            <option value="effects">특수효과</option>
+			                            <option value="making">제작</option>
+			                            <option value="actor">배우</option>
+			                            <option value="art">미술</option>
+			                            <option value="makeUp">분장</option>
+			                        </select>
+			                    </form>
+	                    		</td>
+								<td><span style="font-weight: bold;">&emsp;&nbsp;지&emsp;역&nbsp;</span></td>
+								<td>
+								<form action="">
+									<select id="country" class="country" onchange="doChange(this, 'detail_country')">
+			                            <option value="allCountry" selected>전국</option>
+			                            <option value="seoul">서울</option>
+			                            <option value="busan">부산</option>
+			                            <option value="daegu">대구</option>
+			                            <option value="incheon">인천</option>
+			                            <option value="gwangju">광주</option>
+			                            <option value="daejeon">대전</option>
+			                            <option value="ulsan">울산</option>
+			                            <option value="sejong">세종</option>
+			                            <option value="gyeong-gi">경기</option>
+			                            <option value="gang-won">강원</option>
+			                            <option value="chungbug">충북</option>
+			                            <option value="chungnam">충남</option>
+			                            <option value="jeonbug">전북</option>
+			                            <option value="jeonnam">전남</option>
+			                            <option value="gyeongbug">경북</option>
+			                            <option value="gyeongnam">경남</option>
+			                            <option value="jeju">제주</option>
+			                        </select>
+								</form>
+								</td>
+								<td><span style="font-weight: bold;">&emsp;작품개수&nbsp;</span></td>
+								<td>
+								<form action="">
+									<select id="career" class="career">
+			                            <option value="allCareer" selected>전체</option>
+			                            <option value="new">신입</option>
+			                            <option value="one">1개</option>
+			                            <option value="two">2개</option>
+			                            <option value="three">3개</option>
+			                            <option value="four">4개</option>
+			                            <option value="five">5개</option>
+			                            <option value="six">6개</option>
+			                            <option value="seven">7개</option>
+			                            <option value="eight">8개</option>
+			                            <option value="nine">9개</option>
+			                            <option value="ten-more">10개 이상</option>
+			                        </select>
+			                    </form>
+								</td>
+							</tr>
+							<tr>
+								<td><span style="font-weight: bold;">세부직무&nbsp;</span></td>
+	                    		<td>
+	                    		<form action="">
+	                    			<select id="detail_job" class="detail_job">
+	                    				<option>전체</option>
+	                    			</select>
+	                    		</form>
+	                    		</td>
+								<td><span style="font-weight: bold;">&emsp;세부지역&nbsp;</span></td>
+	                    		<td>
+	                    		<form action="">
+	                    			<select id="detail_country" class="detail_country">
+	                    				<option>전지역</option>
+	                    			</select>
+	                    		</form>
+	                    		</td>
+							</tr>
+                        </table>
                     </div>
 
                     <select>
@@ -562,14 +500,6 @@
         </div>
     </div>
 <script type="text/javascript" src="/resources/loginmain.js"> </script>
-<!-- <script type="text/javascript">
-	$('#job').click(function (event) {
-		event.preventDefault();
-		this.blur();
-		$.get(this.href, function (html) {
-			$(html).appendTo('body').modal_job();
-		});
-	});
-</script> -->
+
 </body>
 </html>
