@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/loginmain.css">
+    <link rel="stylesheet" href="/resources/loginUserMain.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>로그인 후 메인화면</title>
 </head>
@@ -17,14 +17,13 @@
 <body>
     <div class="full">
         <header>
-            <h2><span><a href="loginmain.html" class="dreamer"><img src="/resources/images/Dreamer.png" width="210px" height="180px"></a></span></h2>
+            <h2><span><a href="/user/mainAfter" class="dreamer"><img src="/resources/images/Dreamer.png" width="210px" height="180px"></a></span></h2>
             <div class="navi">
                 <span><button id="selectnavi"
                         type="button">탐색</button></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span><button id="resume" type="button">이력서</button></span>&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span><button id="matchup" type="button">매치업</button></span>&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <div class="mp">
                                     <img id="search1" src="/resources/images/search.png" onclick="javascript:location.href='searchpage.html'" style="width: 30px; height: 30px;">
                                     <img id="mypage1" src="/resources/images/avatar.png" style="width: 30px; height: 30px;">    
@@ -115,8 +114,14 @@
                     <div style="width: 110px; height: 169px; margin-right: 20px; margin-top: 30px;float: left;
                     display: block;">
                         <input type="button" id="acous" value="음향" style="margin-bottom: 10px; color: black; background-color: rgb(235, 240, 235);">
-                        <li>음향팀</li>
-                        <li>동시녹음팀</li>
+                        <li style="list-style: none;
+                        margin-left: 8px;
+                        margin-top: 5px;
+                        color: gray;">음향팀</li>
+                        <li style="list-style: none;
+                        margin-left: 8px;
+                        margin-top: 5px;
+                        color: gray;">동시녹음팀</li>
                     </div>
                     <div style="width: 110px; height: 169px; margin-right: 20px; margin-top: 30px;float: left;
                     display: block;">
@@ -277,7 +282,7 @@
 	                    		<td>
 	                    		<form action="">
 	                    			<select id="detail_job" class="detail_job">
-	                    				<option>전체</option>
+	                    				<option selected>전체</option>
 	                    			</select>
 	                    		</form>
 	                    		</td>
@@ -285,7 +290,7 @@
 	                    		<td>
 	                    		<form action="">
 	                    			<select id="detail_country" class="detail_country">
-	                    				<option>전지역</option>
+	                    				<option selected>전지역</option>
 	                    			</select>
 	                    		</form>
 	                    		</td>
@@ -299,7 +304,7 @@
                     </select>
                 </div>
                 <li class="company-job">
-                    <div class="company-margin">
+                    <li class="company-margin">
                         <a class="company-href" href="http://www.naver.com">
                             <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
                             </div>
@@ -312,194 +317,12 @@
                                 </div>
                             </figcaption>
                         </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
-                    <div class="company-margin">
-                        <a class="company-href" href="http://www.naver.com">
-                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                            </div>
-                            <figcaption>
-                                <div class="body">
-                                    <div class="job-card-position">구인글제목</div><br>
-                                    <div class="job-card-company-name">기업명</div><br>
-                                    <div class="job-card-company-location">위치</div><br>
-                                    <div class="job-card-end-date">마감일</div>
-                                </div>
-                            </figcaption>
-                        </a>
-                    </div>
+                    </li>
                 </li>
             </div>
         </div>
     </div>
-<script type="text/javascript" src="/resources/loginmain.js"> </script>
+<script type="text/javascript" src="/resources/loginUserMain.js"> </script>
 
 </body>
 </html>

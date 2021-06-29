@@ -99,19 +99,6 @@ a.dreamer {
 	z-index: 1;
 }
 
-#matchup {
-	border: 1px solid rgb(229, 250, 249);
-	background-color: rgb(229, 250, 249);
-	color: rgb(0, 206, 201);
-	font-size: 2.2vh;
-	cursor: pointer;
-	background-color: white;
-	border: 0;
-	outline: 0;
-	margin-right: 2vh;
-	z-index: 1;
-}
-
 .navi {
 	/* margin-bottom: 15px;
       margin-right: 500px; */
@@ -311,7 +298,7 @@ select {
 	top: 7vh;
 	left: 50vh;
 	z-index: 999;
-	background-color: rgb(235, 240, 235);
+	background-color: rgba(0, 203, 206);
 	/* border: 1px solid rgb(162, 162, 162); */
 	border-top: none;
 	display: inline-block;
@@ -326,7 +313,7 @@ a.company-href {
 	border: 0;
 }
 
-div.company-margin {
+li.company-margin {
 	margin-top: 10px;
 	float: left;
 	display: block;
@@ -413,3 +400,4 @@ div.company-margin {
 	border-width: 21px;
 	margin-left: -21px;
 }
+
