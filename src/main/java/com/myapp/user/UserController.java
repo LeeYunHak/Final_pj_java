@@ -124,9 +124,7 @@ public class UserController {
 	@PostMapping("/joinUser")
 	public String joinUser(Model model, User user) {
 		User joinUser = userService.joinUserInsert(user);
-
 		model.addAttribute("joinUser", joinUser);
-
 		return "userMainBeforePage"; // 내 정보 설정 페이지로 가야함
 	}
 
@@ -138,13 +136,9 @@ public class UserController {
 		int result = userService.idCheck(userEmail);
 		System.out.println("결과 = " + result);
 		if (result != 0) {
-
 			return "fail"; // 중복 아이디가 존재
-
 		} else {
-
 			return "success"; // 중복 아이디 x
-
 		}
 	}
 
@@ -254,7 +248,8 @@ public class UserController {
 
 	// 로그인 후 메인페이지
 	// 전체 기업구인글 목록이 나오는 페이지
-	@GetMapping("/mainAfter")
+	@RequestMapping(value ="/mainAfter", method = RequestMethod.GET)
+	@ResponseBody
 	public String mainCompanyJobPostingList(Model model) {
 		List<CompanyJobPosting> comList = userService.mainCompanyJobPostingList();
 		model.addAttribute("comList", comList);

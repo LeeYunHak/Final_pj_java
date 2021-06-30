@@ -299,12 +299,11 @@
 	                    		</form>
 	                    		</td>
 	                    		<td colspan="2"> 
-                                    <span>&emsp;&emsp;<button type="button" class="select_reset_btn">초 기 화</button></span>
+                                    <span>&emsp;&emsp;<button type="button" id="select_reset_btn" class="select_reset_btn">초 기 화</button></span>
                                 </td>
 							</tr>
                         </table>
                     </div>
-
                     <select>
                         <option>최신순</option>
                         <option>인기순</option>

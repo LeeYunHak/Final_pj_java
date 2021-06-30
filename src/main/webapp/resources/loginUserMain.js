@@ -464,14 +464,28 @@ $('.career').on("change", function(){
 
 /////////////////////////////////////////////////////////////////////
 
+//셀렉트박스 값 초기화 기능
 $('.select_reset_btn').on("click", function(){
-    $("#career option:eq(0)").attr("selected", "selected");
+	//초기값으로 셀렉트 변경
+    $("#career option:eq(0)").attr("selected", "selected"); //id값이 career인 셀렉트 박스의 0번 인덱스를 선택해서 바꿔줌
     $("#job option:eq(0)").attr("selected", "selected");
     $("#country option:eq(0)").attr("selected", "selected");
     $("#detail_job option:eq(0)").attr("selected", "selected");
     $("#detail_country option:eq(0)").attr("selected", "selected");
-    alert('선택한 항목을 초기화합니다.');
-
+    
+	//초기화 된 값으로 조회(로그인 후 메인페이지 기본값)
+	$.ajax({
+		type : "get",
+		url : "/user/mainAfter",
+		success : function(result){
+			if(result != 'fail'){ //성공
+				//console.log("성공" + result);
+				alert('선택한 항목을 초기화합니다.');		
+			} else {
+				alert('조회에 실패했습니다.');
+			}
+		}
+	});
 });
 
 
