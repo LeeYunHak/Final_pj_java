@@ -67,32 +67,30 @@
                 <section class="m-contents">
                     <div class="status">
                         <h2 class="status-h2">지원 현황</h2>
+                        <div class="status-child">
+	                        <table>
+		                        <tr>
+			                        <td style="width: 200px; color: #999999">지원 기업</td>
+			                        <td style="width: 200px; color: #999999">지원 포지션</td>
+			                        <td style="width: 200px; color: #999999">지원일</td>
+		                        </tr>
+	                        </table>
+	                        <hr style="border: 1px solid #999999; background-color: #999999;">
                         <ul class="m-ul">
-                            <li>
-                                <a href="#">
-                                    <em>0</em>
-                                    <span>지원 완료</span>
-                                </a><!--지원현황 페이지로 가게하셈-->
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <em>0</em>
-                                    <span>서류 통과</span>
-                                </a><!--지원현황 페이지로 가게하셈-->
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <em>0</em>
-                                    <span>최종 합격</span>
-                                </a><!--지원현황 페이지로 가게하셈-->
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <em>0</em>
-                                    <span>불합격</span>
-                                </a><!--지원현황 페이지로 가게하셈-->
-                            </li>
+                        	<c:forEach var="app" items="${applicationList }">
+                            	<li>
+                            		<table>
+                            			<tr> <!--  -->
+                            				<td style="width: 200px; color: #999999; font-size: 14px;"><a href="#">${app.companyName }</a></td>
+                            				<td style="width: 200px; color: #999999; font-size: 14px;">${app.companyJobJostingJobGroup } / ${app.companyJobJostingJob }</td>
+                            				<td style="width: 200px; color: #999999; font-size: 14px;">${app.applicationDate }</td>
+                            			</tr>
+                            		</table>
+	                            </li>
+                            </c:forEach>
                         </ul>
+                        
+                        </div>
                     </div>
                     <div class="sec-frame">
                         <div class="bookmark">

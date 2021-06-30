@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.myapp.application.Application;
 import com.myapp.bookmark.Bookmark;
 import com.myapp.companyJobPosting.CompanyJobPosting;
 import com.myapp.jobPostingList.JobPostingList;
@@ -81,6 +82,11 @@ public class UserService {
 	}
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	// 마이드리머 지원 목록 조회를 위한 소스
+	public List<Application> mydreamerApplicationList(){
+		return userMapper.selectApplication();
+	}
 
 	// 마이드리머 북마크 조회를 위한 소스
 	public List<Bookmark> mydreamerBookmarkList(){

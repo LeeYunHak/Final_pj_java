@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import com.myapp.application.Application;
 import com.myapp.bookmark.Bookmark;
 import com.myapp.jobPostingList.JobPostingList;
 
@@ -76,10 +77,16 @@ public interface UserMapper {
 	
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 	
+	// 마이드리머 지원하기 목록
+	@Select("select * from user u join application a on u.user_id = a.user_id join "
+			+ "company_job_posting cj on a.application_id = cj.bookmark_id join company c on "
+			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_name = #{userName}")
+	public List<Application> selectApplication();
+	
 	// 마이드리머 북마크 구인글 목록
 	@Select("select * from user u join bookmark b on u.user_id = b.user_id join "
 			+ "company_job_posting cj on b.bookmark_id = cj.bookmark_id join company c on "
-			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_name = ${userName}")
+			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_name = #{userName}")
 	public List<Bookmark> selectBookmark();
 	
 }

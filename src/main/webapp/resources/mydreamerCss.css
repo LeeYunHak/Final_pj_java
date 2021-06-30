@@ -337,16 +337,31 @@ input[type="file" i]{
     border: 1px solid #e1e2e3;
     border-radius: 5px;
     margin: 0 0 20px;
-    padding: 26px 0 34px;
+    padding: 20px;
 }
 /* 지원현황 h2 */
 .status-h2{
     font-size: 18px;
-    padding: 0 32px 26px;
+	margin : 0;    
+    padding-bottom: 20px;
     font-weight: 700;
 }
 
+.status-child{
+	background: #eeeeee;
+    border: 1px solid #e1e2e3;
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px;
+}
+
+
 /* 지원현황 ul */
+.m-ul{
+	padding : 0;
+	margin: 10px;
+}
+
 .m-ul:after{
     display: block;
     content: "";
@@ -359,7 +374,6 @@ input[type="file" i]{
 
 .m-ul>li{
     float: left;
-    width: 25%;
     border-left: 1px solid #e1e2e3;
 }
 /* a태그 */
@@ -401,7 +415,7 @@ input[type="file" i]{
 
 /* 북마크 */
 .bookmark{
-    padding: 26px 30px 30px;
+    padding: 20px;
 }
 
 .bookmark>h2{

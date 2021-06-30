@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.myapp.application.Application;
 import com.myapp.bookmark.Bookmark;
 import com.myapp.companyJobPosting.CompanyJobPosting;
 import com.myapp.jobPostingList.JobPostingList;
@@ -322,7 +323,9 @@ public class UserController {
 	@GetMapping("mydreamer")
 	public String myDreamerView(Model model) {
 		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList();
+		List<Application> applicationList = userService.mydreamerApplicationList();
 		model.addAttribute("bookmarkList",bookmarkList);
+		model.addAttribute("applicationList",applicationList);
 		return "mydreamer";
 	}
 	

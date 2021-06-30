@@ -20,6 +20,7 @@ public class CompanyJobPosting {
 	private String companyJobJostingJob; // 모집분야 직종의 세부직무
 	private String companyJobJostingCareer; // 모집분야 경력(작품개수)
 	private int bookmarkId; // 북마크 번호
+	private int applicationId; // 지원 번호
 
 	public CompanyJobPosting(int companyJobPostingId, String companyJobPostingTitle,
 			String companyJobPostingImageNumber, String companyJobPostingIntroduce, String companyJobPostingManager,
@@ -27,7 +28,7 @@ public class CompanyJobPosting {
 			LocalDate companyJobPostingPeriodEnd, String companyJobPostingManagerPhone,
 			String companyJobPostingManagerEmail, String companyJobPostingQr, String companyJobPostingPreference,
 			String companyJobPostingWelfare, String companyJobJostingJobGroup, String companyJobJostingJob,
-			String companyJobJostingCareer, int bookmarkId) {
+			String companyJobJostingCareer, int bookmarkId, int applicationId) {
 		super();
 		this.companyJobPostingId = companyJobPostingId;
 		this.companyJobPostingTitle = companyJobPostingTitle;
@@ -46,6 +47,7 @@ public class CompanyJobPosting {
 		this.companyJobJostingJob = companyJobJostingJob;
 		this.companyJobJostingCareer = companyJobJostingCareer;
 		this.bookmarkId = bookmarkId;
+		this.applicationId = applicationId;
 	}
 
 	public CompanyJobPosting() {
@@ -179,12 +181,20 @@ public class CompanyJobPosting {
 		this.companyJobJostingCareer = companyJobJostingCareer;
 	}
 
-	public int getbookmarkId() {
+	public int getBookmarkId() {
 		return bookmarkId;
 	}
 
-	public void setbookmarkId(int bookmarkId) {
+	public void setBookmarkId(int bookmarkId) {
 		this.bookmarkId = bookmarkId;
+	}
+
+	public int getApplicationId() {
+		return applicationId;
+	}
+
+	public void setApplicationId(int applicationId) {
+		this.applicationId = applicationId;
 	}
 
 	@Override
@@ -199,6 +209,8 @@ public class CompanyJobPosting {
 				+ companyJobPostingQr + ", companyJobPostingPreference=" + companyJobPostingPreference
 				+ ", companyJobPostingWelfare=" + companyJobPostingWelfare + ", companyJobJostingJobGroup="
 				+ companyJobJostingJobGroup + ", companyJobJostingJob=" + companyJobJostingJob
-				+ ", companyJobJostingCareer=" + companyJobJostingCareer + ", bookmarkId=" + bookmarkId + "]";
+				+ ", companyJobJostingCareer=" + companyJobJostingCareer + ", bookmarkId=" + bookmarkId
+				+ ", applicationId=" + applicationId + "]";
 	}
+
 }
