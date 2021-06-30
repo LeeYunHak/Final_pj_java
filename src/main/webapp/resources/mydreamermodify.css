@@ -434,10 +434,6 @@ b-ul:before{
 
 /*기본정보수정*/
 
-@media (width < 750px){
-    .m-contents{ }
-}
-
 .Form-title {
     display: block;
     margin-block-start: 1em;

@@ -38,9 +38,9 @@
                             </div>
                             <a href="#" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
                                 <dl>
-                                    <dt id="namename" class="namename">${loginUser.userName }</dt><!-- ${.userName}-->
-                                    <dd>${loginUser.userEmail}</dd><!--${.userEmail}-->
-                                    <dd>${loginUser.userPhone}</dd><!--${.userPhone}-->
+                                    <dt id="namename" class="namename">${loginUser.userName }</dt>
+                                    <dd>${loginUser.userEmail}</dd>
+                                    <dd>${loginUser.userPhone}</dd>
                                 </dl>
                             </a>
                         </div>

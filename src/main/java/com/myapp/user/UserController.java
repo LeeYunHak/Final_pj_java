@@ -322,6 +322,12 @@ public class UserController {
 		return "mydreamer";
 	}
 	
+	//마이드리머 모디파이인가 먼가
+	@GetMapping("mydreamerMDF")
+	public String myDreaerMDF() {
+		return "mydreamermodify";
+	}
+	
 	//로그아웃
 		@RequestMapping("/logOut")
 		public String logout(HttpSession session) {

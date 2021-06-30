@@ -41,7 +41,7 @@
                                     <!-- <i class="camer_icon" role="presentation"></i> -->
                                 </div>
                             </div>
-                            <a href="#" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
+                            <a href="/user/mydreamerMDF" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
                                 <dl>
                                     <dt>${loginUser.userName }</dt>
                                     <dd>${loginUser.userEmail}</dd>
