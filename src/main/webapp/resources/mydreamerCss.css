@@ -243,7 +243,7 @@ input[type="file" i]{
 }
 /* 카메라 아이콘 */
 .fi-fi-camera:before{
-    content:url("images/016-camera.png")
+    content:url("/resources/images/016-camera.png")
 }
 
 /* 프로필 이름 누르면 마이프로필 가지는 a태그 */
