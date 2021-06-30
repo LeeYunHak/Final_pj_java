@@ -21,7 +21,7 @@
 <body>
     <div class="full">
         <header>
-            <h2><span><a href="#" class="dreamer"><img src="/resources/images/Dreamer.png" width="210px" height="180px"></a></span></h2>
+            <h2><span><a href="/user/mainAfterMain" class="dreamer"><img src="/resources/images/Dreamer.png" width="210px" height="180px"></a></span></h2>
             <div class="navi">
                 <span><button id="selectnavi"
                         type="button">탐색</button></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

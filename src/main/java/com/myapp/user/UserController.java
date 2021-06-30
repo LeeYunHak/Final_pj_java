@@ -249,6 +249,13 @@ public class UserController {
 
 	// 로그인 후 메인페이지
 	// 전체 기업구인글 목록이 나오는 페이지
+	//로고눌렀을때
+	@GetMapping("/mainAfterMain")
+	public String mainAfterMain(Model model) {
+		List<CompanyJobPosting> comList = userService.mainCompanyJobPostingList();
+		model.addAttribute("comList", comList);
+		return "loginUserPage";
+	}
 
 	@RequestMapping(value ="/mainAfter", method = RequestMethod.GET)
 	@ResponseBody
