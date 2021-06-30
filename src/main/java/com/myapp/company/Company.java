@@ -16,7 +16,7 @@ public class Company {
 	private String companyIntroduce; // 기업소개
 	private String companyPhone; // 기업연락처
 	private int companyImageNumber; // 기업 대표 사진
-	private int companyJobPostingNumber; // 기업이 작성한 구인글 번호
+	private int companyJobPostingId; // 기업이 작성한 구인글 번호
 	private String companyCountry; // 기업 지역
 	private String companyDetailCountry; // 기업 세부지역
 	// 구인글
@@ -27,7 +27,7 @@ public class Company {
 	public Company(int companyId, String companyEmail, String companyPassword, String companyName,
 			int companyRegistrationNumber, String companyAddress, int companySales, int companyEmployeeNumber,
 			LocalDate companyEstablishmentYear, String companyIntroduce, String companyPhone, int companyImageNumber,
-			int companyJobPostingNumber, String companyCountry, String companyDetailCountry) {
+			int companyJobPostingId, String companyCountry, String companyDetailCountry) {
 		super();
 		this.companyId = companyId;
 		this.companyEmail = companyEmail;
@@ -41,7 +41,7 @@ public class Company {
 		this.companyIntroduce = companyIntroduce;
 		this.companyPhone = companyPhone;
 		this.companyImageNumber = companyImageNumber;
-		this.companyJobPostingNumber = companyJobPostingNumber;
+		this.companyJobPostingId = companyJobPostingId;
 		this.companyCountry = companyCountry;
 		this.companyDetailCountry = companyDetailCountry;
 	}
@@ -145,12 +145,12 @@ public class Company {
 		this.companyImageNumber = companyImageNumber;
 	}
 
-	public int getCompanyJobPostingNumber() {
-		return companyJobPostingNumber;
+	public int getcompanyJobPostingId() {
+		return companyJobPostingId;
 	}
 
-	public void setCompanyJobPostingNumber(int companyJobPostingNumber) {
-		this.companyJobPostingNumber = companyJobPostingNumber;
+	public void setcompanyJobPostingId(int companyJobPostingId) {
+		this.companyJobPostingId = companyJobPostingId;
 	}
 
 	public String getCompanyCountry() {
@@ -176,7 +176,7 @@ public class Company {
 				+ companyRegistrationNumber + ", companyAddress=" + companyAddress + ", companySales=" + companySales
 				+ ", companyEmployeeNumber=" + companyEmployeeNumber + ", companyEstablishmentYear="
 				+ companyEstablishmentYear + ", companyIntroduce=" + companyIntroduce + ", companyPhone=" + companyPhone
-				+ ", companyImageNumber=" + companyImageNumber + ", companyJobPostingNumber=" + companyJobPostingNumber
+				+ ", companyImageNumber=" + companyImageNumber + ", companyJobPostingId=" + companyJobPostingId
 				+ ", companyCountry=" + companyCountry + ", companyDetailCountry=" + companyDetailCountry + "]";
 	}
 

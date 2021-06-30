@@ -9,7 +9,8 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.myapp.companyJobPosting.CompanyJobPosting;
+import com.myapp.bookmark.Bookmark;
+import com.myapp.jobPostingList.JobPostingList;
 
 @Mapper
 public interface UserMapper {
@@ -41,37 +42,44 @@ public interface UserMapper {
 	@Update("update user set user_password=#{userPassword} where user_email=#{userEmail} ")
 	public int pwFindUserReceiveByUserEmail(User user);
 	
-	
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// 로그인 후 메인페이지(탐색페이지)
 	// 기업구인글 목록이 쫘르르르르륵
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number")
-	public List<CompanyJobPosting> selectCompany();
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id")
+	public List<JobPostingList> selectCompany();
 	
 	// 직종 선택 후 구인글 조회하기
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
 			+ " where cj.company_job_posting_job_group = #{companyJobPostingJobGroup}")
-	public List<CompanyJobPosting> selectCompanyJobGroup();
+	public List<JobPostingList> selectCompanyJobGroup();
 		
 	// 세부직무 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
 			+ " where cj.company_job_posting_job = #{companyJobPostingJob}")
-	public List<CompanyJobPosting> selectCompanyDetailJob();
+	public List<JobPostingList> selectCompanyDetailJob();
 		
 	// 경력(작품개수) 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
 			+ " where cj.company_job_posting_career = #{companyJobPostingCareer}")
-	public List<CompanyJobPosting> selectCompanyCareer();
+	public List<JobPostingList> selectCompanyCareer();
 	
 	// 지역 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
 			+ " where c.company_country = #{companyCountry}")
-	public List<CompanyJobPosting> selectCompanyCountry();
+	public List<JobPostingList> selectCompanyCountry();
 	
 	// 상세지역 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_number = c.company_job_posting_number"
+	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
 			+ " where c.company_detail_country = #{companyDetailCountry}")
-	public List<CompanyJobPosting> selectCompanyDetailCountry();
+	public List<JobPostingList> selectCompanyDetailCountry();
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	// 마이드리머 북마크 구인글 목록
+	@Select("select * from user u join bookmark b on u.user_id = b.user_id join "
+			+ "company_job_posting cj on b.bookmark_id = cj.bookmark_id join company c on "
+			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_name = ${userName}")
+	public List<Bookmark> selectBookmark();
 	
 }

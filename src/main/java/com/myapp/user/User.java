@@ -12,11 +12,11 @@ public class User {
 	private String userCareer; // 경력(작품개수)
 	private String resumeTitle; // 이력서제목
 	private int wishNumber; // 찜하기번호
-	private int bookmarkNumber; // 북마크번호
+	private int bookmarkId; // 북마크번호
 
 	public User(int userId, String userProfileImage, String userName, String userEmail, String userPassword,
 			String userPhone, String userJobGroup, String userJob, String userCareer, String resumeTitle,
-			int wishNumber, int bookmarkNumber) {
+			int wishNumber, int bookmarkId) {
 		super();
 		this.userId = userId;
 		this.userProfileImage = userProfileImage;
@@ -29,7 +29,7 @@ public class User {
 		this.userCareer = userCareer;
 		this.resumeTitle = resumeTitle;
 		this.wishNumber = wishNumber;
-		this.bookmarkNumber = bookmarkNumber;
+		this.bookmarkId = bookmarkId;
 	}
 
 	public User() {
@@ -125,12 +125,12 @@ public class User {
 		this.wishNumber = wishNumber;
 	}
 
-	public int getBookmarkNumber() {
-		return bookmarkNumber;
+	public int getbookmarkId() {
+		return bookmarkId;
 	}
 
-	public void setBookmarkNumber(int bookmarkNumber) {
-		this.bookmarkNumber = bookmarkNumber;
+	public void setbookmarkId(int bookmarkId) {
+		this.bookmarkId = bookmarkId;
 	}
 
 	@Override
@@ -138,7 +138,7 @@ public class User {
 		return "User [userId=" + userId + ", userProfileImage=" + userProfileImage + ", userName=" + userName
 				+ ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", userPhone=" + userPhone
 				+ ", userJobGroup=" + userJobGroup + ", userJob=" + userJob + ", userCareer=" + userCareer
-				+ ", resumeTitle=" + resumeTitle + ", wishNumber=" + wishNumber + ", bookmarkNumber=" + bookmarkNumber
+				+ ", resumeTitle=" + resumeTitle + ", wishNumber=" + wishNumber + ", bookmarkId=" + bookmarkId
 				+ "]";
 	}
 }

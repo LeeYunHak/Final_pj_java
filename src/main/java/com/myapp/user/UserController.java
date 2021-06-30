@@ -24,7 +24,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.myapp.bookmark.Bookmark;
 import com.myapp.companyJobPosting.CompanyJobPosting;
+import com.myapp.jobPostingList.JobPostingList;
 import com.myapp.kakao.Kakao_restapi;
 
 @Controller
@@ -252,7 +254,7 @@ public class UserController {
 	//로고눌렀을때
 	@GetMapping("/mainAfterMain")
 	public String mainAfterMain(Model model) {
-		List<CompanyJobPosting> comList = userService.mainCompanyJobPostingList();
+		List<JobPostingList> comList = userService.mainCompanyJobPostingList();
 		model.addAttribute("comList", comList);
 		return "loginUserPage";
 	}
@@ -260,7 +262,7 @@ public class UserController {
 	@RequestMapping(value ="/mainAfter", method = RequestMethod.GET)
 	@ResponseBody
 	public String mainCompanyJobPostingListB(Model model) {
-		List<CompanyJobPosting> comList = userService.mainCompanyJobPostingList();
+		List<JobPostingList> comList = userService.mainCompanyJobPostingList();
 		model.addAttribute("comList", comList);
 		return "loginUserPage";
 	}
@@ -269,7 +271,7 @@ public class UserController {
 	@RequestMapping(value = "/mainAfterJobGroup", method = RequestMethod.GET)
 	@ResponseBody
 	public String jobGroupCompanyJobPostingList(Model model) {
-		List<CompanyJobPosting> jobGroupList = userService.jobGroupCompanyJobPostingList();
+		List<JobPostingList> jobGroupList = userService.jobGroupCompanyJobPostingList();
 		model.addAttribute("jobGroupList", jobGroupList);
 		return "loginUserPage";
 	}
@@ -278,7 +280,7 @@ public class UserController {
 	@RequestMapping(value = "/mainAfterDetaliJob", method = RequestMethod.GET)
 	@ResponseBody
 	public String detailJobCompanyJobPostingList(Model model) {
-		List<CompanyJobPosting> detailJobList = userService.detailJobCompanyJobPostingList();
+		List<JobPostingList> detailJobList = userService.detailJobCompanyJobPostingList();
 		model.addAttribute("detailJobList ", detailJobList );
 		return "loginUserPage";
 	}
@@ -287,7 +289,7 @@ public class UserController {
 	@RequestMapping(value = "/mainAfterCareer", method = RequestMethod.GET)
 	@ResponseBody
 	public String careerCompanyJobPostingList(Model model) {
-		List<CompanyJobPosting> careerList = userService.careerCompanyJobPostingList();
+		List<JobPostingList> careerList = userService.careerCompanyJobPostingList();
 		model.addAttribute("careerList", careerList);
 		return "loginUserPage";
 	}
@@ -296,7 +298,7 @@ public class UserController {
 	@RequestMapping(value = "/mainAfterCountry", method = RequestMethod.GET)
 	@ResponseBody
 	public String countryCompanyJobPostingList(Model model) {
-		List<CompanyJobPosting> countryList = userService.countryCompanyJobPostingList();
+		List<JobPostingList> countryList = userService.countryCompanyJobPostingList();
 		model.addAttribute("countryList", countryList);
 		return "loginUserPage";
 	}
@@ -305,7 +307,7 @@ public class UserController {
 	@RequestMapping(value = "/mainAfterDetailCountry", method = RequestMethod.GET)
 	@ResponseBody
 	public String detailCountryCompanyJobPostingList(Model model) {
-		List<CompanyJobPosting> detailCountryList = userService.detailCountryCompanyJobPostingList();
+		List<JobPostingList> detailCountryList = userService.detailCountryCompanyJobPostingList();
 		model.addAttribute("detailCountryList", detailCountryList);
 		return "loginUserPage";
 	}
@@ -318,7 +320,9 @@ public class UserController {
 	}
 	//마이 드리머 
 	@GetMapping("mydreamer")
-	public String myDreamerView() {
+	public String myDreamerView(Model model) {
+		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList();
+		model.addAttribute("bookmarkList",bookmarkList);
 		return "mydreamer";
 	}
 	

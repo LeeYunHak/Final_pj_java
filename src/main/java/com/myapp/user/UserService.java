@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.myapp.bookmark.Bookmark;
 import com.myapp.companyJobPosting.CompanyJobPosting;
+import com.myapp.jobPostingList.JobPostingList;
 
 @Service
 public class UserService {
@@ -54,28 +56,34 @@ public class UserService {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// 로그인 후 페이지(탐색창) 구인글 리스트
-	public List<CompanyJobPosting> mainCompanyJobPostingList(){
+	public List<JobPostingList> mainCompanyJobPostingList(){
 		return userMapper.selectCompany();
 	}
 	// 로그인 후 페이지(탐색창) 직종 선택 후 구인글 조회
-	public List<CompanyJobPosting> jobGroupCompanyJobPostingList(){
+	public List<JobPostingList> jobGroupCompanyJobPostingList(){
 		return userMapper.selectCompanyJobGroup();
 	}
 	// 로그인 후 페이지(탐색창) 세부직무 선택 후 구인글 조회
-	public List<CompanyJobPosting> detailJobCompanyJobPostingList(){
+	public List<JobPostingList> detailJobCompanyJobPostingList(){
 		return userMapper.selectCompanyDetailJob();
 	}
 	// 로그인 후 페이지(탐색창) 경력(작품개수) 선택 후 구인글 조회
-	public List<CompanyJobPosting> careerCompanyJobPostingList(){
+	public List<JobPostingList> careerCompanyJobPostingList(){
 		return userMapper.selectCompanyCareer();
 	}
 	// 로그인 후 페이지(탐색창) 지역 선택 후 구인글 조회
-	public List<CompanyJobPosting> countryCompanyJobPostingList(){
+	public List<JobPostingList> countryCompanyJobPostingList(){
 		return userMapper.selectCompanyCountry();
 	}
 	// 로그인 후 페이지(탐색창) 상세 지역 선택 후 구인글 조회
-	public List<CompanyJobPosting> detailCountryCompanyJobPostingList(){
+	public List<JobPostingList> detailCountryCompanyJobPostingList(){
 		return userMapper.selectCompanyDetailCountry();
 	}
 	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// 마이드리머 북마크 조회를 위한 소스
+	public List<Bookmark> mydreamerBookmarkList(){
+		return userMapper.selectBookmark();
+	}
 }

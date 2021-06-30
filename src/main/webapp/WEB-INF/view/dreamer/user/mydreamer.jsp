@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%
 	response.setHeader("Cache-Control","no-cache");
@@ -12,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/mydreamerCss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Mydreamer</title>
 </head>
 <body>
@@ -97,66 +99,23 @@
                             <h2>북마크</h2>
                             <div class="b-div">
                                 <ul class="b-ul">
-                                    <li>
-                                        <div class="company-margin">
-                                            <a class="company-href" href="http://www.naver.com">
-                                                <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
-                                                <figcaption>
-                                                    <div class="f-body">
-                                                        <div class="job-card-position">구인글제목</div>
-                                                        <div class="job-card-company-name">기업명</div>
-                                                        <div class="job-card-company-location">위치</div>
-                                                        <div class="job-card-end-date">마감일</div>
-                                                    </div>
-                                                </figcaption>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="company-margin">
-                                            <a class="company-href" href="http://www.naver.com">
-                                                <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
-                                                <figcaption>
-                                                    <div class="f-body">
-                                                        <div class="job-card-position">구인글제목</div>
-                                                        <div class="job-card-company-name">기업명</div>
-                                                        <div class="job-card-company-location">위치</div>
-                                                        <div class="job-card-end-date">마감일</div>
-                                                    </div>
-                                                </figcaption>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="company-margin">
-                                            <a class="company-href" href="http://www.naver.com">
-                                                <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
-                                                <figcaption>
-                                                    <div class="f-body">
-                                                        <div class="job-card-position">구인글제목</div>
-                                                        <div class="job-card-company-name">기업명</div>
-                                                        <div class="job-card-company-location">위치</div>
-                                                        <div class="job-card-end-date">마감일</div>
-                                                    </div>
-                                                </figcaption>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="company-margin">
-                                            <a class="company-href" href="http://www.naver.com">
-                                                <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
-                                                <figcaption>
-                                                    <div class="f-body">
-                                                        <div class="job-card-position">구인글제목</div>
-                                                        <div class="job-card-company-name">기업명</div>
-                                                        <div class="job-card-company-location">위치</div>
-                                                        <div class="job-card-end-date">마감일</div>
-                                                    </div>
-                                                </figcaption>
-                                            </a>
-                                        </div>
-                                    </li>
+                                	<c:forEach var="book" items="${bookmarkList }">
+	                                    <li>
+	                                        <div class="company-margin">
+	                                            <a class="company-href" href="http://www.naver.com">
+	                                                <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
+	                                                <figcaption>
+	                                                    <div class="f-body">
+	                                                        <div class="job-card-position">${book.companyJobPostingTitle }</div>
+	                                                        <div class="job-card-company-name">${book.companyName }</div>
+	                                                        <div class="job-card-company-location">${book.companyCountry }</div>
+	                                                        <div class="job-card-end-date">${book.companyJobPostingPeriodEnd }</div>
+	                                                    </div>
+	                                                </figcaption>
+	                                            </a>
+	                                        </div>
+	                                    </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                         </div>

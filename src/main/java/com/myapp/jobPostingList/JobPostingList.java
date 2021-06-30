@@ -1,8 +1,22 @@
-package com.myapp.companyJobPosting;
+package com.myapp.jobPostingList;
 
 import java.time.LocalDate;
 
-public class CompanyJobPosting {
+public class JobPostingList {
+	private int companyId; // 기업번호(기본키, auto_increment)
+	private String companyEmail; // 기업이메일(아이디)
+	private String companyPassword; // 기업비밀번호
+	private String companyName; // 기업이름
+	private int companyRegistrationNumber; // 사업자등록번호
+	private String companyAddress; // 기업주소
+	private int companySales; // 기업매출액
+	private int companyEmployeeNumber; // 직원수
+	private LocalDate companyEstablishmentYear; // 설립연도
+	private String companyIntroduce; // 기업소개
+	private String companyPhone; // 기업연락처
+	private int companyImageNumber; // 기업 대표 사진
+	private String companyCountry; // 기업 지역
+	private String companyDetailCountry; // 기업 세부지역
 	private int companyJobPostingId; // 공고글번호(기본키, auto_increment)
 	private String companyJobPostingTitle; // 구인글 제목
 	private String companyJobPostingImageNumber; // 구인글이미지
@@ -21,7 +35,10 @@ public class CompanyJobPosting {
 	private String companyJobJostingCareer; // 모집분야 경력(작품개수)
 	private int bookmarkId; // 북마크 번호
 
-	public CompanyJobPosting(int companyJobPostingId, String companyJobPostingTitle,
+	public JobPostingList(int companyId, String companyEmail, String companyPassword, String companyName,
+			int companyRegistrationNumber, String companyAddress, int companySales, int companyEmployeeNumber,
+			LocalDate companyEstablishmentYear, String companyIntroduce, String companyPhone, int companyImageNumber,
+			String companyCountry, String companyDetailCountry, int companyJobPostingId, String companyJobPostingTitle,
 			String companyJobPostingImageNumber, String companyJobPostingIntroduce, String companyJobPostingManager,
 			int companyJobPostingRecruitment, LocalDate companyJobPostingPeriodStart,
 			LocalDate companyJobPostingPeriodEnd, String companyJobPostingManagerPhone,
@@ -29,6 +46,20 @@ public class CompanyJobPosting {
 			String companyJobPostingWelfare, String companyJobJostingJobGroup, String companyJobJostingJob,
 			String companyJobJostingCareer, int bookmarkId) {
 		super();
+		this.companyId = companyId;
+		this.companyEmail = companyEmail;
+		this.companyPassword = companyPassword;
+		this.companyName = companyName;
+		this.companyRegistrationNumber = companyRegistrationNumber;
+		this.companyAddress = companyAddress;
+		this.companySales = companySales;
+		this.companyEmployeeNumber = companyEmployeeNumber;
+		this.companyEstablishmentYear = companyEstablishmentYear;
+		this.companyIntroduce = companyIntroduce;
+		this.companyPhone = companyPhone;
+		this.companyImageNumber = companyImageNumber;
+		this.companyCountry = companyCountry;
+		this.companyDetailCountry = companyDetailCountry;
 		this.companyJobPostingId = companyJobPostingId;
 		this.companyJobPostingTitle = companyJobPostingTitle;
 		this.companyJobPostingImageNumber = companyJobPostingImageNumber;
@@ -48,7 +79,119 @@ public class CompanyJobPosting {
 		this.bookmarkId = bookmarkId;
 	}
 
-	public CompanyJobPosting() {
+	public JobPostingList() {
+	}
+
+	public int getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(int companyId) {
+		this.companyId = companyId;
+	}
+
+	public String getCompanyEmail() {
+		return companyEmail;
+	}
+
+	public void setCompanyEmail(String companyEmail) {
+		this.companyEmail = companyEmail;
+	}
+
+	public String getCompanyPassword() {
+		return companyPassword;
+	}
+
+	public void setCompanyPassword(String companyPassword) {
+		this.companyPassword = companyPassword;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+	public int getCompanyRegistrationNumber() {
+		return companyRegistrationNumber;
+	}
+
+	public void setCompanyRegistrationNumber(int companyRegistrationNumber) {
+		this.companyRegistrationNumber = companyRegistrationNumber;
+	}
+
+	public String getCompanyAddress() {
+		return companyAddress;
+	}
+
+	public void setCompanyAddress(String companyAddress) {
+		this.companyAddress = companyAddress;
+	}
+
+	public int getCompanySales() {
+		return companySales;
+	}
+
+	public void setCompanySales(int companySales) {
+		this.companySales = companySales;
+	}
+
+	public int getCompanyEmployeeNumber() {
+		return companyEmployeeNumber;
+	}
+
+	public void setCompanyEmployeeNumber(int companyEmployeeNumber) {
+		this.companyEmployeeNumber = companyEmployeeNumber;
+	}
+
+	public LocalDate getCompanyEstablishmentYear() {
+		return companyEstablishmentYear;
+	}
+
+	public void setCompanyEstablishmentYear(LocalDate companyEstablishmentYear) {
+		this.companyEstablishmentYear = companyEstablishmentYear;
+	}
+
+	public String getCompanyIntroduce() {
+		return companyIntroduce;
+	}
+
+	public void setCompanyIntroduce(String companyIntroduce) {
+		this.companyIntroduce = companyIntroduce;
+	}
+
+	public String getCompanyPhone() {
+		return companyPhone;
+	}
+
+	public void setCompanyPhone(String companyPhone) {
+		this.companyPhone = companyPhone;
+	}
+
+	public int getCompanyImageNumber() {
+		return companyImageNumber;
+	}
+
+	public void setCompanyImageNumber(int companyImageNumber) {
+		this.companyImageNumber = companyImageNumber;
+	}
+
+	public String getCompanyCountry() {
+		return companyCountry;
+	}
+
+	public void setCompanyCountry(String companyCountry) {
+		this.companyCountry = companyCountry;
+	}
+
+	public String getCompanyDetailCountry() {
+		return companyDetailCountry;
+	}
+
+	public void setCompanyDetailCountry(String companyDetailCountry) {
+		this.companyDetailCountry = companyDetailCountry;
 	}
 
 	public int getCompanyJobPostingId() {
@@ -179,26 +322,34 @@ public class CompanyJobPosting {
 		this.companyJobJostingCareer = companyJobJostingCareer;
 	}
 
-	public int getbookmarkId() {
+	public int getBookmarkId() {
 		return bookmarkId;
 	}
 
-	public void setbookmarkId(int bookmarkId) {
+	public void setBookmarkId(int bookmarkId) {
 		this.bookmarkId = bookmarkId;
 	}
 
 	@Override
 	public String toString() {
-		return "CompanyJobPosting [companyJobPostingId=" + companyJobPostingId + ", companyJobPostingTitle="
-				+ companyJobPostingTitle + ", companyJobPostingImageNumber=" + companyJobPostingImageNumber
-				+ ", companyJobPostingIntroduce=" + companyJobPostingIntroduce + ", companyJobPostingManager="
-				+ companyJobPostingManager + ", companyJobPostingRecruitment=" + companyJobPostingRecruitment
-				+ ", companyJobPostingPeriodStart=" + companyJobPostingPeriodStart + ", companyJobPostingPeriodEnd="
-				+ companyJobPostingPeriodEnd + ", companyJobPostingManagerPhone=" + companyJobPostingManagerPhone
-				+ ", companyJobPostingManagerEmail=" + companyJobPostingManagerEmail + ", companyJobPostingQr="
-				+ companyJobPostingQr + ", companyJobPostingPreference=" + companyJobPostingPreference
-				+ ", companyJobPostingWelfare=" + companyJobPostingWelfare + ", companyJobJostingJobGroup="
-				+ companyJobJostingJobGroup + ", companyJobJostingJob=" + companyJobJostingJob
-				+ ", companyJobJostingCareer=" + companyJobJostingCareer + ", bookmarkId=" + bookmarkId + "]";
+		return "JobPostingList [companyId=" + companyId + ", companyEmail=" + companyEmail + ", companyPassword="
+				+ companyPassword + ", companyName=" + companyName + ", companyRegistrationNumber="
+				+ companyRegistrationNumber + ", companyAddress=" + companyAddress + ", companySales=" + companySales
+				+ ", companyEmployeeNumber=" + companyEmployeeNumber + ", companyEstablishmentYear="
+				+ companyEstablishmentYear + ", companyIntroduce=" + companyIntroduce + ", companyPhone=" + companyPhone
+				+ ", companyImageNumber=" + companyImageNumber + ", companyCountry=" + companyCountry
+				+ ", companyDetailCountry=" + companyDetailCountry + ", companyJobPostingId=" + companyJobPostingId
+				+ ", companyJobPostingTitle=" + companyJobPostingTitle + ", companyJobPostingImageNumber="
+				+ companyJobPostingImageNumber + ", companyJobPostingIntroduce=" + companyJobPostingIntroduce
+				+ ", companyJobPostingManager=" + companyJobPostingManager + ", companyJobPostingRecruitment="
+				+ companyJobPostingRecruitment + ", companyJobPostingPeriodStart=" + companyJobPostingPeriodStart
+				+ ", companyJobPostingPeriodEnd=" + companyJobPostingPeriodEnd + ", companyJobPostingManagerPhone="
+				+ companyJobPostingManagerPhone + ", companyJobPostingManagerEmail=" + companyJobPostingManagerEmail
+				+ ", companyJobPostingQr=" + companyJobPostingQr + ", companyJobPostingPreference="
+				+ companyJobPostingPreference + ", companyJobPostingWelfare=" + companyJobPostingWelfare
+				+ ", companyJobJostingJobGroup=" + companyJobJostingJobGroup + ", companyJobJostingJob="
+				+ companyJobJostingJob + ", companyJobJostingCareer=" + companyJobJostingCareer + ", bookmarkId="
+				+ bookmarkId + "]";
 	}
+
 }
