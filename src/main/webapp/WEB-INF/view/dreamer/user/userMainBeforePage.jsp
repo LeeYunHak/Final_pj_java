@@ -32,7 +32,7 @@
 			<button id="startbtn" type="button">시작하기</button>
 		</div>
 		<div>
-			<img class="camera" src="/resources/images/camera.jpg">
+			<img class="camera" src="/resources/images/camera.png">
 		</div>
 	</section>
 	<section>

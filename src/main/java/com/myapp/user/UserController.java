@@ -55,13 +55,14 @@ public class UserController {
 
 	// 로그인 폼 요청 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
 	@PostMapping("/mainBefore")
-	public String loginUser(Model model, String userEmail, String userPassword) {
+	public String loginUser(Model model, String userEmail, String userPassword, HttpSession session) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
 			return "userMainBeforePage";
 		} else {
 			model.addAttribute("loginUser", loginUser);
+			session.setAttribute("loginUser", loginUser);
 			return "loginUserPage";
 		}
 	}
@@ -248,9 +249,10 @@ public class UserController {
 
 	// 로그인 후 메인페이지
 	// 전체 기업구인글 목록이 나오는 페이지
+
 	@RequestMapping(value ="/mainAfter", method = RequestMethod.GET)
 	@ResponseBody
-	public String mainCompanyJobPostingList(Model model) {
+	public String mainCompanyJobPostingListB(Model model) {
 		List<CompanyJobPosting> comList = userService.mainCompanyJobPostingList();
 		model.addAttribute("comList", comList);
 		return "loginUserPage";
