@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	response.setHeader("Cache-Control","no-cache");
+	response.setHeader("Pragma","no-cache");
+%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -66,6 +70,7 @@
                         <div class="modifyform">
                             <div class="FormBlock-content content" style="padding-right: 20px;padding-left: 20px;">
                             <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="이윤학"></label>
+                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="password" type="password" autocomplete="off" value="*******"></label>
                             <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="dbsgkr23@naver.com"></label>
                             <div class="phone"><h6 class="MobileInput-label">연락처</h6>
                                 <div class="phoneInput">
@@ -76,11 +81,11 @@
                         </div>
                     </div>
                     <footer class="FormFooter">
-                        <button type="button" id="submit" class="submit" onclick="changeByJS()">확인</button></footer>    
-                </section>
+                        <button type="button" id="resign" class="resign" onclick="location.href='mainhtml.html'">회원탈퇴하기</button>    
+                        <button type="button" id="submit" class="submit">확인</button></footer>    
+                    </section>
             </div>
         </section>
     </div>
-    <script type="text/javascript" src="/resources/mydreamermodify.js">require('../script/viewLog.js') </script>
 </body>
 </html>
