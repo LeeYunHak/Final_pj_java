@@ -39,7 +39,7 @@
             <div class="arrow_box">
                 <p><a class="mydreamer" href="/user/mydreamer" style="text-decoration: none;">
                 MY드리머</a></p>
-                <p><a class="profile" href="http://www.naver.com"style="text-decoration: none;">
+                <p><a class="profile" href="/user/profileEdit"style="text-decoration: none;">
                 프로필</a></p>
                 <p><a class="application" href="http://www.naver.com"style="text-decoration: none;">
                 지원현황</a></p>

@@ -79,7 +79,7 @@ public class UserController {
 	// ✔✔✔✔✔✔✔✔구글 로그인 건들지마시오✔✔✔✔✔✔✔✔
 	// 로그인 페이지로 이동하는 컨트롤러
 	@RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
-	public String initLogin(Model model, HttpSession session) throws Exception {
+	public String initLogin(Model model, HttpSession  session) throws Exception {
 
 		// 구글code 발행
 		OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations();
@@ -103,7 +103,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/oauth", produces = "application/json")
-	public String kakaoLogin(@RequestParam("code") String code, Model model, HttpSession session) {
+	public String kakaoLogin(@RequestParam("code") String code, Model model, HttpSession  session) {
 		System.out.println("로그인 할때 임시 코드값");
 		// 카카오 홈페이지에서 받은 결과 코드
 		System.out.println(code);
@@ -326,7 +326,7 @@ public class UserController {
 		return"searchpage";
 	}
 	//마이 드리머 
-	@GetMapping("mydreamer")
+	@GetMapping("/mydreamer")
 	public String myDreamerView(Model model) {
 //		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList();
 //		List<Application> applicationList = userService.mydreamerApplicationList();
@@ -336,9 +336,9 @@ public class UserController {
 	}
 	
 	//마이드리머 모디파이인가 먼가
-	@GetMapping("mydreamerMDF")
+	@GetMapping("/profileEdit")
 	public String myDreaerMDF() {
-		return "mydreamermodify";
+		return "profileEdit";
 	}
 	
 	//로그아웃
