@@ -30,9 +30,9 @@ public class Application {
 	private String companyJobPostingQr; // 자격요건
 	private String companyJobPostingPreference; // 우대사항
 	private String companyJobPostingWelfare; // 혜택 및 복지
-	private String companyJobJostingJobGroup; // 모집분야 직종
-	private String companyJobJostingJob; // 모집분야 직종의 세부직무
-	private String companyJobJostingCareer; // 모집분야 경력(작품개수)
+	private String companyJobPostingJobGroup; // 모집분야 직종
+	private String companyJobPostingJob; // 모집분야 직종의 세부직무
+	private String companyJobPostingCareer; // 모집분야 경력(작품개수)
 	private int bookmarkId; // 북마크 번호
 	private int applicationId; // 지원 번호
 	private int userId; // 회원번호
@@ -56,8 +56,8 @@ public class Application {
 			int companyJobPostingRecruitment, LocalDate companyJobPostingPeriodStart,
 			LocalDate companyJobPostingPeriodEnd, String companyJobPostingManagerPhone,
 			String companyJobPostingManagerEmail, String companyJobPostingQr, String companyJobPostingPreference,
-			String companyJobPostingWelfare, String companyJobJostingJobGroup, String companyJobJostingJob,
-			String companyJobJostingCareer, int bookmarkId, int applicationId, int userId, String userProfileImage,
+			String companyJobPostingWelfare, String companyJobPostingJobGroup, String companyJobPostingJob,
+			String companyJobPostingCareer, int bookmarkId, int applicationId, int userId, String userProfileImage,
 			String userName, String userEmail, String userPassword, String userPhone, String userJobGroup,
 			String userJob, String userCareer, String resumeTitle, int wishNumber, LocalDate applicationDate) {
 		super();
@@ -88,9 +88,9 @@ public class Application {
 		this.companyJobPostingQr = companyJobPostingQr;
 		this.companyJobPostingPreference = companyJobPostingPreference;
 		this.companyJobPostingWelfare = companyJobPostingWelfare;
-		this.companyJobJostingJobGroup = companyJobJostingJobGroup;
-		this.companyJobJostingJob = companyJobJostingJob;
-		this.companyJobJostingCareer = companyJobJostingCareer;
+		this.companyJobPostingJobGroup = companyJobPostingJobGroup;
+		this.companyJobPostingJob = companyJobPostingJob;
+		this.companyJobPostingCareer = companyJobPostingCareer;
 		this.bookmarkId = bookmarkId;
 		this.applicationId = applicationId;
 		this.userId = userId;
@@ -326,28 +326,28 @@ public class Application {
 		this.companyJobPostingWelfare = companyJobPostingWelfare;
 	}
 
-	public String getCompanyJobJostingJobGroup() {
-		return companyJobJostingJobGroup;
+	public String getcompanyJobPostingJobGroup() {
+		return companyJobPostingJobGroup;
 	}
 
-	public void setCompanyJobJostingJobGroup(String companyJobJostingJobGroup) {
-		this.companyJobJostingJobGroup = companyJobJostingJobGroup;
+	public void setcompanyJobPostingJobGroup(String companyJobPostingJobGroup) {
+		this.companyJobPostingJobGroup = companyJobPostingJobGroup;
 	}
 
-	public String getCompanyJobJostingJob() {
-		return companyJobJostingJob;
+	public String getcompanyJobPostingJob() {
+		return companyJobPostingJob;
 	}
 
-	public void setCompanyJobJostingJob(String companyJobJostingJob) {
-		this.companyJobJostingJob = companyJobJostingJob;
+	public void setcompanyJobPostingJob(String companyJobPostingJob) {
+		this.companyJobPostingJob = companyJobPostingJob;
 	}
 
-	public String getCompanyJobJostingCareer() {
-		return companyJobJostingCareer;
+	public String getcompanyJobPostingCareer() {
+		return companyJobPostingCareer;
 	}
 
-	public void setCompanyJobJostingCareer(String companyJobJostingCareer) {
-		this.companyJobJostingCareer = companyJobJostingCareer;
+	public void setcompanyJobPostingCareer(String companyJobPostingCareer) {
+		this.companyJobPostingCareer = companyJobPostingCareer;
 	}
 
 	public int getBookmarkId() {
@@ -479,8 +479,8 @@ public class Application {
 				+ companyJobPostingManagerPhone + ", companyJobPostingManagerEmail=" + companyJobPostingManagerEmail
 				+ ", companyJobPostingQr=" + companyJobPostingQr + ", companyJobPostingPreference="
 				+ companyJobPostingPreference + ", companyJobPostingWelfare=" + companyJobPostingWelfare
-				+ ", companyJobJostingJobGroup=" + companyJobJostingJobGroup + ", companyJobJostingJob="
-				+ companyJobJostingJob + ", companyJobJostingCareer=" + companyJobJostingCareer + ", bookmarkId="
+				+ ", companyJobPostingJobGroup=" + companyJobPostingJobGroup + ", companyJobPostingJob="
+				+ companyJobPostingJob + ", companyJobPostingCareer=" + companyJobPostingCareer + ", bookmarkId="
 				+ bookmarkId + ", applicationId=" + applicationId + ", userId=" + userId + ", userProfileImage="
 				+ userProfileImage + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword="
 				+ userPassword + ", userPhone=" + userPhone + ", userJobGroup=" + userJobGroup + ", userJob=" + userJob

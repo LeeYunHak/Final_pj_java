@@ -26,7 +26,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.myapp.application.Application;
 import com.myapp.bookmark.Bookmark;
-import com.myapp.companyJobPosting.CompanyJobPosting;
 import com.myapp.jobPostingList.JobPostingList;
 import com.myapp.kakao.Kakao_restapi;
 
@@ -60,12 +59,19 @@ public class UserController {
 	@PostMapping("/mainBefore")
 	public String loginUser(Model model, String userEmail, String userPassword, HttpSession session) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
+		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
+		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
+
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
 			return "userMainBeforePage";
 		} else {
 			model.addAttribute("loginUser", loginUser);
 			session.setAttribute("loginUser", loginUser);
+			session.setAttribute("bookmarkList",bookmarkList);
+			session.setAttribute("applicationList",applicationList);
+			System.out.println(bookmarkList);
+			System.out.println(applicationList);
 			return "loginUserPage";
 		}
 	}
@@ -271,8 +277,8 @@ public class UserController {
 	// 직종으로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterJobGroup", method = RequestMethod.GET)
 	@ResponseBody
-	public String jobGroupCompanyJobPostingList(Model model) {
-		List<JobPostingList> jobGroupList = userService.jobGroupCompanyJobPostingList();
+	public String jobGroupCompanyJobPostingList(Model model, String companyJobPostingJobGroup) {
+		List<JobPostingList> jobGroupList = userService.jobGroupCompanyJobPostingList(companyJobPostingJobGroup);
 		model.addAttribute("jobGroupList", jobGroupList);
 		return "loginUserPage";
 	}
@@ -280,8 +286,8 @@ public class UserController {
 	// 세부직업으로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterDetaliJob", method = RequestMethod.GET)
 	@ResponseBody
-	public String detailJobCompanyJobPostingList(Model model) {
-		List<JobPostingList> detailJobList = userService.detailJobCompanyJobPostingList();
+	public String detailJobCompanyJobPostingList(Model model, String companyJobPostingJob) {
+		List<JobPostingList> detailJobList = userService.detailJobCompanyJobPostingList(companyJobPostingJob);
 		model.addAttribute("detailJobList ", detailJobList );
 		return "loginUserPage";
 	}
@@ -289,8 +295,8 @@ public class UserController {
 	// 경력(작품개수)로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterCareer", method = RequestMethod.GET)
 	@ResponseBody
-	public String careerCompanyJobPostingList(Model model) {
-		List<JobPostingList> careerList = userService.careerCompanyJobPostingList();
+	public String careerCompanyJobPostingList(Model model, String companyJobPostingCareer) {
+		List<JobPostingList> careerList = userService.careerCompanyJobPostingList(companyJobPostingCareer);
 		model.addAttribute("careerList", careerList);
 		return "loginUserPage";
 	}
@@ -298,8 +304,8 @@ public class UserController {
 	// 지역으로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterCountry", method = RequestMethod.GET)
 	@ResponseBody
-	public String countryCompanyJobPostingList(Model model) {
-		List<JobPostingList> countryList = userService.countryCompanyJobPostingList();
+	public String countryCompanyJobPostingList(Model model, String companyCountry) {
+		List<JobPostingList> countryList = userService.countryCompanyJobPostingList(companyCountry);
 		model.addAttribute("countryList", countryList);
 		return "loginUserPage";
 	}
@@ -307,8 +313,8 @@ public class UserController {
 	// 상세지역으로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterDetailCountry", method = RequestMethod.GET)
 	@ResponseBody
-	public String detailCountryCompanyJobPostingList(Model model) {
-		List<JobPostingList> detailCountryList = userService.detailCountryCompanyJobPostingList();
+	public String detailCountryCompanyJobPostingList(Model model, String companyDetailCountry) {
+		List<JobPostingList> detailCountryList = userService.detailCountryCompanyJobPostingList(companyDetailCountry);
 		model.addAttribute("detailCountryList", detailCountryList);
 		return "loginUserPage";
 	}
@@ -322,10 +328,10 @@ public class UserController {
 	//마이 드리머 
 	@GetMapping("mydreamer")
 	public String myDreamerView(Model model) {
-		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList();
-		List<Application> applicationList = userService.mydreamerApplicationList();
-		model.addAttribute("bookmarkList",bookmarkList);
-		model.addAttribute("applicationList",applicationList);
+//		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList();
+//		List<Application> applicationList = userService.mydreamerApplicationList();
+//		model.addAttribute("bookmarkList",bookmarkList);
+//		model.addAttribute("applicationList",applicationList);
 		return "mydreamer";
 	}
 	

@@ -61,35 +61,35 @@ public class UserService {
 		return userMapper.selectCompany();
 	}
 	// 로그인 후 페이지(탐색창) 직종 선택 후 구인글 조회
-	public List<JobPostingList> jobGroupCompanyJobPostingList(){
-		return userMapper.selectCompanyJobGroup();
+	public List<JobPostingList> jobGroupCompanyJobPostingList(String companyJobPostingJobGroup){
+		return userMapper.selectCompanyJobGroup(companyJobPostingJobGroup);
 	}
 	// 로그인 후 페이지(탐색창) 세부직무 선택 후 구인글 조회
-	public List<JobPostingList> detailJobCompanyJobPostingList(){
-		return userMapper.selectCompanyDetailJob();
+	public List<JobPostingList> detailJobCompanyJobPostingList(String companyJobPostingJob){
+		return userMapper.selectCompanyDetailJob(companyJobPostingJob);
 	}
 	// 로그인 후 페이지(탐색창) 경력(작품개수) 선택 후 구인글 조회
-	public List<JobPostingList> careerCompanyJobPostingList(){
-		return userMapper.selectCompanyCareer();
+	public List<JobPostingList> careerCompanyJobPostingList(String companyJobPostingCareer){
+		return userMapper.selectCompanyCareer(companyJobPostingCareer);
 	}
 	// 로그인 후 페이지(탐색창) 지역 선택 후 구인글 조회
-	public List<JobPostingList> countryCompanyJobPostingList(){
-		return userMapper.selectCompanyCountry();
+	public List<JobPostingList> countryCompanyJobPostingList(String companyCountry){
+		return userMapper.selectCompanyCountry(companyCountry);
 	}
 	// 로그인 후 페이지(탐색창) 상세 지역 선택 후 구인글 조회
-	public List<JobPostingList> detailCountryCompanyJobPostingList(){
-		return userMapper.selectCompanyDetailCountry();
+	public List<JobPostingList> detailCountryCompanyJobPostingList(String companyDetailCountry){
+		return userMapper.selectCompanyDetailCountry(companyDetailCountry);
 	}
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// 마이드리머 지원 목록 조회를 위한 소스
-	public List<Application> mydreamerApplicationList(){
-		return userMapper.selectApplication();
+	public List<Application> mydreamerApplicationList(String userEmail){
+		return userMapper.selectApplication(userEmail);
 	}
 
 	// 마이드리머 북마크 조회를 위한 소스
-	public List<Bookmark> mydreamerBookmarkList(){
-		return userMapper.selectBookmark();
+	public List<Bookmark> mydreamerBookmarkList(String userEmail){
+		return userMapper.selectBookmark(userEmail);
 	}
 }
