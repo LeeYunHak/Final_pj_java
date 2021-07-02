@@ -43,7 +43,7 @@
                                     <!-- <i class="camer_icon" role="presentation"></i> -->
                                 </div>
                             </div>
-                            <a href="/user/mydreamerMDF" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
+                            <a href="/user/profileEdit" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
                                 <dl>
                                     <dt>${loginUser.userName }</dt>
                                     <dd>${loginUser.userEmail}</dd>
@@ -51,16 +51,8 @@
                                 </dl>
                             </a>
                         </div>
-                        <div class="second-contents">
-                            <div class="sc-div">
-                                <a href="#" class="sc-div-a">
-                                    <span>받은 제안</span>
-                                    <strong>0</strong> <!--받은 제안 수-->
-                                </a>
-                            </div>
-                        </div>
                         <div class="third-contents">
-                            <a href="#">계정 설정</a> <!--계정 설정으로 가는링크-->
+                            <a href="/user/profileEdit"><div class="third-contents-btn">프로필 수정</div></a> <!--계정 설정으로 가는링크-->
                         </div>
                     </div>
                 </aside>

@@ -59,10 +59,9 @@ public class UserController {
 	@PostMapping("/mainBefore")
 	public String loginUser(Model model, String userEmail, String userPassword, HttpSession session) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
-//		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
-//		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
-		User profileEdit = userService.userProfileEdit(loginUser);
-		User professional = userService.professionalSet(loginUser);
+		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
+		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
+		User userProfileEdit = userService.selectUserProfile(userEmail);
 
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
@@ -70,10 +69,9 @@ public class UserController {
 		} else {
 			model.addAttribute("loginUser", loginUser);
 			session.setAttribute("loginUser", loginUser);
-//			session.setAttribute("bookmarkList", bookmarkList);
-//			session.setAttribute("applicationList", applicationList);
-			session.setAttribute("profileEdit", profileEdit);
-			session.setAttribute("professional", professional);
+			session.setAttribute("bookmarkList", bookmarkList);
+			session.setAttribute("applicationList", applicationList);
+			session.setAttribute("userProfileEdit", userProfileEdit);
 			return "loginUserPage";
 		}
 	}
@@ -339,22 +337,39 @@ public class UserController {
 		return "mydreamer";
 	}
 	
+	// 프로필메인페이지
 	@GetMapping("/profileMain")
 	public String profileMain() {
 		return "profileMain";
 	}
 
-	// 마이드리머 프로필수정페이지 
+	// 마이드리머 프로필수정 페이지
 	@GetMapping("/profileEdit")
-	public String profileEdit(Model model, String userEmail, String userPassword) {
-		boolean deleteUser = userService.userDelete(userEmail, userPassword);
-		model.addAttribute("deleteUser", deleteUser);
+	public String pofileEdit(Model model, User user) {
 		return "profileEdit";
 	}
 	
-	@GetMapping("/professional")
-	public String professional() {
-		return "professional";
+	@PostMapping("/profileEdit")
+	public String pofileEditUpdate(Model model, User user) {
+		User profileEdit = userService.userProfileEdit(user);
+		model.addAttribute("profileEdit", profileEdit);
+		return "profileEdit";
+	}
+	
+	// 마이드리머 프로필삭제 페이지 
+	@GetMapping("/profileEditDelete")
+	public String profileEditDelete(Model model, String userEmail, String userPassword) {
+		boolean deleteUser = userService.userDelete(userEmail, userPassword);
+		model.addAttribute("deleteUser", deleteUser);
+		return "userMainBeforePage";
+	}
+	
+	// 전문분야 설정 페이지
+	@PostMapping("/professional")
+	public String professional(Model model, User user) {
+		User professional = userService.professionalSet(user);
+		model.addAttribute("professional", professional);
+		return "profileMain";
 	}
 
 	// 로그아웃

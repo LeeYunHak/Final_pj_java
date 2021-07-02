@@ -54,7 +54,7 @@
                     </div>
                 </aside>
                 <section class="m-contents">
-                	<form action="" method="post">
+                	<form action="/user/profileEdit" method="post">
 	                    <div class="status">
 	                        <dl class="Form-title">
 	                            <dt style="color: #333;font-size: 20px;font-weight: 600;line-height: 1;display: block;">기본정보 수정</dt>
@@ -71,7 +71,7 @@
 	                    </div>
 	                    <footer class="FormFooter">
 	                        <button type="button" id="resign" class="resign" onclick="location.href='mainhtml.html'">회원탈퇴하기</button>    
-	                        <button type="button" id="submit" class="submit">수정하기</button>
+	                        <button type="submit" id="submit" class="submit">수정하기</button>
 	                    </footer>
                     </form>    
                 </section>

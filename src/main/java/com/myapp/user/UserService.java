@@ -84,14 +84,14 @@ public class UserService {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// 마이드리머 지원 목록 조회를 위한 소스
-//	public List<Application> mydreamerApplicationList(String userEmail){
-//		return userMapper.selectApplication(userEmail);
-//	}
-//
-//	// 마이드리머 북마크 조회를 위한 소스
-//	public List<Bookmark> mydreamerBookmarkList(String userEmail){
-//		return userMapper.selectBookmark(userEmail);
-//	}
+	public List<Application> mydreamerApplicationList(String userEmail){
+		return userMapper.selectApplication(userEmail);
+	}
+
+	// 마이드리머 북마크 조회를 위한 소스
+	public List<Bookmark> mydreamerBookmarkList(String userEmail){
+		return userMapper.selectBookmark(userEmail);
+	}
 	
 	// 회원정보 수정하기
 	public User selectUserProfile(String userEmail) {
