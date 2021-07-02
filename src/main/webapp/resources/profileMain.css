@@ -166,9 +166,7 @@ a.dreamer{
     border: 1px solid #c8c8c8;
     border-radius: 3px;
 }
-.sidebar-contents>div{
-    border-top: 1px solid #c8c8c8;
-}
+
 /* 사이드바 상단부터 첫번째 */
 .first-contents{
     border: none;
@@ -320,7 +318,20 @@ input[type="file" i]{
 }
 
 .third-contents{
-    padding: 30px 20px;
+    padding: 10px 20px 60px;
+    text-align: center;
+}
+
+.third-contents-btn{
+	background-color: rgb(0,206,201);
+	width: 190px;
+	height: 35px;	
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 8px;
+	margin-left: 10px;
+	font-weight: bold;
+	color: white;
 }
 
 .third-contents>a{
@@ -394,11 +405,6 @@ input[type="file" i]{
     border-right: 4px solid transparent;
 }
 
-/*학교입력부분 구분선*/
-.univ:after{
-    content: " | ";
-    color: #c8c8c8;
-}
 
 /* 전문분야설정쪽 큰틀 */
 .sec-frame{

@@ -1,5 +1,3 @@
-/* 마이드리머 CSS파일 */
-
 *{box-sizing: border-box;}
 
 a{
@@ -36,14 +34,14 @@ header {
     padding: 1vh;
     color: rgb(0,206,201);
     /* background: rgb(229, 250, 249); */
-    border-bottom: solid 1px rgba(26, 97, 96, 0.219);
+    border-bottom: solid 1px #c8c8c8;
     font-weight: bold;
     display: flex;/*한줄로 나오게*/
     justify-content: space-between;/*정렬*/
     align-items: center;
     font-size: 35px;
-    background-color: white;
     z-index: 1;
+    background-color: white
 }
 
 a.dreamer{
@@ -162,9 +160,10 @@ a.dreamer{
 }
 .sidebar-contents{
     background: #fff;
-    border: 1px solid #e1e2e3;
+    border: 1px solid #c8c8c8;
     border-radius: 3px;
 }
+
 
 /* 사이드바 상단부터 첫번째 */
 .first-contents{
@@ -343,251 +342,82 @@ input[type="file" i]{
 .m-contents{
     padding-left: 270px;
 }
-/* 지원현황 */
+/* 이력서 */
 .status{
     background: #fff;
-    border: 1px solid #e1e2e3;
+    border: 1px solid #c8c8c8;
     border-radius: 5px;
     margin: 0 0 20px;
-    padding: 26px 0 34px;
+    padding: 26px 0 25px;
 }
-/* 지원현황 h2 */
-.status-h2{
+
+.resume{
+    padding-left: 40px;
+    padding-right: 40px;
+    display: block;
+}
+
+/* 이력서 h2 */
+.resume-h2{
     font-size: 18px;
-    padding: 0 32px 26px;
+    padding: 0 0px 26px;
     font-weight: 700;
 }
 
-/* 지원현황 ul */
-.m-ul:after{
-    display: block;
-    content: "";
-    clear: both;
-}
-/* 지원현황 ul>li */
-.m-ul>li:first-of-type{
-    border: none;
-}
-
-.m-ul>li{
-    float: left;
-    width: 25%;
-    border-left: 1px solid #e1e2e3;
-}
-/* a태그 */
-.m-ul>li>a{
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-}
-
-.m-ul>li>a>em{
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1;
-    padding-bottom: 11px;
-    font-style: normal;
-}
-
-.m-ul>li>a>span{
-    font-size: 16px;
-    line-height: 19px;
-}
-/* 북마크쪽 큰틀 */
-.sec-frame{
-    background: #fff;
-    border: 1px solid #e1e2e3;
-    border-radius: 5px;
-}
-
-.sec-frame>div:first-of-type{
-    border: none;
-}
-
-.sec-frame>div{
-    border-top: 1px solid #e1e2e3;
-}
-
-/* 북마크 */
-.bookmark{
-    padding: 26px 30px 30px;
-}
-
-.bookmark>h2{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    margin-bottom: 30px;
-}
-
-.b-div>ul{
-    margin: -10px;
-    padding: 0;
-}
-b-ul:before{
-    content: "";
-    display: table;
-}
-
-.bookmark>div>ul>li{
-    width: 33.33333%;
-}
-
-.b-div>ul li{
-    padding: 10px;
-    list-style: none;
-    display: inline-block;
-    vertical-align: top;
-}
-
-/*기본정보수정*/
-
-.Form-title {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    margin-left: 20px;
-}
-
-.status {
-    background: #fff;
-    border: 1px solid #e1e2e3;
-    border-radius: 5px;
-    margin: 0 0 20px;
-    padding: 26px 20px 34px;
-}
-
-/*라벨설정*/
-.name, .email, .pwd {
-    max-width: 100%;
-    font-weight: bold;
-}
-
-/*이름,이메일*/
-h6{
-    color: #999;
-    font-size: 16px;
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    display: block;
-    margin-block-start: 2.33em;
-    margin-block-end: 2.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-/*input설정*/
-input:focus
-    {outline:none;}
-
-/*이름*/
-.name{
-    display: block;
+.resume1{
     position: relative;
-    padding: 15px 0;
-}
-
-/*텍스트박스*/
-#name{
-    width: 100%;
-    margin: 0;
-    padding: 12px 0;
-    color: #333;
     font-size: 16px;
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid #e1e2e3;
-}
-/*비밀번호*/
-#password{
-    width: 100%;
-    margin: 0;
-    padding: 12px 0;
-    color: #333;
-    font-size: 16px;
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid #e1e2e3;
-}
-/*이메일*/
-.email{
     display: block;
+}
+
+/*이력서선택버튼*/
+.resumeselectbtn{
     position: relative;
-    padding: 15px 0;
-}
-
-/*텍스트박스*/
-#email{
     width: 100%;
-    margin: 0;
-    padding: 12px 0;
-    color: #333;
-    font-size: 16px;
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid #e1e2e3;
-}
-
-/*번호*/
-.phone{
-    display: block;
-    position: relative;
-    padding: 15px 0;
-}
-
-.phoneInput{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    width: 100%;
-}
-
-.phonenumInput{
-    margin-top: 10px;
-    margin-left: 0;
-    width: 100%;
-    color: #333;
-    font-size: 16px;
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid #e1e2e3;
-}
-
-.FormFooter{
+    height: 50px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 45px;
-    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #c8c8c8;
+    margin-top: -2px;
+    text-align: left;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
 }
 
-.resign{
-    width: 30%;
-    height: 50px;
-    border-radius: 3px;
-    background-color: rgb(0, 206, 201);
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    
-}
-.submit{
-    width: 30%;
-    float: right;
-    height: 50px;
-    border-radius: 3px;
-    background-color: rgb(0, 206, 201);
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
 
+/* 전문분야설정쪽 큰틀 */
+.sec-frame{
+    background: #fff;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    padding: 26px 0 25px;
+}
+
+.speciality{
+    padding-left: 40px;
+    padding-right: 40px;
+    display: block;
+}
+
+/* 전문분야 h2 */
+.speciality-h2{
+    font-size: 18px;
+    padding: 0 0px 26px;
+    font-weight: 700;
+}
+
+.speciality1{
+    position: relative;
+    font-size: 16px;
+    display: block;
+}
+
+#salary:focus{
+    outline:none;
 }

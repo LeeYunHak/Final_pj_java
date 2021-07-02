@@ -169,6 +169,9 @@ a.dreamer {
 	border-radius: 3px;
 }
 
+.sidebar-contents>div {
+	border-top: 1px solid #e1e2e3;
+}
 /* 사이드바 상단부터 첫번째 */
 .first-contents {
 	border: none;
@@ -322,28 +325,15 @@ input[type="file" i] {
 	font-weight: 700;
 }
 
-.third-contents{
-    padding: 10px 20px 60px;
-    text-align: center;
+.third-contents {
+	padding: 30px 20px;
 }
 
-.third-contents-btn{
-	background-color: rgb(0,206,201);
-	width: 190px;
-	height: 35px;	
-	border-radius: 10px;
-	text-align: center;
-	padding-top: 8px;
-	margin-left: 10px;
-	font-weight: bold;
-	color: white;
-}
-
-.third-contents>a{
-    display: block;
-    font-size: 16px;
-    line-height: 17px;
-    font-weight: 500;
+.third-contents>a {
+	display: block;
+	font-size: 16px;
+	line-height: 17px;
+	font-weight: 500;
 }
 /* 사이드바 옆 */
 .m-contents {

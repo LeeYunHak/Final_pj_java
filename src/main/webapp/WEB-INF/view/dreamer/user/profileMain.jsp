@@ -10,8 +10,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/mydreamerresume.css">
-    <title>Mydreamer</title>
+    <link rel="stylesheet" href="/resources/profileMain.css">
+    <title>profileMain</title>
 </head>
 <body>
     <div class="full">
@@ -40,7 +40,7 @@
                                     <!-- <i class="camer_icon" role="presentation"></i> -->
                                 </div>
                             </div>
-                            <a href="#" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
+                            <a href="/user/profileEdit" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
                                 <dl>
                                     <dt id="namename" class="namename">${loginUser.userName }</dt>
                                     <dd>${loginUser.userEmail}</dd>
@@ -48,16 +48,8 @@
                                 </dl>
                             </a>
                         </div>
-                        <div class="second-contents">
-                            <div class="sc-div">
-                                <a href="#" class="sc-div-a">
-                                    <span>받은 제안</span>
-                                    <strong>0</strong> <!--받은 제안 수-->
-                                </a>
-                            </div>
-                        </div>
                         <div class="third-contents">
-                            <a href="#">계정 설정</a> <!--계정 설정으로 가는링크-->
+                            <a href="/user/profileEdit"><div class="third-contents-btn">프로필 수정</div></a> <!--계정 설정으로 가는링크-->
                         </div>
                     </div>
                 </aside>
@@ -74,12 +66,10 @@
                                 </div>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">학교</dl>
-                                    <div><span class="univ">용인대학교</span>
-                                        <span class="major" style="color: red;">전공 미입력</span>
-                                    </div>
+                                    <div><span class="univ">이력서에서 작성한 학교</span></div>
                                 </div>
                                 <div>
-                                <dl style="align-items: center;line-height: 24px;color: #999; margin-top: 60px;">안녕하세요 신입개발자 이윤학입니다.</dl>
+                                <dl style="align-items: center;line-height: 24px;color: #999; margin-top: 60px;">이력서의 자기소개</dl>
                                 </div>
                             </div>  
                         </div>             
@@ -101,23 +91,9 @@
                                 </div>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">작품개수</dl>
-                                    <div><span class="new">신입</span>
+                                    <div><span style="padding-bottom: 20px;" class="new">신입</span>
                                     </div>
                                 </div>
-                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px; margin-bottom: 30px;">
-                                    <dl style="align-items: center;line-height: 24px;color: #999;">직무</dl>
-                                    <div>
-                                        <span class="find">
-                                            <select style="width: 200px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
-                                                <option selected>구직 여부 설정</option>
-                                                <option>현재 구직중</option>
-                                                <option>관심 있음</option>
-                                                <option>전혀 관심없음</option>
-                                            </select>
-                                        </span>
-                                        <span class="open">이력서 공개중</span>
-                                    </div>
-                                </div>    
                             </div>  
                         </div>
                         <div style="margin-left: 650px;">
@@ -190,6 +166,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/resources/mydreamerresume.js">require('../script/viewLog.js') </script>
+    <script type="text/javascript" src="/resources/profileMain.js">require('../script/viewLog.js') </script>
 </body>
 </html>

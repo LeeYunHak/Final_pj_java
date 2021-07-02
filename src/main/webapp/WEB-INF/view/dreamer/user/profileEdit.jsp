@@ -40,7 +40,7 @@
                                     <!-- <i class="camer_icon" role="presentation"></i> -->
                                 </div>
                             </div>
-                            <a href="#" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
+                            <a href="/user/profileMain class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
                                 <dl>
                                     <dt id="namename" class="namename">${loginUser.userName }</dt>
                                     <dd>${loginUser.userEmail}</dd>
@@ -48,16 +48,8 @@
                                 </dl>
                             </a>
                         </div>
-                        <div class="second-contents">
-                            <div class="sc-div">
-                                <a href="#" class="sc-div-a">
-                                    <span>받은 제안</span>
-                                    <strong>0</strong> <!--받은 제안 수-->
-                                </a>
-                            </div>
-                        </div>
                         <div class="third-contents">
-                            <a href="#">계정 설정</a> <!--계정 설정으로 가는링크-->
+                            <a href="/user/profileMain"><div class="third-contents-btn">프로필 정보</div></a> <!--계정 설정으로 가는링크-->
                         </div>
                     </div>
                 </aside>
@@ -82,7 +74,7 @@
                     </div>
                     <footer class="FormFooter">
                         <button type="button" id="resign" class="resign" onclick="location.href='mainhtml.html'">회원탈퇴하기</button>    
-                        <button type="button" id="submit" class="submit">확인</button></footer>    
+                        <button type="button" id="submit" class="submit">수정하기</button></footer>    
                     </section>
             </div>
         </section>

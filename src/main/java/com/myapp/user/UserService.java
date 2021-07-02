@@ -84,12 +84,36 @@ public class UserService {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// 마이드리머 지원 목록 조회를 위한 소스
-	public List<Application> mydreamerApplicationList(String userEmail){
-		return userMapper.selectApplication(userEmail);
+//	public List<Application> mydreamerApplicationList(String userEmail){
+//		return userMapper.selectApplication(userEmail);
+//	}
+//
+//	// 마이드리머 북마크 조회를 위한 소스
+//	public List<Bookmark> mydreamerBookmarkList(String userEmail){
+//		return userMapper.selectBookmark(userEmail);
+//	}
+	
+	// 회원정보 수정하기
+	public User selectUserProfile(String userEmail) {
+		return userMapper.selectProfile(userEmail);
 	}
-
-	// 마이드리머 북마크 조회를 위한 소스
-	public List<Bookmark> mydreamerBookmarkList(String userEmail){
-		return userMapper.selectBookmark(userEmail);
+	public User userProfileEdit(User user) {
+		int row = userMapper.updateProfile(user);
+		if(row == 1) {
+			return new User(user.getUserId(), user.getUserProfileImage(), user.getUserName(), user.getUserEmail(), user.getUserPassword(), user.getUserPhone(), 
+					user.getUserJobGroup(), user.getUserJob(), user.getUserCareer(), user.getResumeTitle(), user.getWishNumber(), user.getbookmarkId());
+		}else {
+			return null;
+		}
+	}
+	
+	// 회원 탈퇴하기 (이메일과 비밀번호가 일치할 때 탈퇴 가능)
+	public boolean userDelete(String userEmail, String userPassword) {
+		int row = userMapper.deleteUser(userEmail, userPassword);
+		if(row == 1) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }

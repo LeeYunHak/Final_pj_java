@@ -2,6 +2,7 @@ package com.myapp.user;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
@@ -78,17 +79,27 @@ public interface UserMapper {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// 마이드리머 지원하기 목록
-	@Select("select c.company_name, cj.company_job_posting_job_group, cj.company_job_posting_job, a.application_date from user u "
-			+ "join application a on u.user_id = a.user_id join "
-			+ "company_job_posting cj on a.application_id = cj.application_id join company c on "
-			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_email = #{userEmail}")
-	public List<Application> selectApplication(String userEmail);
+//	@Select("select c.company_name, cj.company_job_posting_job_group, cj.company_job_posting_job, a.application_date from user u "
+//			+ "join application a on u.user_id = a.user_id join "
+//			+ "company_job_posting cj on a.application_id = cj.application_id join company c on "
+//			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_email = #{userEmail}")
+//	public List<Application> selectApplication(String userEmail);
+//	
+//	// 마이드리머 북마크 구인글 목록
+//	@Select("select cj.company_job_posting_title, c.company_name, c.company_country, cj.company_job_posting_period_end "
+//			+ "from user u join bookmark b on u.user_id = b.user_id join "
+//			+ "company_job_posting cj on b.bookmark_id = cj.bookmark_id join company c on "
+//			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_email = #{userEmail}")
+//	public List<Bookmark> selectBookmark(String userEmail);
 	
-	// 마이드리머 북마크 구인글 목록
-	@Select("select cj.company_job_posting_title, c.company_name, c.company_country, cj.company_job_posting_period_end "
-			+ "from user u join bookmark b on u.user_id = b.user_id join "
-			+ "company_job_posting cj on b.bookmark_id = cj.bookmark_id join company c on "
-			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_email = #{userEmail}")
-	public List<Bookmark> selectBookmark(String userEmail);
+	// 프로필 수정
+	@Select("select * from user where user_email = #{userEmail}")
+	public User selectProfile(String userEmail);
+	@Update("update user set user_name = #{userName}, user_password = #{userPassword}, user_email = #{userEmail}, user_phone = #{userPhone} "
+			+ "where user_email = #{userEmail}")
+	public int updateProfile(User user);
 	
+	// 회원탈퇴
+	@Delete("delete from user where user_email = #{userEmail} and user_password = #{userPassword}")
+	public int deleteUser(@Param("userEmail") String userEmail, @Param("userPassword") String userPassword);
 }

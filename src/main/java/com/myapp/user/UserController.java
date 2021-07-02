@@ -59,8 +59,9 @@ public class UserController {
 	@PostMapping("/mainBefore")
 	public String loginUser(Model model, String userEmail, String userPassword, HttpSession session) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
-		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
-		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
+//		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
+//		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
+		User profileEdit = userService.userProfileEdit(loginUser);
 
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
@@ -68,10 +69,9 @@ public class UserController {
 		} else {
 			model.addAttribute("loginUser", loginUser);
 			session.setAttribute("loginUser", loginUser);
-			session.setAttribute("bookmarkList",bookmarkList);
-			session.setAttribute("applicationList",applicationList);
-			System.out.println(bookmarkList);
-			System.out.println(applicationList);
+//			session.setAttribute("bookmarkList", bookmarkList);
+//			session.setAttribute("applicationList", applicationList);
+			session.setAttribute("profileEdit", profileEdit);
 			return "loginUserPage";
 		}
 	}
@@ -79,7 +79,7 @@ public class UserController {
 	// ✔✔✔✔✔✔✔✔구글 로그인 건들지마시오✔✔✔✔✔✔✔✔
 	// 로그인 페이지로 이동하는 컨트롤러
 	@RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
-	public String initLogin(Model model, HttpSession  session) throws Exception {
+	public String initLogin(Model model, HttpSession session) throws Exception {
 
 		// 구글code 발행
 		OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations();
@@ -103,7 +103,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/oauth", produces = "application/json")
-	public String kakaoLogin(@RequestParam("code") String code, Model model, HttpSession  session) {
+	public String kakaoLogin(@RequestParam("code") String code, Model model, HttpSession session) {
 		System.out.println("로그인 할때 임시 코드값");
 		// 카카오 홈페이지에서 받은 결과 코드
 		System.out.println(code);
@@ -258,7 +258,7 @@ public class UserController {
 
 	// 로그인 후 메인페이지
 	// 전체 기업구인글 목록이 나오는 페이지
-	//로고눌렀을때
+	// 로고눌렀을때
 	@GetMapping("/mainAfterMain")
 	public String mainAfterMain(Model model) {
 		List<JobPostingList> comList = userService.mainCompanyJobPostingList();
@@ -266,14 +266,14 @@ public class UserController {
 		return "loginUserPage";
 	}
 
-	@RequestMapping(value ="/mainAfter", method = RequestMethod.GET)
+	@RequestMapping(value = "/mainAfter", method = RequestMethod.GET)
 	@ResponseBody
 	public String mainCompanyJobPostingListB(Model model) {
 		List<JobPostingList> comList = userService.mainCompanyJobPostingList();
 		model.addAttribute("comList", comList);
 		return "loginUserPage";
 	}
-	
+
 	// 직종으로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterJobGroup", method = RequestMethod.GET)
 	@ResponseBody
@@ -282,16 +282,16 @@ public class UserController {
 		model.addAttribute("jobGroupList", jobGroupList);
 		return "loginUserPage";
 	}
-	
+
 	// 세부직업으로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterDetaliJob", method = RequestMethod.GET)
 	@ResponseBody
 	public String detailJobCompanyJobPostingList(Model model, String companyJobPostingJob) {
 		List<JobPostingList> detailJobList = userService.detailJobCompanyJobPostingList(companyJobPostingJob);
-		model.addAttribute("detailJobList ", detailJobList );
+		model.addAttribute("detailJobList ", detailJobList);
 		return "loginUserPage";
 	}
-	
+
 	// 경력(작품개수)로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterCareer", method = RequestMethod.GET)
 	@ResponseBody
@@ -309,7 +309,7 @@ public class UserController {
 		model.addAttribute("countryList", countryList);
 		return "loginUserPage";
 	}
-	
+
 	// 상세지역으로 검색 후 기업구인글 목록이 나오는 페이지
 	@RequestMapping(value = "/mainAfterDetailCountry", method = RequestMethod.GET)
 	@ResponseBody
@@ -318,14 +318,16 @@ public class UserController {
 		model.addAttribute("detailCountryList", detailCountryList);
 		return "loginUserPage";
 	}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//검색창 
+	// 검색창
 	@GetMapping("search")
 	public String search() {
-		return"searchpage";
+		return "searchpage";
 	}
-	//마이 드리머 
+
+	// 마이 드리머
 	@GetMapping("/mydreamer")
 	public String myDreamerView(Model model) {
 //		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList();
@@ -335,18 +337,23 @@ public class UserController {
 		return "mydreamer";
 	}
 	
-	//마이드리머 모디파이인가 먼가
+	@GetMapping("/profileMain")
+	public String profileMain() {
+		return "profileMain";
+	}
+
+	// 마이드리머 프로필수정페이지 
 	@GetMapping("/profileEdit")
-	public String myDreaerMDF() {
+	public String profileEdit(Model model, String userEmail, String userPassword) {
+		boolean deleteUser = userService.userDelete(userEmail, userPassword);
+		model.addAttribute("deleteUser", deleteUser);
 		return "profileEdit";
 	}
-	
-	//로그아웃
-		@RequestMapping("/logOut")
-		public String logout(HttpSession session) {
-			session.invalidate();
-			return "userMainBeforePage";
-		}
-	
-	
+
+	// 로그아웃
+	@RequestMapping("/logOut")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "userMainBeforePage";
+	}
 }
