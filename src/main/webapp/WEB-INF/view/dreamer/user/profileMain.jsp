@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <%
 	response.setHeader("Cache-Control","no-cache");
@@ -11,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/profileMain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>profileMain</title>
 </head>
 <body>
@@ -78,26 +81,28 @@
                         <div class="speciality">
                             <h2 class="speciality-h2">전문분야설정</h2>
                             <div class="speciality1">
-                               
                                 <div style="position: relative;font-size: 16px; display: block;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">직군</dl>
-                                    <div><span class="light"></span>조명</span>
+                                    <div><span class="light"></span>${loginUser.userJobGroup }직군</span>
+                                    <hr style="border-top : 1px solid #c8c8c8;">
                                     </div>
                                 </div>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">직무</dl>
-                                    <div><span class="backlight">백 조명</span>
+                                    <div><span class="backlight">${loginUser.userJob }직무</span>
+                                    <hr style="border-top : 1px solid #c8c8c8;">
                                     </div>
                                 </div>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">작품개수</dl>
-                                    <div><span style="padding-bottom: 20px;" class="new">신입</span>
+                                    <div style="padding-bottom: 20px;"><span class="new">${loginUser.userCareer }경력</span>
+                                    <hr style="border-top : 1px solid #c8c8c8;">
                                     </div>
                                 </div>
                             </div>  
                         </div>
                         <div style="margin-left: 650px;">
-                        <button type="button" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
+                        <button type="button" onclick="javascript:location.href='/user/professional'" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
                         background-color: #ffffff; border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;">전문분야 수정</button>
                         </div>    
                 </div>  
@@ -114,50 +119,19 @@
         <div class="ModalBody">
             <div class="ModalBody_input">
                 <ul style="padding-bottom: 10px; height: 400px; padding: 10px; list-style: none;overflow-y: scroll;">
+                	<%-- <c:forEach var="" items=""> --%>
                     <li class="mo_list" style="width: 50%; float: left; padding: 10px; position: relative; display: list-item;">
                         <button type="button" class="selected" onclick="changeByJS()">
                         <div class="mo_resume">
                             <div class="mo_status">작성 완료</div>
                         </div>
                         <dl class="mo_name">
-                            <dt style="color: #333;font-size: 16px; text-overflow: ellipsis; white-space: nowrap;overflow: hidden; line-height: 1.42857143; font-weight: bold;">이력서 1</dt>
-                            <dd style="color: #c8c8c8;font-size: 12px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;line-height: 1.42857143;margin-inline-start: 40px; margin: 0;">2021-05-25</dd>
+                            <dt style="color: #333;font-size: 16px; text-overflow: ellipsis; white-space: nowrap;overflow: hidden; line-height: 1.42857143; font-weight: bold;">이력서 제목1</dt>
+                            <dd style="color: #c8c8c8;font-size: 12px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;line-height: 1.42857143;margin-inline-start: 40px; margin: 0;">이력서 작성일</dd>
                         </dl>
                         </button>
                     </li>
-                    <li class="mo_list" style="width: 50%; float: left; padding: 10px; position: relative; display: list-item;">
-                        <button type="button" class="selected" onclick="changeByJS()">
-                        <div class="mo_resume">
-                            <div class="mo_status">작성 완료</div>
-                        </div>
-                        <dl class="mo_name2">
-                            <dt style="color: #333;font-size: 16px; text-overflow: ellipsis; white-space: nowrap;overflow: hidden; line-height: 1.42857143; font-weight: bold;">이력서 2</dt>
-                            <dd style="color: #c8c8c8;font-size: 12px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;line-height: 1.42857143;margin-inline-start: 40px; margin: 0;">2021-05-25</dd>
-                        </dl>
-                        </button>
-                    </li>
-                    <li class="mo_list" style="width: 50%; float: left; padding: 10px; position: relative; display: list-item;">
-                        <button type="button" class="selected" onclick="changeByJS()">
-                        <div class="mo_resume">
-                            <div class="mo_status">작성 완료</div>
-                        </div>
-                        <dl class="mo_name3">
-                            <dt style="color: #333;font-size: 16px; text-overflow: ellipsis; white-space: nowrap;overflow: hidden; line-height: 1.42857143; font-weight: bold;">이력서 3</dt>
-                            <dd style="color: #c8c8c8;font-size: 12px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;line-height: 1.42857143;margin-inline-start: 40px; margin: 0;">2021-05-25</dd>
-                        </dl>
-                        </button>
-                    </li>
-                    <li class="mo_list" style="width: 50%; float: left; padding: 10px; position: relative; display: list-item;">
-                        <button type="button" class="selected" onclick="changeByJS()">
-                        <div class="mo_resume">
-                            <div class="mo_status">작성 완료</div>
-                        </div>
-                        <dl class="mo_name4">
-                            <dt style="color: #333;font-size: 16px; text-overflow: ellipsis; white-space: nowrap;overflow: hidden; line-height: 1.42857143; font-weight: bold;">이력서 4</dt>
-                            <dd style="color: #c8c8c8;font-size: 12px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;line-height: 1.42857143;margin-inline-start: 40px; margin: 0;">2021-05-25</dd>
-                        </dl>
-                        </button>
-                    </li>
+                    <%-- </c:forEach> --%>
                 </ul>
                 <footer class="mo_foot">
                     <p class="warn">기본 이력서는 원티드 이력서만 선택 가능합니다.</p>
@@ -166,6 +140,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/resources/profileMain.js">require('../script/viewLog.js') </script>
+    <script type="text/javascript" src="/resources/profileMain.js"></script>
 </body>
 </html>

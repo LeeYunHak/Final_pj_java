@@ -110,7 +110,7 @@
                                 </div> 
                                 <div style="margin-left: 600px; margin-top: 50px;">
                                     <button type="button" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
-                                    background-color: #ffffff; border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='speciality.html'">수정 완료</button>
+                                    background-color: #ffffff; border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/profileMain'">수정 완료</button>
                                 </div>  
                             </div>  
                         </div>             

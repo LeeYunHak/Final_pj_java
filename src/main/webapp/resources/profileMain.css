@@ -340,10 +340,12 @@ input[type="file" i]{
     line-height: 17px;
     font-weight: 500;
 }
+
 /* 사이드바 옆 */
 .m-contents{
     padding-left: 270px;
 }
+
 /* 이력서 */
 .status{
     background: #fff;
@@ -405,6 +407,11 @@ input[type="file" i]{
     border-right: 4px solid transparent;
 }
 
+/*학교입력부분 구분선*/
+.univ:after{
+    content: " | ";
+    color: #c8c8c8;
+}
 
 /* 전문분야설정쪽 큰틀 */
 .sec-frame{
@@ -543,38 +550,15 @@ input[type="file" i]{
     text-align: left;
     margin: 0;
 }
-.mo_name2{
-    border-top: 1px solid #e0e0e0;
-    text-align: left;
-    padding: 10px 15px;
-    text-align: left;
-    margin: 0;
-}
-.mo_name3{
-    border-top: 1px solid #e0e0e0;
-    text-align: left;
-    padding: 10px 15px;
-    text-align: left;
-    margin: 0;
-}
-.mo_name4{
-    border-top: 1px solid #e0e0e0;
-    text-align: left;
-    padding: 10px 15px;
-    text-align: left;
-    margin: 0;
+
+/*클릭이벤트*/
+.clicked{
+    border: 1px solid rgb(0, 206, 201);
 }
 
-.mo_name:after{
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgb(0, 206, 201);
-    position: absolute;
-    box-sizing: border-box;
-}
+/*하위박스들은 선택안되게*/
+.mo_resume, .mo_name
+{ pointer-events: none; }
 
 .mo_foot{
     padding: 20px;
@@ -606,3 +590,6 @@ input[type="file" i]{
     border: none;
 }
 
+.mo_close{
+    display: none;
+}

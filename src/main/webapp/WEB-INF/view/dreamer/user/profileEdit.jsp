@@ -40,7 +40,7 @@
                                     <!-- <i class="camer_icon" role="presentation"></i> -->
                                 </div>
                             </div>
-                            <a href="/user/profileMain class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
+                            <a href="/user/profileMain" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
                                 <dl>
                                     <dt id="namename" class="namename">${loginUser.userName }</dt>
                                     <dd>${loginUser.userEmail}</dd>
@@ -54,28 +54,27 @@
                     </div>
                 </aside>
                 <section class="m-contents">
-                    <div class="status">
-                        <dl class="Form-title">
-                            <dt style="color: #333;font-size: 20px;font-weight: 600;line-height: 1;display: block;">기본정보 수정</dt>
-                            <dd style="margin-top: 18px;color: #9a9a9a;font-size: 16px;font-weight: 400;line-height: 1.8;margin-left: 0;">지원 결과 또는 추천 포지션 정보를 받아볼 이메일/연락처 정보 입력해주세요.</dd>
-                        </dl>
-                        <div class="modifyform">
-                            <div class="FormBlock-content content" style="padding-right: 20px;padding-left: 20px;">
-                            <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="${loginUser.userName }"></label>
-                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="password" type="password" autocomplete="off" value="*******"></label>
-                            <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="${loginUser.userEmail}"></label>
-                            <div class="phone"><h6 class="MobileInput-label">연락처</h6>
-                                <div class="phoneInput">
-                                <input id="mobile" class="phonenumInput" type="text" placeholder="(예시) 01034567890" value="${loginUser.userPhone}">
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <footer class="FormFooter">
-                        <button type="button" id="resign" class="resign" onclick="location.href='mainhtml.html'">회원탈퇴하기</button>    
-                        <button type="button" id="submit" class="submit">수정하기</button></footer>    
-                    </section>
+                	<form action="" method="post">
+	                    <div class="status">
+	                        <dl class="Form-title">
+	                            <dt style="color: #333;font-size: 20px;font-weight: 600;line-height: 1;display: block;">기본정보 수정</dt>
+	                            <dd style="margin-top: 18px;color: #9a9a9a;font-size: 16px;font-weight: 400;line-height: 1.8;margin-left: 0;">지원 결과 또는 추천 포지션 정보를 받아볼 이메일/연락처 정보 입력해주세요.</dd>
+	                        </dl>
+	                        <div class="modifyform">
+	                            <div class="FormBlock-content" style="padding-right: 20px; padding-left: 20px;">
+	                            <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="${loginUser.userName }"></label>
+	                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" type="password" autocomplete="off" value="*******"></label>
+	                            <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="${loginUser.userEmail}"></label>
+	                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" class="phonenumInput" type="text" placeholder="(예시) 01034567890" value="${loginUser.userPhone}"></label>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <footer class="FormFooter">
+	                        <button type="button" id="resign" class="resign" onclick="location.href='mainhtml.html'">회원탈퇴하기</button>    
+	                        <button type="button" id="submit" class="submit">수정하기</button>
+	                    </footer>
+                    </form>    
+                </section>
             </div>
         </section>
     </div>

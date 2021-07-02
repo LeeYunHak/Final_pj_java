@@ -107,6 +107,17 @@ public class UserService {
 		}
 	}
 	
+	// 전문분야 설정하기
+	public User professionalSet(User user) {
+		int row = userMapper.updateProfessional(user);
+		if(row == 1) {
+			return new User(user.getUserId(), user.getUserProfileImage(), user.getUserName(), user.getUserEmail(), user.getUserPassword(), user.getUserPhone(), 
+					user.getUserJobGroup(), user.getUserJob(), user.getUserCareer(), user.getResumeTitle(), user.getWishNumber(), user.getbookmarkId());
+		}else {
+			return null;
+		}
+	}
+	
 	// 회원 탈퇴하기 (이메일과 비밀번호가 일치할 때 탈퇴 가능)
 	public boolean userDelete(String userEmail, String userPassword) {
 		int row = userMapper.deleteUser(userEmail, userPassword);

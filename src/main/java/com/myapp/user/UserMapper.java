@@ -99,6 +99,10 @@ public interface UserMapper {
 			+ "where user_email = #{userEmail}")
 	public int updateProfile(User user);
 	
+	// 전문분야 설정
+	@Update("update user set user_job_group = #{userJobGroup}, user_job = #{userJob}, user_career = #{userCareer} where user_email = #{userEmail} ")
+	public int updateProfessional(User user);
+	
 	// 회원탈퇴
 	@Delete("delete from user where user_email = #{userEmail} and user_password = #{userPassword}")
 	public int deleteUser(@Param("userEmail") String userEmail, @Param("userPassword") String userPassword);

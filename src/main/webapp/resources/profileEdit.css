@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 마이드리머 CSS파일 */
 
 *{box-sizing: border-box;}
@@ -463,9 +464,12 @@ b-ul:before{
 }
 
 /*라벨설정*/
-.name, .email, .pwd {
+.name, .email, .pwd, .phone {
     max-width: 100%;
     font-weight: bold;
+    display: block;
+    position: relative;
+    padding: 15px 0;
 }
 
 /*이름,이메일*/
@@ -486,15 +490,8 @@ h6{
 input:focus
     {outline:none;}
 
-/*이름*/
-.name{
-    display: block;
-    position: relative;
-    padding: 15px 0;
-}
-
 /*텍스트박스*/
-#name{
+#name, #pwd, #email, #mobile{
     width: 100%;
     margin: 0;
     padding: 12px 0;
@@ -503,49 +500,6 @@ input:focus
     font-weight: 400;
     border: 0;
     border-bottom: 1px solid #e1e2e3;
-}
-/*비밀번호*/
-#password{
-    width: 100%;
-    margin: 0;
-    padding: 12px 0;
-    color: #333;
-    font-size: 16px;
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid #e1e2e3;
-}
-/*이메일*/
-.email{
-    display: block;
-    position: relative;
-    padding: 15px 0;
-}
-
-/*텍스트박스*/
-#email{
-    width: 100%;
-    margin: 0;
-    padding: 12px 0;
-    color: #333;
-    font-size: 16px;
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid #e1e2e3;
-}
-
-/*번호*/
-.phone{
-    display: block;
-    position: relative;
-    padding: 15px 0;
-}
-
-.phoneInput{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    width: 100%;
 }
 
 .phonenumInput{

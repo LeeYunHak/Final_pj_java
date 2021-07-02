@@ -62,6 +62,7 @@ public class UserController {
 //		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
 //		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
 		User profileEdit = userService.userProfileEdit(loginUser);
+		User professional = userService.professionalSet(loginUser);
 
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
@@ -72,6 +73,7 @@ public class UserController {
 //			session.setAttribute("bookmarkList", bookmarkList);
 //			session.setAttribute("applicationList", applicationList);
 			session.setAttribute("profileEdit", profileEdit);
+			session.setAttribute("professional", professional);
 			return "loginUserPage";
 		}
 	}
@@ -348,6 +350,11 @@ public class UserController {
 		boolean deleteUser = userService.userDelete(userEmail, userPassword);
 		model.addAttribute("deleteUser", deleteUser);
 		return "profileEdit";
+	}
+	
+	@GetMapping("/professional")
+	public String professional() {
+		return "professional";
 	}
 
 	// 로그아웃
