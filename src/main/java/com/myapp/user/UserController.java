@@ -51,7 +51,8 @@ public class UserController {
 
 	// 로그인 전 메인페이지
 	@GetMapping("/mainBefore")
-	public String mainBefore() {
+	public String mainBefore(Model model, String userEmail, HttpSession session) {
+		
 		return "userMainBeforePage";
 	}
 
@@ -72,6 +73,7 @@ public class UserController {
 			session.setAttribute("bookmarkList", bookmarkList);
 			session.setAttribute("applicationList", applicationList);
 			session.setAttribute("userProfileEdit", userProfileEdit);
+			
 			return "loginUserPage";
 		}
 	}
@@ -345,15 +347,16 @@ public class UserController {
 
 	// 마이드리머 프로필수정 페이지
 	@GetMapping("/profileEdit")
-	public String pofileEdit(Model model, User user) {
+	public String pofileEdit(Model model, String userEmail) {
+		
 		return "profileEdit";
 	}
 	
 	@PostMapping("/profileEdit")
 	public String pofileEditUpdate(Model model, User user) {
-		User profileEdit = userService.userProfileEdit(user);
-		model.addAttribute("profileEdit", profileEdit);
-		return "profileEdit";
+		User pofileEditUpdate = userService.userProfileEdit(user);
+		model.addAttribute("pofileEditUpdate", pofileEditUpdate);
+		return "profileMain";
 	}
 	
 	// 마이드리머 프로필삭제 페이지 

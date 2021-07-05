@@ -62,18 +62,18 @@
 	                        </dl>
 	                        <div class="modifyform">
 	                            <div class="FormBlock-content" style="padding-right: 20px; padding-left: 20px;">
-	                            <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="${loginUser.userName }"></label>
-	                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" type="password" autocomplete="off" value="*******"></label>
-	                            <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="${loginUser.userEmail}"></label>
-	                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" class="phonenumInput" type="text" placeholder="(예시) 01034567890" value="${loginUser.userPhone}"></label>
+	                            <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="${userProfileEdit.userName }"></label>
+	                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" type="password" autocomplete="off" value="${userProfileEdit.userPassword}"></label>
+	                            <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="${userProfileEdit.userEmail}"></label>
+	                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" class="phonenumInput" type="text" value="${userProfileEdit.userPhone}"></label>
 	                            </div>
 	                        </div>
 	                    </div>
-	                    <footer class="FormFooter">
-	                        <button type="button" id="resign" class="resign" onclick="location.href='mainhtml.html'">회원탈퇴하기</button>    
+	                    <footer class="FormFooter-edit">
 	                        <button type="submit" id="submit" class="submit">수정하기</button>
+	                        <button type="button" id="resign" class="resign" onclick="location.href='/user/userMainBefore'">회원탈퇴하기</button>    
 	                    </footer>
-                    </form>    
+                    </form>
                 </section>
             </div>
         </section>
