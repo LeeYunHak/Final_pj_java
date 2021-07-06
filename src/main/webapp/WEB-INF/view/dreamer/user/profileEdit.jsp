@@ -62,10 +62,10 @@
 	                        </dl>
 	                        <div class="modifyform">
 	                            <div class="FormBlock-content" style="padding-right: 20px; padding-left: 20px;">
-	                            <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="${pofileEditUpdate.userName }"></label>
-	                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" type="password" autocomplete="off" value="${pofileEditUpdate.userPassword}"></label>
-	                            <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="${pofileEditUpdate.userEmail}"></label>
-	                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" class="phonenumInput" type="text" value="${pofileEditUpdate.userPhone}"></label>
+	                            <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="${userProfileEdit.userName }"></label>
+	                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" type="password" autocomplete="off" value="${userProfileEdit.userPassword}"></label>
+	                            <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="${userProfileEdit.userEmail}"></label>
+	                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" class="phonenumInput" type="text" value="${userProfileEdit.userPhone}"></label>
 	                            </div>
 	                        </div>
 	                    </div>

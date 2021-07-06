@@ -26,23 +26,6 @@ document.getElementsByClassName('arrow_box')[0].addEventListener('mouseout', fun
 });
 
 
-// 검색창 JS 시작
-$(document).on('ready', function() {
-    $('.field').on('focus', function() {
-        $('body').addClass('is-focus');
-    });
-    $('.field').on('blur', function() {
-        $('body').removeClass('is-focus is-type');
-    });
-    $('.field').on('keydown', function(event) {
-        $('body').addClass('is-type');
-        if((event.which === 8) && $(this).val() === '') {
-            $('body').removeClass('is-type');
-        }
-    });
-});
-// 검색창 JS 끝
-
 //////////////////////////////////////////////////////////////////////
 // 직업, 지역 셀렉트박스 선택 기능
 function doChange(src, target) {

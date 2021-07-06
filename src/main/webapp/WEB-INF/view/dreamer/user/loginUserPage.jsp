@@ -2,11 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
 <%
 	response.setHeader("Cache-Control","no-cache");
 	response.setHeader("Pragma","no-cache");
 %>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/loginUserMain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>로그인 후 메인화면</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -55,13 +56,13 @@
                                     <div class="blank">
                                         <p></p>
                                     </div>
-                                    <div class="mydreamer"><a href="mydreamer.html"
+                                    <div class="mydreamer"><a href="/user/mydreamer"
                                             style="text-decoration: none;color: #00cec9;">
                                             MY드리머</a></div>
-                                    <div class="profile"><a href="mydreamermodify.html"
+                                    <div class="profile"><a href="/user/profileMain"
                                             style="text-decoration: none;color: #00cec9;">
                                             프로필</a></div>
-                                    <div class="logout"><a href="mainhtml.html"
+                                    <div class="logout"><a href="/user/userMainBefore"
                                             style="text-decoration: none;color: #00cec9;">
                                             로그아웃</a></div>
                                     <div class="blank">
@@ -69,7 +70,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <li><a id="nav3-6-ProfileName" type="button" href="mydreamer.html"
+                            <li><a id="nav3-6-ProfileName" type="button" href="/user/mydreamer"
                                     style="color: brown; font-size: 15px;">${loginUser.userName }</a>
                                 <div class="blank1"></div>
                             </li>
