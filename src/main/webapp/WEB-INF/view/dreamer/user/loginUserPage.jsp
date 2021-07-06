@@ -27,13 +27,26 @@
                 <div>
                     <li><a id="nav3-1-logo" href="loginUserPage.html"><img src="/resources/images/Dreamer.png" class="logo"></a>
                     </li>
-                    <div style=" font-weight: bold;">
+                    <div style="font-weight: bold; font-size: 10px;">
                         <ul>
                             <div class="blank2"></div>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
                             <li><a id="nav3-2-Select" type="button">탐색</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="/user/resume">이력서</a></li>
-                            <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">이력서</a></li>
+                            <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
                             <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
                             <div class="blank1"></div>
                             <div class="blank2"></div>
                             <div>
@@ -42,13 +55,13 @@
                                     <div class="blank">
                                         <p></p>
                                     </div>
-                                    <div class="mydreamer"><a href="/user/mydreamer"
+                                    <div class="mydreamer"><a href="mydreamer.html"
                                             style="text-decoration: none;color: #00cec9;">
                                             MY드리머</a></div>
-                                    <div class="profile"><a href="/user/profileMain"
+                                    <div class="profile"><a href="mydreamermodify.html"
                                             style="text-decoration: none;color: #00cec9;">
                                             프로필</a></div>
-                                    <div class="logout"><a href="/user/userMainBefore"
+                                    <div class="logout"><a href="mainhtml.html"
                                             style="text-decoration: none;color: #00cec9;">
                                             로그아웃</a></div>
                                     <div class="blank">
@@ -56,8 +69,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <li><a id="nav3-6-ProfileName" type="button" href="/user/mydreamer"
-                                    style="color: brown; font-size: 15px;">이름</a>
+                            <li><a id="nav3-6-ProfileName" type="button" href="mydreamer.html"
+                                    style="color: brown; font-size: 15px;">${loginUser.userName }</a>
                                 <div class="blank1"></div>
                             </li>
                         </ul>

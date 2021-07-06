@@ -58,11 +58,12 @@ public class UserController {
 
 	// 로그인 폼 요청 ✔✔✔✔✔✔✔✔수정한 부분✔✔✔✔✔✔✔✔
 	@PostMapping("/mainBefore")
-	public String loginUser(Model model, String userEmail, String userPassword, HttpSession session) {
+	public String loginUser(Model model, String userEmail, String userPassword, User user, HttpSession session) {
 		User loginUser = userService.loginUserSelect(userEmail, userPassword);
 		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
 		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
 		User userProfileEdit = userService.selectUserProfile(userEmail);
+		User pofileEditUpdate = userService.userProfileEdit(user);
 
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
@@ -73,6 +74,7 @@ public class UserController {
 			session.setAttribute("bookmarkList", bookmarkList);
 			session.setAttribute("applicationList", applicationList);
 			session.setAttribute("userProfileEdit", userProfileEdit);
+			model.addAttribute("pofileEditUpdate", pofileEditUpdate);
 			
 			return "loginUserPage";
 		}
@@ -332,10 +334,7 @@ public class UserController {
 	// 마이 드리머
 	@GetMapping("/mydreamer")
 	public String myDreamerView(Model model) {
-//		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList();
-//		List<Application> applicationList = userService.mydreamerApplicationList();
-//		model.addAttribute("bookmarkList",bookmarkList);
-//		model.addAttribute("applicationList",applicationList);
+
 		return "mydreamer";
 	}
 	
@@ -348,14 +347,12 @@ public class UserController {
 	// 마이드리머 프로필수정 페이지
 	@GetMapping("/profileEdit")
 	public String pofileEdit(Model model, String userEmail) {
-		
 		return "profileEdit";
 	}
 	
 	@PostMapping("/profileEdit")
 	public String pofileEditUpdate(Model model, User user) {
-		User pofileEditUpdate = userService.userProfileEdit(user);
-		model.addAttribute("pofileEditUpdate", pofileEditUpdate);
+		
 		return "profileMain";
 	}
 	
@@ -397,8 +394,4 @@ public class UserController {
 	public String resumeWrite() {
 		return "resumeWritePage";
 	}
-	
-	
-	
-	
 }
