@@ -26,7 +26,7 @@
         <div id="nav2" role="presentation">
             <ul id="nav3">
                 <div>
-                    <li><a id="nav3-1-logo" href="loginUserPage.html"><img src="/resources/images/Dreamer.png" class="logo"></a>
+                    <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a>
                     </li>
                     <div style="font-weight: bold; font-size: 10px;">
                         <ul>

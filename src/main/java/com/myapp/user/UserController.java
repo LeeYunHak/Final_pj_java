@@ -63,18 +63,15 @@ public class UserController {
 		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
 		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
 		User userProfileEdit = userService.selectUserProfile(userEmail);
-		User pofileEditUpdate = userService.userProfileEdit(user);
 
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
 			return "userMainBeforePage";
 		} else {
-			model.addAttribute("loginUser", loginUser);
 			session.setAttribute("loginUser", loginUser);
 			session.setAttribute("bookmarkList", bookmarkList);
 			session.setAttribute("applicationList", applicationList);
 			session.setAttribute("userProfileEdit", userProfileEdit);
-			model.addAttribute("pofileEditUpdate", pofileEditUpdate);
 			
 			return "loginUserPage";
 		}
@@ -352,7 +349,8 @@ public class UserController {
 	
 	@PostMapping("/profileEdit")
 	public String pofileEditUpdate(Model model, User user) {
-		
+		User profileUpdate = userService.userProfileEdit(user);
+		model.addAttribute("profileUpdate",profileUpdate);
 		return "profileMain";
 	}
 	
