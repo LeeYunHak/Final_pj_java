@@ -218,7 +218,7 @@ a.dreamer{
     cursor: pointer;
   }
   .resume-icon::before{
-    content: url(images/006-pencil.png);
+    content: url(/resources/images/006-pencil.png);
   }
 
   .wrapper>p{
@@ -251,7 +251,7 @@ a.dreamer{
     text-transform: none;
   }
   .upload-icon::before{
-    content: url(images/199-upload2.png);
+    content: url(/resources/images/199-upload2.png);
   }
 
   input[type="file"]{
