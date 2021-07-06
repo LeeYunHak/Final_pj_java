@@ -99,7 +99,7 @@
             </div>
         </div>
 
-        <form id="search" action="#" autocomplete="off">
+        <form id="search-form" action="#" autocomplete="off">
             <fieldset class="url" style="border: white;">
                 <input id="url" type="text" name="url" required>
                 <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
@@ -218,9 +218,6 @@
     <div class="full">
         <div class="half">
             <div style="float: left; display: block;">
-                <br>
-                <br>
-                <br>
                 <div class="bot">
                     <div class="sel">
                     	<table style="border-spacing: 5px 10px;">
