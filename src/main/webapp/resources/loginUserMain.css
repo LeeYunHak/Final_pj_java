@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 /* 공통 CSS START */
 * {
@@ -6,22 +7,19 @@
 	box-sizing: border-box;
 	font-family: 'Nanum Gothic', sans-serif;
 }
-
 div {
 	list-style-type: none;
 	display: inline-block;
 }
-
 li {
 	list-style-type: none;
 }
-
 			/* 스크롤 */
 html {
 	overflow: scroll;
 }
-
 /* 공통 CSS END */
+
 
 /* 검색창 CSS 시작 */
 .menu ul {
@@ -33,7 +31,6 @@ html {
 
 .menu li {
 	border-bottom: 1px solid #636366;
-	/* font-family: 'Open Sans', sans-serif; */
 	line-height: 45px;
 	padding-bottom: 3px;
 	padding-left: 20px;
@@ -56,11 +53,9 @@ html {
 	margin-right: 5px;
 }
 
-
 .jumbotron {
 	background: #fff url('https://imgur.com/download/yqdtMRi') no-repeat center;
 	background-size: cover;
-	/* min-height: 100vh; */
 	height: 60px;
 	line-height: 100%;
 	width: 100%;
@@ -71,7 +66,7 @@ html {
 	background-size: cover;
 }
 
-form {
+#search {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -80,12 +75,10 @@ form {
 	-ms-flex-direction: row;
 	flex-direction: row;
 	position: absolute;
-	top: 50px;
+	top: -20px;
 	width: 100%;
-	/* 수정? */
 	margin-top: 58px;
 	height: 176px;
-	/* padding-top: 53px; */
 	background-color: #00cecb3f;
 	border-bottom: 1px solid #c8c8c8;
 }
@@ -101,8 +94,8 @@ fieldset {
 }
 
 .url {
-	margin: 48px 50px;
-	padding-left: 100px;
+	margin: 80px 0px;
+	padding-left: 330px;
 	padding-right: 0px;
 	-webkit-box-flex: 5;
 	-ms-flex-positive: 5;
@@ -110,11 +103,12 @@ fieldset {
 }
 
 .enter {
-	margin: 20px 20px;
+	margin: 46px 10px;
 	-webkit-box-flex: 1;
 	text-align: left;
 	-ms-flex-positive: 1;
 	flex-grow: 1;
+	padding-right: 150px;
 }
 
 label {
@@ -177,7 +171,7 @@ input:focus~.after {
 	background-position: 0 0;
 }
 
-button {
+#search-btn {
 	position: relative;
 	width: 200px;
 	height: 34px;
@@ -202,7 +196,7 @@ button {
 	transition: all 0.3s ease;
 }
 
-button:before {
+#search-btn:before {
 	position: absolute;
 	font-family: system-ui, FontAwesome, Helvetica, Arial, sans-serif;
 	font-size: 20px;
@@ -217,13 +211,12 @@ button:before {
 	right: 2px;
 	display: block;
 	border-radius: 15px;
-	/*color: white;*/
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-button:active,
-button:focus,
-button:hover {
+#search-btn:active,
+#search-btn:focus,
+#search-btn:hover {
 	outline: none;
 	background-position: 0 0;
 	color: white;
@@ -236,7 +229,7 @@ button:hover {
 }
 
 @media (max-width: 590px) {
-	button {
+	#search-btn {
 		width: 150px;
 		margin-left: -20px !important;
 	}
@@ -247,14 +240,14 @@ button:hover {
 }
 
 @media (max-width: 475px) {
-	form {
+	#search {
 		-webkit-box-orient: vertical !important;
 		-webkit-box-direction: normal !important;
 		-ms-flex-direction: column !important;
 		flex-direction: column !important;
 	}
 
-	button {
+	#search-btn {
 		float: right;
 		margin-right: 25px !important;
 	}
@@ -286,42 +279,45 @@ button:hover {
 	float: left;
 	display: block;
 }
+
 .opennavi {
 	position: fixed;
-	top: 108px;
+	top: 74px;
 	left: 0px;
 	z-index: 999;
-	background-color: #00cec9;
+	background-color: #98fcfa;
 	border: 1px solid black;
 	border-top: none;
 	display: block;
 	display: none;
 	box-shadow: 1px solid black;
-	/* float: left; */
 }
+
 div>div>div>ul {
 	padding-left: 0px;
 }
+
 div>div>div>ul>li {
 	font-size: 15px;
 	color: gray;
 	text-align: center;
 }
+
 div>div>div>ul>li>input {
 	width: 100px;
 	margin-bottom: 3px;
 	color: black;
-	background-color: white;
+	background-color: #98fcfa;
 	text-align: center;
 }
 /* 탐색 메뉴~ END */
+
 
 /* 네비게이션바 CSS START */
 #nav1 {
 	display: block;
 	background: white;
-	/* border-bottom: solid 1px black; */
-	height: 100px;
+	height: 60px;
 	width: 100%;
 	text-align: center;
 	position: fixed;
@@ -337,8 +333,6 @@ div>div>div>ul>li>input {
 	width: 100%;
 	overflow: hidden;
 	line-height: 100%;
-	/* padding-top: 2px;
-	padding-bottom: 2px; */
 	padding-inline-start: 40px;
 	padding-inline-end: 40px;
 }
@@ -352,14 +346,11 @@ div>div>div>ul>li>input {
 .logo {
 	width: 180px;
 	height: 50px;
+	line-height: 100%;
 	padding-top: 10px;
 }
 
 #nav3-1-logo {
-	/* display: block;
-	cursor: pointer;
-	padding-left: 40px;
-	padding-right: 40px; */
 	padding: 0px;
 }
 
@@ -367,7 +358,6 @@ div>div>div>ul>li>input {
 #nav3-3-Resume,
 #nav3-4-Bookmark,
 #nav3-5-ConstructionSupport,
-#nav3-6-ProfileName,
 #nav3-7-MyPage {
 	background-color: white;
 	/* 링크 밑줄 제거 */
@@ -378,26 +368,53 @@ div>div>div>ul>li>input {
 	padding-left: 40px;
 	padding-right: 40px;
 	display: inline-block;
-	padding: 41px;
+	padding: 20px;
+}
+
+#nav3-7-MyPage {
+	background-color: white;
+	/* 링크 밑줄 제거 */
+	text-decoration: none;
+	font-size: 25px;
+	cursor: pointer;
+	color: #525252;
+	display: inline-block;
+	padding: 10px;
+}
+
+#nav3-6-ProfileName {
+	background-color: white;
+	/* 링크 밑줄 제거 */
+	text-decoration: none;
+	font-size: 25px;
+	cursor: pointer;
+	color: #525252;
+	padding-left: 0px;
+	padding-right: 0px;
+	display: inline-block;
+	padding: 20px;
 }
 
 /*호버*/
-#nav3-2-Select:hover{
-	color: rgb(0, 206, 201);;
+#nav3-2-Select:hover {
+	color: rgb(0, 206, 201);
 }
-#nav3-3-Resume:hover{
-	color: rgb(0, 206, 201);;
+
+#nav3-3-Resume:hover {
+	color: rgb(0, 206, 201);
 }
-#nav3-4-Bookmark:hover{
-	color: rgb(0, 206, 201);;
+
+#nav3-4-Bookmark:hover {
+	color: rgb(0, 206, 201);
 }
-#nav3-5-ConstructionSupport:hover{
-	color: rgb(0, 206, 201);;
+
+#nav3-5-ConstructionSupport:hover {
+	color: rgb(0, 206, 201);
 }
 
 .avatar {
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 }
 
 header>div>ul>div>div>ul>li,
@@ -407,20 +424,6 @@ header>div>ul>div>li {
 }
 /* 네비게이션바 CSS END */
 
-/* 구인글 리스트 */
-.company-job-list {
-	display: block;
-	height: 100%;
-	width: 100%;
-	float: left;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-#job-card {
-	float: left;
-	display: block;
-}
 
 a:visited {
 	text-decoration: none;
@@ -438,7 +441,7 @@ a:visited {
 	position: relative;
 	float: left;
 	/* padding-top: 100px; */
-	top: 15vh;
+	top: 160px;
 	height: 85vh;
 	width: 100%;
 	padding-left: 14vh;
@@ -461,7 +464,7 @@ select {
 	cursor: pointer;
 }
 
-.searchSearch{
+.searchSearch {
 	width: 20px;
 	height: 10vh;
 	text-align: center;
@@ -470,8 +473,15 @@ select {
 	display: block;
 }
 
-.prod1, .light1, .acous1, .shoot1, .se1, .manuf1, .actor1, .art1,
-	.makeup1 {
+.prod1,
+.light1,
+.acous1,
+.shoot1,
+.se1,
+.manuf1,
+.actor1,
+.art1,
+.makeup1 {
 	width: 18vh;
 	height: 10vh;
 	display: flex;
@@ -492,7 +502,8 @@ select {
 	display: block;
 }
 
-#job, #detail_job {
+#job, #detail_job, #country,
+#detail_country, #career {
 	width: 12vh;
 	padding: .6em .5em;
 	border: 1px solid #999;
@@ -504,26 +515,15 @@ select {
 	z-index: 1;
 }
 
-#country, #detail_country {
-	width: 12vh;
+#select_reset_btn{
+	width: 14vh;
 	padding: .6em .5em;
 	border: 1px solid #999;
 	border-radius: 4px;
 	box-shadow: 1px 1px gray;
 	font-size: 16px;
-	background-color: white;
-	cursor: pointer;
-	z-index: 1;
-}
-
-#work {
-	width: 10vh;
-	padding: .6em .5em;
-	border: 1px solid #999;
-	border-radius: 4px;
-	box-shadow: 1px 1px gray;
-	font-size: 16px;
-	background-color: white;
+	font-weight : bold;
+	background-color: #eeeeee;
 	cursor: pointer;
 	z-index: 1;
 }
@@ -610,6 +610,20 @@ select {
 }
 
 
+/* 구인글 select 리스트 START */
+.company-job-list {
+	display: block;
+	height: 100%;
+	width: 100%;
+	float: left;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#job-card {
+	float: left;
+	display: block;
+}
 
 a.company-href {
 	margin: 10px;
@@ -621,17 +635,6 @@ div.company-margin {
 	margin-top: 10px;
 	float: left;
 	display: block;
-}
-
-.company-job {
-	width: 100%;
-	padding: 10px;
-	list-style: none;
-	display: inline-block;
-	vertical-align: top;
-	height: 10px;
-	/* float: left;
-  display: block; */
 }
 
 .company-img {
@@ -669,7 +672,39 @@ div.company-margin {
 	display: block;
 }
 
-/*마이페이지박스*/
+.company-job-list {
+	display: block;
+	height: 100%;
+	width: 100%;
+	/* float: left; */
+	padding-left: 30px;
+	padding-right: 30px;
+	/* vertical-align: top; */
+}
+
+#job-card {
+	float: left;
+	display: block;
+}
+
+li.company-margin {
+	margin: 30px 10px 5px 10px;
+	float: left;
+	display: block;
+}
+
+/* .company-job {
+	width: 100%;
+	padding: 10px;
+	list-style: none;
+	display: inline-block;
+	
+	height: 10px;
+} */
+/* 구인글 select 리스트 END */
+
+
+/* 마이페이지박스 START */
 .arrow_box {
 	width: 120px;
 	height: 170px;
@@ -681,7 +716,8 @@ div.company-margin {
 	z-index: 9999999;
 }
 
-.arrow_box:after, .arrow_box:before {
+.arrow_box:after,
+.arrow_box:before {
 	bottom: 100%;
 	left: 50%;
 	border: solid transparent;
@@ -689,37 +725,45 @@ div.company-margin {
 	height: 0;
 	width: 0;
 	position: absolute;
-	pointer-events: none;z-index: 10000;
+	pointer-events: none;
+	z-index: 10000;
 }
 
 .arrow_box:after {
 	border-color: rgba(255, 255, 255, 0);
 	border-bottom-color: #ffffff;
 	border-width: 15px;
-	margin-left: -15px;z-index: 10000;
+	margin-left: -15px;
+	z-index: 10000;
 }
 
 .arrow_box:before {
 	border-color: rgba(96, 185, 245, 0);
 	border-bottom-color: rgb(0, 201, 206);
 	border-width: 21px;
-	margin-left: -21px;z-index: 1000000;
+	margin-left: -21px;
+	z-index: 1000000;
 }
 
-.mydreamer, .profile, .logout{
+.mydreamer,
+.profile,
+.logout {
 	width: 100%;
 	height: 50px;
 }
 
-.blank{
+.blank {
 	width: 100%;
 	height: 20px;
 }
-.blank1{
+
+.blank1 {
 	height: 100%;
 	width: 50px;
 }
-.blank2{
+
+.blank2 {
 	height: 100%;
 	width: 25px;
 }
+/* 마이페이지박스 END */

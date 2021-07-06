@@ -83,19 +83,19 @@
                             <div class="speciality1">
                                 <div style="position: relative;font-size: 16px; display: block;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">직군</dl>
-                                    <div><span class="light"></span>${loginUser.userJobGroup }직군</span>
+                                    <div><span id="job-group">${loginUser.userJobGroup }직군</span>
                                     <hr style="border-top : 1px solid #c8c8c8;">
                                     </div>
                                 </div>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">직무</dl>
-                                    <div><span class="backlight">${loginUser.userJob }직무</span>
+                                    <div><span id="detail-job">${loginUser.userJob }직무</span>
                                     <hr style="border-top : 1px solid #c8c8c8;">
                                     </div>
                                 </div>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
                                     <dl style="align-items: center;line-height: 24px;color: #999;">작품개수</dl>
-                                    <div style="padding-bottom: 20px;"><span class="new">${loginUser.userCareer }경력</span>
+                                    <div style="padding-bottom: 20px;"><span id="job-career">${loginUser.userCareer }경력</span>
                                     <hr style="border-top : 1px solid #c8c8c8;">
                                     </div>
                                 </div>

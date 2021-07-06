@@ -368,8 +368,12 @@ public class UserController {
 	}
 	
 	// 전문분야 설정 페이지
-	@PostMapping("/professional")
+	@GetMapping("/professional")
 	public String professional(Model model, User user) {
+		return "professional";
+	}
+	@PostMapping("/professional")
+	public String professionalEdit(Model model, User user) {
 		User professional = userService.professionalSet(user);
 		model.addAttribute("professional", professional);
 		return "profileMain";
