@@ -383,15 +383,5 @@ public class UserController {
 		return "userMainBeforePage";
 	}
 	
-	///////////////////////////        이력서     
-	//이력서 목록
-	@GetMapping("/resume")
-	public String resumeView() {
-		return "resumeViewPage";
-	}
 	
-	@GetMapping("/resumeWrite")
-	public String resumeWrite() {
-		return "resumeWritePage";
-	}
 }

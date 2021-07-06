@@ -10,5 +10,6 @@
 	<typeAliases>
 		<typeAlias type="com.myapp.user.User" alias="User"/>
 		<typeAlias type="com.myapp.company.Company" alias="Company"/>
+		<typeAlias type="com.myapp.resume.Resume" alias="Resume"/>
 	</typeAliases>
 </configuration>

@@ -17,7 +17,7 @@
 
 	<!-- 빈 등록 -->
 	<context:component-scan
-		base-package="com.myapp.user,com.myapp.company">
+		base-package="com.myapp.user,com.myapp.company,com.myapp.resume">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
@@ -46,7 +46,7 @@
 
 	<!-- 마이바티스 매퍼 빈을 스캔 -->
 	<mybatis-spring:scan
-		base-package="com.myapp.user,com.myapp.company" />
+		base-package="com.myapp.user,com.myapp.company,resume" />
 
 	<!-- 이메일 발송 bean 설정 -->
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
