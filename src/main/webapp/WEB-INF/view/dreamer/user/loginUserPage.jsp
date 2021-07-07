@@ -33,7 +33,7 @@
                             <div class="blank2"></div>
                             <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
                             <li><a id="nav3-2-Select" type="button">탐색</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">이력서</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="/user/resume">이력서</a></li>
                             <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
                             <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
                             <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>

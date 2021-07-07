@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- servlet_context -->
+	<context:component-scan base-package="com.myapp.user,com.myapp.company">
+		<!-- 컨트롤러만 스캔하여 추가 -->
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>	
+	
+	<!-- 뷰 리졸버 셋팅 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/dreamer/user/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	<!-- resource 관련 애들은 바로 서버 안쪽의 특정 폴더에 맵핑되도록 설정 -->
+	<!-- js,css,html,image 와 같은 정적파일을 맵핑시켜줌 -->
+	<!-- <mvc:resources location="/resources/static/css/" mapping="/resources/css/**"/> -->
+	<mvc:resources location="/resources/" mapping="/resources/**"/>
+	
+	<!-- 파라미터의 값을 객체로 넣어주기 위해 -->
+	<mvc:annotation-driven/>
+	
+	
+	<!-- google Class Bean설정 추가 -->
+    <!-- 클라이언트ID와 보안비밀 세팅 -->
+    <bean id="googleConnectionFactory" class="org.springframework.social.google.connect.GoogleConnectionFactory">
+        <constructor-arg value="119126326439-64bjbbcqa23uc9o7ue3n9g8skph4c1lc.apps.googleusercontent.com" />
+        <constructor-arg value="JnvvRY650osNgIQG3N_XfTIq" />
+    </bean>
+
+    <!-- 승인된 자바스크립트 원본과 승인된 리디렉션 URI -->
+    <bean id="googleOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
+        <property name="scope" value="https://www.googleapis.com/auth/plus.login" />
+        <property name="redirectUri" value="http://localhost:8080/user/mainAfter" />
+    </bean>
+    <!-- google Class Bean설정 추가 -->
+	
+	
+</beans>

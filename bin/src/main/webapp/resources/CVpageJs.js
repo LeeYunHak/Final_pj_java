@@ -119,6 +119,6 @@ Element.prototype.setStyle = function(styles) {
 
 addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click',function(){
-    location.href='/user/resumeWriteView'
+    location.href='/user/resumeWrite'
 },100000)
 

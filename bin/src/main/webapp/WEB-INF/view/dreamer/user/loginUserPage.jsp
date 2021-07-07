@@ -31,7 +31,7 @@
                         <ul>
                             <div class="blank2"></div>
                             <li><a id="nav3-2-Select" type="button">탐색</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">이력서</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="/user/resume">이력서</a></li>
                             <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
                             <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
                             <div class="blank1"></div>
@@ -86,14 +86,14 @@
             </div>
         </div>
 
-        <form action="#" autocomplete="off">
+        <form id="search" action="#" autocomplete="off">
             <fieldset class="url" style="border: white;">
                 <input id="url" type="text" name="url" required>
                 <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
                 <div class="after"></div>
             </fieldset>
             <fieldset class="enter" style="border: white;">
-                <button></button>
+                <button id="search-btn"></button>
             </fieldset>
         </form>
     </div>
@@ -210,81 +210,93 @@
                 <br>
                 <div class="bot">
                     <div class="sel">
-                        <table>
-                            <tr>
-                                <td><span style="font-weight: bold;">&nbsp;직&emsp;종&nbsp;</span></td>
-                                <td>
-                                    <select id="job">
-                                        <option value="allJob" selected>전체</option>
-                                        <option value="production">연출</option>
-                                        <option value="light">조명</option>
-                                        <option value="acoustics">음향</option>
-                                        <option value="photographing">촬영</option>
-                                        <option value="effects">특수효과</option>
-                                        <option value="making">제작</option>
-                                        <option value="actor">배우</option>
-                                        <option value="art">미술</option>
-                                        <option value="makeUp">분장</option>
-                                    </select>
+                    	<table style="border-spacing: 5px 10px;">
+                    		<tr>
+	                    		<td><span style="font-weight: bold;">&nbsp;직&emsp;종&nbsp;</span></td>
+	                    		<td>
+	                    		<form action="">
+	                    			<select id="job" class="job" onchange="doChange(this, 'detail_job')">
+			                            <option value="allJob" >전체</option>
+			                            <option value="production">연출</option>
+			                            <option value="light">조명</option>
+			                            <option value="acoustics">음향</option>
+			                            <option value="photographing">촬영</option>
+			                            <option value="effects">특수효과</option>
+			                            <option value="making">제작</option>
+			                            <option value="actor">배우</option>
+			                            <option value="art">미술</option>
+			                            <option value="makeUp">분장</option>
+			                        </select>
+			                    </form>
+	                    		</td>
+								<td><span style="font-weight: bold;">&emsp;&nbsp;지&emsp;역&nbsp;</span></td>
+								<td>
+								<form action="">
+									<select id="country" class="country" onchange="doChange(this, 'detail_country')">
+			                            <option value="allCountry" >전국</option>
+			                            <option value="seoul">서울</option>
+			                            <option value="busan">부산</option>
+			                            <option value="daegu">대구</option>
+			                            <option value="incheon">인천</option>
+			                            <option value="gwangju">광주</option>
+			                            <option value="daejeon">대전</option>
+			                            <option value="ulsan">울산</option>
+			                            <option value="sejong">세종</option>
+			                            <option value="gyeong-gi">경기</option>
+			                            <option value="gang-won">강원</option>
+			                            <option value="chungbug">충북</option>
+			                            <option value="chungnam">충남</option>
+			                            <option value="jeonbug">전북</option>
+			                            <option value="jeonnam">전남</option>
+			                            <option value="gyeongbug">경북</option>
+			                            <option value="gyeongnam">경남</option>
+			                            <option value="jeju">제주</option>
+			                        </select>
+								</form>
+								</td>
+								<td><span style="font-weight: bold;">&emsp;작품개수&nbsp;</span></td>
+								<td>
+								<form action="">
+									<select id="career" class="career">
+			                            <option value="allCareer" >전체</option>
+			                            <option value="new">신입</option>
+			                            <option value="one">1개</option>
+			                            <option value="two">2개</option>
+			                            <option value="three">3개</option>
+			                            <option value="four">4개</option>
+			                            <option value="five">5개</option>
+			                            <option value="six">6개</option>
+			                            <option value="seven">7개</option>
+			                            <option value="eight">8개</option>
+			                            <option value="nine">9개</option>
+			                            <option value="ten-more">10개 이상</option>
+			                        </select>
+			                    </form>
+								</td>
+							</tr>
+							<tr>
+								<td><span style="font-weight: bold;">세부직무&nbsp;</span></td>
+	                    		<td>
+	                    		<form action="">
+	                    			<select id="detail_job" class="detail_job">
+	                    				<option >전체</option>
+	                    			</select>
+	                    		</form>
+	                    		</td>
+								<td><span style="font-weight: bold;">&emsp;세부지역&nbsp;</span></td>
+	                    		<td>
+	                    		<form action="">
+	                    			<select id="detail_country" class="detail_country">
+	                    				<option >전지역</option>
+	                    			</select>
+	                    		</form>
+	                    		</td>
+	                    		<td colspan="2"> 
+                                    <span>&emsp;&emsp;&nbsp;<button type="button" id="select_reset_btn" class="select_reset_btn">초 기 화</button></span>
                                 </td>
-                                <td><span style="font-weight: bold;">&emsp;&nbsp;지&emsp;역&nbsp;</span></td>
-                                <td>
-                                    <select id="country">
-                                        <option value="allCountry" selected>전국</option>
-                                        <option value="seoul">서울</option>
-                                        <option value="busan">부산</option>
-                                        <option value="daegu">대구</option>
-                                        <option value="incheon">인천</option>
-                                        <option value="gwangju">광주</option>
-                                        <option value="daejeon">대전</option>
-                                        <option value="ulsan">울산</option>
-                                        <option value="sejong">세종</option>
-                                        <option value="gyeong-gi">경기</option>
-                                        <option value="gang-won">강원</option>
-                                        <option value="chungbug">충북</option>
-                                        <option value="chungnam">충남</option>
-                                        <option value="jeonbug">전북</option>
-                                        <option value="jeonnam">전남</option>
-                                        <option value="gyeongbug">경북</option>
-                                        <option value="gyeongnam">경남</option>
-                                        <option value="jeju">제주</option>
-                                    </select>
-                                </td>
-                                <td><span style="font-weight: bold;">&emsp;작품개수&nbsp;</span></td>
-                                <td>
-                                    <select id="work">
-                                        <option value="allCareer" selected>전체</option>
-                                        <option value="new">신입</option>
-                                        <option value="one">1개</option>
-                                        <option value="two">2개</option>
-                                        <option value="three">3개</option>
-                                        <option value="four">4개</option>
-                                        <option value="five">5개</option>
-                                        <option value="six">6개</option>
-                                        <option value="seven">7개</option>
-                                        <option value="eight">8개</option>
-                                        <option value="nine">9개</option>
-                                        <option value="ten-more">10개 이상</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span style="font-weight: bold;">세부직무&nbsp;</span></td>
-                                <td>
-                                    <select id="detail_job">
-                                        <option>전체</option>
-                                    </select>
-                                </td>
-                                <td><span style="font-weight: bold;">&emsp;세부지역&nbsp;</span></td>
-                                <td>
-                                    <select id="detail_country">
-                                        <option>전지역</option>
-                                    </select>
-                                </td>
-                            </tr>
+							</tr>
                         </table>
                     </div>
-
                     <select>
                         <option>최신순</option>
                         <option>인기순</option>
