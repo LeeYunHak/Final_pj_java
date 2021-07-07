@@ -718,45 +718,45 @@ li.company-margin {
 
 /* 마이페이지박스 START */
 .arrow_box {
-	width: 120px;
-	height: 170px;
-	text-align: center;
-	position: absolute;
-	background: #ffffff;
-	border: 4px solid rgb(0, 201, 206);
-	display: none;
-	z-index: 9999999;
+    width: 120px;
+    height: 170px;
+    margin-top: 8px;
+    text-align: center;
+    position: absolute;
+    background: #ffffff;
+    border: 4px solid rgb(0, 201, 206);
+    display: none;
+    z-index: 9999999;
 }
 
 .arrow_box:after,
 .arrow_box:before {
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: "";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	z-index: 10000;
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10000;
 }
 
 .arrow_box:after {
-	border-color: rgba(255, 255, 255, 0);
-	border-bottom-color: #ffffff;
-	border-width: 15px;
-	margin-left: -15px;
-	z-index: 10000;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 0px;
+    margin-left: -4px;
+    z-index: 10000;
 }
 
 .arrow_box:before {
-	border-color: rgba(96, 185, 245, 0);
-	border-bottom-color: rgb(0, 201, 206);
-	border-width: 21px;
-	margin-left: -21px;
-	z-index: 1000000;
+    border-color: rgba(96, 185, 245, 0);
+    border-bottom-color: rgb(0, 201, 206);
+    border-width: 16px;
+    margin-left: -48px;
+    z-index: 1000000;
 }
-
 .mydreamer,
 .profile,
 .logout {

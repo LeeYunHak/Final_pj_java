@@ -57,13 +57,13 @@
                                         <p></p>
                                     </div>
                                     <div class="mydreamer"><a href="/user/mydreamer"
-                                            style="text-decoration: none;color: #00cec9;">
+                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             MY드리머</a></div>
                                     <div class="profile"><a href="/user/profileMain"
-                                            style="text-decoration: none;color: #00cec9;">
+                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             프로필</a></div>
                                     <div class="logout"><a href="/user/userMainBefore"
-                                            style="text-decoration: none;color: #00cec9;">
+                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             로그아웃</a></div>
                                     <div class="blank">
                                         <p></p>
@@ -85,13 +85,7 @@
     <!-- 검색창 START -->
     <div class="menu, icon-close">
         <!-- Menu icon -->
-        <div class="">
-            <!-- <img src="https://imgur.com/download/GcHTJg2"> -->
-            <!-- </div> -->
-        </div>
-        <!-- <ul>
-            <li></li>
-        </ul> -->
+        <div class=""></div>
         <!-- Main body -->
         <div class="jumbotron">
 
@@ -221,6 +215,9 @@
     <div class="full">
         <div class="half">
             <div style="float: left; display: block;">
+            
+            
+			    <!-- 직종, 세부직무, 지역, 세부지역, 작품개수 등 START -->
                 <div class="bot">
                     <div class="sel">
                     	<table style="border-spacing: 5px 10px;">
@@ -315,32 +312,50 @@
                         <option>인기순</option>
                     </select>
                 </div>
+			    <!-- 직종, 세부직무, 지역, 세부지역, 작품개수 등 START -->
+			    
+			    
                 <!-- 구인글 select START -->
                 <div class="company-job-list">
                     <ul>
                         <li class="company-job" style="text-align: center;">
                             <div class="company-margin">
                                 <ul>
+                                	<c:forEach begin="" end="" >
                                     <li>
+                                    	<!-- 링크 -->
                                         <a class="company-href" href="http://www.naver.com">
+                                            <!-- 이미지 -->
                                             <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
                                             </div>
                                             <figcaption>
                                                 <div id="job-card" style="font-size: 16px;">
-                                                    <div class="job-card-position">구인글제목</div><br>
-                                                    <div class="job-card-company-name">기업명</div><br>
-                                                    <div class="job-card-company-location">위치</div><br>
-                                                    <div class="job-card-end-date">마감일</div>
+                                                    <!-- 내용 -->
+                                                    <div class="job-card-position">구인글제목 : 
+                                                    <%-- ${ } --%>
+                                                    </div><br>
+                                                    <div class="job-card-company-name">기업명 : 
+                                                    <%-- ${ } --%>
+                                                    </div><br>
+                                                    <div class="job-card-company-location">위치 : 
+                                                    <%-- ${ } --%>
+                                                    </div><br>
+                                                    <div class="job-card-end-date">마감일 : 
+                                                    <%-- ${ } --%>
+                                                    </div>
                                                 </div>
                                             </figcaption>
                                         </a>
                                     </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <!-- 구인글 select END -->
+                
+                
             </div>
         </div>
     </div>
