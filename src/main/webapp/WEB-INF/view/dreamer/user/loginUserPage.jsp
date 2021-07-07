@@ -86,7 +86,7 @@
     <div class="menu, icon-close">
         <!-- Menu icon -->
         <div class="">
-            <img src="https://imgur.com/download/GcHTJg2">
+            <!-- <img src="https://imgur.com/download/GcHTJg2"> -->
             <!-- </div> -->
         </div>
         <!-- <ul>
@@ -102,8 +102,8 @@
 
         <form id="search-form" action="#" autocomplete="off">
             <fieldset class="url" style="border: white;">
-                <input id="url" type="text" name="url" required>
-                <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
+                <input class="search-input" id="url" type="text" name="url" required>
+                <label id="search-label" for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
                 <div class="after"></div>
             </fieldset>
             <fieldset class="enter" style="border: white;">
@@ -113,7 +113,7 @@
     </div>
     <!-- 검색창 END -->
 
-    <!-- 탐색 -->
+    <!-- 탐색 START -->
     <div class="bar">
         <div class="opennavi" style="width: 100%; height: 237px; text-align: right;">
             <div style="z-index: 1000; float: left;">
@@ -216,6 +216,8 @@
             </div>
         </div>
     </div>
+    <!-- 탐색 END -->
+    
     <div class="full">
         <div class="half">
             <div style="float: left; display: block;">
