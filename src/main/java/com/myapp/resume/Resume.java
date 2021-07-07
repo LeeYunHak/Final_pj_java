@@ -1,5 +1,7 @@
 package com.myapp.resume;
 
+import java.time.LocalDate;
+
 public class Resume {
 	private int resumeId; // 일련번호
 	private String resumeTitle; // 이력서제목
@@ -11,10 +13,11 @@ public class Resume {
 	private String education; // 학력
 	private String skill; // 특기 및 기술
 	private String awards; // 수상경력 및 기타 경험
+	private LocalDate writeDate; // 작성일
 	
 	
 	public Resume(int resumeId, String resumeTitle, String userName, String userEmail, String userPhone,
-			String introduce, String career, String education, String skill, String awards) {
+			String introduce, String career, String education, String skill, String awards, LocalDate writeDate) {
 		super();
 		this.resumeId = resumeId;
 		this.resumeTitle = resumeTitle;
@@ -26,6 +29,7 @@ public class Resume {
 		this.education = education;
 		this.skill = skill;
 		this.awards = awards;
+		this.writeDate = writeDate;
 	}
 
 
@@ -134,18 +138,23 @@ public class Resume {
 	}
 
 
+	public LocalDate getWriteDate() {
+		return writeDate;
+	}
+
+
+	public void setWriteDate(LocalDate writeDate) {
+		this.writeDate = writeDate;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Resume [resumeId=" + resumeId + ", resumeTitle=" + resumeTitle + ", userName=" + userName
 				+ ", userEmail=" + userEmail + ", userPhone=" + userPhone + ", introduce=" + introduce + ", career="
-				+ career + ", education=" + education + ", skill=" + skill + ", awards=" + awards + "]";
+				+ career + ", education=" + education + ", skill=" + skill + ", awards=" + awards + ", writeDate="
+				+ writeDate + "]";
 	}
-	
-	
-	
-	
-
-	
 	
 	
 }
