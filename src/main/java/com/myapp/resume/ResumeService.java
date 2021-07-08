@@ -24,7 +24,7 @@ public class ResumeService {
 	}
 	
 	//이력서 목록
-	public List<Resume> selectResumeList(String userEmail){
+	public Resume selectResumeList(String userEmail){
 		return resumeMapper.selectResumeList(userEmail);
 	}
 	

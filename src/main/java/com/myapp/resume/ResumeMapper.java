@@ -19,7 +19,7 @@ public interface ResumeMapper {
 	//이력서 목록에 띄워줄 조회
 	@Select("select r.resume_title, r.user_name, r.write_date, r.user_email,r.resume_id, u.user_email"
 			+ " from user u join resume r on u.user_email = r.user_email where u.user_email = #{userEmail}")
-	public List<Resume> selectResumeList(String userEmail);
+	public Resume selectResumeList(String userEmail);
 	
 	
 	
