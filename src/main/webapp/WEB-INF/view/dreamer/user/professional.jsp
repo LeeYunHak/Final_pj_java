@@ -169,5 +169,6 @@
         </section>
     </div>
     <script type="text/javascript" src="/resources/professional.js"></script>
+    <script type="text/javascript" src="/resources/navi.js"></script>
 </body>
 </html>

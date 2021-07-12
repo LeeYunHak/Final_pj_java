@@ -1,31 +1,3 @@
-document.getElementById('nav3-2-Select').addEventListener('mouseover', function() {
-
-    document.getElementsByClassName('opennavi')[0].style.display ='block'
-});
-document.getElementsByClassName('opennavi')[0].addEventListener('mouseover', function() {
-
-    document.getElementsByClassName('opennavi')[0].style.display ='block'
-});
-document.getElementsByClassName('opennavi')[0].addEventListener('mouseout', function() {
-
-    document.getElementsByClassName('opennavi')[0].style.display ='none'
-});
-
-
-document.getElementById('nav3-7-MyPage').addEventListener('click', function() {
-
-    document.getElementsByClassName('arrow_box')[0].style.display ='block'
-});
-document.getElementsByClassName('arrow_box')[0].addEventListener('mouseover', function() {
-
-    document.getElementsByClassName('arrow_box')[0].style.display ='block'
-});
-document.getElementsByClassName('arrow_box')[0].addEventListener('mouseout', function() {
-
-    document.getElementsByClassName('arrow_box')[0].style.display ='none'
-});
-
-
 //////////////////////////////////////////////////////////////////////
 // 직업, 지역 셀렉트박스 선택 기능
 function doChange(src, target) {
