@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- servlet_context -->
-	<context:component-scan base-package="com.myapp.user,com.myapp.company">
+	<context:component-scan base-package="com.myapp.user,com.myapp.company,com.myapp.resume">
 		<!-- 컨트롤러만 스캔하여 추가 -->
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>	

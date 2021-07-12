@@ -1,3 +1,4 @@
+
 var addBtn = document.getElementById("addBtn");
 addBtn.addEventListener('click',function(){
 
@@ -119,6 +120,6 @@ Element.prototype.setStyle = function(styles) {
 
 addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click',function(){
-    location.href='/user/resumeWrite'
+    location.href='/user/resumeWriteView'
 },100000)
 

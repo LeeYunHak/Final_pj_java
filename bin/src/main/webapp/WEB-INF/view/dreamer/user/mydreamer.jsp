@@ -18,17 +18,66 @@
 </head>
 <body>
     <div class="full">
-        <header>
-            <h2><span><a href="/user/mainAfterMain" class="dreamer">Dreamer</a></h2>
-            <div class="navi">
-                <span><button id="selectnavi" type="button">탐색</button></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span><button id="resume" type="button">이력서</button><span>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <div class="mp">
-                    <img id="search1" src="/resources/images/search.png" style="width: 30px; height: 30px;">
-                    <img id="mypage1" src="/resources/images/avatar.png" style="width: 30px; height: 30px;">
+        <!-- 네비게이션바 START -->
+    <header id="nav1" role="presentation">
+        <div id="nav2" role="presentation">
+            <ul id="nav3">
+                <div>
+                    <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a>
+                    </li>
+                    <div style="font-weight: bold; font-size: 10px;">
+                        <ul>
+                            <div class="blank2"></div>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-2-Select" type="button">탐색</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">이력서</a></li>
+                            <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
+                            <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <div class="blank1"></div>
+                            <div class="blank2"></div>
+                            <div>
+                                <a id="nav3-7-MyPage"><img class="avatar" src="/resources/images/avatar.png"></a>
+                                <div class="arrow_box">
+                                    <div class="blank">
+                                        <p></p>
+                                    </div>
+                                    <div class="mydreamer"><a href="/user/mydreamer"
+                                            style="text-decoration: none;color: #00cec9;">
+                                            MY드리머</a></div>
+                                    <div class="profile"><a href="/user/profileMain"
+                                            style="text-decoration: none;color: #00cec9;">
+                                            프로필</a></div>
+                                    <div class="logout"><a href="/user/userMainBefore"
+                                            style="text-decoration: none;color: #00cec9;">
+                                            로그아웃</a></div>
+                                    <div class="blank">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <li><a id="nav3-6-ProfileName" type="button" href="/user/mydreamer"
+                                    style="color: brown; font-size: 15px;">${loginUser.userName }</a>
+                                <div class="blank1"></div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>    
-        </header>
+            </ul>
+        </div>
+    </header>
+    <!-- 네비게이션바 END -->
         <div class="Blank"></div>
         <section class="sec">
             <h2 class="subheading">MY 드리머</h2>

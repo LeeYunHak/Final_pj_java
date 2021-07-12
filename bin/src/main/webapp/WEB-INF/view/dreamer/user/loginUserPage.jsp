@@ -2,11 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
 <%
 	response.setHeader("Cache-Control","no-cache");
 	response.setHeader("Pragma","no-cache");
 %>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/loginUserMain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>로그인 후 메인화면</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -25,15 +26,28 @@
         <div id="nav2" role="presentation">
             <ul id="nav3">
                 <div>
-                    <li><a id="nav3-1-logo" href="loginUserPage.html"><img src="/resources/images/Dreamer.png" class="logo"></a>
+                    <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a>
                     </li>
-                    <div style=" font-weight: bold;">
+                    <div style="font-weight: bold; font-size: 10px;">
                         <ul>
                             <div class="blank2"></div>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
                             <li><a id="nav3-2-Select" type="button">탐색</a></li>
                             <li><a id="nav3-3-Resume" type="button" href="/user/resume">이력서</a></li>
-                            <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
+                            <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
                             <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
+                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
                             <div class="blank1"></div>
                             <div class="blank2"></div>
                             <div>
@@ -43,13 +57,13 @@
                                         <p></p>
                                     </div>
                                     <div class="mydreamer"><a href="/user/mydreamer"
-                                            style="text-decoration: none;color: #00cec9;">
+                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             MY드리머</a></div>
                                     <div class="profile"><a href="/user/profileMain"
-                                            style="text-decoration: none;color: #00cec9;">
+                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             프로필</a></div>
                                     <div class="logout"><a href="/user/userMainBefore"
-                                            style="text-decoration: none;color: #00cec9;">
+                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             로그아웃</a></div>
                                     <div class="blank">
                                         <p></p>
@@ -57,7 +71,7 @@
                                 </div>
                             </div>
                             <li><a id="nav3-6-ProfileName" type="button" href="/user/mydreamer"
-                                    style="color: brown; font-size: 15px;">이름</a>
+                                    style="color: brown; font-size: 15px;">${loginUser.userName }</a>
                                 <div class="blank1"></div>
                             </li>
                         </ul>
@@ -71,13 +85,7 @@
     <!-- 검색창 START -->
     <div class="menu, icon-close">
         <!-- Menu icon -->
-        <div class="">
-            <img src="https://imgur.com/download/GcHTJg2">
-            <!-- </div> -->
-        </div>
-        <!-- <ul>
-            <li></li>
-        </ul> -->
+        <div class=""></div>
         <!-- Main body -->
         <div class="jumbotron">
 
@@ -86,10 +94,10 @@
             </div>
         </div>
 
-        <form id="search" action="#" autocomplete="off">
+        <form id="search-form" action="#" autocomplete="off">
             <fieldset class="url" style="border: white;">
-                <input id="url" type="text" name="url" required>
-                <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
+                <input class="search-input" id="url" type="text" name="url" required>
+                <label id="search-label" for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
                 <div class="after"></div>
             </fieldset>
             <fieldset class="enter" style="border: white;">
@@ -99,7 +107,7 @@
     </div>
     <!-- 검색창 END -->
 
-    <!-- 탐색 -->
+    <!-- 탐색 START -->
     <div class="bar">
         <div class="opennavi" style="width: 100%; height: 237px; text-align: right;">
             <div style="z-index: 1000; float: left;">
@@ -202,12 +210,14 @@
             </div>
         </div>
     </div>
+    <!-- 탐색 END -->
+    
     <div class="full">
         <div class="half">
             <div style="float: left; display: block;">
-                <br>
-                <br>
-                <br>
+            
+            
+			    <!-- 직종, 세부직무, 지역, 세부지역, 작품개수 등 START -->
                 <div class="bot">
                     <div class="sel">
                     	<table style="border-spacing: 5px 10px;">
@@ -302,32 +312,50 @@
                         <option>인기순</option>
                     </select>
                 </div>
+			    <!-- 직종, 세부직무, 지역, 세부지역, 작품개수 등 START -->
+			    
+			    
                 <!-- 구인글 select START -->
                 <div class="company-job-list">
                     <ul>
                         <li class="company-job" style="text-align: center;">
                             <div class="company-margin">
                                 <ul>
+                                	<c:forEach begin="" end="" >
                                     <li>
+                                    	<!-- 링크 -->
                                         <a class="company-href" href="http://www.naver.com">
+                                            <!-- 이미지 -->
                                             <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
                                             </div>
                                             <figcaption>
                                                 <div id="job-card" style="font-size: 16px;">
-                                                    <div class="job-card-position">구인글제목</div><br>
-                                                    <div class="job-card-company-name">기업명</div><br>
-                                                    <div class="job-card-company-location">위치</div><br>
-                                                    <div class="job-card-end-date">마감일</div>
+                                                    <!-- 내용 -->
+                                                    <div class="job-card-position">구인글제목 : 
+                                                    <%-- ${ } --%>
+                                                    </div><br>
+                                                    <div class="job-card-company-name">기업명 : 
+                                                    <%-- ${ } --%>
+                                                    </div><br>
+                                                    <div class="job-card-company-location">위치 : 
+                                                    <%-- ${ } --%>
+                                                    </div><br>
+                                                    <div class="job-card-end-date">마감일 : 
+                                                    <%-- ${ } --%>
+                                                    </div>
                                                 </div>
                                             </figcaption>
                                         </a>
                                     </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <!-- 구인글 select END -->
+                
+                
             </div>
         </div>
     </div>
