@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%
 	response.setHeader("Cache-Control","no-cache");
@@ -110,12 +111,22 @@
 	                            <dd style="margin-top: 18px;color: #9a9a9a;font-size: 16px;font-weight: 400;line-height: 1.8;margin-left: 0;">지원 결과 또는 추천 포지션 정보를 받아볼 이메일/연락처 정보 입력해주세요.</dd>
 	                        </dl>
 	                        <div class="modifyform">
+	                            <c:if test="${number eq 1 }">
 	                            <div class="FormBlock-content" style="padding-right: 20px; padding-left: 20px;">
-	                            <label for="name" class="name"><h6>이름</h6><input id="name" type="text" autocomplete="off" value="${userProfileEdit.userName }"></label>
-	                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" type="password" autocomplete="off" value="${userProfileEdit.userPassword}"></label>
-	                            <label for="email" class="email"><h6>이메일</h6><input id="email" type="email" autocomplete="off" value="${userProfileEdit.userEmail}"></label>
-	                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" class="phonenumInput" type="text" value="${userProfileEdit.userPhone}"></label>
-	                            </div>
+		                            <label for="name" class="name"><h6>이름</h6><input id="name" name="userName" type="text" placeholder="이름을 입력하세요" autocomplete="off" value="${loginUser.userName }"></label>
+		                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" name="userPassword" type="password" placeholder="비밀번호를 입력하세요" autocomplete="off" value="${loginUser.userPassword}"></label>
+		                            <label for="email" class="email"><h6>이메일</h6><input id="email" name="userEmail" type="email" placeholder="이메일을 입력하세요" autocomplete="off" value="${loginUser.userEmail}"></label>
+		                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" name="userPhone" class="phonenumInput" placeholder="연락처를 입력하세요" type="text" value="${loginUser.userPhone}"></label>
+		                            </div>
+	                            </c:if>
+	                            <c:if test="${number eq 0 }">
+	                            <div class="FormBlock-content" style="padding-right: 20px; padding-left: 20px;">
+		                            <label for="name" class="name"><h6>이름</h6><input id="name" name="userName" type="text" placeholder="이름을 입력하세요" autocomplete="off" value="${profileUpdate.userName }"></label>
+		                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" name="userPassword" type="password" placeholder="비밀번호를 입력하세요" autocomplete="off" value="${profileUpdate.userPassword}"></label>
+		                            <label for="email" class="email"><h6>이메일</h6><input id="email" name="userEmail" type="email" placeholder="이메일을 입력하세요" autocomplete="off" value="${profileUpdate.userEmail}"></label>
+		                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" name="userPhone" class="phonenumInput" placeholder="연락처를 입력하세요" type="text" value="${profileUpdate.userPhone}"></label>
+		                            </div>
+	                            </c:if>
 	                        </div>
 	                    </div>
 	                    <footer class="FormFooter-edit">

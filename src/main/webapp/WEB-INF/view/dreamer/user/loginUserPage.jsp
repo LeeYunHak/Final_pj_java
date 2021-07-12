@@ -62,7 +62,7 @@
                                     <div class="profile"><a href="/user/profileMain"
                                             style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             프로필</a></div>
-                                    <div class="logout"><a href="/user/userMainBefore"
+                                    <div class="logout"><a href="/user/logOut"
                                             style="text-decoration: none;color: #00cec9; font-size: 15px;">
                                             로그아웃</a></div>
                                     <div class="blank">

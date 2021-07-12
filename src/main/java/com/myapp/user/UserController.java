@@ -341,15 +341,17 @@ public class UserController {
 		return "profileMain";
 	}
 
-	// 마이드리머 프로필수정 페이지
+	// 마이드리머 프로필수정 페이지 //할것
 	@GetMapping("/profileEdit")
 	public String pofileEdit(Model model, String userEmail) {
+		model.addAttribute("number",1);
 		return "profileEdit";
 	}
 	
 	@PostMapping("/profileEdit")
 	public String pofileEditUpdate(Model model, User user) {
 		User profileUpdate = userService.userProfileEdit(user);
+		model.addAttribute("number",0);
 		model.addAttribute("profileUpdate",profileUpdate);
 		return "profileMain";
 	}
