@@ -374,6 +374,7 @@ public class UserController {
 		User professional = userService.professionalSet(user);
 		model.addAttribute("professional", professional);
 		System.out.println("호출");
+		System.out.println(professional);
 		return "profileMain";
 	}
 

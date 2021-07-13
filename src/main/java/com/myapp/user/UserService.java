@@ -110,6 +110,8 @@ public class UserService {
 	// 전문분야 설정하기
 	public User professionalSet(User user) {
 		int row = userMapper.updateProfessional(user);
+		System.out.println("--------------------");
+		System.out.println(row+"전문분야실행됐나");
 		if(row == 1) {
 			return new User(user.getUserId(), user.getUserProfileImage(), user.getUserName(), user.getUserEmail(), user.getUserPassword(), user.getUserPhone(), 
 					user.getUserJobGroup(), user.getUserJob(), user.getUserCareer(), user.getResumeTitle(), user.getWishNumber(), user.getbookmarkId());

@@ -106,39 +106,40 @@
                     <div class="status">
                         <div class="resume">
                             <h2 class="resume-h2">전문분야 설정</h2>
-                            <form action="/user/professional/update" method="post">
                             <div class="resume1">
+                            <form action="/user/professional/update" method="post">
                             	<input type="text" name="userEmail"
-										value="${loginUser.userEmail}" disabled="disabled"
-										>
+										value="${loginUser.userEmail}" style="display: none;">
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px; margin-bottom: 30px;">
                                     <label for="jobKindU" style="align-items: center;line-height: 24px;color: #999; margin-right: 30px; padding-left: 10px;">직군</label>
-                                    <select class="form-control" id="jobKindU" name="userJobGroup" onchange="jobKindChange(this)"
+                                    <select class="form-control" id="jobKindU" onchange="jobKindChange(this)"
                                     style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
                                         <option value="a">선택하기</option>
-                                        <option value="b">연출</option>
-                                        <option value="c">조명</option>
-                                        <option value="d">음향</option>
-                                        <option value="e">촬영</option>
-                                        <option value="f">특수효과</option>
-                                        <option value="g">제작</option>
-                                        <option value="h">배우</option>
-                                        <option value="i">미술</option>
-                                        <option value="j">분장</option>
+                                        <option id="1" value="b">연출</option>
+                                        <option id="2" value="c">조명</option>
+                                        <option id="3" value="d">음향</option>
+                                        <option id="4" value="e">촬영</option>
+                                        <option id="5" value="f">특수효과</option>
+                                        <option id="6" value="g">제작</option>
+                                        <option id="7" value="h">배우</option>
+                                        <option id="8" value="i">미술</option>
+                                        <option id="9" value="j">분장</option>
                                     </select>
+                                    <input id="test" type="text" name="userJobGroup" style="display: none;">
                                 </div>   
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px; margin-bottom: 30px;">
                                     <label for="jobKindD" style="align-items: center;line-height: 24px;color: #999; margin-right: 30px; padding-left: 10px;">직무</label>
-                                    <select class="form-control" id="jobKindD" name="userJob"
+                                    <select class="form-control" id="jobKindD" onchange="jobChange()"
                                     style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
                                     <option>직군을 선택해 주세요</option>
                                     </select>
+                                    <input id="test2" type="text" name="userJob" style="display: none">
                                 </div>   
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px; margin-bottom: 30px;">
                                     <label style="align-items: center;line-height: 24px;color: #999; margin-right: 13px; margin-left: -5px;">작품개수</label>
                                     
                                         <span class="find">
-                                            <select name="userCareer" style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
+                                            <select id="career" onchange="careerCh()" style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
                                                 <option selected>선택하기</option>
                                                 <option>신입</option>
                                                 <option>1개</option>
@@ -152,6 +153,7 @@
                                                 <option>9개</option>
                                                 <option>10개이상</option>
                                             </select>
+                                            <input id="test3" type="text" name="userCareer" style="display: none;">
                                         </span>
                                    
                                 </div> 
@@ -163,10 +165,10 @@
                                 </div> 
                                 <div style="margin-left: 600px; margin-top: 50px;">
                                     <button type="submit" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
-                                    background-color: #ffffff; border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/profileMain'">수정 완료</button>
+                                    background-color: #ffffff; border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;">수정 완료</button>
                                 </div>
-                                </form>  
-                            </div>  
+	                           </form>   
+                            </div>
                         </div>             
                     </div>
                 </section>
