@@ -106,10 +106,14 @@
                     <div class="status">
                         <div class="resume">
                             <h2 class="resume-h2">전문분야 설정</h2>
+                            <form action="/user/professional/update" method="post">
                             <div class="resume1">
+                            	<input type="text" name="userEmail"
+										value="${loginUser.userEmail}" disabled="disabled"
+										>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px; margin-bottom: 30px;">
                                     <label for="jobKindU" style="align-items: center;line-height: 24px;color: #999; margin-right: 30px; padding-left: 10px;">직군</label>
-                                    <select class="form-control" id="jobKindU" name="jobKindU" onchange="jobKindChange(this)"
+                                    <select class="form-control" id="jobKindU" name="userJobGroup" onchange="jobKindChange(this)"
                                     style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
                                         <option value="a">선택하기</option>
                                         <option value="b">연출</option>
@@ -125,7 +129,7 @@
                                 </div>   
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px; margin-bottom: 30px;">
                                     <label for="jobKindD" style="align-items: center;line-height: 24px;color: #999; margin-right: 30px; padding-left: 10px;">직무</label>
-                                    <select class="form-control" id="jobKindD" name="jobKindD"
+                                    <select class="form-control" id="jobKindD" name="userJob"
                                     style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
                                     <option>직군을 선택해 주세요</option>
                                     </select>
@@ -134,7 +138,7 @@
                                     <label style="align-items: center;line-height: 24px;color: #999; margin-right: 13px; margin-left: -5px;">작품개수</label>
                                     
                                         <span class="find">
-                                            <select style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
+                                            <select name="userCareer" style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
                                                 <option selected>선택하기</option>
                                                 <option>신입</option>
                                                 <option>1개</option>
@@ -158,9 +162,10 @@
                                     <input type="text" style="width:50px; padding: .8em .5em;border:none;font-size: 15px; pointer-events: none;" placeholder="만원">
                                 </div> 
                                 <div style="margin-left: 600px; margin-top: 50px;">
-                                    <button type="button" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
+                                    <button type="submit" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
                                     background-color: #ffffff; border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/profileMain'">수정 완료</button>
-                                </div>  
+                                </div>
+                                </form>  
                             </div>  
                         </div>             
                     </div>

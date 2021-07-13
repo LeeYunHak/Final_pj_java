@@ -369,10 +369,11 @@ public class UserController {
 	public String professional(Model model, User user) {
 		return "professional";
 	}
-	@PostMapping("/professional")
+	@PostMapping("/professional/update")
 	public String professionalEdit(Model model, User user) {
 		User professional = userService.professionalSet(user);
 		model.addAttribute("professional", professional);
+		System.out.println("호출");
 		return "profileMain";
 	}
 
