@@ -129,26 +129,52 @@
                     <div class="sec-frame">
                         <div class="speciality">
                             <h2 class="speciality-h2">전문분야설정</h2>
-                            <div class="speciality1">
-                                <div style="position: relative;font-size: 16px; display: block;">
-                                    <dl style="align-items: center;line-height: 24px;color: #999;">직군</dl>
-                                    <div><span id="job-group">${loginUser.userJobGroup }직군</span>
-                                    <hr style="border-top : 1px solid #c8c8c8;">
-                                    </div>
-                                </div>
-                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
-                                    <dl style="align-items: center;line-height: 24px;color: #999;">직무</dl>
-                                    <div><span id="detail-job">${loginUser.userJob }직무</span>
-                                    <hr style="border-top : 1px solid #c8c8c8;">
-                                    </div>
-                                </div>
-                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
-                                    <dl style="align-items: center;line-height: 24px;color: #999;">작품개수</dl>
-                                    <div style="padding-bottom: 20px;"><span id="job-career">${loginUser.userCareer }경력</span>
-                                    <hr style="border-top : 1px solid #c8c8c8;">
-                                    </div>
-                                </div>
-                            </div>  
+                            <c:choose>
+                            	<c:when test="${update eq 1 }">
+		                            <div class="speciality1">
+		                                <div style="position: relative;font-size: 16px; display: block;">
+		                                    <dl style="align-items: center;line-height: 24px;color: #999;">직군</dl>
+		                                    <div><span id="job-group">${professional.userJobGroup }</span>
+		                                    <hr style="border-top : 1px solid #c8c8c8;">
+		                                    </div>
+		                                </div>
+		                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
+		                                    <dl style="align-items: center;line-height: 24px;color: #999;">직무</dl>
+		                                    <div><span id="detail-job">${professional.userJob }</span>
+		                                    <hr style="border-top : 1px solid #c8c8c8;">
+		                                    </div>
+		                                </div>
+		                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
+		                                    <dl style="align-items: center;line-height: 24px;color: #999;">작품개수</dl>
+		                                    <div style="padding-bottom: 20px;"><span id="job-career">${professional.userCareer }</span>
+		                                    <hr style="border-top : 1px solid #c8c8c8;">
+		                                    </div>
+		                                </div>
+		                            </div>
+                            	</c:when>
+                            	<c:otherwise>
+                            		<div class="speciality1">
+		                                <div style="position: relative;font-size: 16px; display: block;">
+		                                    <dl style="align-items: center;line-height: 24px;color: #999;">직군</dl>
+		                                    <div><span id="job-group">${loginUser.userJobGroup }</span>
+		                                    <hr style="border-top : 1px solid #c8c8c8;">
+		                                    </div>
+		                                </div>
+		                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
+		                                    <dl style="align-items: center;line-height: 24px;color: #999;">직무</dl>
+		                                    <div><span id="detail-job">${loginUser.userJob }</span>
+		                                    <hr style="border-top : 1px solid #c8c8c8;">
+		                                    </div>
+		                                </div>
+		                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
+		                                    <dl style="align-items: center;line-height: 24px;color: #999;">작품개수</dl>
+		                                    <div style="padding-bottom: 20px;"><span id="job-career">${loginUser.userCareer }</span>
+		                                    <hr style="border-top : 1px solid #c8c8c8;">
+		                                    </div>
+		                                </div>
+		                            </div>
+                            	</c:otherwise>
+                            </c:choose>
                         </div>
                         <div style="margin-left: 650px;">
                         <button type="button" onclick="javascript:location.href='/user/professional'" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;

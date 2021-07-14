@@ -373,8 +373,7 @@ public class UserController {
 	public String professionalEdit(Model model, User user) {
 		User professional = userService.professionalSet(user);
 		model.addAttribute("professional", professional);
-		System.out.println("호출");
-		System.out.println(professional);
+		model.addAttribute("update", 1);
 		return "profileMain";
 	}
 

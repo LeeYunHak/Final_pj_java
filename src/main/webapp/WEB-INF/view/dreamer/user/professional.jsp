@@ -137,7 +137,6 @@
                                 </div>   
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px; margin-bottom: 30px;">
                                     <label style="align-items: center;line-height: 24px;color: #999; margin-right: 13px; margin-left: -5px;">작품개수</label>
-                                    
                                         <span class="find">
                                             <select id="career" onchange="careerCh()" style="width: 600px; padding: .8em .5em; border: 1px solid #c8c8c8; border-radius: 0px;  font-size: 15px;">
                                                 <option selected>선택하기</option>
@@ -155,13 +154,6 @@
                                             </select>
                                             <input id="test3" type="text" name="userCareer" style="display: none;">
                                         </span>
-                                   
-                                </div> 
-                                <div style="position: relative;font-size: 16px; display: block;">
-                                    <label style="align-items: center;line-height: 24px;color: #999; margin-right: 13px; margin-left: -5px;">희망급여</label>
-                                    <span class="light">
-                                    <input type="number" id="salary" style="width:558px; padding: .8em .5em;border:none; border-bottom : 1px solid #c8c8c8; font-size: 15px;">
-                                    <input type="text" style="width:50px; padding: .8em .5em;border:none;font-size: 15px; pointer-events: none;" placeholder="만원">
                                 </div> 
                                 <div style="margin-left: 600px; margin-top: 50px;">
                                     <button type="submit" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
