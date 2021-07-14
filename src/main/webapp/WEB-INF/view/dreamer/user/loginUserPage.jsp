@@ -316,7 +316,7 @@
                                 <ul>
                                     <li>
                                     	<!-- 링크 -->
-                                        <a class="company-href" href="http://www.naver.com">
+                                        <a class="company-href" href="/user/companypost">
                                             <!-- 이미지 -->
                                             <div class="company-img" style="background-image: url(/resources/images/movie.jpg)";>
                                             </div>

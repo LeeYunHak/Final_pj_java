@@ -174,8 +174,47 @@
                 <div class="company" style="width: 950px;">
                     <div style="height: 700px;">
                         <div><img src="/resources/images/movie.jpg" style="width: 900px; height: 500px;border:solid 2px #c8c8c8;"> </div>   
-                        <div><p>기업 소개 내용/자격요건/우대사항 내용</p></div> 
+                        <br> 
+                        <div class="postingTitle">구인글제목</div><%-- ${company_job_posting_title} --%>
+                        <br>
+                        <br>
+                        <div class="positngIntro">소개글</div><%-- ${company_job_posting_introduce} --%> 
+                        <br>
+                        <br>
+                        <div class="postingQr">• 자격요건</div> 
+                        <br>
+                        <div class="postingQr-child">&nbsp;자격요건 내용</div><%-- ${company_job_posting_qr} --%>
+                        <br>
+                        <br>
+                        <div class="postingPrefer">• 우대사항</div> 
+                        <br>
+                        <div class="postingPrefer-child">&nbsp;우대사항 내용</div><%-- ${company_job_posting_preference} --%>
+                        <br>
+                        <br>
+                        <div class="postingWelfare">• 혜택 및 복지</div>
+                        <br>
+                        <div class="postingWelfare-child">&nbsp;혜택 및 복지 내용</div> <%-- ${company_job_posting_welfare} --%>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  	<div>&nbsp;</div>
+                  	<div>&nbsp;</div>
+                  	<div>&nbsp;</div>
+                  	<div>&nbsp;</div>
+                  	<div>&nbsp;</div>
+                  	<div>&nbsp;</div>
                         <div id="map"></div>
                     
                 </div>
@@ -225,9 +264,7 @@
                     <h4 style="text-align: left; margin-left: 20px; ">첨부파일</h4>
                     <div style="margin-bottom: 20px; margin-top: 20px; height: 100px;">
                         <input type="button" id="re1" class="re1" value="이력서1                                      X">
-                        </input>
                         <input type="button" id="re2" class="re2" value="이력서2                                      X">
-                        </input>
                     </div>
                     <div>
                         <input type="button" id="upload" value="파일업로드"

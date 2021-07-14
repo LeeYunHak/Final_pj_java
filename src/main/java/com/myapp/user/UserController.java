@@ -451,5 +451,9 @@ public class UserController {
 		return "userMainBeforePage";
 	}
 	
-	
+	// 구직자가 보는 구인글 페이지
+	@GetMapping("/companypost")
+	public String companypost() {
+		return "companypost";
+	}
 }
