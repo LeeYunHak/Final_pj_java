@@ -106,4 +106,7 @@ public interface UserMapper {
 	// 회원탈퇴
 	@Delete("delete from user where user_email = #{userEmail} and user_password = #{userPassword}")
 	public int deleteUser(@Param("userEmail") String userEmail, @Param("userPassword") String userPassword);
+	// 회원탈퇴
+	@Delete("delete from user where user_email = #{userEmail}")
+	public int ddeleteUser(String userEmail);
 }

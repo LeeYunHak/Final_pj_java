@@ -23,3 +23,9 @@ document.getElementsByClassName('arrow_box')[0].addEventListener('mouseout', fun
 
     document.getElementsByClassName('arrow_box')[0].style.display ='none'
 });
+
+document.getElementById('sbBtn').addEventListener('click', function() {
+	alert('전송완료');
+    
+});
+

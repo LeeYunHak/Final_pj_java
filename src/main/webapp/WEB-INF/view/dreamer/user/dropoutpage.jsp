@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	response.setHeader("Cache-Control","no-cache");
+	response.setHeader("Pragma","no-cache");
+%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -196,7 +200,7 @@
                         <h4 style="display: inline-block; font-size: 16px; color: tomato;">기업서비스 접속 권한도 동시에 삭제됩니다.</h4></li>
                     <li style="list-style:disc"><h4 style="display: inline-block;">이상의 내용에 동의하여 탈퇴를 원하실 경우, 아래의 '동의하기' 버튼을 클릭 부탁드립니다.</h4></li>
                 </ul>
-                <input type="submit" class="dropoutbtn" id="dropoutbtn" value="동의하기">
+                <input type="button" class="dropoutbtn" id="dropoutbtn" value="동의하기">
             </div>
         </div>
 
@@ -214,7 +218,7 @@
                 </div>    
                 <footer class="foot">
                     <input type="button" id="close" class="close" value="닫기">
-                    <input type="submit" id="drop" value="탈퇴하기">
+                    <input type="button" id="drop" value="탈퇴하기">
                 </footer>
             </div>        
         </div>
@@ -229,9 +233,12 @@
                     <h6>&nbsp;</h6>
                     <h6>보다 나은 서비스로 다시 찾아뵙겠습니다.</h6>
                 </div>
-                <footer class="foot">          
-                    <input type="button" id="gohome" value="드리머 첫화면"
-                    onclick="javascript:location.href='/user/userMainBefore'"></input>
+                <footer class="foot">
+                	<form action="/user/dropUser" method="post">>
+	                	<input type="text" name="userEmail" value="${loginUser.userEmail}" style="display: none;">          
+	                    <input type="submit" id="gohome" value="드리머 첫화면"
+	                    onclick="javascript:location.href='/user/userMainBefore'"></input>
+                    </form>
             </footer>
         </div>
     </div>        

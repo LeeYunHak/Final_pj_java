@@ -127,4 +127,13 @@ public class UserService {
 			return false;
 		}
 	}
+	// 회원 탈퇴하기 
+	public boolean userdDelete(String userEmail) {
+		int row = userMapper.ddeleteUser(userEmail);
+		if(row == 1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }

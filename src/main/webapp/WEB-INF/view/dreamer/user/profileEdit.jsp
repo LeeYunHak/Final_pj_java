@@ -196,7 +196,7 @@
                             <a href="/user/profileMain"><div class="third-contents-btn">프로필 정보</div></a> <!--계정 설정으로 가는링크-->
                         </div>
                         <div class="third-contents">
-                            <a href="/user/accountpage">계정 설정</a> <!--계정 설정으로 가는링크-->
+                            <a href="/user/accountPage">계정 설정</a> <!--계정 설정으로 가는링크-->
                         </div>
                     </div>
                 </aside>

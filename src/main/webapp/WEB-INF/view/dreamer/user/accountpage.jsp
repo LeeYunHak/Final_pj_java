@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	response.setHeader("Cache-Control","no-cache");
+	response.setHeader("Pragma","no-cache");
+%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -183,14 +187,16 @@
                 <a href="/user/dropoutpage" >&nbsp;&nbsp;&nbsp;&nbsp;회원탈퇴</a>
             </div>
             <div class="setting">
+            <form action="/user/reUserPw" method="post">
                 <h3>비밀번호 설정</h3>
-                <input type="email" class="email" placeholder="abcd123@naver.com">
+                <input type="email" class="email" name="userEmail" placeholder="abcd123@naver.com">
                 <h6>&nbsp;</h6>
                 <h6>&nbsp;</h6>
                 <h6 style="color: #adadad;">*비밀번호를 재설정 할 이메일 계정을 입력해주세요</h6>
                 <h6>&nbsp;</h6>
                 <h6>&nbsp;</h6>
-                <input type="submit" class="submit" value="전송">
+                <input type="submit" id="sbBtn" class="submit" value="전송">
+            </form>
             </div>
         </div>
     </div>        
