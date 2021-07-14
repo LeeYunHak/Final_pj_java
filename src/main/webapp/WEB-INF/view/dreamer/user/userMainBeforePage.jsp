@@ -57,10 +57,10 @@ response.setHeader("Pragma", "no-cache");
 					<h1>
 						예술인의 필모그래피를<br> 탄탄하게, 드리머
 					</h1>
-					<h2>&nbsp</h2>
+					<h2>&nbsp;</h2>
 					<button id="startbtn" type="button">시작하기</button>
 				</div>
-				<img class="camera" src="images/camera.jpg">
+				<img class="camera" src="/resources/images/camera.png">
 			</div>
 			<div class="drmain2">
 				<img class="movie" src="/resources/images/movie.jpg">
@@ -85,11 +85,11 @@ response.setHeader("Pragma", "no-cache");
 			</div>
 			<div class="ModalBody">
 				<div class="ModalBody_text" style="text-align: center;">
-					<h4>&nbsp</h4>
+					<h4>&nbsp;</h4>
 					<h2>
 						예술인들을 위한 <br> 구인구직 플랫폼, 드리머!
 					</h2>
-					<h4>&nbsp</h4>
+					<h4>&nbsp;</h4>
 				</div>
 				<div class="ModalBody_input">
 					<form action="/user/mainBefore" method="POST">

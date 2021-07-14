@@ -14,8 +14,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>회원가입</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <style>
-        .join1 {
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+        *{
+            font-family: 'Nanum Gothic', sans-serif;
+            box-sizing: border-box;
+        }
+        
+         .join1 {
             margin: auto;
             text-align: center;
             color: rgb(170, 170, 170);
@@ -47,8 +57,8 @@
         body {
             text-align: center;
             margin: auto;
-            margin-top: 5%;
-            margin-bottom: 10%;
+            width: 100%;
+            height: 100%;
             width: fit-content;    
         }
         td{
@@ -70,6 +80,11 @@
             outline: none;
             box-shadow: 0 0 0 2px rgb(0, 206, 201);
         }
+        
+        html{
+            min-width: 1000px;
+            height: 100%;
+        }
         /* 중복아이디 존재하지 않는경우 */
 		.id_input_re_1{
 			color : green;
@@ -80,6 +95,88 @@
 			color : red;
 			display : none;
 		}
+		
+		/* 네비게이션바 CSS START */
+
+        .logo {
+            width: 180px;
+            height: 50px;
+            padding-top: 10px;
+            margin-top: 25px;
+            }
+        
+        #nav3-1-logo {
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+        padding: 0px;
+        }
+        
+        .navbar{
+            flex: 0 0 auto;
+            height: 60px;
+            width: 1600px;
+            /* max-width: 1600px; */
+            background-color: white;
+            /* border-bottom: 1px solid #c8c8c8; */
+            z-index: 100;
+            position: absolute;
+        }
+        
+        .nav-con{
+            position: relative;
+            width: 1600px;
+            /* max-width: 1600px; */
+            margin: 0px auto;
+            padding: 0px 20px;
+        }
+        
+        .nv{
+            float: left;
+            position: relative;
+            margin: 0px;
+            width: 100%;
+        }
+        
+        .nv-st{
+            float: left;
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            white-space: nowrap;
+            width: 100%;
+            list-style:none;
+            margin:0;
+            padding:0;
+            top: 0;
+        }
+        
+        .nv-st>li {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            border : 0;
+            float: left;
+        list-style-type: none;
+        }
+        
+        .nv-st::after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+
+        #nav3-1-blank{
+
+            /* 링크 밑줄 제거 */
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: inline-block;
+            padding:20px;
+        }
+        /*네비끝*/
     </style>
 </head>
 
@@ -223,106 +320,8 @@
 	
 	    });// function 종료
     
-        // var errname = document.getElementById("errname");
-        // var errnum = document.getElementById("errnum");
-        // var erremail = document.getElementById("erremail");
-        // var errpw = document.getElementById("errpw");
-        // var errcheckpw = document.getElementById("errcheckpw");
-
-        // join.onsubmit = function () {
-        //     var name = join.name;
-        //     var td1 = document.getElementsByTagName("td")[2];
-        //     var nameValue = name.value.trim();
-        //     var nameCheck = /^[가-힣]{2}/g;
-        //     errname.style.color = "red";
-
-        //     if (nameValue == "") {
-        //         errname.innerHTML = "이름을 입력하세요<br>";
-        //         td4.insertBefore(errname, name.nextElementSibling);
-        //         name.focus();
-        //         return false;
-        //     } else if (!nameCheck.test(nameValue)) {
-        //         errname.innerHTML = "한글로 2자 이상 입력해주세요<br>";
-        //         td4.insertBefore(errname, name.nextElementSibling);
-        //         name.focus();
-        //         return false;
-        //     }
-        //     else {
-        //         errname.style.display = "none";
-        //     }
-
-        //     var email = join.email;
-        //     var td2 = document.getElementsByTagName("td")[6];
-        //     var emailValue = email.value.trim();
-        //     var emailPattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/
-        //     erremail.style.color = "red";
-
-        //     if (emailValue == "") {
-        //         erremail.innerHTML = "이메일을 입력하세요<br>";
-        //         td5.insertBefore(erremail, email.nextElementSibling);
-        //         email.focus();
-        //         return false;
-
-        //     } else if (!emailPattern.test(emailValue)) {
-        //         erremail.innerHTML = "이메일 형식이 유효하지않습니다.<br>";
-        //         td5.insertBefore(erremail, email.nextElementSibling);
-        //         email.focus();
-        //         return false;
-        //     } else {
-        //         erremail.style.display = "none";
-        //     }
-
-        //     var pw = join.pw;
-        //     var td3 = document.getElementsByTagName("td")[8];
-        //     var pwValue = pw.value.trim();
-        //     var pwValue2 = pw.value;
-        //     var pwPattern = /^[a-zA-Z0-9]{8}/g;
-        //     var space2 = /\s/;
-        //     errpw.style.color = "red";
-
-        //     if (pwValue == "") {
-        //         errpw.innerHTML = "비밀번호를 입력하세요<br>";
-        //         td2.insertBefore(errpw, pw.nextElementSibling);
-        //         pw.focus();
-        //         return false;
-
-        //     } else if (!pwPattern.test(pwValue)) {
-        //         errpw.innerHTML = "비밀번호는 8글자 이상이어야 합니다<br>";
-        //         td2.insertBefore(errpw, pw.nextElementSibling);
-        //         pw.focus();
-        //         return false;
-        //     } else if (pwValue2.match(space2)) {
-        //         errpw.innerHTML = "공백이 존재합니다";
-        //         td2.insertBefore(errpw, pw.nextElementSibling);
-        //         pw.focus();
-        //         return false;
-        //     }
-        //     else {
-        //         errpw.style.display = "none";
-        //     }
-
-        //     var checkpw = join.checkpw;
-        //     var td4 = document.getElementsByTagName("td")[10];
-        //     var checkpwValue = checkpw.value.trim();
-        //     errcheckpw.style.color = "red";
-
-        //     if (checkpwValue == "") {
-        //         errcheckpw.innerHTML = "비밀번호 재입력이 필요합니다<br>";
-        //         td3.insertBefore(errcheckpw, checkpw.nextElementSibling);
-        //         checkpw.focus();
-        //         return false;
-
-        //     } else if (pwValue != checkpwValue) {
-        //         errcheckpw.innerHTML = "비밀번호가 일치하지않습니다<br>";
-        //         td3.insertBefore(errcheckpw, checkpw.nextElementSibling);
-        //         checkpw.focus();
-        //         return false;
-        //     } else {
-        //         errcheckpw.style.display = "none";
-        //     }
-        // }
-
-        const checkAll = document.querySelector(".terms__check__all input");//모두 동의 체크박스
+        
+	    const checkAll = document.querySelector(".terms__check__all input");//모두 동의 체크박스
         const checkBoxes = document.querySelectorAll(".input__check input");//모두 동의를 제외한 3개의 체크박스
         const submitButton = document.querySelector("button"); //확인 버튼
 
@@ -348,10 +347,10 @@
             item.parentNode.classList.remove('active');
             });
         }
-        toggleSubmitButton();
+        // toggleSubmitButton();
         }); 
 
-        form.addEventListener("submit", (e) => e.preventDefault());
+        // form.addEventListener("submit", (e) => e.preventDefault());
 
         checkBoxes.forEach((item) => item.addEventListener('input', toggleCheckbox));
 
@@ -359,8 +358,8 @@
             const { checked, id } = e.target;
         agreements[id] = checked;
         this.parentNode.classList.toggle('active');
-        checkAllStatus(); //3개의 체크박스의 상태를 확인해서 모두동의에 체크(미구현)
-        toggleSubmitButton();
+        checkAllStatus(); //3개의 체크박스의 상태를 확인해서 모두동의에 체크
+        // toggleSubmitButton();
     }
     
     function checkAllStatus() {
@@ -371,17 +370,7 @@
             checkAll.checked = false;
         }
     }
-    
-    //필수부분의 체크 여부를 확인한 뒤 버튼을 활성화 비활성화(미구현)
-        // function toggleSubmitButton() {
-        // const { termsOfService, privacyPolicy } = agreements;
-        // if (termsOfService && privacyPolicy) {
-        //     submitButton.disabled = false;
-        // } else {
-        //     submitButton.disabled = true;
-        // }
-        // }
-	
+  	
     // 아이디 유효성 검사(1 = 중복 / 0 != 중복)
 	$("#userEmail").blur(function() {
 		// id = "id_reg" / name = "userId"
