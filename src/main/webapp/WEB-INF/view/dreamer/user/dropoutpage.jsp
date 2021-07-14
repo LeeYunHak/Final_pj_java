@@ -39,6 +39,7 @@
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <div>
+                            <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
                                 <div class="arrow_box">
                                     <div class="blank">
                                         <p></p>
@@ -57,7 +58,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">이름</a>
                             <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
                         </ul>
                     </nav>
