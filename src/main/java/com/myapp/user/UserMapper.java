@@ -48,31 +48,31 @@ public interface UserMapper {
 	
 	// 로그인 후 메인페이지(탐색페이지)
 	// 기업구인글 목록이 쫘르르르르륵
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id")
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id")
 	public List<JobPostingList> selectCompany();
 	
 	// 직종 선택 후 구인글 조회하기
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id"
 			+ " where cj.company_job_posting_job_group = #{companyJobPostingJobGroup}")
 	public List<JobPostingList> selectCompanyJobGroup(String companyJobPostingJobGroup);
 		
 	// 세부직무 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id"
 			+ " where cj.company_job_posting_job = #{companyJobPostingJob}")
 	public List<JobPostingList> selectCompanyDetailJob(String companyJobPostingJob);
 		
 	// 경력(작품개수) 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id"
 			+ " where cj.company_job_posting_career = #{companyJobPostingCareer}")
 	public List<JobPostingList> selectCompanyCareer(String companyJobPostingCareer);
 	
 	// 지역 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id"
 			+ " where c.company_country = #{companyCountry}")
 	public List<JobPostingList> selectCompanyCountry(String companyCountry);
 	
 	// 상세지역 선택 후 구인글 조회하기 
-	@Select("select * from company_job_posting cj join company c on cj.company_job_posting_id = c.company_job_posting_id"
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id"
 			+ " where c.company_detail_country = #{companyDetailCountry}")
 	public List<JobPostingList> selectCompanyDetailCountry(String companyDetailCountry);
 	
@@ -82,14 +82,14 @@ public interface UserMapper {
 	@Select("select c.company_name, cj.company_job_posting_job_group, cj.company_job_posting_job, a.application_date from user u "
 			+ "join application a on u.user_id = a.user_id join "
 			+ "company_job_posting cj on a.application_id = cj.application_id join company c on "
-			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_email = #{userEmail}")
+			+ "cj.company_id = c.company_id where u.user_email = #{userEmail}")
 	public List<Application> selectApplication(String userEmail);
 	
 	// 마이드리머 북마크 구인글 목록
 	@Select("select cj.company_job_posting_title, c.company_name, c.company_country, cj.company_job_posting_period_end "
 			+ "from user u join bookmark b on u.user_id = b.user_id join "
 			+ "company_job_posting cj on b.bookmark_id = cj.bookmark_id join company c on "
-			+ "cj.company_job_posting_id = c.company_job_posting_id where u.user_email = #{userEmail}")
+			+ "cj.company_id = c.company_id where u.user_email = #{userEmail}")
 	public List<Bookmark> selectBookmark(String userEmail);
 	
 	// 프로필 수정
