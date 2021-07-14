@@ -14,6 +14,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/loginUserMain.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>로그인 후 메인화면</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -21,71 +24,65 @@
 </head>
 
 <body>
-    <!-- 네비게이션바 START -->
-    <header id="nav1" role="presentation">
-        <div id="nav2" role="presentation">
-            <ul id="nav3">
-                <div>
-                    <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a>
-                    </li>
-                    <div style="font-weight: bold; font-size: 10px;">
-                        <ul>
-                            <div class="blank2"></div>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-2-Select" type="button">탐색</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="/user/resume">이력서</a></li>
-                            <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
-                            <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <div class="blank1"></div>
-                            <div class="blank2"></div>
+<div class="full">
+     <!-- 네비게이션바 START -->
+        <header class="navbar">
+            <div class="nav-con">
+                <div style="width: 100%;display: inline;">
+                    <nav class="nv">
+                        <ul class="nv-st">
+                            <li><a id="nav3-1-logo" href="/resources/loginUserPage"><img src="/resources/images/Dreamer.png" class="logo"></a>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-2-Select" type="button">탐색</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-3-Resume" type="button" href="CVpage.html">이력서</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-5-ApplicationStatus" type="button" href="#">지원현황</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <div>
-                                <a id="nav3-7-MyPage"><img class="avatar" src="/resources/images/avatar.png"></a>
                                 <div class="arrow_box">
                                     <div class="blank">
                                         <p></p>
-                                    </div>
+                                    </div><br>
                                     <div class="mydreamer"><a href="/user/mydreamer"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            MY드리머</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            MY드리머</a></div><br>
                                     <div class="profile"><a href="/user/profileMain"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            프로필</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            프로필</a></div><br>
                                     <div class="logout"><a href="/user/logOut"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            로그아웃</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            로그아웃</a></div><br>
                                     <div class="blank">
-                                        <p></p>
+                                        <p></p><br>
                                     </div>
                                 </div>
                             </div>
-                            <li><a id="nav3-6-ProfileName" type="button" href="/user/mydreamer"
-                                    style="color: brown; font-size: 15px;">${loginUser.userName }</a>
-                                <div class="blank1"></div>
-                            </li>
+                            <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">이름</a>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-            </ul>
-        </div>
-    </header>
-    <!-- 네비게이션바 END -->
+            </div>
+        </header>
+        <!-- 네비게이션바 END -->
 
     <!-- 검색창 START -->
     <div class="menu, icon-close">
         <!-- Menu icon -->
-        <div class=""></div>
+        <div class="">
+            <img src="https://imgur.com/download/GcHTJg2">
+        </div>
         <!-- Main body -->
         <div class="jumbotron">
 
@@ -94,14 +91,14 @@
             </div>
         </div>
 
-        <form id="search-form" action="#" autocomplete="off">
+        <form action="#" autocomplete="off" class="search_form">
             <fieldset class="url" style="border: white;">
-                <input class="search-input" id="url" type="text" name="url" required>
-                <label id="search-label" for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
+                <input id="url" type="text" name="url" required>
+                <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
                 <div class="after"></div>
             </fieldset>
             <fieldset class="enter" style="border: white;">
-                <button id="search-btn"></button>
+                <button class="searchbtn"></button>
             </fieldset>
         </form>
     </div>
@@ -212,7 +209,6 @@
     </div>
     <!-- 탐색 END -->
     
-    <div class="full">
         <div class="half">
             <div style="float: left; display: block;">
             
@@ -307,10 +303,6 @@
 							</tr>
                         </table>
                     </div>
-                    <select>
-                        <option>최신순</option>
-                        <option>인기순</option>
-                    </select>
                 </div>
 			    <!-- 직종, 세부직무, 지역, 세부지역, 작품개수 등 START -->
 			    
@@ -354,8 +346,6 @@
                     </ul>
                 </div>
                 <!-- 구인글 select END -->
-                
-                
             </div>
         </div>
     </div>

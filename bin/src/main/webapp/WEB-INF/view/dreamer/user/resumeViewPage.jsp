@@ -67,6 +67,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="/resources/navi.js"></script>
 </body>
 <!-- <script src="/resources/CVpageJs.js"></script> -->
 <script type="text/javascript">

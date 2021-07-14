@@ -1,22 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<%
-	response.setHeader("Cache-Control","no-cache");
-	response.setHeader("Pragma","no-cache");
-%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/profileEdit.css">
-    <title>profileEdit</title>
+    <link rel="stylesheet" href="/resources/dropoutpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>계정설정페이지</title>
 </head>
 <body>
     <div class="full">
-       <!-- 네비게이션바 START -->
+        <!-- 네비게이션바 START -->
         <header class="navbar">
             <div class="nav-con">
                 <div style="width: 100%;">
@@ -171,70 +169,72 @@
                 </div>
             </div>
         </div>
-        <div class="Blank"></div>
-        <section class="sec">
-            <h2 class="subheading">프로필</h2>
-            <div class="mainFrame">
-                <aside class="sidebar">
-                    <div class="sidebar-contents">
-                        <div class="first-contents">
-                            <div class="profile-img" style="background-image: url('https://lh3.googleusercontent.com/a/AATXAJxUk7k9zuTifNm76mAqm6ti2Ca9Z96pTotTHEv1=s96-c');">
-                                <div class="img-input">
-                                    <input type="file" accept="image/*">
-                                    <i class="fi-fi-camera" role="presentation"></i>
-                                </div>
-                            </div>
-                            <a href="/user/profileMain" class="myprofile_a"> <!--주소에 프로필설정창가게 하셈-->
-                                <dl>
-                                    <dt id="namename" class="namename">${loginUser.userName }</dt>
-                                    <dd>${loginUser.userEmail}</dd>
-                                    <dd>${loginUser.userPhone}</dd>
-                                </dl>
-                            </a>
-                        </div>
-                        <div class="third-contents">
-                            <a href="/user/profileMain"><div class="third-contents-btn">프로필 정보</div></a> <!--계정 설정으로 가는링크-->
-                        </div>
-                        <div class="third-contents">
-                            <a href="/user/accountpage">계정 설정</a> <!--계정 설정으로 가는링크-->
-                        </div>
-                    </div>
-                </aside>
-                <section class="m-contents">
-                	<form action="/user/profileEdit" method="post">
-	                    <div class="status">
-	                        <dl class="Form-title">
-	                            <dt style="color: #333;font-size: 20px;font-weight: 600;line-height: 1;display: block;">기본정보 수정</dt>
-	                            <dd style="margin-top: 18px;color: #9a9a9a;font-size: 16px;font-weight: 400;line-height: 1.8;margin-left: 0;">지원 결과 또는 추천 포지션 정보를 받아볼 이메일/연락처 정보 입력해주세요.</dd>
-	                        </dl>
-	                        <div class="modifyform">
-	                            <c:if test="${number eq 1 }">
-	                            <div class="FormBlock-content" style="padding-right: 20px; padding-left: 20px;">
-		                            <label for="name" class="name"><h6>이름</h6><input id="name" name="userName" type="text" placeholder="이름을 입력하세요" autocomplete="off" value="${loginUser.userName }"></label>
-		                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" name="userPassword" type="password" placeholder="비밀번호를 입력하세요" autocomplete="off" value="${loginUser.userPassword}"></label>
-		                            <label for="email" class="email"><h6>이메일</h6><input id="email" name="userEmail" type="email" placeholder="이메일을 입력하세요" autocomplete="off" value="${loginUser.userEmail}"></label>
-		                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" name="userPhone" class="phonenumInput" placeholder="연락처를 입력하세요" type="text" value="${loginUser.userPhone}"></label>
-		                            </div>
-	                            </c:if>
-	                            <c:if test="${number eq 0 }">
-	                            <div class="FormBlock-content" style="padding-right: 20px; padding-left: 20px;">
-		                            <label for="name" class="name"><h6>이름</h6><input id="name" name="userName" type="text" placeholder="이름을 입력하세요" autocomplete="off" value="${profileUpdate.userName }"></label>
-		                            <label for="pwd" class="pwd"><h6>비밀번호</h6><input id="pwd" name="userPassword" type="password" placeholder="비밀번호를 입력하세요" autocomplete="off" value="${profileUpdate.userPassword}"></label>
-		                            <label for="email" class="email"><h6>이메일</h6><input id="email" name="userEmail" type="email" placeholder="이메일을 입력하세요" autocomplete="off" value="${profileUpdate.userEmail}"></label>
-		                            <label for="mobile" class="phone"><h6>연락처</h6><input id="mobile" name="userPhone" class="phonenumInput" placeholder="연락처를 입력하세요" type="text" value="${profileUpdate.userPhone}"></label>
-		                            </div>
-	                            </c:if>
-	                        </div>
-	                    </div>
-	                    <footer class="FormFooter-edit">
-	                        <button type="submit" id="submit" class="submit">수정하기</button>
-	                        <button type="button" id="resign" class="resign" onclick="location.href='/user/userMainBefore'">회원탈퇴하기</button>    
-	                    </footer>
-                    </form>
-                </section>
+        <div class="main">
+            <div class="sidebar">
+                <h4>&nbsp;</h4>
+                <h4>&nbsp;</h4>
+                <h5>&nbsp;</h5>
+                <h2>계정 설정</h2>
+                <h2>&nbsp;</h2>
+                <h2>&nbsp;</h2>
+                <a href="accountpage.html">비밀번호 설정</a>
+                <h5>&nbsp;</h5>
+                <h5>&nbsp;</h5>
+                <a href="dropoutpage.html" style="color: #00cec9;">&nbsp;&nbsp;&nbsp;&nbsp;회원탈퇴</a>
             </div>
-        </section>
-    </div>
-    <script type="text/javascript" src="/resources/navi.js"></script>
+            <div class="dropout">
+                <h3>탈퇴 시 주의사항</h3>
+                <h3>&nbsp;</h3>
+                <ul style="line-height: 30px; margin-left: 20px;">
+                    <li style="list-style:disc"><h4 style="display: inline-block;">탈퇴 시 회원님의 이력서를 포함하여 회원님의 계정에 저장된</h4>
+                    <h4 style="display: inline-block; font-size: 16px; color: tomato;">모든 정보가 영구적으로 삭제되며,<br></h4></li>
+                    <li><h4>다시는 복구할 수 없습니다.</h4></li>
+                    <li style="list-style:disc"><h4 style="display: inline-block;">이력서의 저장을 원하실 경우, 탈퇴 이전에</h4>
+                    <h4 style="display: inline-block; font-weight: bolder; text-decoration: underline;font-size: 16px; color: tomato;">이력서 관리 페이지</h4>
+                    <h4 style="display: inline-block;">에서 다운로드 해주세요.</h4></li>
+                    <li style="list-style:disc"><h4 style="display: inline-block;">기업 서비스에 등록되어있는 계정일 경우,</h4>
+                        <h4 style="display: inline-block; font-size: 16px; color: tomato;">기업서비스 접속 권한도 동시에 삭제됩니다.</h4></li>
+                    <li style="list-style:disc"><h4 style="display: inline-block;">이상의 내용에 동의하여 탈퇴를 원하실 경우, 아래의 '동의하기' 버튼을 클릭 부탁드립니다.</h4></li>
+                </ul>
+                <input type="submit" class="dropoutbtn" id="dropoutbtn" value="동의하기">
+            </div>
+        </div>
+
+        <div id="my_modal2">
+            <div>
+                <div class="ModalHeader2" style="text-align: center;">
+                    <span style="text-align: center; font-size: 20px;" >탈퇴하기</span>
+                    <button type="button" class="Modal_close_btn2">X</button>
+                    <div style="width: 102%;border-top: 1px solid #c8c8c8; margin-top: 20px;"></div>
+                </div>
+                <div class="ModalBody2">
+                    <div>
+                        <h3>드리머를 탈퇴하시겠습니까?</h3>
+                    </div>
+                </div>    
+                <footer class="foot">
+                    <input type="button" id="close" class="close" value="닫기">
+                    <input type="submit" id="drop" value="탈퇴하기">
+                </footer>
+            </div>        
+        </div>
+        <div id="my_modal1">
+            <div class="ModalHeader1" style="text-align: center;">
+                <span style="text-align: center; margin-right: -25px; font-size: 20px;" >회원탈퇴가 완료되었습니다.</span>
+                <div style="width: 100%;border-top: 1px solid #c8c8c8; margin-top: 20px;"></div>
+            </div>
+            <div class="ModalBody1">
+                <div>
+                    <h4>그동안 드리머를 이용해주셔서 감사합니다.</h4>
+                    <h6>&nbsp;</h6>
+                    <h6>보다 나은 서비스로 다시 찾아뵙겠습니다.</h6>
+                </div>
+                <footer class="foot">          
+                    <input type="button" id="gohome" value="드리머 첫화면"
+                    onclick="javascript:location.href='/user/userMainBefore'"></input>
+            </footer>
+        </div>
+    </div>        
+    <script type="text/javascript" src="/resources/dropoutpage.js"> </script>
 </body>
 </html>

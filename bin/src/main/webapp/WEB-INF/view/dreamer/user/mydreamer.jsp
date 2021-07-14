@@ -162,5 +162,6 @@
             </div>
         </section>
     </div>
+    <script type="text/javascript" src="/resources/navi.js"></script>
 </body>
 </html>
