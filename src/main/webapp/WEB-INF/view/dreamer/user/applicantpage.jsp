@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <title>지원자 정보 페이지</title>
+    <title>구인자 메인화면</title>
 </head>
 <body>
     <div class="full">
@@ -20,7 +20,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="로그인 후 메인"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
+                            <li class="nv-it"><a id="nav3-1-logo" href="/user/companyMain"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -28,14 +28,15 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-4-applicant_status" type="button" href="#">지원자 현황</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-5-companyinfo" type="button" href="#">회사정보</a></li>
+                            <li><a id="nav3-5-companyinfo" type="button" href="/user/companyInfo">회사정보</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                            <li><a id="nav3-7-account" type="button" href="#">계정관리</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-6-ProfileName" type="button" href="companyInfo"
-                                style="color: white; font-size: 15px;">이름</a></li>
-                            <li style="float: right;"><a href="userMainBeforePage"><button class="home-btn" type="button">드리머 홈</button></a></li>
+                            <li><a id="nav3-6-ProfileName" type="button" href="mydreamer.html"
+                                style="color: white; font-size: 15px;">기업명</a></li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/userMainBefore'">드리머 홈</button></li>
                         </ul>
                     </nav>
                 </div>
@@ -70,8 +71,8 @@
                 </div>
             </div>
         </div>
+        
     </div>  
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script type="text/javascript" src="/resources/navi.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, ::after, ::before {
     box-sizing: border-box;
     font-family: 'Nanum Gothic', sans-serif;
@@ -54,6 +55,10 @@ textarea {
     flex: 0 0 auto;
     height: 60px;
     background-color: rgb(28, 28, 28);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
 }
 
 .nav-con{
@@ -220,6 +225,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     max-width: 1060px;
+    padding-top: 80px;
 }
 
 .ct-h2{
@@ -396,4 +402,148 @@ textarea {
     border-radius: 25px;
     height: 50px;
     font-weight: 600;
+}
+/*비밀번호변경모달*/
+#my_modal1 {
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    width: 500px;
+    height: 300px;
+    display: none;
+    z-index: 99;
+}
+
+.ModalHeader1 {
+    height: 54px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    word-wrap: break-word;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.Modal_close_btn1 {
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    overflow: visible;
+    float: right;
+}
+
+.ModalBody1{
+    display: block;
+    text-align: center;
+}
+
+#findemail{
+    color:black;
+    border: #c8c8c8 solid 1px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    font-weight: bold; 
+    font-size: 15px;
+    height: 40px;
+    width: 450px;
+    position: relative;
+    line-height:0px;
+}
+#upload{
+    color:white;
+    border: rgb(0, 206, 201) solid 1px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #04bfbf; 
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold; 
+    font-size: 15px;
+    height: 42px;
+    width: 480px;
+    position: relative;
+    line-height:0px;
+    margin-top: 30px;
+}
+
+/*채용담당자 로그인 모달*/
+#my_modal2 {
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    display: none;
+}
+
+.ModalHeader2 {
+    height: 54px;
+    padding: 16px 20px;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    word-wrap: break-word;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.Modal_close_btn2 {
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    overflow: visible;
+    float: right;
+}
+
+.ModalBody2{
+    display: block;
+    text-align: center;
+    width: 500px;
+}
+
+/*input설정*/
+input:focus
+    {outline:none;}
+
+/*텍스트박스*/
+#email, #pwd{
+    color:black;
+    border: #c8c8c8 solid 1px;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 3px;
+    /* cursor: pointer; */
+    font-weight: bold; 
+    font-size: 15px;
+    height: 40px;
+    width: 480px;
+    position: relative;
+    line-height:0px;
+}
+
+/*비밀번호변경 모달로 가는 버튼*/
+#change {
+    color:white;
+    border: rgb(0, 206, 201) solid 1px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #03a6a6 ; 
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold; 
+    font-size: 15px;
+    height: 42px;
+    width: 480px;
+    position: relative;
+    line-height:0px;
 }

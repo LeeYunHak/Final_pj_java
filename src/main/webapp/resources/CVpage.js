@@ -1,4 +1,3 @@
-
 var addBtn = document.getElementById("addBtn");
 addBtn.addEventListener('click',function(){
 
@@ -100,7 +99,7 @@ addBtn.addEventListener('click',function(){
             ul.style.display='none';
         }
     })
-    // location.href='/user/resumeWritePage'
+    // location.href='CV-write.html'
 });
 
 function cli(id){
@@ -120,6 +119,6 @@ Element.prototype.setStyle = function(styles) {
 
 addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click',function(){
-    location.href='/user/resumeWriteView'
+    location.href='CV-write.html'
 },100000)
 

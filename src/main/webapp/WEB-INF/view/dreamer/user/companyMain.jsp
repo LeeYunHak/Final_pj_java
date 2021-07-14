@@ -34,9 +34,9 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>               
                             <li><a id="nav3-2-login" type="button">채용담당자 로그인</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-3-join" type="button" href="companyJoin.html">채용담당자 가입</a></li>
+                            <li><a id="nav3-3-join" type="button" href="/user/companyJoin">채용담당자 가입</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li style="float: right;"><button class="home-btn" type="button">드리머 홈</button></li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/userMainBefore'">드리머 홈</button></li>
                         </ul>
                     </nav>
                 </div>
@@ -76,7 +76,7 @@
                 <div class="ModalBody2">
                     <div>
                         <h4 style="text-align: left; margin-left: 20px;">지원 정보</h4>
-                        <form name="info" action="co_mainhtml.html" method="POST">
+                        <form name="info" action="/user/companyMain" method="POST">
                             <div style="margin-top: 20px;">
                                 <label><input required id="email" type="email" placeholder="회사 이메일 (로그인 아이디로 사용됩니다.)"autocomplete="off"></label>
                                 <label><input required id="pwd" type="password" placeholder="비밀번호"autocomplete="off"></label>
@@ -111,11 +111,10 @@
                 </div>
                 <footer class="foot">          
                     <input type="submit" id="upload" value="완료"
-                    onclick="javascript:location.href='co_mainhtml.html'"></input>
+                    onclick="javascript:location.href='/user/companyMain'"></input>
             </footer>
         </div>
     </div>    
     <script type="text/javascript" src="/resources/companyMain.js"> </script>
-    <script type="text/javascript" src="/resources/navi.js"></script>
 </body>
 </html>

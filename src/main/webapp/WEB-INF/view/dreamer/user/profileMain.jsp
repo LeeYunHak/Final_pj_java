@@ -199,7 +199,7 @@
                         background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/professional'">프로필 수정</button>
                             <h4>&nbsp;</h4>
                             <button type="button" style="color: white; border: none; width: 200px; height: 40px;
-                        background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='#'">계정설정</button>
+                        background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/accountpage'">계정설정</button>
                         </div>
                     </div>
                 </aside>

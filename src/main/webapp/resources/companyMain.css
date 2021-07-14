@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *{box-sizing: border-box;}
 
 /* 공통 CSS START */
@@ -59,6 +60,10 @@ a{
     flex: 0 0 auto;
     height: 60px;
     background-color: rgb(28, 28, 28);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
 }
 
 .nav-con{
@@ -244,7 +249,7 @@ a{
     clear: both;
 }
 
-/*북마크모달*/
+/*비밀번호변경모달*/
 #my_modal1 {
     border-radius: 5px;
     background-color: #fff;

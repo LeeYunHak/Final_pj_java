@@ -3,8 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
-	response.setHeader("Cache-Control","no-cache");
-	response.setHeader("Pragma","no-cache");
+response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Pragma", "no-cache");
 %>
 <!DOCTYPE html>
 <html>
@@ -14,17 +14,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>아이디ㆍ비밀번호 찾기</title>
 <link rel="stylesheet" href="/resources/findcss.css">
+<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"	rel="stylesheet">
 </head>
 
 <body>
-	<header>
-		<h2>
-			<span><a href="/user/mainBefore" class="dreamer">Dreamer</a></span>&nbsp;
-		</h2>
-		<div class="nav"></div>
-	</header>
 	<div class="container-margin-top-80">
+
 		<div class="col-xs-offset-4-col-xs-4">
+			<ul class="nv-st">
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+				<li><a id="nav3-1-logo" href="index.html"><img
+						src="/resources/images/Dreamer.png" class="logo"></a></li>
+			</ul>
 			<div class="row">
 				<div class="col-xs-12">
 					<h3>아이디ㆍ비밀번호 찾기</h3>
@@ -86,11 +97,11 @@
 									<input type="submit"
 										class="btn-btn-primary-btn-sm-btn-block-margin-top-5"
 										value="비밀번호 변경 URL 전송">
-										<c:if test="${checked == 1 }">
+									<c:if test="${checked == 1 }">
 										<script>
 											alert("전송완료");
 										</script>
-										</c:if>
+									</c:if>
 								</div>
 							</form>
 						</div>

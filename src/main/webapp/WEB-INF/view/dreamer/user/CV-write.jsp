@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/companypost.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>이력서 작성</title>
+    <link rel="stylesheet" href="/resources/CV-write.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <title>기업 구인글 페이지</title>
 </head>
 <body>
     <div class="full" name="full">
@@ -169,86 +169,110 @@
                 </div>
             </div>
         </div>
-        <div class="sec">
-            <div class="mainFrame">
-                <div class="company" style="width: 950px;">
-                    <div style="height: 700px;">
-                        <div><img src="/resources/images/movie.jpg" style="width: 900px; height: 500px;border:solid 2px #c8c8c8;"> </div>   
-                        <div><p>기업 소개 내용/자격요건/우대사항 내용</p></div> 
-                    </div>
-                        <div id="map"></div>
-                    
-                </div>
-                <div class="sidebar">
-                        <h2 style="text-align: center; margin-top: 70px;">기업 이름</h2>
-                        <div id="bookmark" style="width: 300px; margin-top: 50px; display: inline-block;">
-                            <div id="bm" class="bm">
-                                <input type="button" value="북마크" id="bookmarkbtn" class="bookmarkbtn" >
-                                <img id="bookmarkimg" class="bookmarkimg" name="bookmarkimg" src="/resources/images/bookmark.png" style="cursor: pointer;">    
-                            </div>                          
-                            <div id="hi"><input type="button" value="채용하기" id="hirebtn"></div>
+            <main>
+                <div id="frame">
+                    <div class="container">
+                        <div id="resume-wr">
+                            <div class="resume-info">
+                                <div class="resume-header">
+                                    <div class="resume-input-form-group">
+                                        <input class="resume-title-input" type="text" maxlength="100" placeholder="이력서 제목(필수)" name="resumeTitle" value="${작성하던 이력서 제목}">
+                                    </div>
+                                </div>
+                                <div class="resume-input-form-group">
+                                    <input class="resume-input-name" type="text" maxlength="100" placeholder="이름(필수)" name="userName" value="${userName}">
+                                </div>
+                                <div class="resume-input-form-group">
+                                    <input class="resume-input-email" type="email" maxlength="120" placeholder="이메일(필수)" name="userEmail" value="${userEmail}">
+                                </div>
+                                <div class="resume-input-form-group">
+                                    <input class="resume-input-phone" type="tel" maxlength="200" placeholder="연락처(필수) ex) 010-0000-0000" name="userPhone" value="${userPhone}">
+                                </div>
+                            </div>
+                            <div class="resume-about">
+                                <div class="resume-about-header">간단 소개</div>
+                                <p class="guide-comment">• 본인의 업무 경험을 기반으로 핵심역량과 업무 스킬을 간단히 작성해주세요.<br>• 3~5줄로 요약하여 작성하는 것을 추천합니다!</p>
+                                <div class="resume-input-form-group">
+                                    <div class="resume-ab-in">
+                                        <textarea class="resume-input-about" maxlength="2000" placeholder="간단한 자기소개를 통해 이력서를 돋보이게 만들어보세요. (3~5줄 권장)"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-list">
+                                <div class="resume-list-career">
+                                    <div class="resume-list-header">
+                                        <span>경력</span>
+                                    </div>
+                                    <p class="guide-comment">• 경력사항이 없는 경우 '신입'으로 작성해주세요.<br>• 업무 성과는 되도록 구체적인 숫자 혹은 %로 표현해주세요!</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" maxlength="2000" placeholder="담당하신 업무 중 우선순위가 높은 업무를 선별하여 최신순으로 작성해주세요."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume-list-education">
+                                    <div class="resume-list-header">
+                                        <span>학력</span>
+                                    </div>
+                                    <p class="guide-comment">• 최신순으로 작성해주세요.</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" maxlength="2000" placeholder="최신순으로 작성해주세요."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume-list-skill">
+                                    <div class="resume-list-header">
+                                        <span>스킬</span>
+                                    </div>
+                                    <p class="guide-comment">• 편집 툴, 디자인 툴, 마케팅 툴 등 가지고 있는 직무와 관련된 스킬을 추가해보세요</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" maxlength="2000" placeholder="편집 툴, 디자인 툴, 마케팅 툴 등 가지고 있는 직무와 관련된 스킬을 추가해보세요"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume-list-activity">
+                                    <div class="resume-list-header">
+                                        <span>수상 및 기타</span>
+                                    </div>
+                                    <p class="guide-comment">• 수상 이력, 직무 관련 자격증, 수료한 교육이나 참석한 외부활동 등이 있다면 간략히 작성해주세요.</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" maxlength="2000" placeholder="수상 이력, 직무 관련 자격증, 수료한 교육이나 참석한 외부활동 등이 있다면 간략히 작성해주세요."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-btn-container">
+                                <div class="b-container">
+                                    <div class="p-container">
+                                        <div class="p-root">
+                                            <div class="p-emoji">🙌</div>
+                                            <div class="p-item">
+                                                <div class="p-comment">당신의 커리어를 응원합니다!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <button class="temporary-btn">
+                                            <span class="label">
+                                                <span>임시 저장</span>
+                                            </span>
+                                        </button>
+                                        <button class="btn-Completed">
+                                            <span class="label">
+                                                <span>작성 완료</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                </div>
-            </div>
-        </div>
-        <div class="doc" name="doc" id="doc">
-            <div id="my_modal1" name="my_modal1" class="my_modal1">
-                <div class="ModalHeader1" style="text-align: center;">
-                    <span style="text-align: center; margin-right: -25px; font-size: 20px;" >북마크에 저장되었습니다.</span>
-                    <button type="button" class="Modal_close_btn1">X</button>
-                </div>
-                <div class="ModalBody1">
-                    <input type="button" onclick="javascript:location.href='/user/mydreamer'" value="북마크 확인하기" id="bmcheck">
-                </div>
-                <footer class="foot1">
-                </footer>
-            </div>
-        </div>
-
-        <div id="my_modal2" class="my_modal2">
-            <div class="ModalHeader2" style="text-align: center;">
-                <span style="text-align: center; font-size: 20px;" >지원하기</span>
-                <button type="button" class="Modal_close_btn2">X</button>
-            </div>
-            <div style="border-bottom: 1px solid #e1e2e3; height: 0px; width: 360px; margin-left: 20px; margin-bottom: 20px;"></div>
-            <div class="ModalBody2">
-                <div style=" height: 220px;">
-                    <h4 style="text-align: left; margin-left: 20px;">지원 정보</h4>
-                    <form name="info" action="/user/companypost" method="POST">
-                        <label for="name" class="name">이름<input required id="name" type="text" autocomplete="off"></label>
-                        <label for="email" class="email">이메일<input required id="email" type="email" autocomplete="off"></label>
-                        <label for="phone" class="phone">연락처<input required id="phone" type="number" autocomplete="off"></label>
-                    </form>
-                </div>
-                <div style="border-bottom: 1px solid #e1e2e3; height: 0px; width: 360px; margin-left: 20px; margin-bottom: 20px;"></div>
-                <div>
-                    <h4 style="text-align: left; margin-left: 20px; ">첨부파일</h4>
-                    <div style="margin-bottom: 20px; margin-top: 20px; height: 100px;">
-                        <input type="button" id="re1" class="re1" value="이력서1                                      X">
-                        </input>
-                        <input type="button" id="re2" class="re2" value="이력서2                                      X">
-                        </input>
-                    </div>
-                    <div>
-                        <input type="button" id="upload" value="파일업로드"
-                        onclick="javascript:location.href='/user/CVpage'"></input>
-                        <input type="button" id="write" value="새 이력서 작성"
-                        onclick="javascript:location.href='/user/CV-write'"></input>
                     </div>
                 </div>
-                <footer class="foot">
-                    <div style="width: 360px; border-top: 1px solid #e1e2e3; margin-top: 15px; padding-top: 15px; height: 100px;">
-                        <input type="submit" class="app" id="app" value="제출하기" ></input>
-                    </div>
-                </footer>
-            </div>
+            </main>
         </div>
-    </div>  
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-    <script type="text/javascript" src="/resources/companypost_jq.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJPJok-ic-162wUIyxN5AcctNP3cNKOk&callback=initMap&region=kr"></script>
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script type="text/javascript" src="/resources/companypost.js"></script>
-    <script type="text/javascript" src="/resources/navi.js"></script>
-</body>
+        <script type="text/javascript" src="/resources/navi.js"></script>
+ </body>
 </html>

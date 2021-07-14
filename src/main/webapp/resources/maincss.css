@@ -1,67 +1,238 @@
 @charset "UTF-8";
-*{
-  box-sizing: border-box;
-}
-header {
-  margin: 0;
-  position: fixed;
-  top: 0;
-  left: 0px;
-  right: 0px;
-  height: 70px;
-  padding: 1px;
-  color: rgb(0,206,201);
-  background: rgb(229, 250, 249);
-  font-weight: bold;
-  display: flex;/*한줄로 나오게*/
-  justify-content: space-between;/*정렬*/
-  align-items: center;
-  font-size: 35px;
-}
-input{
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  text-rendering: auto;
-  text-align: start;
-  cursor: text;
-  font: 400 13.3333px Arial;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* 공통 CSS START */
+* {
+	margin: 0 auto;
+	padding: 0 auto;
+	box-sizing: border-box;
+	font-family: 'Nanum Gothic', sans-serif;
 }
 
-a.dreamer{
-  text-decoration: none; color: rgb(0, 206, 201);
-  position: fixed;
-  left: 300px;
+div {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+a:link, a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+ol,ul{
+    list-style: none;
+}
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-width: 875px;
+}
+
+body{
+    /* width: 1920px; */
+    height: 100%;
+    margin: 0;
+}
+
+.full{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* 네비게이션바 CSS START */
+
+
+/* 네비 */
+.logo {
+    width: 180px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+#nav3-1-logo {
+	display: block;
+	cursor: pointer;
+	padding: 0px;
+}
+.navbar{
+    flex: 0 0 auto;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    border-bottom: 1px solid #c8c8c8;
+    font-weight: bold;
+}
+
+.nav-con{
+    position: relative;
+    width: 1400px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.nv{
+    float: left;
+    position: relative;
+    margin: 0px;
+	width: 100%;
+}
+
+.nv-st{
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    white-space: nowrap;
+	width: 100%;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.nv-st>li {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border : 0;
+    float: left;
+	list-style-type: none;
+}
+
+.nv-st::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+
+#nav3-1-blank{
+
+    /* 링크 밑줄 제거 */
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    padding:20px;
+}
+
+
+.home-btn:hover{
+    background-color: #00cecbaf;
+    color: white;
+    border-color: #00cecbaf;
+    }
+#popup_open_btn:hover{
+    background-color: #00cecbaf;
+    color: white;
+    border-color: #00cecbaf;
+    }
+    
+
+.select-ic{
+    margin: 0px 1rem;
+    transition: transform 0.2s ease 0s;
+    display: inline-block;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    cursor: pointer;
+    color: black;
+}
+
+.select-ic::before{
+    content:url(images/337-ctrl.png);
+}
+
+.home-btn{
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    background-color: transparent;
+    padding: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+	margin-top: 8px;
+}
+#popup_open_btn{
+  font-size: 14px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    background-color: transparent;
+    padding: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+	margin-top: 8px;
   }
-a.find-a-tag{
-  text-decoration:none !important;
-  color:#646464;
+
+/* 네비 끝 */
+
+.blank{
+	width: 100%;
+	height: 20px;
 }
-a.find-a-tag:hover{
-  text-decoration:none !important;
+.blank1{
+	height: 100%;
+	width: 50px;
 }
-a.find-a-tag:link{
-  text-decoration:none !important;
-}
-a.find-a-tag:visited{
-  text-decoration:none !important;
-}
-a.find-a-tag:active{
-  text-decoration:none !important;
+.blank2{
+	height: 100%;
+	width: 25px;
 }
 
-section{
-  width: 1926px;
-  height: 410px;
+.drmain{
+  height: 100%;
+  width: 100%;
+  right: 100px;
+  white-space: nowrap;
+}
+.drmain1{
+  margin-top: 10%;
+  height: 50%;
+  width: 80%;
+  padding-left: 100px;
+}
+.drmain1-1{
+  width: 50%;
+  float: left;
+  padding-top: 100px;
+  min-height: 400px;
 }
 
-#drmain1{
-  margin-left: 300px;
-  margin-top: 150px;
-  padding-right: 50px;
-  font-size: 25px;
+.drmain2{
+  height: 50%;
+  width: 80%;
+  /* float: left; */
+}
+
+.dramin2-1{
+  float: right;
+  width: 50%;
+  padding-left: 100px;
+  margin-top: 100px;
+  min-width: 700px;
+  min-height: 200px;
 }
 
 .camera{
@@ -69,51 +240,14 @@ section{
   max-width: 600px;
   max-height: 500px;
   float: right;
-  margin-top: -211px;
-  margin-right: 300px;
+  top: 100px;
+  margin-right: 100px;
 }
-
 .movie{
   object-fit: cover;
   max-width: 600px;
   max-height: 500px;
-  margin-top: 50px;
-  margin-left: 300px;
-}
-
-#drmain2{
-  margin-top: -400px;
-  margin-left: 1226px;
-}
-
-.nav{
-  position: relative;
-  margin-top: -15px;
-  margin-left: 1000px;
-}
-
-#popup_open_btn{
-  border: 1px solid rgb(229, 250, 249);
-  background-color: rgb(229, 250, 249);
-  color: rgb(0,206,201);
-  font-size: 15px;
-  right: 450px;
-  cursor: pointer;
-  }
-
-#servicebtn{
-  border: 1px solid rgb(229, 250, 249);
-  background-color: rgb(229, 250, 249);
-  color: rgb(0, 206, 201);
-  font-size: 15px;
-  cursor: pointer;
-  
-  }
-
-#beforemainimg2{
-  position: absolute; top:0; left: 0;
-  width: 100%;
-  height: 100%;
+  float: left;
 }
 
 #startbtn{
@@ -139,14 +273,21 @@ section{
   width: 400px;
   padding: 20px 60px;
   background-color: #fefefe;
-  border: 1px solid #888;
+  border: 1px solid #c8c8c8;
   border-radius: 3px;
 }
 .Modal_close_btn {
   position: absolute;
   top: 10px;
   right: 10px;
+  border: none;
+  background-color: white;
 }
+
+#email, #password{
+  border: 1px solid #c8c8c8;
+} 
+
 div.modal-text{
   margin-top: 20px;
   font-size: 13px;
@@ -197,12 +338,7 @@ div.modal-text{
   display: flex;
   justify-content: space-between;
 }
-.sns-btn-naver{
-  background-color: #20c702;
-}
-.sns-btn-naver img{
-  width: 30px;
-}
+
 .sns-btn-kakao{
   background-color: #f9e000;
 }
@@ -215,27 +351,24 @@ div.modal-text{
 .sns-btn-google img{
   width: 30px;
 }
-.sns-btn-apple{
-  background-color: #000;
-}
-.sns-btn-apple img{
-  width: 20px;
-}
+
 .login-btn{
   font-size: 17px;
-  color: #303441;
+  font-weight: bold;
+  color: white;
   border-radius: 4px !important;
-  background-color: #ffd400;
-  border-color: #ffd400;
+  background-color: #00cecbad;
+  border: none;
   width: 100% !important;
   padding: 15px 15px;
 }
 #joinBtn{
   font-size: 17px;
+  font-weight: bold;
   border-radius: 4px !important;
-  color: #116ad4;
+  color: #00cec9;
   background-color: #fff;
-  border-color: #116ad4;
+  border: 1px solid #00cec9;
   width: 100% !important;
   padding: 15px 15px;
 }
