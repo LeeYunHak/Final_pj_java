@@ -311,37 +311,32 @@
                 <div class="company-job-list">
                     <ul>
                         <li class="company-job" style="text-align: center;">
+                       	<c:forEach items="${comList}" var="comList" >
                             <div class="company-margin">
                                 <ul>
-                                	<c:forEach begin="" end="" >
                                     <li>
                                     	<!-- 링크 -->
                                         <a class="company-href" href="http://www.naver.com">
                                             <!-- 이미지 -->
-                                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
+                                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)";>
                                             </div>
                                             <figcaption>
                                                 <div id="job-card" style="font-size: 16px;">
-                                                    <!-- 내용 -->
-                                                    <div class="job-card-position">구인글제목 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-position">${comList.companyJobPostingTitle}
                                                     </div><br>
-                                                    <div class="job-card-company-name">기업명 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-company-name">${comList.companyName }
                                                     </div><br>
-                                                    <div class="job-card-company-location">위치 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-company-location">${comList.companyCountry } 
                                                     </div><br>
-                                                    <div class="job-card-end-date">마감일 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-end-date">${comList.companyJobPostingPeriodEnd }
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </a>
                                     </li>
-                                    </c:forEach>
                                 </ul>
                             </div>
+                      		</c:forEach>
                         </li>
                     </ul>
                 </div>

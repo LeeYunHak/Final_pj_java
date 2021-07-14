@@ -136,4 +136,11 @@ public class UserService {
 			return false;
 		}
 	}
+	
+	//게시물 20개 조회
+	public List<JobPostingList> selectJbPosting(){
+		return userMapper.selectJbPosting();
+	}
+	
+	
 }

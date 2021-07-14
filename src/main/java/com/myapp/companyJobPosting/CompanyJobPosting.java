@@ -8,7 +8,7 @@ public class CompanyJobPosting {
 	private String companyJobPostingImageNumber; // 구인글이미지
 	private String companyJobPostingIntroduce; // 구인회사소개(타입text)
 	private String companyJobPostingManager; // 채용담당자
-	private int companyJobPostingRecruitment; // 모집인원
+	private String companyJobPostingRecruitment; // 모집인원
 	private LocalDate companyJobPostingPeriodStart; // 모집 시작일
 	private LocalDate companyJobPostingPeriodEnd; // 모집 마감일
 	private String companyJobPostingManagerPhone; // 담당자 연락처
@@ -21,14 +21,16 @@ public class CompanyJobPosting {
 	private String companyJobJostingCareer; // 모집분야 경력(작품개수)
 	private int bookmarkId; // 북마크 번호
 	private int applicationId; // 지원 번호
-
+	private LocalDate writeDate;
+	
+	
 	public CompanyJobPosting(int companyJobPostingId, String companyJobPostingTitle,
 			String companyJobPostingImageNumber, String companyJobPostingIntroduce, String companyJobPostingManager,
-			int companyJobPostingRecruitment, LocalDate companyJobPostingPeriodStart,
+			String companyJobPostingRecruitment, LocalDate companyJobPostingPeriodStart,
 			LocalDate companyJobPostingPeriodEnd, String companyJobPostingManagerPhone,
 			String companyJobPostingManagerEmail, String companyJobPostingQr, String companyJobPostingPreference,
 			String companyJobPostingWelfare, String companyJobJostingJobGroup, String companyJobJostingJob,
-			String companyJobJostingCareer, int bookmarkId, int applicationId) {
+			String companyJobJostingCareer, int bookmarkId, int applicationId, LocalDate writeDate) {
 		super();
 		this.companyJobPostingId = companyJobPostingId;
 		this.companyJobPostingTitle = companyJobPostingTitle;
@@ -48,154 +50,205 @@ public class CompanyJobPosting {
 		this.companyJobJostingCareer = companyJobJostingCareer;
 		this.bookmarkId = bookmarkId;
 		this.applicationId = applicationId;
+		this.writeDate = writeDate;
 	}
 
+
 	public CompanyJobPosting() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+
 
 	public int getCompanyJobPostingId() {
 		return companyJobPostingId;
 	}
 
+
 	public void setCompanyJobPostingId(int companyJobPostingId) {
 		this.companyJobPostingId = companyJobPostingId;
 	}
+
 
 	public String getCompanyJobPostingTitle() {
 		return companyJobPostingTitle;
 	}
 
+
 	public void setCompanyJobPostingTitle(String companyJobPostingTitle) {
 		this.companyJobPostingTitle = companyJobPostingTitle;
 	}
+
 
 	public String getCompanyJobPostingImageNumber() {
 		return companyJobPostingImageNumber;
 	}
 
+
 	public void setCompanyJobPostingImageNumber(String companyJobPostingImageNumber) {
 		this.companyJobPostingImageNumber = companyJobPostingImageNumber;
 	}
+
 
 	public String getCompanyJobPostingIntroduce() {
 		return companyJobPostingIntroduce;
 	}
 
+
 	public void setCompanyJobPostingIntroduce(String companyJobPostingIntroduce) {
 		this.companyJobPostingIntroduce = companyJobPostingIntroduce;
 	}
+
 
 	public String getCompanyJobPostingManager() {
 		return companyJobPostingManager;
 	}
 
+
 	public void setCompanyJobPostingManager(String companyJobPostingManager) {
 		this.companyJobPostingManager = companyJobPostingManager;
 	}
 
-	public int getCompanyJobPostingRecruitment() {
+
+	public String getCompanyJobPostingRecruitment() {
 		return companyJobPostingRecruitment;
 	}
 
-	public void setCompanyJobPostingRecruitment(int companyJobPostingRecruitment) {
+
+	public void setCompanyJobPostingRecruitment(String companyJobPostingRecruitment) {
 		this.companyJobPostingRecruitment = companyJobPostingRecruitment;
 	}
+
 
 	public LocalDate getCompanyJobPostingPeriodStart() {
 		return companyJobPostingPeriodStart;
 	}
 
+
 	public void setCompanyJobPostingPeriodStart(LocalDate companyJobPostingPeriodStart) {
 		this.companyJobPostingPeriodStart = companyJobPostingPeriodStart;
 	}
+
 
 	public LocalDate getCompanyJobPostingPeriodEnd() {
 		return companyJobPostingPeriodEnd;
 	}
 
+
 	public void setCompanyJobPostingPeriodEnd(LocalDate companyJobPostingPeriodEnd) {
 		this.companyJobPostingPeriodEnd = companyJobPostingPeriodEnd;
 	}
+
 
 	public String getCompanyJobPostingManagerPhone() {
 		return companyJobPostingManagerPhone;
 	}
 
+
 	public void setCompanyJobPostingManagerPhone(String companyJobPostingManagerPhone) {
 		this.companyJobPostingManagerPhone = companyJobPostingManagerPhone;
 	}
+
 
 	public String getCompanyJobPostingManagerEmail() {
 		return companyJobPostingManagerEmail;
 	}
 
+
 	public void setCompanyJobPostingManagerEmail(String companyJobPostingManagerEmail) {
 		this.companyJobPostingManagerEmail = companyJobPostingManagerEmail;
 	}
+
 
 	public String getCompanyJobPostingQr() {
 		return companyJobPostingQr;
 	}
 
+
 	public void setCompanyJobPostingQr(String companyJobPostingQr) {
 		this.companyJobPostingQr = companyJobPostingQr;
 	}
+
 
 	public String getCompanyJobPostingPreference() {
 		return companyJobPostingPreference;
 	}
 
+
 	public void setCompanyJobPostingPreference(String companyJobPostingPreference) {
 		this.companyJobPostingPreference = companyJobPostingPreference;
 	}
+
 
 	public String getCompanyJobPostingWelfare() {
 		return companyJobPostingWelfare;
 	}
 
+
 	public void setCompanyJobPostingWelfare(String companyJobPostingWelfare) {
 		this.companyJobPostingWelfare = companyJobPostingWelfare;
 	}
+
 
 	public String getCompanyJobJostingJobGroup() {
 		return companyJobJostingJobGroup;
 	}
 
+
 	public void setCompanyJobJostingJobGroup(String companyJobJostingJobGroup) {
 		this.companyJobJostingJobGroup = companyJobJostingJobGroup;
 	}
+
 
 	public String getCompanyJobJostingJob() {
 		return companyJobJostingJob;
 	}
 
+
 	public void setCompanyJobJostingJob(String companyJobJostingJob) {
 		this.companyJobJostingJob = companyJobJostingJob;
 	}
+
 
 	public String getCompanyJobJostingCareer() {
 		return companyJobJostingCareer;
 	}
 
+
 	public void setCompanyJobJostingCareer(String companyJobJostingCareer) {
 		this.companyJobJostingCareer = companyJobJostingCareer;
 	}
+
 
 	public int getBookmarkId() {
 		return bookmarkId;
 	}
 
+
 	public void setBookmarkId(int bookmarkId) {
 		this.bookmarkId = bookmarkId;
 	}
+
 
 	public int getApplicationId() {
 		return applicationId;
 	}
 
+
 	public void setApplicationId(int applicationId) {
 		this.applicationId = applicationId;
 	}
+
+
+	public LocalDate getWriteDate() {
+		return writeDate;
+	}
+
+
+	public void setWriteDate(LocalDate writeDate) {
+		this.writeDate = writeDate;
+	}
+
 
 	@Override
 	public String toString() {
@@ -210,7 +263,11 @@ public class CompanyJobPosting {
 				+ ", companyJobPostingWelfare=" + companyJobPostingWelfare + ", companyJobJostingJobGroup="
 				+ companyJobJostingJobGroup + ", companyJobJostingJob=" + companyJobJostingJob
 				+ ", companyJobJostingCareer=" + companyJobJostingCareer + ", bookmarkId=" + bookmarkId
-				+ ", applicationId=" + applicationId + "]";
+				+ ", applicationId=" + applicationId + ", writeDate=" + writeDate + "]";
 	}
+	
+	
+
+	
 
 }

@@ -63,7 +63,9 @@ public class UserController {
 		List<Bookmark> bookmarkList = userService.mydreamerBookmarkList(userEmail);
 		List<Application> applicationList = userService.mydreamerApplicationList(userEmail);
 		User userProfileEdit = userService.selectUserProfile(userEmail);
-
+		List<JobPostingList> comList = userService.mainCompanyJobPostingList();
+		model.addAttribute("comList", comList);
+		System.out.println(comList);
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
 			return "userMainBeforePage";
@@ -437,6 +439,9 @@ public class UserController {
 		session.invalidate();
 		return "userMainBeforePage";
 	}
+	
+	//포스팅 20개 조회
+	
 	
 	
 	// 로그아웃

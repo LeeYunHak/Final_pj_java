@@ -109,4 +109,9 @@ public interface UserMapper {
 	// 회원탈퇴
 	@Delete("delete from user where user_email = #{userEmail}")
 	public int ddeleteUser(String userEmail);
+	
+	//게시물 20개 조회
+	@Select("select * from company_job_posting order by write_date asc limit 0,20")
+	public List<JobPostingList> selectJbPosting();
+	
 }
