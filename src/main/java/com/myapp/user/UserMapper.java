@@ -50,6 +50,8 @@ public interface UserMapper {
 	// 기업구인글 목록이 쫘르르르르륵
 	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id")
 	public List<JobPostingList> selectCompany();
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id where cj.company_job_posting_id = ${companyJobPostingId}")
+	public List<JobPostingList> selectIdCompany();
 	
 	// 직종 선택 후 구인글 조회하기
 	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id"

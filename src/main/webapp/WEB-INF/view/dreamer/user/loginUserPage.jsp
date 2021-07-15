@@ -305,8 +305,6 @@
                     </div>
                 </div>
 			    <!-- 직종, 세부직무, 지역, 세부지역, 작품개수 등 START -->
-			    
-			    
                 <!-- 구인글 select START -->
                 <div class="company-job-list">
                     <ul>
@@ -316,7 +314,7 @@
                                 <ul>
                                     <li>
                                     	<!-- 링크 -->
-                                        <a class="company-href" href="/user/companypost">
+                                        <a class="company-href" href="/user/companypost?companyJobPostingId=${comLIst.companyJobPostingId }">
                                             <!-- 이미지 -->
                                             <div class="company-img" style="background-image: url(/resources/images/movie.jpg)";>
                                             </div>
