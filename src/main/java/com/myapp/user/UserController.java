@@ -450,18 +450,10 @@ public class UserController {
 	
 	//포스팅 20개 조회
 	
-	
-	
 	// 로그아웃
 	@RequestMapping("/logOut")
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "userMainBeforePage";
-	}
-	
-	// 구직자가 보는 구인글 페이지
-	@GetMapping("/companypost")
-	public String companypost() {
-		return "companypost";
 	}
 }
