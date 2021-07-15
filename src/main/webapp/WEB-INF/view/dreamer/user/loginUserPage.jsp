@@ -13,6 +13,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/resources/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/loginUserMain.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -310,7 +312,7 @@
                     <ul>
                         <li class="company-job" style="text-align: center;">
                        	<c:forEach items="${comList}" var="comList" >
-                            <div class="company-margin">
+                            <div class="company-margin" data->
                                 <ul>
                                     <li>
                                     	<!-- 링크 -->
@@ -344,5 +346,9 @@
     </div>
     <script type="text/javascript" src="/resources/loginUserMain.js"> </script>
     <script type="text/javascript" src="/resources/navi.js"></script>
+    <script type="text/javascript">
+		
+    
+    </script>
 </body>
 </html>
