@@ -17,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.myapp.application.Application;
 import com.myapp.bookmark.Bookmark;
+import com.myapp.companyJobPosting.CompanyJobPosting;
 import com.myapp.jobPostingList.JobPostingList;
 import com.myapp.kakao.Kakao_restapi;
 
@@ -448,7 +450,13 @@ public class UserController {
 		return "userMainBeforePage";
 	}
 	
-	//포스팅 20개 조회
+	@RequestMapping(value = "/ScrollDown", method = RequestMethod.POST)
+	public @ResponseBody List<JobPostingList> scrollDown(@RequestBody JobPostingList cjpId){
+		
+		int pidStart = cjpId.getCompanyJobPostingId()-1;
+		
+		return userService.scrollDown(pidStart);
+	}
 	
 	// 로그아웃
 	@RequestMapping("/logOut")

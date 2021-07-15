@@ -142,9 +142,9 @@ public class UserService {
 		}
 	}
 	
-	//게시물 20개 조회
-	public List<JobPostingList> selectJbPosting(){
-		return userMapper.selectJbPosting();
+	//스크롤 내릴때 실행되는 
+	public List<JobPostingList> scrollDown(int pidStart) {
+		return userMapper.selectJbPosting(pidStart);
 	}
 	
 	

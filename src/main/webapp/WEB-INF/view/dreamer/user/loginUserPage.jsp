@@ -312,7 +312,7 @@
                     <ul>
                         <li class="company-job" style="text-align: center;">
                        	<c:forEach items="${comList}" var="comList" >
-                            <div class="company-margin" data->
+                            <div class="company-margin" data-pid=${comList.companyJobPostingId }>
                                 <ul>
                                     <li>
                                     	<!-- 링크 -->
@@ -346,9 +346,74 @@
     </div>
     <script type="text/javascript" src="/resources/loginUserMain.js"> </script>
     <script type="text/javascript" src="/resources/navi.js"></script>
-    <script type="text/javascript">
-		
-    
-    </script>
+    <script>
+    var lastScrollTop = 0;
+    var easeEffect = 'easeInQuint';
+
+    // 다은 스크롤
+    $(window).scroll(function(){
+        var ScrollTop = $(window).scrollTop();
+        if(ScrollTop - lastScrollTop > 0){
+            //down-scroll : 현재 게시글 다음의 글 불러오기
+            console.log("down-scroll");
+            // 현재 스크롤의 top 좌표가 > (게시글을 불러온 화면 height - 윈도우 창의 height)되는 순간
+            if($(window).scrollTop()>=($(document).height() - $(window).height())){
+                
+                // class가 scrolling인 것의 요소 중 마지막 요소 선택 후 그것의 data 속성 값 받아오기
+                //  현재 뿌려진 게시글의 마지막 companyJobPostingId 값 읽어 오기 (다음 게시글 가져오기 위해 필요함)
+
+                var lastpid = $(".company-margin:last").attr("data-pid");
+
+                $.ajax({
+                    type:'post', //요청 method 방식
+                    url:'/user/ScrollDown', //요청 url
+                    headers:{
+                        "Content-Type":"application/json",
+                        "X-HTTP-Method-Override":"POST"
+                    },
+                    dataType:'json',//서버로 부터 되돌려 받는 데이터 타입
+                    data:JSON.stringify({ // 서버로 보낼 데이터
+                        pid:lastpid
+                    }),
+                    success:function(data){
+                        var str ="";
+
+                        if(data !=""){
+                            $(data).each(
+                                function(){
+                                    console.log(this);
+                                    str += "<div class="+"company-margin"+" data-pid="+"this.companyJobPostingId"+">"
+                                    +       "<ul>"
+                                    +           "<li>"
+                                    +               "<a class="+"company-href"+" href="+"/user/companypost?companyJobPostingId=this.companyJobPostingId"+">"
+                                    +                   "<div class= company-img style=background-image: url(/resources/images/movie.jpg)"
+                                    +                       "</div>"
+                                    +                   "<figcaption>"
+                                    +                           "<div id=job-card style=font-size: 16px>"
+                                    +                               "<div class=job-card-position>"+this.companyJobPostingTitle
+                                    +                                "</div><br>"
+                                    +                                "<div class=job-card-company-name>"+this.companyName
+                                    +                                "</div><br>"
+                                    +                                "<div class=job-card-company-location>"+this.companyCountry
+                                    +                                "</div><br>"
+                                    +                                "<div class=job-card-end-date>"+this.companyJobPostingPeriodEnd
+                                    +                                "</div>"
+                                    +                            "<div>"
+                                    +                     "<figcaption>"
+                                    +                "</a>"
+                                    +            "</li>"
+                                    +       "</ul>"          
+                                    +   "</div>";
+                                }
+                            ); //each
+                        }// if
+                    }//success
+
+                })//ajax
+            }
+
+        }
+    })
+</script>
 </body>
 </html>
