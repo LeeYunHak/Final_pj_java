@@ -48,7 +48,7 @@ public interface UserMapper {
 	
 	// 로그인 후 메인페이지(탐색페이지)
 	// 기업구인글 목록이 쫘르르르르륵
-	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id")
+	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id limit 0,20")
 	public List<JobPostingList> selectCompany();
 	@Select("select * from company_job_posting cj join company c on cj.company_id = c.company_id where cj.company_job_posting_id = ${companyJobPostingId}")
 	public JobPostingList selectIdCompany(int companyJobPostingId);

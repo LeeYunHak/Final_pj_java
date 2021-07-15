@@ -64,7 +64,6 @@ public class UserService {
 	public JobPostingList mainCompanyJobPostingById(int companyJobPostingId){
 		return userMapper.selectIdCompany(companyJobPostingId);
 	}
-
 	// 로그인 후 페이지(탐색창) 직종 선택 후 구인글 조회
 	public List<JobPostingList> jobGroupCompanyJobPostingList(String companyJobPostingJobGroup){
 		return userMapper.selectCompanyJobGroup(companyJobPostingJobGroup);

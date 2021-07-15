@@ -314,7 +314,7 @@
                        	<c:forEach items="${comList}" var="comList" >
                             <div class="company-margin" data-pid=${comList.companyJobPostingId }>
                                 <ul>
-                                    <li>
+                                    <li class="scrollH">
                                     	<!-- 링크 -->
                                         <a class="company-href" href="/user/companypost?companyJobPostingId=${comList.companyJobPostingId }">
                                             <!-- 이미지 -->
@@ -373,7 +373,7 @@
                     },
                     dataType:'json',//서버로 부터 되돌려 받는 데이터 타입
                     data:JSON.stringify({ // 서버로 보낼 데이터
-                        pid:lastpid
+                    	companyJobPostingId:lastpid
                     }),
                     success:function(data){
                         var str ="";
@@ -382,31 +382,35 @@
                             $(data).each(
                                 function(){
                                     console.log(this);
-                                    str += "<div class="+"company-margin"+" data-pid="+"this.companyJobPostingId"+">"
-                                    +       "<ul>"
-                                    +           "<li>"
-                                    +               "<a class="+"company-href"+" href="+"/user/companypost?companyJobPostingId=this.companyJobPostingId"+">"
-                                    +                   "<div class= company-img style=background-image: url(/resources/images/movie.jpg)"
-                                    +                       "</div>"
-                                    +                   "<figcaption>"
-                                    +                           "<div id=job-card style=font-size: 16px>"
-                                    +                               "<div class=job-card-position>"+this.companyJobPostingTitle
-                                    +                                "</div><br>"
-                                    +                                "<div class=job-card-company-name>"+this.companyName
-                                    +                                "</div><br>"
-                                    +                                "<div class=job-card-company-location>"+this.companyCountry
-                                    +                                "</div><br>"
-                                    +                                "<div class=job-card-end-date>"+this.companyJobPostingPeriodEnd
-                                    +                                "</div>"
-                                    +                            "<div>"
-                                    +                     "<figcaption>"
-                                    +                "</a>"
-                                    +            "</li>"
-                                    +       "</ul>"          
-                                    +   "</div>";
+                                    str += "<div class="+"company-margin"+" data-pid="+this.companyJobPostingId+">"
+                                    +       	"<ul>"
+                                    +           	"<li>"
+                                    +              		" <a class="+"company-href"+" href="+"/user"+"/companypost?"+"companyJobPostingId="+this.companyJobPostingId+">"
+                                    +                   	"<div class="+"company-img"+ " style="+"background-image:"+"url(/resources/images/movie.jpg)"+" </div>"
+			                        +                   		"<figcaption>"
+			                        +                     			"<div id="+"job-card"+" style="+"font-size: 16px>"
+			                        +                        			"<div class="+"job-card-position>"+this.companyJobPostingTitle
+			                        +                           		"</div>"+"<br>"
+			                        +                           		"<div class="+"job-card-company-name>"+this.companyName
+			                        +                           		"</div>"+"<br>"
+			                        +                           		"<div class="+"job-card-company-location>"+this.companyCountry
+			                        +                           		"</div>"+"<br>"
+			                        +                           		"<div class="+"job-card-end-date>"+this.writeDate
+			                        +                           		"</div>"
+			                        +                       		"</div>"
+			                        +                   		"</figcaption>"
+                                    +        			"</a>"
+                                    +     			"</li>"
+                                    +   		"</ul>"          
+                                    +	"</div>";
+                                    console.log(str);
                                 }
                             ); //each
+                            $(".company-margin").last().after(str);
                         }// if
+                        else{
+                        	 alert("더 불러올 데이터가 없습니다.")
+                        }
                     }//success
 
                 })//ajax
@@ -414,6 +418,7 @@
 
         }
     })
+    console.log($(".company-margin:last"));
 </script>
 </body>
 </html>
