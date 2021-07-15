@@ -20,7 +20,7 @@
                 <div style="width: 100%;">
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li><a id="nav3-1-logo" href="/user/loginUserPage"><img src="/resources/images/Dreamer.png" class="logo"></a>
+                            <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -38,7 +38,6 @@
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <div>
                             <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
                                 <div class="arrow_box">
                                     <div class="blank">
@@ -53,11 +52,15 @@
                                     <div class="logout"><a href="/user/logOut"
                                             style="text-decoration: none;color: #00cec9; font-size: 14px;">
                                             로그아웃</a></div><br>
+                                    <!-- 고객센터추가s -->
+                                    <div class="servicecenter"><a href="sevicecenter.html"
+                                        style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                        고객센터</a></div><br>
+                                    <!-- 고객센터추가e -->
                                     <div class="blank">
                                         <p></p><br>
                                     </div>
                                 </div>
-                            </div>
                             <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
                         </ul>
                     </nav>
@@ -220,13 +223,15 @@
                 </div>
                 <div class="sidebar">
                         <h2 style="text-align: center; margin-top: 70px;">${comList.companyName}</h2>
-                        <h4> <a href="/user/mainAfterMain">목록으로 돌아가기</a> </h4>
                         <div id="bookmark" style="width: 300px; margin-top: 50px; display: inline-block;">
                             <div id="bm" class="bm">
                                 <input type="button" value="북마크" id="bookmarkbtn" class="bookmarkbtn" >
                                 <img id="bookmarkimg" class="bookmarkimg" name="bookmarkimg" src="/resources/images/bookmark.png" style="cursor: pointer;">    
                             </div>                          
-                            <div id="hi"><input type="button" value="채용하기" id="hirebtn"></div>
+                            <div id="hi"><input type="button" value="지원하기" id="hirebtn"></div>
+                        </div>
+                        <div style="text-align: center; margin:20px;">
+	                        <h4><a href="/user/mainAfterMain" style="text-decoration: none;">목록으로 돌아가기</a></h4>
                         </div>
                 </div>
             </div>
