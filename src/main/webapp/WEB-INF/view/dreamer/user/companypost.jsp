@@ -175,25 +175,25 @@
                     <div style="height: 700px;">
                         <div><img src="/resources/images/movie.jpg" style="width: 900px; height: 500px;border:solid 2px #c8c8c8;"> </div>   
                         <br> 
-                        <div class="postingTitle">구인글제목</div><%-- ${company_job_posting_title} --%>
+                        <div class="postingTitle">${comList.companyJobPostingTitle}</div><%-- ${company_job_posting_title} --%>
                         <br>
                         <br>
-                        <div class="positngIntro">소개글</div><%-- ${company_job_posting_introduce} --%> 
+                        <div class="positngIntro">${comList.companyJobPostingIntroduce}</div><%-- ${company_job_posting_introduce} --%> 
                         <br>
                         <br>
                         <div class="postingQr">• 자격요건</div> 
                         <br>
-                        <div class="postingQr-child">&nbsp;자격요건 내용</div><%-- ${company_job_posting_qr} --%>
+                        <div class="postingQr-child">&nbsp;${comList.companyJobPostingQr}</div><%-- ${company_job_posting_qr} --%>
                         <br>
                         <br>
                         <div class="postingPrefer">• 우대사항</div> 
                         <br>
-                        <div class="postingPrefer-child">&nbsp;우대사항 내용</div><%-- ${company_job_posting_preference} --%>
+                        <div class="postingPrefer-child">&nbsp;${comList.companyJobPostingPreference}</div><%-- ${company_job_posting_preference} --%>
                         <br>
                         <br>
                         <div class="postingWelfare">• 혜택 및 복지</div>
                         <br>
-                        <div class="postingWelfare-child">&nbsp;혜택 및 복지 내용</div> <%-- ${company_job_posting_welfare} --%>
+                        <div class="postingWelfare-child">&nbsp;${comList.companyJobPostingWelfare} </div> <%-- ${company_job_posting_welfare} --%>
                         <br>
                         <br>
                         <br>
@@ -219,7 +219,8 @@
                     
                 </div>
                 <div class="sidebar">
-                        <h2 style="text-align: center; margin-top: 70px;">기업 이름</h2>
+                        <h2 style="text-align: center; margin-top: 70px;">${comList.companyName}</h2>
+                        <h4> <a href="/user/mainAfterMain">목록으로 돌아가기</a> </h4>
                         <div id="bookmark" style="width: 300px; margin-top: 50px; display: inline-block;">
                             <div id="bm" class="bm">
                                 <input type="button" value="북마크" id="bookmarkbtn" class="bookmarkbtn" >

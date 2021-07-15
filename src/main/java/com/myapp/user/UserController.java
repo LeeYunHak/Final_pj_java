@@ -269,6 +269,14 @@ public class UserController {
 		return "loginUserPage";
 	}
 
+	// 구직자가 보는 구인글 페이지
+	@GetMapping("/companypost")
+	public String companypost(Model model, int companyJobPostingId) {
+		JobPostingList comList = userService.mainCompanyJobPostingById(companyJobPostingId);
+		model.addAttribute("comList",comList);
+		return "companypost";
+	}
+	
 	@RequestMapping(value = "/mainAfter", method = RequestMethod.GET)
 	@ResponseBody
 	public String mainCompanyJobPostingListB(Model model) {

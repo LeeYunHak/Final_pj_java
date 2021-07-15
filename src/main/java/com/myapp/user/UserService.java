@@ -60,6 +60,11 @@ public class UserService {
 	public List<JobPostingList> mainCompanyJobPostingList(){
 		return userMapper.selectCompany();
 	}
+	// 구인글 선택시 구인글 정보 나오는 페이지
+	public JobPostingList mainCompanyJobPostingById(int companyJobPostingId){
+		return userMapper.selectIdCompany(companyJobPostingId);
+	}
+
 	// 로그인 후 페이지(탐색창) 직종 선택 후 구인글 조회
 	public List<JobPostingList> jobGroupCompanyJobPostingList(String companyJobPostingJobGroup){
 		return userMapper.selectCompanyJobGroup(companyJobPostingJobGroup);
