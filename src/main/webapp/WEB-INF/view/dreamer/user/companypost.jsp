@@ -71,12 +71,12 @@
 
         <!-- 탐색 -->
         <div class="bar">
-            <div class="opennavi" style="width: 100%; height: 237px; text-align: right;min-width: 1750px;">
+            <div class="opennavi" style="width: 100%; height: 286px; text-align: right; min-width: 1750px;">
                 <div style="z-index: 1000; float: left;">
-                    <img src="/resources/images/movie.jpg" alt="" style="width: 350px;">
+                    <img src="/resources/images/movie.jpg" alt="" style="width: 400px; height: 286px">
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="연출">
@@ -89,7 +89,7 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="조명">
@@ -99,7 +99,7 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="음향">
@@ -109,7 +109,7 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="촬영">
@@ -118,7 +118,7 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="특수효과">
@@ -127,7 +127,7 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="제작">
@@ -137,7 +137,7 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="배우">
@@ -149,7 +149,7 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                     <ul>
                         <li>
                             <input type="button" id="searchSearch" value="미술">
@@ -160,8 +160,8 @@
                     </ul>
                 </div>
                 <div
-                    style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                    <ul style="text-align: right;">
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
                         <li>
                             <input type="button" id="searchSearch" value="분장">
                         </li>
