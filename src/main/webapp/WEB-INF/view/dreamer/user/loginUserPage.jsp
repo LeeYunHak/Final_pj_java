@@ -13,13 +13,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/resources/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="/resources/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/loginUserMain.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>로그인 후 메인화면</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -402,22 +401,28 @@
                                     +     			"</li>"
                                     +   		"</ul>"          
                                     +	"</div>";
-                                    console.log(str);
                                 }
                             ); //each
-                            $(".company-margin").last().after().html(str);
+                            $(".company-margin").empty();
+                            $(".company-job").after().html(str);
                         }// if
                         else{
                         	 alert("더 불러올 데이터가 없습니다.")
                         }
                     }//success
 
-                })//ajax
+                });//ajax
+                
+                // class가 company-margin 인 요소중 가장 처음 위치로 이동
+               	var position = $(".company-margin:first").offset(); //위치 값
+               	console.log(position,"위치값임");
+                
+                // 이동 위로 부터 position.top px 위치로 스크롤 . 
+                $('html,body').stop().animate({scrollTop:position.top},600);
             }
-
+				lastScrollTop = ScrollTop;
         }
     })
-    console.log($(".company-margin:last"));
 </script>
 </body>
 </html>
