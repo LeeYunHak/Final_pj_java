@@ -226,6 +226,7 @@
                         <div id="bookmark" style="width: 300px; margin-top: 50px; display: inline-block;">
                             <div id="bm" class="bm">
                                 <input type="button" value="북마크" id="bookmarkbtn" class="bookmarkbtn" >
+                                <!-- 이거 눌렀을 때 북마크에 인서트 / 유저,잡포스팅에 업데이트 -->
                                 <img id="bookmarkimg" class="bookmarkimg" name="bookmarkimg" src="/resources/images/bookmark.png" style="cursor: pointer;">    
                             </div>                          
                             <div id="hi"><input type="button" value="지원하기" id="hirebtn"></div>

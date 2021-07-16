@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.myapp.application.Application;
+import com.myapp.bookmark.AddBookmark;
 import com.myapp.bookmark.Bookmark;
-import com.myapp.companyJobPosting.CompanyJobPosting;
 import com.myapp.jobPostingList.JobPostingList;
 
 @Service
@@ -146,5 +146,14 @@ public class UserService {
 		return userMapper.selectJbPosting(pidStart);
 	}
 	
+	//북마크 추가
+	public AddBookmark insertBookmark(AddBookmark addBookmark) {
+		int row = userMapper.addBookmark(addBookmark);
+		if(row == 1) {
+			return new AddBookmark(addBookmark.getBookmarkId(), addBookmark.getUserId(), addBookmark.getCompanyJobPostingId());
+		}else {
+			return null;
+		}
+	}
 	
 }

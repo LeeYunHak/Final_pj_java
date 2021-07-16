@@ -11,6 +11,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.myapp.application.Application;
+import com.myapp.bookmark.AddBookmark;
 import com.myapp.bookmark.Bookmark;
 import com.myapp.jobPostingList.JobPostingList;
 
@@ -90,7 +91,7 @@ public interface UserMapper {
 	// 마이드리머 북마크 구인글 목록
 	@Select("select cj.company_job_posting_title, c.company_name, c.company_country, cj.company_job_posting_period_end "
 			+ "from user u join bookmark b on u.user_id = b.user_id join "
-			+ "company_job_posting cj on b.bookmark_id = cj.bookmark_id join company c on "
+			+ "company_job_posting cj on b.company_job_posting_id = cj.company_job_posting_id join company c on "
 			+ "cj.company_id = c.company_id where u.user_email = #{userEmail}")
 	public List<Bookmark> selectBookmark(String userEmail);
 	
@@ -116,4 +117,8 @@ public interface UserMapper {
 	@Select("select * from company_job_posting where company_job_posting_id <= #{companyJobPostingId} and company_job_posting_id > #{companyJobPostingId}-20 order by write_date asc")
 	public List<JobPostingList> selectJbPosting(int companyJobPostingId);
 	
+	//북마크 추가하기
+	@Insert("insert into bookmark values(#{bookmarkId}, #{userId}, #{companyJobPostingId})")
+	@Options(useGeneratedKeys = true, keyProperty = "bookmarkId")
+	public int addBookmark(AddBookmark addBookmark);
 }
