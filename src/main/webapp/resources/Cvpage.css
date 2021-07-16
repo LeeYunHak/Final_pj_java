@@ -242,52 +242,55 @@ border-color: #c8c8c8;
 
 /* 탐색 메뉴~ START */
 .bar {
-margin: 0 auto;
-width: 100%;
-height: 28px;
-line-height: 30px;
-text-align: center;
-cursor: pointer;
-float: left;
-display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: 28px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	display: block;
 }
+/*배경색수정*/
 .opennavi {
-position: fixed;
-top: 60px;
-left: 0px;
-z-index: 999;
-/* background-color: #98fcfa; */
-background-color: #d2d3d9;
-border-top: none;
-display: block;
-display: none;
-box-shadow: 1px #c8c8c8;
-/* float: left; */
+	position: fixed;
+	top: 60px;
+	left: 0px;
+	z-index: 999;
+    background-color: rgb(211, 238, 237);
+	border-top: none;
+	display: block;
+	display: none;
+	box-shadow: 1px #c8c8c8;
+	/* float: left; */
 }
 div>div>div>ul {
-padding-left: 0px;
+	padding-left: 0px;
 }
+/*글씨크기수정*/
 div>div>div>ul>li {
-font-size: 15px;
-color: gray;
-text-align: center;
+	font-size: 13px;
+	color: gray;
+	text-align: center;
 }
+/*글씨크기수정*/
 div>div>div>ul>li>input {
-width: 100px;
-margin-bottom: 3px;
-color: black;
-background-color:#00cecb00;
-text-align: center;
-  border: none;
-  border-bottom: 1px solid #c8c8c8;
-  font-size: 18px;
+	width: 100px;
+	margin-bottom: 3px;
+	color: black;
+	background-color:#00cecb00;
+	text-align: center;
+    border: none;
+    border-bottom: 1px solid #c8c8c8;
+    font-size: 16px;
 }
 /* 탐색 메뉴~ END */
 
 /*마이페이지박스*/
 .arrow_box {
 	width: 110px;
-	height: 135px;
+    /*높이수정*/
+	height: 175px;
 	text-align: center;
 	position: absolute;
 	background: #ffffff;
@@ -328,19 +331,16 @@ text-align: center;
 .mydreamer, .profile, .logout{
 	width: 100%;
 	height: 30px;
+    /* line-height: 20px; */
+    /* top: 50%;
+    transform: translateY(-50%); */
 }
-
-.blank0{
-width: 100%;
-height: 20px;
-}
-.blank1{
-height: 100%;
-width: 50px;
-}
-.blank2{
-height: 100%;
-width: 25px;
+/*새로추가*/
+.servicecenter{
+    height: 40px;
+    padding-top: 20px;
+    margin-top: -10px;
+    border-top: 1px solid rgb(0, 206, 201);
 }
 
   /* 공백 */

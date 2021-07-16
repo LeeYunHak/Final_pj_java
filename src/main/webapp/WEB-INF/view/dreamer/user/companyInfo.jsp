@@ -26,19 +26,37 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-2-announcement" type="button" href="#">공고목록</a></li>
+                            <li><a id="nav3-2-announcement" type="button" href="/company/recruitmentOfCompany">공고목록</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-4-applicant_status" type="button" href="#">지원자 현황</a></li>
+                            <li><a id="nav3-4-applicant_status" type="button" href="/company/applicantstatus">지원자 현황</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-5-companyinfo" type="button" href="/user/companyInfo">회사정보</a></li>
+                            <li><a id="nav3-5-companyinfo" type="button" href="/company/companyInfo">회사정보</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-7-account" type="button" href="#">계정관리</a></li>
+                            <li><a id="nav3-7-account" type="button" href="/company/co_accountpage">계정관리</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-6-ProfileName" type="button" href="mydreamer.html"
+                            <li><a id="nav3-6-ProfileName" type="button"
                                 style="color: white; font-size: 15px;">기업명</a></li>
                             <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/userMainBefore'">드리머 홈</button></li>
+                        <!-- 마이페이지박스추가 -->
+                            <div>
+                                <div class="arrow_box">
+                                    <div class="blank">
+                                        <p></p>
+                                    </div><br>
+                                    <div class="logout"><a href="/user/logOut"
+                                            style="text-decoration: none;color: grey; font-size: 14px;">
+                                            로그아웃</a></div><br>
+                                             <!-- 고객센터추가 -->
+                                    <div class="servicecenter"><a href="/user/sevicecenter"
+                                        style="text-decoration: none;color: grey; font-size: 14px;">
+                                        고객센터</a></div><br>
+                                    <div class="blank">
+                                        <p></p><br>
+                                    </div>
+                                </div>
+                            </div>
                         </ul>
                     </nav>
                 </div>
@@ -47,7 +65,7 @@
         <!-- 네비게이션바 END -->
         <div class="tab-container">
             <a href="/resources/companyImage"> <!--이미지 수정페이지--><button class="img-btn">이미지</button></a>
-            <a href="/resources/companyInfo"> <!--이미지 수정페이지--><button class="info-btn">정보</button></a>
+            <a href="/resources/companyInfo"> <!--정보 수정페이지--><button class="info-btn">정보</button></a>
         </div>
         <div class="cp-info">
             <div class="sc-container">
@@ -126,5 +144,6 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="/resources/navi.js"> </script>
 </body>
 </html>

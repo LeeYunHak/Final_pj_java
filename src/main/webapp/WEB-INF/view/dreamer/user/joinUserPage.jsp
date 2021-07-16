@@ -181,12 +181,17 @@
 </head>
 
 <body>
-    <div>
-        <button type="button" style="color: rgb(0, 206, 201); background-color: white;
-        font-size: 35px; font-weight: bold ; cursor: pointer; border: none; padding-bottom: 20px;"
-        onclick="location.href='/user/mainBefore'"
-        >Dreamer</button>
-    </div>
+     <div style="width: 100%; height: 70px; ">
+    <!-- 네비게이션바 START -->
+        <ul class="nv-st">
+            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>         
+            <li><a id="nav3-1-logo" href="/user/mainBefore"><img src="/resources/images/Dreamer.png" class="logo"></a>
+            </li>
+        </ul>
+    </div>    
+    <h6>&nbsp</h6>
     <div style="border: 1px solid rgb(170, 170, 170); height: 900px;" class="join1">
         <form name="join" action="/user/joinUser" method="post">
 

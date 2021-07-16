@@ -16,34 +16,34 @@
     <div id="frame">
         <div class="main">
             <!-- 네비게이션바 START -->
-        <header class="navbar">
+       <header class="navbar">
             <div class="nav-con">
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="/user/companyMain"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
+                            <li class="nv-it"><a id="nav3-1-logo"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-2-announcement" type="button" href="#">공고목록</a></li>
-                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-4-applicant_status" type="button" href="#">지원자 현황</a></li>
-                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-5-companyinfo" type="button" href="/user/companyInfo">회사정보</a></li>
-                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-7-account" type="button" href="#">계정관리</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-6-ProfileName" type="button" href="mydreamer.html"
-                                style="color: white; font-size: 15px;">기업명</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>               
+                            <li><a id="nav3-2-login" type="button">채용담당자 로그인</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                            <li><a id="nav3-3-join" type="button" href="/user/companyJoin">채용담당자 가입</a></li>
+                            <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/userMainBefore'">드리머 홈</button></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
-        <!-- 네비게이션바 END -->
+    <!-- 네비게이션바 END -->
             <div class="content">
                 <div class="ct-container">
                     <h2 class="ct-h2">회사 정보를 등록해주세요.</h2>
@@ -290,5 +290,6 @@ function modal1 (id){
           return this;
       };
     </script>
+        <script type="text/javascript" src="/resources/navi.js"> </script>
 </body>
 </html>

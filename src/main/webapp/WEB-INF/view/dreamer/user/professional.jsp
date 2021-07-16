@@ -28,11 +28,11 @@
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-2-Select" type="button">탐색</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                                <li><a id="nav3-3-Resume" type="button" href="CVpage.html">이력서</a></li>
+                                <li><a id="nav3-3-Resume" type="button" href="/user/CVpage">이력서</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                                <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
+                                <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                                <li><a id="nav3-5-ApplicationStatus" type="button" href="#">지원현황</a></li>
+                                <li><a id="nav3-5-ApplicationStatus" type="button" href="/user/mydreamer">지원현황</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -40,7 +40,6 @@
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <div>
-                            <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
                                 <div class="arrow_box">
                                     <div class="blank">
                                         <p></p>
@@ -54,11 +53,16 @@
                                     <div class="logout"><a href="/user/logOut"
                                             style="text-decoration: none;color: #00cec9; font-size: 14px;">
                                             로그아웃</a></div><br>
+                                            <!-- 고객센터추가 -->
+                                    <div class="servicecenter"><a href="/user/sevicecenter"
+                                        style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                        고객센터</a></div><br>
                                     <div class="blank">
                                         <p></p><br>
                                     </div>
                                 </div>
                             </div>
+                            <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
                             <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
                         </ul>
                     </nav>
@@ -69,12 +73,12 @@
 
     <!-- 탐색 START -->
     <div class="bar">
-        <div class="opennavi" style="width: 100%; height: 237px; text-align: right;">
+        <div class="opennavi" style="width: 100%; height: 286px; text-align: right;">
             <div style="z-index: 1000; float: left;">
-                <img src="/resources/images/movie.jpg" alt="" style="width: 350px;">
+                <img src="/resources/images/movie.jpg" alt="" style="width: 400px; height: 286px;">
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="연출">
@@ -87,7 +91,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="조명">
@@ -97,7 +101,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="음향">
@@ -107,7 +111,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="촬영">
@@ -116,7 +120,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="특수효과">
@@ -125,7 +129,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="제작">
@@ -135,7 +139,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="배우">
@@ -147,7 +151,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul>
                     <li>
                         <input type="button" id="searchSearch" value="미술">
@@ -158,7 +162,7 @@
                 </ul>
             </div>
             <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
                 <ul style="text-align: right;">
                     <li>
                         <input type="button" id="searchSearch" value="분장">
@@ -194,11 +198,11 @@
                             </a>
                         </div>
                         <div class="second-contents">
-                                <button type="button" style="color: white; border: none; width: 200px; height: 40px;
-                        background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/profileMain'">프로필 정보</button>
+                            <button type="button" style="color: white; border: none; width: 200px; height: 40px;
+                            background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='speciality.html'">프로필 수정</button>
                             <h4>&nbsp;</h4>
                             <button type="button" style="color: white; border: none; width: 200px; height: 40px;
-                        background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/accountpage'">계정설정</button>
+                            background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='mydreamermodify.html'">계정설정</button>
                         </div>
                     </div>
                 </aside>

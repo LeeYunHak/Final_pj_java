@@ -33,7 +33,7 @@ response.setHeader("Pragma", "no-cache");
 				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
 				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
 				<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-				<li><a id="nav3-1-logo" href="index.html"><img
+				<li><a id="nav3-1-logo" href="/user/mainBefore"><img
 						src="/resources/images/Dreamer.png" class="logo"></a></li>
 			</ul>
 			<div class="row">

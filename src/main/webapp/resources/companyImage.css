@@ -223,6 +223,64 @@ a, button{
 
 /* 네비 끝 */
 
+/*마이페이지박스*/
+.arrow_box {
+	width: 110px;
+    /*height수정*/
+	height: 110px;
+	text-align: center;
+	position: absolute;
+	background: #ffffff;
+	border: 4px solid rgb(162, 162, 162);
+    line-height: 5px;
+	display: none;
+	z-index: 9999999;
+    top: 67px;
+    right: 445px;
+    /* vertical-align: middle; */
+}
+
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;z-index: 10000;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 15px;
+	margin-left: -15px;z-index: 10000;
+}
+
+.arrow_box:before {
+	border-color: rgba(96, 185, 245, 0);
+	border-bottom-color: rgb(162, 162, 162);
+	border-width: 21px;
+	margin-left: -21px;z-index: 1000000;
+}
+
+.logout{
+	width: 100%;
+	height: 30px;
+}
+
+.servicecenter{
+    height: 40px;
+    padding-top: 20px;
+    margin-top: -10px;
+}
+
+.blank{
+	width: 100%;
+	height: 20px;
+}
+
 
 /* 네비 아래 시작 */
 .tab-container{
