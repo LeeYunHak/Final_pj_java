@@ -318,8 +318,7 @@
                                     	<!-- 링크 -->
                                         <a class="company-href" href="/user/companypost?companyJobPostingId=${comList.companyJobPostingId }">
                                             <!-- 이미지 -->
-                                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)";>
-                                            </div>
+                                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                             <figcaption>
                                                 <div id="job-card" style="font-size: 16px;">
                                                     <div class="job-card-position">${comList.companyJobPostingTitle}
@@ -382,20 +381,20 @@
                             $(data).each(
                                 function(){
                                     console.log(this);
-                                    str += "<div class="+"company-margin"+" data-pid="+this.companyJobPostingId+">"
+                                    str += "<div class='company-margin' data-pid='"+this.companyJobPostingId+"'>"
                                     +       	"<ul>"
-                                    +           	"<li>"
-                                    +              		" <a class="+"company-href"+" href="+"/user"+"/companypost?"+"companyJobPostingId="+this.companyJobPostingId+">"
-                                    +                   	"<div class="+"company-img"+ " style="+"background-image:"+"url(/resources/images/movie.jpg)"+" </div>"
+                                    +           	"<li class='scrollH'>"
+                                    +              		" <a class='company-href' href='/user/companypost?companyJobPostingId="+this.companyJobPostingId+"'>"
+                                    +                   	"<div class='company-img' style='background-image:url(/resources/images/movie.jpg)'></div>"
 			                        +                   		"<figcaption>"
-			                        +                     			"<div id="+"job-card"+" style="+"font-size: 16px>"
-			                        +                        			"<div class="+"job-card-position>"+this.companyJobPostingTitle
+			                        +                     			"<div id='job-card' style= 'font-size: 16px'>"
+			                        +                        			"<div class='job-card-position'>"+this.companyJobPostingTitle
 			                        +                           		"</div>"+"<br>"
-			                        +                           		"<div class="+"job-card-company-name>"+this.companyName
+			                        +                           		"<div class='job-card-company-name'>"+this.companyName
 			                        +                           		"</div>"+"<br>"
-			                        +                           		"<div class="+"job-card-company-location>"+this.companyCountry
+			                        +                           		"<div class='job-card-company-location'>"+this.companyCountry
 			                        +                           		"</div>"+"<br>"
-			                        +                           		"<div class="+"job-card-end-date>"+this.writeDate
+			                        +                           		"<div class='job-card-end-date'>"+this.writeDate
 			                        +                           		"</div>"
 			                        +                       		"</div>"
 			                        +                   		"</figcaption>"
@@ -406,7 +405,7 @@
                                     console.log(str);
                                 }
                             ); //each
-                            $(".company-margin").last().after(str);
+                            $(".company-margin").last().after().html(str);
                         }// if
                         else{
                         	 alert("더 불러올 데이터가 없습니다.")

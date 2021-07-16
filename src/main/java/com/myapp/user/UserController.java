@@ -451,7 +451,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/ScrollDown", method = RequestMethod.POST)
-	public @ResponseBody List<JobPostingList> scrollDown(@RequestBody CompanyJobPosting cjpId){
+	public @ResponseBody List<JobPostingList> scrollDown(@RequestBody JobPostingList cjpId){
 		System.out.println("호출");
 		System.out.println(cjpId.getCompanyJobPostingId());
 		int pidStart = cjpId.getCompanyJobPostingId()-1;
