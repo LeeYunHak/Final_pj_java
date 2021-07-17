@@ -392,6 +392,7 @@ div>div>div>ul>li>input {
       margin-bottom: 20px;
       width: calc(25% - 25px);
       background-color: #fff;
+      margin-right: 0;
   }
 
   .resume-box{
@@ -552,17 +553,22 @@ div>div>div>ul>li>input {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
   }
 
   .writing-span{
     font-size: 16px;
-    font-weight: 600;
     line-height: 20px;
     letter-spacing: normal;
-    text-align: left;
+    outline: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+    
   }
-
-  .dropdown-btn-group{
+  
+   .dropdown-btn-group{
     position: absolute;
     right: 12px;
     top: 8px;

@@ -119,6 +119,6 @@ Element.prototype.setStyle = function(styles) {
 
 addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click',function(){
-    location.href='CV-write.html'
+    location.href='/user/resumeWritepage'
 },100000)
 

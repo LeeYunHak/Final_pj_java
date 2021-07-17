@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <%
 	response.setHeader("Cache-Control","no-cache");
@@ -12,8 +10,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이력서</title>
-    <link rel="stylesheet" href="/resources/Cvpage.css">
+    <title>이력서 작성</title>
+    <link rel="stylesheet" href="/resources/CV-write.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -179,67 +177,113 @@
                 </div>
             </div>
         </div>
-    <div class="blank"></div>
-    <div class="resume-list-container">
-        <div id="resume-list">
-            <div class="resume-list-header">
-                <h4>최근 이력서</h4>
-            </div>
-            <div style="max-height:inherit;overflow-y:inherit;height:inherit;">
-                <div class="resume-list-content">
-                    <div class="resume-item">
-                        <div class="resume-box">
-                            <button type="button" id="addBtn" class="resume-add-btn">
-                                <div class="wrapper">
-                                    <div class="box-dreamer">
-                                        <i class="resume-icon"></i>
-                                    </div>
-                                    <p>이력서 작성</p>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="resume-item">
-                        <div class="resume-box">
-                            <div class="drop-resume">
-                                <div class="wrapper">
-                                    <div class="box">
-                                        <i class="upload-icon"></i>
-                                    </div>
-                                    <p>파일 업로드</p>
-                                </div>
-                                <input type="file" style="display: none;">
-                            </div>
-                        </div>
-                    </div>
-                    <c:forEach items="${resumeList }" var="resumeList">
-                    <div class="resume-item">
-                        <div class="resume-box">
-                            <div class="resume-preview">
-                                <h3 class="writing">${resumeList.resumeTitle}</h3>
-                                <p class="date">${resumeList.writeDate}</p>
-                            </div>
+            <main>
+                <div id="frame">
+                    <div class="container">
+                        <div id="resume-wr">
+                        <form action="/user/resumeUpdate" method="post">
+                        	<input type="number" name="resumeId" value="${writeResume.resumeId }">
                             <div class="resume-info">
-                            	<div class="resume-status">
-                            	<form action="/user/resumeUpdate" method="get">
-                            		<input type="text" name="resumeId" value="${resumeList.resumeId}" style="display: none;">
-                            		<button type="submit" class="writing-span">수정하기</button>
-                            	</form>
-                            	<span>•</span>
-                            	<form action="/user/resumeDelete" method="post">
-                            		<input type="text" name="resumeId" value="${resumeList.resumeId}" style="display: none;">
-                            		<button type="submit" class="writing-span">삭제하기</button>
-                            	</form>	
-                            	</div>
+                                <div class="resume-header">
+                                    <div class="resume-input-form-group">
+                                        <input class="resume-title-input" type="text" maxlength="100" placeholder="이력서 제목(필수)" name="resumeTitle" value="${writeResume.resumeTitle }">
+                                    </div>
+                                </div>
+                                <div class="resume-input-form-group">
+                                    <input class="resume-input-name" type="text" maxlength="100" placeholder="이름(필수)" name="userName" value="${writeResume.userName }">
+                                </div>
+                                <div class="resume-input-form-group">
+                                    <input class="resume-input-email" type="email" maxlength="120" placeholder="이메일(필수)" name="userEmail" value="${writeResume.userEmail }">
+                                </div>
+                                <div class="resume-input-form-group">
+                                    <input class="resume-input-phone" type="tel" maxlength="200" placeholder="연락처(필수) ex) 010-0000-0000" name="userPhone" value="${writeResume.userPhone }">
+                                </div>
                             </div>
+                            <div class="resume-about">
+                                <div class="resume-about-header">간단 소개</div>
+                                <p class="guide-comment">• 본인의 업무 경험을 기반으로 핵심역량과 업무 스킬을 간단히 작성해주세요.<br>• 3~5줄로 요약하여 작성하는 것을 추천합니다!</p>
+                                <div class="resume-input-form-group">
+                                    <div class="resume-ab-in">
+                                        <textarea class="resume-input-about" name="introduce" maxlength="2000" placeholder="간단한 자기소개를 통해 이력서를 돋보이게 만들어보세요. (3~5줄 권장)">${writeResume.introduce}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-list">
+                                <div class="resume-list-career">
+                                    <div class="resume-list-header">
+                                        <span>경력</span>
+                                    </div>
+                                    <p class="guide-comment">• 경력사항이 없는 경우 '신입'으로 작성해주세요.<br>• 업무 성과는 되도록 구체적인 숫자 혹은 %로 표현해주세요!</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" name="career" maxlength="2000" placeholder="담당하신 업무 중 우선순위가 높은 업무를 선별하여 최신순으로 작성해주세요.">${writeResume.career}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume-list-education">
+                                    <div class="resume-list-header">
+                                        <span>학력</span>
+                                    </div>
+                                    <p class="guide-comment">• 최신순으로 작성해주세요.</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" name="education" maxlength="2000" placeholder="최신순으로 작성해주세요.">${writeResume.education}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume-list-skill">
+                                    <div class="resume-list-header">
+                                        <span>스킬</span>
+                                    </div>
+                                    <p class="guide-comment">• 편집 툴, 디자인 툴, 마케팅 툴 등 가지고 있는 직무와 관련된 스킬을 추가해보세요</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" name="skill" maxlength="2000" placeholder="편집 툴, 디자인 툴, 마케팅 툴 등 가지고 있는 직무와 관련된 스킬을 추가해보세요">${writeResume.skill}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume-list-activity">
+                                    <div class="resume-list-header">
+                                        <span>수상 및 기타</span>
+                                    </div>
+                                    <p class="guide-comment">• 수상 이력, 직무 관련 자격증, 수료한 교육이나 참석한 외부활동 등이 있다면 간략히 작성해주세요.</p>
+                                    <div class="resume-input-form-group">
+                                        <div class="resume-ab-in">
+                                            <textarea class="resume-input-about" name="awards" maxlength="2000" placeholder="수상 이력, 직무 관련 자격증, 수료한 교육이나 참석한 외부활동 등이 있다면 간략히 작성해주세요.">${writeResume.awards}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-btn-container">
+                                <div class="b-container">
+                                    <div class="p-container">
+                                        <div class="p-root">
+                                            <div class="p-emoji">🙌</div>
+                                            <div class="p-item">
+                                                <div class="p-comment">당신의 커리어를 응원합니다!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <button class="temporary-btn">
+                                            <span class="label">
+                                                <span>임시 저장</span>
+                                            </span>
+                                        </button>
+                                        <button type="submit" class="btn-Completed">
+                                            <span class="label">
+                                                <span>작성 완료</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
                         </div>
                     </div>
-                    </c:forEach>
                 </div>
-            </div>
+            </main>
         </div>
-    </div>
-</body>
-<script type="text/javascript" src="/resources/CVpage.js"></script>
-<script type="text/javascript" src="/resources/navi.js"></script>
+        <script type="text/javascript" src="/resources/navi.js"></script>
+ </body>
 </html>

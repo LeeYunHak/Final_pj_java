@@ -14,6 +14,7 @@ import com.myapp.application.Application;
 import com.myapp.bookmark.AddBookmark;
 import com.myapp.bookmark.Bookmark;
 import com.myapp.jobPostingList.JobPostingList;
+import com.myapp.resume.Resume;
 
 @Mapper
 public interface UserMapper {
@@ -122,4 +123,26 @@ public interface UserMapper {
 	@Insert("insert into bookmark values(#{bookmarkId}, #{userId}, #{companyJobPostingId})")
 	@Options(useGeneratedKeys = true, keyProperty = "bookmarkId")
 	public int addBookmark(AddBookmark addBookmark);
+	
+	//이력서
+	@Select("select * from resume where user_email = #{userEmail}")
+	public List<Resume> selectResume(String userEmail);
+	//작성중이던 이력서
+	@Select("select * from resume where resume_Id = #{resumeId}")
+	public Resume selectResumeWriting(int resumeId);
+	
+	//이력서 작성
+	@Insert("insert into resume values(#{resumeId},#{resumeTitle},#{userName},#{userEmail},#{userPhone},#{introduce},#{career},#{education},#{skill},#{awards},#{writeDate})")
+	@Options(useGeneratedKeys = true, keyProperty = "resumeId")
+	public int addResume(Resume resume);
+	
+	//이력서 수정
+	@Update("update resume set resume_title = #{resumeTitle},user_name = #{userName},user_email = #{userEmail},user_phone = #{userPhone},introduce = #{introduce},career = #{career},education = #{education},skill = #{skill},awards = #{awards},write_date = #{writeDate}"
+			+ " where resume_id = #{resumeId}")
+	public int updateResume(Resume resume);
+	
+	//이력서 삭제
+	@Delete("delete from resume where resume_id = #{resumeId}")
+	public int deleteResume(int resumeId);
+	
 }

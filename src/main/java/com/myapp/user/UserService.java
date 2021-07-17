@@ -1,5 +1,6 @@
 package com.myapp.user;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import com.myapp.application.Application;
 import com.myapp.bookmark.AddBookmark;
 import com.myapp.bookmark.Bookmark;
 import com.myapp.jobPostingList.JobPostingList;
+import com.myapp.resume.Resume;
 
 @Service
 public class UserService {
@@ -153,6 +155,44 @@ public class UserService {
 			return new AddBookmark(addBookmark.getBookmarkId(), addBookmark.getUserId(), addBookmark.getCompanyJobPostingId());
 		}else {
 			return null;
+		}
+	}
+	//이력서 조회
+	public List<Resume> selectResume(String userEmail){
+		return userMapper.selectResume(userEmail);
+	}
+	//작성중이던 이력서 조회
+	public Resume selectResumeWriting(int resumeId) {
+		return userMapper.selectResumeWriting(resumeId);
+	}
+	//이력서 추가
+	public Resume writeResume(Resume resume) {
+		resume.setWriteDate(LocalDate.now());
+		int row = userMapper.addResume(resume);
+		if(row == 1) {
+			return new Resume(resume.getResumeId(), resume.getResumeTitle(), resume.getUserName(), resume.getUserEmail(), resume.getUserPhone(), resume.getIntroduce(), resume.getCareer(), resume.getEducation(), resume.getSkill(), resume.getAwards(), resume.getWriteDate());
+		}else {
+			return null;
+		}
+	}
+	//이력서 수정
+	public Resume updateResume(Resume resume) {
+		resume.setWriteDate(LocalDate.now());
+		int row = userMapper.updateResume(resume);
+		if(row == 1) {
+			return new Resume(resume.getResumeId(), resume.getResumeTitle(), resume.getUserName(), resume.getUserEmail(), resume.getUserPhone(), resume.getIntroduce(), resume.getCareer(), resume.getEducation(), resume.getSkill(), resume.getAwards(), resume.getWriteDate());
+		}else {
+			return null;
+		}
+	}
+	
+	//이력서 삭제
+	public boolean deleteResume(int resumeId) {
+		int row = userMapper.deleteResume(resumeId);
+		if(row == 1) {
+			return true;
+		}else {
+			return false;
 		}
 	}
 	

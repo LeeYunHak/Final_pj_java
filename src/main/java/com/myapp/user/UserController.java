@@ -31,6 +31,7 @@ import com.myapp.bookmark.Bookmark;
 import com.myapp.companyJobPosting.CompanyJobPosting;
 import com.myapp.jobPostingList.JobPostingList;
 import com.myapp.kakao.Kakao_restapi;
+import com.myapp.resume.Resume;
 
 @Controller
 @RequestMapping("/user")
@@ -69,6 +70,8 @@ public class UserController {
 		List<JobPostingList> comList = userService.mainCompanyJobPostingList();
 		model.addAttribute("comList", comList);
 		System.out.println(comList);
+		List<Resume> resumeList = userService.selectResume(userEmail);
+		model.addAttribute("resumeList",resumeList);
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
 			return "userMainBeforePage";
@@ -77,9 +80,14 @@ public class UserController {
 			session.setAttribute("bookmarkList", bookmarkList);
 			session.setAttribute("applicationList", applicationList);
 			session.setAttribute("userProfileEdit", userProfileEdit);
+			session.setAttribute("resumeList", resumeList);
 			
 			return "loginUserPage";
 		}
+	}
+	@GetMapping("/loginUserPage")
+	public String loginUserPage() {
+		return "loginUserPage";
 	}
 
 	// ✔✔✔✔✔✔✔✔구글 로그인 건들지마시오✔✔✔✔✔✔✔✔
@@ -476,10 +484,57 @@ public class UserController {
 //		return userService.scrollUp(pidStart);
 //	}
 	
+	//이력서 조회
+	@GetMapping("/resume")
+	public String resume(String userEmail, Model model) {
+		List<Resume> resumeList = userService.selectResume(userEmail);
+		model.addAttribute("resumeList",resumeList);
+		
+		return "CVpage";
+	}
+	//이력서 작성페이지
+	@GetMapping("/resumeWritepage")
+	public String resumeWritePage() {
+		return "CV-write";
+	}
+	//이력서 작성
+	@PostMapping("/resumeWrite")
+	public String resumeWrite(Model model, Resume resume) {
+		Resume writeResume = userService.writeResume(resume);
+		model.addAttribute("writeResume",writeResume);
+		return "CVpage";
+	}
+	//작성중이던 이력서 페이지
+	@GetMapping("/resumeUpdate")
+	public String resumeWritingPage(Model model,int resumeId) {
+		Resume writingResume = userService.selectResumeWriting(resumeId);
+		model.addAttribute("writeResume",writingResume);
+		return "CV-wrting";
+	}
+	//작성중이던 이력서 수정
+	@PostMapping("/resumeUpdate")
+	public String resumeUpdate(Model model, Resume resume) {
+		Resume updateResume = userService.updateResume(resume);
+		model.addAttribute("updateResume",updateResume);
+		return "CVpage";
+	}
+	
+	
+	//이력서 삭제
+	@PostMapping("/resumeDelete")
+	public String resumeDelete(int resumeId) {
+		userService.deleteResume(resumeId);
+		return "CVpage";
+	}
+	
+	
+	
 	// 로그아웃
 	@RequestMapping("/logOut")
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "userMainBeforePage";
 	}
+	
+	
 }
