@@ -357,7 +357,7 @@
             // 현재 스크롤의 top 좌표가 > (게시글을 불러온 화면 height - 윈도우 창의 height)되는 순간
             if($(window).scrollTop()>=($(document).height() - $(window).height())){
                 
-                // class가 scrolling인 것의 요소 중 마지막 요소 선택 후 그것의 data 속성 값 받아오기
+                // class가 company-margin인 것의 요소 중 마지막 요소 선택 후 그것의 data 속성 값 받아오기
                 //  현재 뿌려진 게시글의 마지막 companyJobPostingId 값 읽어 오기 (다음 게시글 가져오기 위해 필요함)
 
                 var lastpid = $(".company-margin:last").attr("data-pid");
@@ -403,8 +403,8 @@
                                     +	"</div>";
                                 }
                             ); //each
-                            $(".company-margin").empty();
-                            $(".company-job").after().html(str);
+                            //$(".company-margin").empty();
+                            $(".company-job").append(str);
                         }// if
                         else{
                         	 alert("더 불러올 데이터가 없습니다.")
@@ -414,14 +414,15 @@
                 });//ajax
                 
                 // class가 company-margin 인 요소중 가장 처음 위치로 이동
-               	var position = $(".company-margin:first").offset(); //위치 값
-               	console.log(position,"위치값임");
+               	var position = $(".company-margin:last").offset(); //위치 값
+               	//console.log(position,"위치값임");
                 
                 // 이동 위로 부터 position.top px 위치로 스크롤 . 
                 $('html,body').stop().animate({scrollTop:position.top},600);
+                
             }
-				lastScrollTop = ScrollTop;
-        }
+				//lastScrollTop = ScrollTop;
+        }//다운스크롤 
     })
 </script>
 </body>

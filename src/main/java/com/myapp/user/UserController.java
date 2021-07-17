@@ -459,15 +459,22 @@ public class UserController {
 		session.invalidate();
 		return "userMainBeforePage";
 	}
-	
+	//이후 20 개 게시물 불러오기
 	@RequestMapping(value = "/ScrollDown", method = RequestMethod.POST)
 	public @ResponseBody List<JobPostingList> scrollDown(@RequestBody JobPostingList cjpId){
-		System.out.println("호출");
 		System.out.println(cjpId.getCompanyJobPostingId());
-		int pidStart = cjpId.getCompanyJobPostingId()-1;
-		System.out.println(pidStart);
+		int pidStart = cjpId.getCompanyJobPostingId();
+		System.out.println(pidStart+"마지막 번호");
 		return userService.scrollDown(pidStart);
 	}
+	//이전 20개 게시물 불러오기
+//	@RequestMapping(value = "/ScrollUp", method = RequestMethod.POST)
+//	public @ResponseBody List<JobPostingList> scrollUP(@RequestBody JobPostingList cjpId){
+//		System.out.println(cjpId.getCompanyJobPostingId());
+//		int pidStart = cjpId.getCompanyJobPostingId()-1;
+//		System.out.println(pidStart+"시작 번호");
+//		return userService.scrollUp(pidStart);
+//	}
 	
 	// 로그아웃
 	@RequestMapping("/logOut")

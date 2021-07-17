@@ -114,7 +114,8 @@ public interface UserMapper {
 	public int ddeleteUser(String userEmail);
 	
 	//게시물 20개 조회하고 나서 20개 더 불러오기
-	@Select("select * from company_job_posting where company_job_posting_id <= #{companyJobPostingId} and company_job_posting_id > #{companyJobPostingId}-20 order by write_date asc")
+//	select * from company_job_posting cj join company c on cj.company_id = c.company_id limit 0,20"
+	@Select("select * from company_job_posting where company_job_posting_id > #{companyJobPostingId} and company_job_posting_id < #{companyJobPostingId}+20")
 	public List<JobPostingList> selectJbPosting(int companyJobPostingId);
 	
 	//북마크 추가하기
