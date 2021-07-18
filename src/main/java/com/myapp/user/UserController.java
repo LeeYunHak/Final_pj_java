@@ -499,9 +499,11 @@ public class UserController {
 	}
 	//이력서 작성
 	@PostMapping("/resumeWrite")
-	public String resumeWrite(Model model, Resume resume) {
+	public String resumeWrite(Model model, Resume resume, String userEmail) {
 		Resume writeResume = userService.writeResume(resume);
 		model.addAttribute("writeResume",writeResume);
+		List<Resume> resumeList = userService.selectResume(userEmail);
+		model.addAttribute("resumeList",resumeList);
 		return "CVpage";
 	}
 	//작성중이던 이력서 페이지
@@ -513,17 +515,21 @@ public class UserController {
 	}
 	//작성중이던 이력서 수정
 	@PostMapping("/resumeUpdate")
-	public String resumeUpdate(Model model, Resume resume) {
+	public String resumeUpdate(Model model, Resume resume, String userEmail) {
 		Resume updateResume = userService.updateResume(resume);
 		model.addAttribute("updateResume",updateResume);
+		List<Resume> resumeList = userService.selectResume(userEmail);
+		model.addAttribute("resumeList",resumeList);
 		return "CVpage";
 	}
 	
 	
 	//이력서 삭제
 	@PostMapping("/resumeDelete")
-	public String resumeDelete(int resumeId) {
+	public String resumeDelete(int resumeId, Model model, String userEmail) {
 		userService.deleteResume(resumeId);
+		List<Resume> resumeList = userService.selectResume(userEmail);
+		model.addAttribute("resumeList",resumeList);
 		return "CVpage";
 	}
 	

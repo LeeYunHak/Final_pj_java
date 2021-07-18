@@ -226,7 +226,7 @@
                             		<button type="submit" class="writing-span">수정하기</button>
                             	</form>
                             	<span>•</span>
-                            	<form action="/user/resumeDelete" method="post">
+                            	<form action="/user/resumeDelete?userEmail=${loginUser.userEmail }" method="post">
                             		<input type="text" name="resumeId" value="${resumeList.resumeId}" style="display: none;">
                             		<button type="submit" class="writing-span">삭제하기</button>
                             	</form>	
