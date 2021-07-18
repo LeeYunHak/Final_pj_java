@@ -41,9 +41,9 @@
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-3-Resume" type="button" href="/user/resume?userEmail=${loginUser.userEmail}">이력서</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                                <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
+                                <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                                <li><a id="nav3-5-ApplicationStatus" type="button" href="#">지원현황</a></li>
+                                <li><a id="nav3-5-ApplicationStatus" type="button" href="/user/mydreamer">지원현황</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>

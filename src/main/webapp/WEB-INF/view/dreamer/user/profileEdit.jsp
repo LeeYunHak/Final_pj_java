@@ -29,7 +29,7 @@
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-2-Select" type="button">탐색</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                                <li><a id="nav3-3-Resume" type="button" href="/user/CVpage">이력서</a></li>
+                                <li><a id="nav3-3-Resume" type="button" href="/user/resume?userEmail=${loginUser.userEmail}">이력서</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
                                 <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
