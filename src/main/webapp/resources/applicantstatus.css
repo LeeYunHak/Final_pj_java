@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* 공통 CSS START */
+* {
+	margin: 0 auto;
+	padding: 0 auto;
+	box-sizing: border-box;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+div {
+	list-style-type: none;
+
+}
+
+html{
+    /* width: 1920px; */
+    height: 100%;
+    margin: 0;
+    min-width: 840px;
+}
+
+body{
+    /* width: 1920px; */
+    height: 100%;
+    margin: 0;
+}
+
+.full{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* width: 1920px; */
+    height: 100%;
+    padding-top: 80px;
+}
+
+a, button{
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+/* 네비 */
+.logo {
+    width: 180px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+#nav3-1-logo {
+	display: block;
+	cursor: pointer;
+	padding: 0px;
+}
+.navbar{
+    flex: 0 0 auto;
+    height: 60px;
+    background-color: rgb(28, 28, 28);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.nav-con{
+    position: relative;
+    width: 1300px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.nv{
+    float: left;
+    position: relative;
+    margin: 0px;
+	width: 100%;
+}
+
+.nv-st{
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    white-space: nowrap;
+	width: 100%;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.nv-st>li {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border : 0;
+    float: left;
+	list-style-type: none;
+}
+ 
+.nv-st::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.nv-home{
+    padding-right: 0px;
+    padding-left: 0px;
+    color: white;
+    padding: 1.2rem 1.6rem 1.6rem;
+    display: block;
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+#nav3-2-announcement,
+#nav3-3-humanresource,
+#nav3-4-applicant_status,
+#nav3-5-companyinfo,
+#nav3-7-account{
+    /* 링크 밑줄 제거 */
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    padding:20px;
+}
+#nav3-1-blank{
+
+    /* 링크 밑줄 제거 */
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    padding:20px;
+}
+
+#nav3-6-ProfileName{
+	/* background-color: white; */
+	/* 링크 밑줄 제거 */
+	text-decoration: none;
+	font-size: 18px;
+	cursor: pointer;
+	color: #525252;
+	padding-left: 0px;
+	padding-right: 0px;
+	display: inline-block;
+	padding: 20px;
+    width: 68px;
+    height: 59px;
+}
+
+.user{
+    padding: 6px 0px 0px;
+    position: relative;
+    float: right;
+}
+
+.u-name{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+
+.log-btn{
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-radius: 0px;
+    background: transparent;
+    height: 3.6rem;
+}
+
+.select-ic{
+    margin: 0px 1rem;
+    transition: transform 0.2s ease 0s;
+    display: inline-block;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+}
+
+.select-ic::before{
+    content:url(images/337-ctrl.png);
+}
+
+.home-btn{
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    padding: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+	margin-top: 8px;
+}
+
+/* 네비 끝 */
+
+/*마이페이지박스*/
+.arrow_box {
+	width: 110px;
+    /*height수정*/
+	height: 110px;
+	text-align: center;
+	position: absolute;
+	background: #ffffff;
+	border: 4px solid rgb(162, 162, 162);
+    line-height: 5px;
+	display: none;
+	z-index: 9999999;
+    top: 67px;
+    right: 125px;
+    /* vertical-align: middle; */
+}
+
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;z-index: 10000;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 15px;
+	margin-left: -15px;z-index: 10000;
+}
+
+.arrow_box:before {
+	border-color: rgba(96, 185, 245, 0);
+	border-bottom-color: rgb(162, 162, 162);
+	border-width: 21px;
+	margin-left: -21px;z-index: 1000000;
+}
+
+.logout{
+	width: 100%;
+	height: 30px;
+}
+
+.servicecenter{
+    height: 40px;
+    padding-top: 20px;
+    margin-top: -10px;
+}
+
+.blank{
+	width: 100%;
+	height: 20px;
+}
+
+/*본문*/
+.main{
+    height: 100%;
+    width: 50%;
+}
+
+.top{
+    height: 6%;
+    width: 100%;
+    border-bottom: 1px solid #c8c8c8;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#applicant{
+    margin-left: 30px;
+    width: 70px;
+    height: 30px;
+    padding-left: 5px;
+    font-size: 15px;
+    color:#525252;
+    border: 1px solid #525252;
+    border-radius: 3px;
+}
+
+.main2{
+    display: inline-block;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+.profile-img{
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50%;
+    /* ↓초기화 */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-top: 50px;
+    margin-right: 50px;
+}

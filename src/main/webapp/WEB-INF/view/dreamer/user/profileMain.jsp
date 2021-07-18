@@ -213,18 +213,18 @@
                         <div class="resume">
                             <h2 class="resume-h2">기본이력서</h2>
                             <div class="resume1">
-                                <dl style="align-items: center;line-height: 24px;color: #999;">기본 이력서 선택</dl>
+                                <dl style="align-items: center;line-height: 24px;color: #999; margin-bottom:20px;">기본 이력서 선택</dl>
                                 <div class="select">
                                     <button type="button" class="resumeselectbtn" id="resumeselectbtn">
                                         <form action="#resumename" method="GET"></form>
                                     </button>
                                 </div>
                                 <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
-                                    <dl style="align-items: center;line-height: 24px;color: #999;">학교</dl>
+                                    <dl style="align-items: center;line-height: 24px;color: #999; margin-bottom:20px;">학교</dl>
                                     <div><span class="univ">이력서에서 작성한 학교</span></div>
                                 </div>
                                 <div>
-                                <dl style="align-items: center;line-height: 24px;color: #999; margin-top: 60px;">이력서의 자기소개</dl>
+                                <dl style="align-items: center;line-height: 24px;color: #999; margin-top: 60px; margin-bottom:20px;">이력서의 자기소개</dl>
                                 </div>
                             </div>  
                         </div>             
@@ -236,19 +236,19 @@
                             	<c:when test="${update eq 1 }">
 		                            <div class="speciality1">
 		                                <div style="position: relative;font-size: 16px; display: block;">
-		                                    <dl style="align-items: center;line-height: 24px;color: #999;">직군</dl>
+		                                    <dl style="align-items: center;line-height: 24px;color: #999; margin-bottom:20px;">직군</dl>
 		                                    <div><span id="job-group">${professional.userJobGroup }</span>
 		                                    <hr style="border-top : 1px solid #c8c8c8;">
 		                                    </div>
 		                                </div>
 		                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
-		                                    <dl style="align-items: center;line-height: 24px;color: #999;">직무</dl>
+		                                    <dl style="align-items: center;line-height: 24px;color: #999; margin-bottom:20px;">직무</dl>
 		                                    <div><span id="detail-job">${professional.userJob }</span>
 		                                    <hr style="border-top : 1px solid #c8c8c8;">
 		                                    </div>
 		                                </div>
 		                                <div style="position: relative;font-size: 16px; display: block; margin-top: 30px;">
-		                                    <dl style="align-items: center;line-height: 24px;color: #999;">작품개수</dl>
+		                                    <dl style="align-items: center;line-height: 24px;color: #999; margin-bottom:20px;">작품개수</dl>
 		                                    <div style="padding-bottom: 20px;"><span id="job-career">${professional.userCareer }</span>
 		                                    <hr style="border-top : 1px solid #c8c8c8;">
 		                                    </div>
@@ -279,7 +279,7 @@
                             	</c:otherwise>
                             </c:choose>
                         </div>
-                        <div style="margin-left: 650px;">
+                        <div style="margin-left: 550px;">
                         <button type="button" onclick="javascript:location.href='/user/professional'" style="color: rgb(0,206,201);border: #c8c8c8 solid 1px;padding: 10px;
                         background-color: #ffffff; border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;">전문분야 수정</button>
                         </div>    

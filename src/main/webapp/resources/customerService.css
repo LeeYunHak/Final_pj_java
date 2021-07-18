@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* 공통 CSS START */
+* {
+    box-sizing: border-box;
+}
+* {
+	margin: 0 auto;
+	padding: 0 auto;
+	box-sizing: border-box;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+div {
+	list-style-type: none;
+}
+html{
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+.full{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+/* 네비게이션바 START */
+header.navbar{
+    flex: 0 0 auto;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+div.nav-con{
+    position: relative;
+    width: 1300px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+nav.nv{
+    float: left;
+    position: relative;
+    margin: 0px;
+	width: 100%;
+}
+ul.nv-st{
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    white-space: nowrap;
+	width: 100%;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.nv-st>li {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border : 0;
+    float: left;
+	list-style-type: none;
+}
+.nv-st::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+/* 로고 */
+a#nav3-1-logo {
+	display: block;
+	cursor: pointer;
+	padding: 0px;
+}
+img.logo {
+    width: 180px;
+    height: 50px;
+    padding-top: 10px;
+}
+/* 네비바 공백 */
+#nav3-1-blank{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    padding:20px;
+}
+/* 고객센터로~~ */
+#nav3-2-customerService{
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    padding:20px;
+}
+/* 문의하기로~~ */
+#nav3-3-contactUs {
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: rgba(0, 82, 233, 0.781);
+    padding: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+#nav3-3-contactUs:hover {
+    background-color: white;
+    color: rgba(0, 82, 233, 0.781);
+    border-color:1px solid rgba(0, 82, 233, 0.781);
+}
+/* 네비게이션바 END */
+
+
+/* 좌 개인회원, 우 기업회원 자주 묻는 코너 START */
+div.customerService-div{
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+/* 좌 개인회원, 우 기업회원 */
+div#detail-wrapper{
+    width: 1300px;
+    padding: 0 10px 0 10px;
+    left: 50%;
+    padding-bottom: 440px;
+}
+#detail-wrapper-left{
+    margin: 0 0 30px 0;
+    width: 600px;
+    float: left;
+    padding: 0 10px 0 10px;
+}
+#detail-wrapper-right{
+    margin: 0 0 30px 0;
+    width: 600px;
+    float: left;
+    padding: 0 10px 0 10px;
+}
+
+
+/* 하단 */
+/* 하단 */
+.resume-btn-container{
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0 50px;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 4;
+  }
+
+  .b-container{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1060px;
+    padding: 15px 0px;
+    margin: 0 auto;
+  }
+
+  .btn-container{
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0px 15px;
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}

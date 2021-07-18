@@ -392,7 +392,7 @@ div>div>div>ul>li>input {
 /* 사이드바 상단부터 첫번째 */
 .first-contents{
     border: none;
-    padding: 42px 20px 30px;
+    padding:42px 86px 30px;
     text-align: center;
     margin: 0;
 }
@@ -508,7 +508,7 @@ input[type="file" i]{
 
 /*이거 추가*/
 .second-contents{
-    padding: 30px 20px;
+    margin: 25px;
 }
 
 
@@ -668,9 +668,9 @@ input:focus
 
 /*텍스트박스*/
 #name{
-    width: 100%;
+    width: 300px;
     margin: 0;
-    padding: 12px 0;
+    padding: 12px;
     color: #333;
     font-size: 16px;
     font-weight: 400;
@@ -695,8 +695,9 @@ input:focus
 
 .phonenumInput{
     margin-top: 10px;
+    padding: 12px;
     margin-left: 0;
-    width: 100%;
+    width: 300px;
     color: #333;
     font-size: 16px;
     font-weight: 400;

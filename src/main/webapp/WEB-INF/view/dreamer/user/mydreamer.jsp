@@ -76,7 +76,7 @@
     
     <!-- 탐색 START -->
     <div class="bar">
-        <div class="opennavi" style="width: 100%; height: 286px; text-align: right;">
+        <div class="opennavi" style="width: 100%; height: 286px; text-align: right; min-width: 1750px;">
             <div style="z-index: 1000; float: left;">
                 <img src="/resources/images/movie.jpg" alt="" style="width: 400px; height: 286px;">
             </div>
@@ -218,8 +218,12 @@
 			                        <td style="width: 205px; color: #999999">지원 포지션</td>
 			                        <td style="width: 210px; color: #999999">지원일</td>
 		                        </tr>
+		                        <tr>
+			                        <td style="width: 200px; color: #999999">지원 기업</td>
+			                        <td style="width: 205px; color: #999999">지원 포지션</td>
+			                        <td style="width: 210px; color: #999999">지원일</td>
+		                        </tr>
 	                        </table>
-	                        <hr style="border: 1px solid #999999; background-color: #999999;">
 	                        <ul class="m-ul">
 	                        	<c:forEach var="app" items="${applicationList }">
 	                            	<li>

@@ -391,7 +391,7 @@ div>div>div>ul>li>input {
 /* 사이드바 상단부터 첫번째 */
 .first-contents{
     border: none;
-    padding: 42px 20px 30px;
+    padding:42px 88px 30px;
     text-align: center;
     margin: 0;
 }
@@ -506,7 +506,7 @@ input[type="file" i]{
 }
 
 .second-contents{
-    padding: 30px 20px;
+    margin: 27px;
 }
 
 /* 사이드바 옆 */
@@ -517,6 +517,7 @@ input[type="file" i]{
 /* 이력서 */
 .status{
     background: #fff;
+    width: 90%;
     border: 1px solid #c8c8c8;
     border-radius: 5px;
     margin: 0 0 20px;
@@ -545,7 +546,7 @@ input[type="file" i]{
 /*이력서선택버튼*/
 .resumeselectbtn{
     position: relative;
-    width: 100%;
+    width: 600px;
     height: 50px;
     padding-right: 20px;
     padding-left: 20px;
@@ -587,6 +588,7 @@ input[type="file" i]{
     border: 1px solid #c8c8c8;
     border-radius: 5px;
     padding: 26px 0 25px;
+    width: 90%;
 }
 
 .speciality{
