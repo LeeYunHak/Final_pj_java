@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -244,12 +246,17 @@
                     <button type="button" class="Modal_close_btn1">X</button>
                 </div>
                 <div class="ModalBody1">
-                    <input type="button" onclick="javascript:location.href='/user/mydreamer'" value="북마크 확인하기" id="bmcheck">
+                	<form action="/user/bookmarkAdd?companyJobPostingId=${comList.companyJobPostingId }" method="post">
+	            	<input type="text" name="userId" value="${loginUser.userId}" style="display: none;">
+	            	<input type="text" name="companyJobPostingId" value="${comList.companyJobPostingId}" style="display: none;">
+                    <input type="submit"value="북마크 확인하기" id="bmcheck">
+                    </form>
                 </div>
                 <footer class="foot1">
                 </footer>
             </div>
         </div>
+        
 
         <div id="my_modal2" class="my_modal2">
             <div class="ModalHeader2" style="text-align: center;">
@@ -289,7 +296,7 @@
         </div>
     </div>  
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-    <script type="text/javascript" src="/resources/companypost_jq.js"></script>
+    <!--  --><script type="text/javascript" src="/resources/companypost_jq.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJPJok-ic-162wUIyxN5AcctNP3cNKOk&callback=initMap&region=kr"></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script type="text/javascript" src="/resources/companypost.js"></script>

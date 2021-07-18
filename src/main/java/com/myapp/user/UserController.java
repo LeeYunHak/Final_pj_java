@@ -284,14 +284,15 @@ public class UserController {
 	@GetMapping("/companypost")
 	public String companypost(Model model, int companyJobPostingId, AddBookmark addBookmark) {
 		JobPostingList comList = userService.mainCompanyJobPostingById(companyJobPostingId);
-		AddBookmark addBook = userService.insertBookmark(addBookmark);
+//		AddBookmark addBook = userService.insertBookmark(addBookmark);
 		model.addAttribute("comList",comList);
-		model.addAttribute("addBook", addBook);
+//		model.addAttribute("addBook", addBook);
 		return "companypost";
 	}
-	@RequestMapping(value = "/bookmarkAdd", method = RequestMethod.POST)
-	@ResponseBody
-	public String bookmarkAdd(Model model, AddBookmark addBookmark) {
+	@PostMapping("/bookmarkAdd")
+	public String bookmarkAdd(Model model, AddBookmark addBookmark,int companyJobPostingId) {
+		JobPostingList comList = userService.mainCompanyJobPostingById(companyJobPostingId);
+		model.addAttribute("comList",comList);
 		AddBookmark addBook = userService.insertBookmark(addBookmark);
 		model.addAttribute("addBook", addBook);
 		return "companypost";
