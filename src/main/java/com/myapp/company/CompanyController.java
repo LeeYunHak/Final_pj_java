@@ -1,26 +1,74 @@
 package com.myapp.company;
 
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.myapp.application.Application;
+import com.myapp.bookmark.Bookmark;
+import com.myapp.jobPostingList.JobPostingList;
+import com.myapp.resume.Resume;
+import com.myapp.user.User;
 
 @Controller
 @RequestMapping("/company")
+@SessionAttributes("/company")
 public class CompanyController {
 
     // companyService 자동 변수
     @Autowired
     CompanyService companyService;
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // 로그인 전 - 메인페이지
     @GetMapping("/MainBefore")
     public String mainBefore() {
-        return "companyMainBeforePage";
+        return "companyMain";
     }
 
+    @PostMapping("/mainBefore")
+    public String loginUser(Model model, String userEmail, String userPassword, User user, HttpSession session) {
+		Company loginUser = companyService.loginCompanySelect(userEmail, userPassword);
+		List<Bookmark> bookmarkList = companyService.mydreamerBookmarkList(userEmail);
+		List<Application> applicationList = companyService.mydreamerApplicationList(userEmail);
+		User userProfileEdit = companyService.selectUserProfile(userEmail);
+		List<JobPostingList> comList = companyService.mainCompanyJobPostingList();
+		model.addAttribute("comList", comList);
+		System.out.println(comList);
+		List<Resume> resumeList = companyService.selectResume(userEmail);
+		model.addAttribute("resumeList",resumeList);
+		if (loginUser == null) {
+			model.addAttribute("loginUser", "없음");
+			return "userMainBeforePage";
+		} else {
+			session.setAttribute("loginUser", loginUser);
+			session.setAttribute("bookmarkList", bookmarkList);
+			session.setAttribute("applicationList", applicationList);
+			session.setAttribute("userProfileEdit", userProfileEdit);
+			session.setAttribute("resumeList", resumeList);
+			
+			return "loginUserPage";
+		}
+	}
+    
     // 로그인 후 - 메인페이지
     @GetMapping("/MainAfter")
     public String mainAfter() {

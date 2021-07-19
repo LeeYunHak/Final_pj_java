@@ -5,16 +5,17 @@ import java.time.LocalDate;
 //dto
 public class Company {
 	private int companyId; // 기업번호(기본키, auto_increment)
+	private String companyProfileImage; //기업프로필 사진
+	private String companyName; // 기업이름
 	private String companyEmail; // 기업이메일(아이디)
 	private String companyPassword; // 기업비밀번호
-	private String companyName; // 기업이름
+	private String companyPhone; // 기업연락처
 	private int companyRegistrationNumber; // 사업자등록번호
 	private String companyAddress; // 기업주소
 	private String companySales; // 기업매출액
-	private String companyEmployeeNumber; // 직원수
 	private LocalDate companyEstablishmentYear; // 설립연도
+	private String companyEmployeeNumber; // 직원수
 	private String companyIntroduce; // 기업소개
-	private String companyPhone; // 기업연락처
 	private int companyImageNumber; // 기업 대표 사진
 	private int companyJobPostingId; // 기업이 작성한 구인글 번호
 	private String companyCountry; // 기업 지역
