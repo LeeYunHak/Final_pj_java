@@ -44,7 +44,7 @@ response.setHeader("Pragma", "no-cache");
 							<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
 							<li><button id="popup_open_btn">로그인/회원가입</button></li>
 							<li style="float: right;"><button class="home-btn"
-									type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
+									type="button" onclick=" location.href='/company/mainBefore'">기업서비스</button></li>
 						</ul>
 					</nav>
 				</div>
@@ -129,7 +129,7 @@ response.setHeader("Pragma", "no-cache");
 								src="/resources/images/google_logo.png" alt="google_icon">
 							</a>
 						</div>
-						<a href="join.html"><button id="joinBtn">드리머 회원가입 하기
+						<a href="joinUserPage.html"><button id="joinBtn">드리머 회원가입 하기
 							</button></a>
 					</div>
 				</div>

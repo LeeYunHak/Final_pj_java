@@ -27,20 +27,9 @@ public class CompanyController {
     @Autowired
     CompanyService companyService;
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // 로그인 전 - 메인페이지
-    @GetMapping("/MainBefore")
-    public String mainBefore() {
+    @GetMapping("/mainBefore")
+    public String mainBefore(Model model, String companyEmail, HttpSession session) {
         return "companyMain";
     }
 
