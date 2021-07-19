@@ -8,6 +8,7 @@
 		<setting name="useGeneratedKeys" value="true"/>
 	</settings>
 	<typeAliases>
+		<typeAlias type="com.myapp.companyJobPosting.CompanyJobPosting" alias="CompanyJobPosting"/>
 		<typeAlias type="com.myapp.user.User" alias="User"/>
 		<typeAlias type="com.myapp.company.Company" alias="Company"/>
 		<typeAlias type="com.myapp.resume.Resume" alias="Resume"/>
