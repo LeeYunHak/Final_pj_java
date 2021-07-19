@@ -13,79 +13,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/resources/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/resources/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/loginUserMain.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>로그인 후 메인화면</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- 네비게이션바 START -->
-    <header id="nav1" role="presentation">
-        <div id="nav2" role="presentation">
-            <ul id="nav3">
-                <div>
-                    <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a>
-                    </li>
-                    <div style="font-weight: bold; font-size: 10px;">
-                        <ul>
-                            <div class="blank2"></div>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-2-Select" type="button">탐색</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="/user/resume">이력서</a></li>
-                            <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
-                            <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <div class="blank1"></div>
-                            <div class="blank2"></div>
+<div class="full">
+     <!-- 네비게이션바 START -->
+        <header class="navbar">
+            <div class="nav-con">
+                <div style="width: 100%;display: inline;">
+                    <nav class="nv">
+                        <ul class="nv-st">
+                            <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-2-Select" type="button">탐색</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-3-Resume" type="button" href="/user/resume?userEmail=${loginUser.userEmail}">이력서</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-5-ApplicationStatus" type="button" href="/user/mydreamer">지원현황</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <div>
-                                <a id="nav3-7-MyPage"><img class="avatar" src="/resources/images/avatar.png"></a>
+                            <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
                                 <div class="arrow_box">
                                     <div class="blank">
                                         <p></p>
-                                    </div>
+                                    </div><br>
                                     <div class="mydreamer"><a href="/user/mydreamer"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            MY드리머</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            MY드리머</a></div><br>
                                     <div class="profile"><a href="/user/profileMain"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            프로필</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            프로필</a></div><br>
                                     <div class="logout"><a href="/user/logOut"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            로그아웃</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            로그아웃</a></div><br>
                                     <div class="blank">
-                                        <p></p>
+                                        <p></p><br>
                                     </div>
                                 </div>
                             </div>
-                            <li><a id="nav3-6-ProfileName" type="button" href="/user/mydreamer"
-                                    style="color: brown; font-size: 15px;">${loginUser.userName }</a>
-                                <div class="blank1"></div>
-                            </li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-            </ul>
-        </div>
-    </header>
-    <!-- 네비게이션바 END -->
+            </div>
+        </header>
+        <!-- 네비게이션바 END -->
 
     <!-- 검색창 START -->
     <div class="menu, icon-close">
         <!-- Menu icon -->
-        <div class=""></div>
+        <div class="">
+            <img src="https://imgur.com/download/GcHTJg2">
+        </div>
         <!-- Main body -->
         <div class="jumbotron">
 
@@ -94,14 +92,14 @@
             </div>
         </div>
 
-        <form id="search-form" action="#" autocomplete="off">
+        <form action="#" autocomplete="off" class="search_form">
             <fieldset class="url" style="border: white;">
-                <input class="search-input" id="url" type="text" name="url" required>
-                <label id="search-label" for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
+                <input id="url" type="text" name="url" required>
+                <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
                 <div class="after"></div>
             </fieldset>
             <fieldset class="enter" style="border: white;">
-                <button id="search-btn"></button>
+                <button class="searchbtn"></button>
             </fieldset>
         </form>
     </div>
@@ -212,7 +210,6 @@
     </div>
     <!-- 탐색 END -->
     
-    <div class="full">
         <div class="half">
             <div style="float: left; display: block;">
             
@@ -307,59 +304,126 @@
 							</tr>
                         </table>
                     </div>
-                    <select>
-                        <option>최신순</option>
-                        <option>인기순</option>
-                    </select>
                 </div>
 			    <!-- 직종, 세부직무, 지역, 세부지역, 작품개수 등 START -->
-			    
-			    
                 <!-- 구인글 select START -->
                 <div class="company-job-list">
                     <ul>
                         <li class="company-job" style="text-align: center;">
-                            <div class="company-margin">
+                       	<c:forEach items="${comList}" var="comList" >
+                            <div class="company-margin" data-pid=${comList.companyJobPostingId }>
                                 <ul>
-                                	<c:forEach begin="" end="" >
-                                    <li>
+                                    <li class="scrollH">
                                     	<!-- 링크 -->
-                                        <a class="company-href" href="http://www.naver.com">
+                                        <a class="company-href" href="/user/companypost?companyJobPostingId=${comList.companyJobPostingId }">
                                             <!-- 이미지 -->
-                                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)" ;>
-                                            </div>
+                                            <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                             <figcaption>
                                                 <div id="job-card" style="font-size: 16px;">
-                                                    <!-- 내용 -->
-                                                    <div class="job-card-position">구인글제목 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-position">${comList.companyJobPostingTitle}
                                                     </div><br>
-                                                    <div class="job-card-company-name">기업명 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-company-name">${comList.companyName }
                                                     </div><br>
-                                                    <div class="job-card-company-location">위치 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-company-location">${comList.companyCountry } 
                                                     </div><br>
-                                                    <div class="job-card-end-date">마감일 : 
-                                                    <%-- ${ } --%>
+                                                    <div class="job-card-end-date">${comList.companyJobPostingPeriodEnd }
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </a>
                                     </li>
-                                    </c:forEach>
                                 </ul>
                             </div>
+                      		</c:forEach>
                         </li>
                     </ul>
                 </div>
                 <!-- 구인글 select END -->
-                
-                
             </div>
         </div>
     </div>
     <script type="text/javascript" src="/resources/loginUserMain.js"> </script>
     <script type="text/javascript" src="/resources/navi.js"></script>
+    <script>
+    var lastScrollTop = 0;
+    var easeEffect = 'easeInQuint';
+
+    // 다은 스크롤
+    $(window).scroll(function(){
+        var ScrollTop = $(window).scrollTop();
+        if(ScrollTop - lastScrollTop > 0){
+            //down-scroll : 현재 게시글 다음의 글 불러오기
+            console.log("down-scroll");
+            // 현재 스크롤의 top 좌표가 > (게시글을 불러온 화면 height - 윈도우 창의 height)되는 순간
+            if($(window).scrollTop()>=($(document).height() - $(window).height())){
+                
+                // class가 company-margin인 것의 요소 중 마지막 요소 선택 후 그것의 data 속성 값 받아오기
+                //  현재 뿌려진 게시글의 마지막 companyJobPostingId 값 읽어 오기 (다음 게시글 가져오기 위해 필요함)
+
+                var lastpid = $(".company-margin:last").attr("data-pid");
+
+                $.ajax({
+                    type:'post', //요청 method 방식
+                    url:'/user/ScrollDown', //요청 url
+                    headers:{
+                        "Content-Type":"application/json",
+                        "X-HTTP-Method-Override":"POST"
+                    },
+                    dataType:'json',//서버로 부터 되돌려 받는 데이터 타입
+                    data:JSON.stringify({ // 서버로 보낼 데이터
+                    	companyJobPostingId:lastpid
+                    }),
+                    success:function(data){
+                        var str ="";
+
+                        if(data !=""){
+                            $(data).each(
+                                function(){
+                                    console.log(this);
+                                    str += "<div class='company-margin' data-pid='"+this.companyJobPostingId+"'>"
+                                    +       	"<ul>"
+                                    +           	"<li class='scrollH'>"
+                                    +              		" <a class='company-href' href='/user/companypost?companyJobPostingId="+this.companyJobPostingId+"'>"
+                                    +                   	"<div class='company-img' style='background-image:url(/resources/images/movie.jpg)'></div>"
+			                        +                   		"<figcaption>"
+			                        +                     			"<div id='job-card' style= 'font-size: 16px'>"
+			                        +                        			"<div class='job-card-position'>"+this.companyJobPostingTitle
+			                        +                           		"</div>"+"<br>"
+			                        +                           		"<div class='job-card-company-name'>"+this.companyName
+			                        +                           		"</div>"+"<br>"
+			                        +                           		"<div class='job-card-company-location'>"+this.companyCountry
+			                        +                           		"</div>"+"<br>"
+			                        +                           		"<div class='job-card-end-date'>"+this.writeDate
+			                        +                           		"</div>"
+			                        +                       		"</div>"
+			                        +                   		"</figcaption>"
+                                    +        			"</a>"
+                                    +     			"</li>"
+                                    +   		"</ul>"          
+                                    +	"</div>";
+                                }
+                            ); //each
+                            //$(".company-margin").empty();
+                            $(".company-job").append(str);
+                        }// if
+                        else{
+                        	 alert("더 불러올 데이터가 없습니다.")
+                        }
+                    }//success
+
+                });//ajax
+                
+                // class가 company-margin 인 요소중 가장 처음 위치로 이동
+               	var position = $(".company-margin:last").offset(); //위치 값
+               	//console.log(position,"위치값임");
+                
+                // 이동 위로 부터 position.top px 위치로 스크롤 . 
+                $('html,body').stop().animate({scrollTop:position.top},600);
+                
+            }
+				//lastScrollTop = ScrollTop;
+        }//다운스크롤 
+    })
+</script>
 </body>
 </html>
