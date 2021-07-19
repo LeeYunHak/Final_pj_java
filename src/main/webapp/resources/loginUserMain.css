@@ -331,12 +331,12 @@ label {
 	transition: all 0.3s ease;
 }
 
-input:focus~label {
+#url:focus~label {
 	color: RGBA(254, 253, 255, 1.00);
 }
 
-input:focus~label,
-input:valid~label {
+#url:focus~label,
+#url:valid~label {
 	top: 0;
 	letter-spacing: 5px;
 	-webkit-transform: translate(0, -30px) scale(0.7, 0.7);
@@ -345,7 +345,7 @@ input:valid~label {
 
 }
 
-input {
+#url {
 	font-family: system-ui, Helvetica, Arial, sans-serif;
 	font-size: 20px !important;
 	width: 100%;
@@ -354,7 +354,7 @@ input {
 	background-color: transparent;
 }
 
-input:focus {
+#url:focus {
 	outline: none;
 }
 
@@ -373,7 +373,7 @@ input:focus {
 	transition: all 0.3s ease;
 }
 
-input:focus~.after {
+#url:focus~.after {
 	background-position: 0 0;
 }
 
@@ -490,8 +490,7 @@ input:focus~.after {
 	top: 60px;
 	left: 0px;
 	z-index: 999;
-	/* background-color: #98fcfa; */
-	background-color: #d2d3d9;
+	background-color: rgb(211,238,237);
 	border-top: none;
 	display: block;
 	display: none;
@@ -502,7 +501,7 @@ div>div>div>ul {
 	padding-left: 0px;
 }
 div>div>div>ul>li {
-	font-size: 15px;
+	font-size: 13px;
 	color: gray;
 	text-align: center;
 }
@@ -514,14 +513,15 @@ div>div>div>ul>li>input {
 	text-align: center;
     border: none;
     border-bottom: 1px solid #c8c8c8;
-    font-size: 18px;
+    font-size: 16px;
 }
 /* 탐색 메뉴~ END */
 
 /*마이페이지박스*/
 .arrow_box {
 	width: 110px;
-	height: 135px;
+	/*height 수정*/
+	height: 170px;
 	text-align: center;
 	position: absolute;
 	background: #ffffff;
@@ -562,11 +562,16 @@ div>div>div>ul>li>input {
 .mydreamer, .profile, .logout{
 	width: 100%;
 	height: 30px;
-	margin-bottom: 3px;
 }
-/* .mydreamer{
-	margin-top: 10px;
-} */
+
+/*새로추가*/
+.servicecenter{
+    height: 40px;
+	width: 100%;
+    padding-top: 15px;
+    margin-top: 0px;
+    border-top: 1px solid rgb(0, 206, 201);
+}
 
 .blank{
 	width: 100%;

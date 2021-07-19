@@ -76,7 +76,7 @@
 
     <!-- 탐색 START -->
     <div class="bar">
-        <div class="opennavi" style="width: 100%; height: 286px; text-align: right;">
+        <div class="opennavi" style="width: 100%; height: 286px; text-align: right; min-width:1750px;">
             <div style="z-index: 1000; float: left;">
                 <img src="/resources/images/movie.jpg" alt="" style="width: 400px; height: 286px;">
             </div>
