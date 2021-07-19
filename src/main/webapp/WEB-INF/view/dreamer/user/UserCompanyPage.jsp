@@ -54,169 +54,163 @@ response.setHeader("Pragma", "no-cache");
 
 <body>
     <!-- 네비게이션바 START -->
-    <header id="nav1" role="presentation">
-        <div id="nav2" role="presentation">
-            <ul id="nav3">
-                <div>
-                    <li><a id="nav3-1-logo" href="loginUserPage.html"><img src="images/Dreamer.png" class="logo"></a>
-                    </li>
-                    <div style="font-weight: bold; font-size: 10px;">
-                        <ul>
-                            <div class="blank2"></div>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">&nbsp;</a></li>
-                            <li><a id="nav3-2-Select" type="button">탐색</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href="CVpage.html">이력서</a></li>
-                            <li><a id="nav3-4-Bookmark" type="button" href="mydreamer.html">북마크</a></li>
-                            <li><a id="nav3-5-ConstructionSupport" type="button" href="지원현황 페이지">지원현황</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <li><a id="nav3-3-Resume" type="button" href=".html">&nbsp;</a></li>
-                            <div class="blank1"></div>
-                            <div class="blank2"></div>
-                            <div>
-                                <a id="nav3-7-MyPage"><img class="avatar" src="images/avatar.png"></a>
+        <header class="navbar">
+            <div class="nav-con">
+                <div style="width: 100%;">
+                    <nav class="nv">
+                        <ul class="nv-st">
+                            <li><a id="nav3-1-logo" href="/user/mainAfterMain"><img src="/resources/images/Dreamer.png" class="logo"></a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-2-Select" type="button">탐색</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-3-Resume" type="button" href="/user/resume?userEmail=${loginUser.userEmail}">이력서</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-4-Bookmark" type="button" href="/user/mydreamer">북마크</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-5-ApplicationStatus" type="button" href="/user/mydreamer">지원현황</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
+                                <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                                 <div class="arrow_box">
                                     <div class="blank">
                                         <p></p>
-                                    </div>
+                                    </div><br>
                                     <div class="mydreamer"><a href="/user/mydreamer"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            MY드리머</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            MY드리머</a></div><br>
                                     <div class="profile"><a href="/user/profileMain"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            프로필</a></div>
-                                    <div class="logout"><a href="/user/userMainBefore"
-                                            style="text-decoration: none;color: #00cec9; font-size: 15px;">
-                                            로그아웃</a></div>
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            프로필</a></div><br>
+                                    <div class="logout"><a href="/user/logOut"
+                                            style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                            로그아웃</a></div><br>
+                                    <!-- 고객센터추가s -->
+                                    <div class="servicecenter"><a href="/user/sevicecenter"
+                                        style="text-decoration: none;color: #00cec9; font-size: 14px;">
+                                        고객센터</a></div><br>
+                                    <!-- 고객센터추가e -->
                                     <div class="blank">
-                                        <p></p>
+                                        <p></p><br>
                                     </div>
                                 </div>
-                            </div>
-                            <li><a id="nav3-6-ProfileName" type="button" href="mydreamer.html"
-                                    style="color: brown; font-size: 15px;">이름</a>
-                                <div class="blank1"></div>
-                            </li>
+                            <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-            </ul>
-        </div>
-    </header>
-    <!-- 네비게이션바 END -->
+            </div>
+        </header>
+        <!-- 네비게이션바 END -->
 
-    <!-- 탐색 START -->
-    <div class="bar">
-        <div class="opennavi" style="width: 100%; height: 237px; text-align: right;">
-            <div style="z-index: 1000; float: left;">
-                <img src="images/movie.jpg" alt="" style="width: 350px;">
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="연출">
-                    </li>
-                    <li>감독</li>
-                    <li>조감독</li>
-                    <li>각본</li>
-                    <li>프로듀서</li>
-                    <li>연출팀</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="조명">
-                    </li>
-                    <li>조명팀</li>
-                    <li>발전차</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="음향">
-                    </li>
-                    <li>음향팀</li>
-                    <li>동시녹음팀</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="촬영">
-                    </li>
-                    <li>촬영팀</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="특수효과">
-                    </li>
-                    <li>특수효과팀</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="제작">
-                    </li>
-                    <li>제작팀</li>
-                    <li>캐스팅담당팀</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="배우">
-                    </li>
-                    <li>주연</li>
-                    <li>조연</li>
-                    <li>스턴트</li>
-                    <li>단역</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul>
-                    <li>
-                        <input type="button" id="searchSearch" value="미술">
-                    </li>
-                    <li>미술팀</li>
-                    <li>미술감독</li>
-                    <li>소품팀</li>
-                </ul>
-            </div>
-            <div
-                style="width: 110px; height: 169px; margin-right: 10px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
-                <ul style="text-align: right;">
-                    <li>
-                        <input type="button" id="searchSearch" value="분장">
-                    </li>
-                    <li>헤어팀</li>
-                    <li>의상팀</li>
-                    <li>분장팀</li>
-                </ul>
+        <!-- 탐색 -->
+        <div class="bar">
+            <div class="opennavi" style="width: 100%; height: 286px; text-align: right; min-width: 1750px;">
+                <div style="z-index: 1000; float: left;">
+                    <img src="/resources/images/movie.jpg" alt="" style="width: 400px; height: 286px">
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="연출">
+                        </li>
+                        <li>감독</li>
+                        <li>조감독</li>
+                        <li>각본</li>
+                        <li>프로듀서</li>
+                        <li>연출팀</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="조명">
+                        </li>
+                        <li>조명팀</li>
+                        <li>발전차</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="음향">
+                        </li>
+                        <li>음향팀</li>
+                        <li>동시녹음팀</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="촬영">
+                        </li>
+                        <li>촬영팀</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="특수효과">
+                        </li>
+                        <li>특수효과팀</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="제작">
+                        </li>
+                        <li>제작팀</li>
+                        <li>캐스팅담당팀</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="배우">
+                        </li>
+                        <li>주연</li>
+                        <li>조연</li>
+                        <li>스턴트</li>
+                        <li>단역</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="미술">
+                        </li>
+                        <li>미술팀</li>
+                        <li>미술감독</li>
+                        <li>소품팀</li>
+                    </ul>
+                </div>
+                <div
+                    style="width: 110px; height: 169px; margin-top: 20px;  float: left; display: block; margin-inline-start: 30px;">
+                    <ul>
+                        <li>
+                            <input type="button" id="searchSearch" value="분장">
+                        </li>
+                        <li>헤어팀</li>
+                        <li>의상팀</li>
+                        <li>분장팀</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
     <!-- 탐색 END -->
 
     <!-- 기업 정보 페이지 START -->
@@ -226,7 +220,7 @@ response.setHeader("Pragma", "no-cache");
             style="margin: 30px 0px 30px 0px; background-color: white; width: 100%; padding-inline-start: 70px; padding-inline-end: 70px; border-bottom: 1px solid silver;">
             <h1 style="text-align: center; margin: 40px; padding-left: 60px; padding-right: 60px; text-align: left;">기업명
                 :
-                ${loginUser.userName }
+                ${comList.companyName }
             </h1>
         </div>
         <div>
@@ -235,7 +229,7 @@ response.setHeader("Pragma", "no-cache");
                 style="list-style-type: none; display: block; color: black; background-color: white; width: 90%; padding-inline-start: 20px; padding-inline-end: 20px;">
                 <div>
                     채용 중인 포지션(구인글네임) :
-                    ${loginUser.userName }
+                    ${comList.companyJobPostingTitle}
                 </div>
             </h3>
 
@@ -362,22 +356,9 @@ response.setHeader("Pragma", "no-cache");
                 <div>
                     <div style="margin-top: 40px; margin-bottom: 20px;">
                         <h3 style="margin-bottom: 10px;">회사 소개</h3>
-                        <img src="images/camera.jpg" alt="" style="margin: 10px; width: 300px; height: 200px;">
+                        <img src="/resources/images/camera.jpg" alt="" style="margin: 10px; width: 300px; height: 200px;">
                         <p style="margin-top: 20px;">
-                            내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구
-                            저쩌구내용
-                            회사소개
-                            어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용
-                            회사소개
-                            어쩌구
-                            저쩌구내용
-                            회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구
-                            저쩌구내용
-                            회사소개
-                            어쩌구
-                            저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개 어쩌구 저쩌구내용 회사소개
-                            어쩌구
-                            저쩌구 :
+                            ${comList.companyIntroduce }
                             
                         </p>
                     </div>
@@ -390,7 +371,7 @@ response.setHeader("Pragma", "no-cache");
                             <div style=" display: block; position: relative; float: left; width: calc(100% - 10px);
                             min-height: 45px; margin: 0px 0px 20px; padding: 10px 0px 1px; border-radius: 3px; border:
                             1px solid black; width: 500px; text-align: center; background-color: silver;">
-                            전체 인원 : 명
+                            전체 인원 : ${comList.companyEmployeeNumber }명
                         </div>
                     </div>
                 </div>
@@ -415,7 +396,7 @@ response.setHeader("Pragma", "no-cache");
     <!-- 기업 정보 페이지 END -->
 
 
-    <script type="text/javascript" src="UserCompanyPage.js"></script>
+    <script type="text/javascript" src="/resources/UserCompanyPage.js"></script>
 </body>
 
 </html>
