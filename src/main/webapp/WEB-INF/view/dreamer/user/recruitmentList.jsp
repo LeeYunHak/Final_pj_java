@@ -395,7 +395,7 @@ response.setHeader("Pragma", "no-cache");
         <!-- 공고 목록 및 공고등록버튼 END -->
         <!-- 최상위 div END -->
     </div>
-    <script type="text/javascript" src="/resources/recruitmentList.js"></script>
+    <script type="text/javascript" src="/resources/navi2.js"></script>
 </body>
 
 </html>

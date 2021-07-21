@@ -71,6 +71,6 @@
             </div>
         </div>
     </div>
-        <script type="text/javascript" src="/resources/navi.js"> </script>
+        <script type="text/javascript" src="/resources/co_accountpage.js"> </script>
 </body>
 </html>
