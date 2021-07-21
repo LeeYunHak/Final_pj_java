@@ -120,7 +120,7 @@ response.setHeader("Pragma", "no-cache");
 						</div>
 					</form>
 					<div>
-						<a href="joinUserPage.html"><button id="joinBtn" style="cursor:pointer; margin-bottom:50px;">드리머 회원가입 하기
+						<a href="/user/joinUser"><button id="joinBtn" style="cursor:pointer; margin-bottom:50px;">드리머 회원가입 하기
 							</button></a>
 					</div>
 				</div>
