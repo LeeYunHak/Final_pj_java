@@ -119,7 +119,7 @@ response.setHeader("Pragma", "no-cache");
 					</div>
 					<div class="col-xs-6-text-right">
 						<div class="row">
-							<a href="join.html" class="logA">
+							<a href="/user/joinUser" class="logA">
 								<h5>회원가입</h5>
 							</a>
 						</div>

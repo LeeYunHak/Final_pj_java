@@ -69,7 +69,7 @@
         
         .terms__check__all{
             position: relative; right: auto;
-            top: 600px;
+            top: 530px;
         }
         ul{
             list-style:none;
@@ -78,7 +78,6 @@
 
         input:focus {
             outline: none;
-            box-shadow: 0 0 0 2px rgb(0, 206, 201);
         }
         
         html{
@@ -192,7 +191,7 @@
         </ul>
     </div>    
     <h6>&nbsp</h6>
-    <div style="border: 1px solid rgb(170, 170, 170); height: 900px;" class="join1">
+    <div style="border: 1px solid rgb(170, 170, 170); height: 850px;" class="join1">
         <form name="join" action="/user/joinUser" method="post">
 
             <div style="font-weight: bolder;" class="join2"> 회원가입</div>
@@ -204,7 +203,7 @@
 
                 <tr>
                     <td colspan="4"><input type="text" required
-                    style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
+                    style="border: 1px solid rgb(170, 170, 170); width: 304px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
                     name="userName" maxlength="12" placeholder="이름을 입력해주세요"><span id="errname"></span></td>
@@ -216,7 +215,7 @@
 
                 <tr>
                     <td colspan="4"><input type="text" required
-                    style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
+                    style="border: 1px solid rgb(170, 170, 170); width: 304px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
                     name="userPhone" id="cel" placeholder="휴대폰 번호를 입력해주세요" /></td>
@@ -228,7 +227,7 @@
 
                 <tr>
                     <td colspan="4"><input type="text" required class="email_input"
-                    style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
+                    style="border: 1px solid rgb(170, 170, 170); width: 304px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
                     name="userEmail" placeholder="이메일을 입력해주세요">
@@ -244,7 +243,7 @@
 
                 <tr>
                     <td colspan="4"><input type="password" required
-                    style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
+                    style="border: 1px solid rgb(170, 170, 170); width: 304px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
                     name="userPassword" placeholder="비밀번호를 입력해주세요"/><span id="errpw"></span></td>
@@ -255,12 +254,12 @@
                 </tr>
                 <tr>
                     <td colspan="4"><input type="password" required
-                    style="border: 1px solid rgb(170, 170, 170); width: 300px; height: 30px;
+                    style="border: 1px solid rgb(170, 170, 170); width: 304px; height: 30px;
                     border-top-left-radius:5px;border-top-right-radius: 5px;
                     border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"
                     placeholder="비밀번호를 한번 더 입력해주세요"/><span id="errcheckpw"></span></td>
                 </tr>
-                <div class="terms__check__all" >
+                <div class="terms__check__all">
                     <div>
                         <input type="checkbox" name="checkAll" id="checkAll" >
                         <label for="checkAll">전체 동의</label>
@@ -273,7 +272,7 @@
                                 <label for="termsOfService" class="required">Dreamer 이용약관 동의(필수)</label>
                             </div>
                         </li>
-                        <li class="terms__box">
+                        <li class="terms__box2" style="margin-right:3.5px;">
                             <div class="input__check">
                                 <input type="checkbox" name="agreement"
                                 value="privacyPolicy" id="privacyPolicy" required />
@@ -297,9 +296,9 @@
                     padding: 10px; margin-top: 50px;">회원가입하기</button>
                 </div>
             </table>
-
-        </form>
+       </form>
     </div>
+    <div style="height:50px; width:100%"></div>
     
     <script>
 	  //아이디 중복검사
