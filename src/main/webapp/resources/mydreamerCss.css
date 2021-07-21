@@ -281,7 +281,7 @@ div>div>div>ul>li>input {
 	text-align: center;
 	position: absolute;
 	background: #ffffff;
-	border: 4px solid rgb(0, 201, 206);
+	border: 4px solid rgb(0, 206, 201);
     line-height: 5px;
 	display: none;
 	z-index: 9999999;
@@ -310,14 +310,14 @@ div>div>div>ul>li>input {
 
 .arrow_box:before {
 	border-color: rgba(96, 185, 245, 0);
-	border-bottom-color: rgb(0, 201, 206);
+	border-bottom-color: rgb(0, 206, 201);
 	border-width: 21px;
 	margin-left: -21px;z-index: 1000000;
 }
 
 .mydreamer, .profile, .logout{
 	width: 100%;
-	height: 30px;
+	height: 35px;
     /* line-height: 20px; */
     /* top: 50%;
     transform: translateY(-50%); */
@@ -325,6 +325,7 @@ div>div>div>ul>li>input {
 /*새로추가*/
 .servicecenter{
     height: 40px;
+    width:100%;
     padding-top: 20px;
     margin-top: -10px;
     border-top: 1px solid rgb(0, 206, 201);
@@ -332,7 +333,7 @@ div>div>div>ul>li>input {
 
 .blank{
 	width: 100%;
-	height: 20px;
+	height: 24px;
 }
 
 .blank1{
