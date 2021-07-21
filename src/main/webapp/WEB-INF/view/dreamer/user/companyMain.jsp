@@ -54,7 +54,7 @@ response.setHeader("Pragma", "no-cache");
 								href="/user/companyJoin">채용담당자 가입</a></li>
 							<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
 							<li style="float: right;"><button class="home-btn"
-									type="button" onclick="location.href = '/user/mainBefore'">드리머
+									type="button" onclick="location.href = 'user/mainBefore'">드리머
 									홈</button></li>
 						</ul>
 					</nav>
@@ -87,7 +87,7 @@ response.setHeader("Pragma", "no-cache");
 						</h2>
 					</div>
 					<div style="width: 100%;">
-						<img src="/resources/images/movie.jpg"
+						<img src="images/movie.jpg"
 							style="width: 100%; height: 800px; top: 60%; position: absolute; margin-top: -300px;">
 					</div>
 				</div>
