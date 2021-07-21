@@ -106,29 +106,21 @@ response.setHeader("Pragma", "no-cache");
 							</div>
 						</div>
 						<div class="margin-top-10">
-							<button type="submit" id="loginBtn" class="login-btn">로그인</button>
+							<button type="submit" id="loginBtn" class="login-btn" style="cursor:pointer;">로그인</button>
 						</div>
-						<div class="flex-between-center">
+						<div class="flex-between-center" style="margin:20px;">
 							<div class="checkBox">
 								<label for="remember" class="label-margin-none"> <input
 									type="checkbox" id="remember" name="remember">
 									<div class="checkBox-text">로그인 유지</div>
 								</label>
 							</div>
-							<a href="/user/findUser" style="font-size: 13px;"
+							<a href="/user/findUser" style="font-size: 13px; padding-bottom:4px;"
 								class="find-a-tag">아이디ㆍ비밀번호 찾기</a>
 						</div>
 					</form>
 					<div>
-						<div class="modal-text">SNS계정으로 간편하게 로그인 하세요.</div>
-						<div class="sns_login">
-							<a id="kakaoLoginBtn" class="sns-btn-kakao"> <img
-								src="/resources/images/kakao_logo.png" alt="kakao_icon">
-							</a> <a id="googleLoginBtn" class="sns-btn-google"> <img
-								src="/resources/images/google_logo.png" alt="google_icon">
-							</a>
-						</div>
-						<a href="joinUserPage.html"><button id="joinBtn">드리머 회원가입 하기
+						<a href="joinUserPage.html"><button id="joinBtn" style="cursor:pointer; margin-bottom:50px;">드리머 회원가입 하기
 							</button></a>
 					</div>
 				</div>

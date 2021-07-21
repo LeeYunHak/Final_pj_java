@@ -43,6 +43,7 @@ body{
     border: 0;
     height: 100%;
     width: 100%;
+    top:
 }
 
 /* 네비게이션바 CSS START */
@@ -93,7 +94,7 @@ body{
     width: 100%;
     list-style:none;
     margin-bottom: 50px;
-    padding:0;
+    padding-left:58px;
   }
   
   .nv-st>li {
@@ -154,6 +155,7 @@ div.container-margin-top-80{
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top:-100px;
 }
 .row{
     margin-left: -15px;
