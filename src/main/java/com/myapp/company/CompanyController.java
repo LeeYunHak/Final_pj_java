@@ -116,6 +116,11 @@ public class CompanyController {
     public String applicantpage() {
         return "applicantpage";
     }
+    //회사계정관리
+    @GetMapping("/co_accountpage")
+    public String co_accountpage() {
+        return "co_accountpage";
+    }
     
     
     // 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃]

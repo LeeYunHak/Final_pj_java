@@ -20,7 +20,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="/user/companyMain"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
+                            <li class="nv-it"><a id="nav3-1-logo" href="/company/mainBefore"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -36,7 +36,7 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-6-ProfileName" type="button"
                                 style="color: white; font-size: 15px;">기업명</a></li>
-                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = 'user/userBefore'">드리머 홈</button></li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/mainBefore'">드리머 홈</button></li>
                         <!-- 마이페이지박스추가 -->
                             <div>
                                 <div class="arrow_box">
