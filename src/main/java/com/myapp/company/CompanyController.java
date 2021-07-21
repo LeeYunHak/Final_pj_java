@@ -127,6 +127,22 @@ public class CompanyController {
         return "co_dropoutpage";
     }
     
+    //고객센터 페이지
+    @GetMapping("/customerService")
+    public String customerService() {
+        return "customerService";
+    }
+    //고객센터 페이지-문의등록
+    @GetMapping("/contactUs")
+    public String contactUs() {
+        return "contactUs";
+    }
+    //고객센터 페이지
+    @GetMapping("/co_qna1")
+    public String co_qna1() {
+        return "co_qna1";
+    }
+    
     // 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃]
 
     // 로그인 후 - 회사정보(기업) 비번수정[업뎃] by email
