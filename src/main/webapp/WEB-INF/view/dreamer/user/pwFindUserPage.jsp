@@ -52,7 +52,7 @@
         <h2>비밀번호 수정 페이지</h2>
         <form action="/user/pwUpdate" method="post">
             <input type="hidden" name="userEmail" readonly="readonly" value="${stUser.userEmail }">
-            <input type="text" name="userPassword" id="userPassword" placeholder="변경할 비밀번호 입력하세요">
+            <input type="text" name="userPassword" id="userPassword" placeholder="변경할 비밀번호">
             <input type="submit" id="submit" value="수정">
         </form>
     </div>    
