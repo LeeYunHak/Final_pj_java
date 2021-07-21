@@ -45,6 +45,7 @@
         </header>
     <!-- 네비게이션바 END -->
             <div class="content">
+	            <form action="/company/joinCompany" method="post">
                 <div class="ct-container">
                     <h2 class="ct-h2">회사 정보를 등록해주세요.</h2>
                     <h4 class="ct-h4">드리머는 구직자들에게 좋은 일자리를 제공하기 위해, 회사 정보를 검토후 회사 등록을 승인하고 있습니다.</h4>
@@ -59,7 +60,7 @@
                             <div class="form-half-left-label">
                                 비밀번호
                             </div>
-                            <input type="password" class="ip-txt-h" name="companyEmail" placeholder="비밀번호 입력" required>
+                            <input type="password" class="ip-txt-h" name="companyPassword" placeholder="비밀번호 입력" required>
                         </div>
                     </div>
                     <div class="form-fullsz">
@@ -111,7 +112,7 @@
                             <div class="form-half-left-label">
                                 담당자 연락처
                             </div>
-                            <input type="text" class="ip-txt-h" name="companyEmployeeNumber" placeholder="ex) 010-0000-0000" required>
+                            <input type="text" class="ip-txt-h" name="companyPhone" placeholder="ex) 010-0000-0000" required>
                         </div>
                     </div>
                     <div class="txt-area-ctr">
@@ -130,12 +131,13 @@
                             </span>
                         </span>
                         <div class="fr-btn-ctr">
-                            <button class="fr-btn">
+                            <button type="submit" class="fr-btn">
                                 가입하기
                             </button>
                         </div>
                     </div>
                 </div>
+                </form>
                 <div id="my_modal2">
                     <div>
                         <div class="ModalHeader2" style="text-align: center;">

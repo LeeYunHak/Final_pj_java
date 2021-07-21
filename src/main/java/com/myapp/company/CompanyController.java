@@ -53,7 +53,7 @@ public class CompanyController {
     public String joinCompany(Model model, Company company) {
         Company joinCompany = companyService.joinCompanyInsert(company);
         model.addAttribute("joinCompany", joinCompany);
-        return "companyMainBeforePage";
+        return "companyMain";
     }
     // 로그인 전 - 채용담당자 로그인[조회](이메일, 비밀번호 둘다 입력)
     @GetMapping("/loginCompany")
