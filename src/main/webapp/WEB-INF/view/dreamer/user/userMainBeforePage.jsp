@@ -43,8 +43,7 @@ response.setHeader("Pragma", "no-cache");
 							<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
 							<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
 							<li><button id="popup_open_btn">로그인/회원가입</button></li>
-							<li style="float: right;"><button class="home-btn"
-									type="button" onclick=" location.href='/company/mainBefore'">기업서비스</button></li>
+							<li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/company/mainBefore'">기업서비스</button></li>
 						</ul>
 					</nav>
 				</div>

@@ -66,7 +66,7 @@
                                 </div>
                             </div>
                             <li><a id="nav3-6-ProfileName" type="button"style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
-                            <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/user/companyMain'">기업서비스</button></li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/company/mainBefore'">기업서비스</button></li>
                         </ul>
                     </nav>
                 </div>
@@ -203,8 +203,8 @@
                                 <button type="button" style="color: white; border: none; width: 200px; height: 40px;
                         background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/profileEdit'">프로필 수정</button>
                             <h4>&nbsp;</h4>
-                            <button type="button" style="color: white; border: none; width: 200px; height: 40px;
-                        background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/accountpage'">계정설정</button>
+                        <button type="button" style="color: white; border: none; width: 200px; height: 40px;
+                            background-color: rgb(0,206,201); border-radius: 3px;cursor: pointer; font-weight: bold; font-size: 15px;"onclick="javascript:location.href='/user/accountPage'">계정설정</button>
                         </div>
                     </div>
                 </aside>
