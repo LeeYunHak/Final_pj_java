@@ -230,7 +230,7 @@
 	                    </div>
 	                    <footer class="FormFooter-edit">
 	                        <button type="submit" id="submit" class="submit">수정하기</button>
-	                        <button type="button" id="resign" class="resign" onclick="location.href='/user/userMainBefore'">회원탈퇴하기</button>    
+	                        <button type="button" id="resign" class="resign" onclick="location.href='dropoutpage'">회원탈퇴하기</button>    
 	                    </footer>
                     </form>
                 </section>

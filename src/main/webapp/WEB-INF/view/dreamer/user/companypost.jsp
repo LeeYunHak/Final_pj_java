@@ -221,7 +221,7 @@
                   	<div>&nbsp;</div>
                   	<div>&nbsp;</div>
                         <div id="map"></div>
-                    
+                    <div style="width:100%; height:50px;"></div>
                 </div>
                 <div class="sidebar">
                         <h2 style="text-align: center; margin-top: 70px;">${comList.companyName}</h2>
@@ -234,7 +234,7 @@
                             <div id="hi"><input type="button" value="지원하기" id="hirebtn"></div>
                         </div>
                         <div style="text-align: center; margin:20px;">
-	                        <h4><a href="/user/mainAfterMain" style="text-decoration: none;">목록으로 돌아가기</a></h4>
+	                        <h4><a href="/user/mainAfterMain" style="text-decoration: none;color:grey;">목록으로 돌아가기</a></h4>
                         </div>
                 </div>
             </div>

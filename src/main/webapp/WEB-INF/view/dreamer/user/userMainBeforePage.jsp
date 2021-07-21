@@ -21,7 +21,7 @@ response.setHeader("Pragma", "no-cache");
 				<div style="width: 100%;">
 					<nav class="nv">
 						<ul class="nv-st">
-							<li><a id="nav3-1-logo" href="/user/loginUserPage"><img
+							<li><a id="nav3-1-logo" href="/user/mainBefore"><img
 									src="/resources/images/Dreamer.png" class="logo"></a>
 							<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
 							<li><a id="nav3-1-blank" type="button">&nbsp;</a></li>

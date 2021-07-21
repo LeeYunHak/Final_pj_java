@@ -372,6 +372,7 @@ div>div>div>ul>li>input {
     clear:both; 
     float: left;
     border:solid 2px #c8c8c8;
+    margin-bottom:80px;
 }
 
 /* 사이드 바 */

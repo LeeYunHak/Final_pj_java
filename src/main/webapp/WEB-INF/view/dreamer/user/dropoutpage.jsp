@@ -185,10 +185,10 @@
                 <h2>계정 설정</h2>
                 <h2>&nbsp;</h2>
                 <h2>&nbsp;</h2>
-                <a href="accountpage.html">비밀번호 설정</a>
+                <a href="accountPage">비밀번호 설정</a>
                 <h5>&nbsp;</h5>
                 <h5>&nbsp;</h5>
-                <a href="dropoutpage.html" style="color: #00cec9;">&nbsp;&nbsp;&nbsp;&nbsp;회원탈퇴</a>
+                <a href="accountPage" style="color: #00cec9;">&nbsp;&nbsp;&nbsp;&nbsp;회원탈퇴</a>
             </div>
             <div class="dropout">
                 <h3>탈퇴 시 주의사항</h3>
