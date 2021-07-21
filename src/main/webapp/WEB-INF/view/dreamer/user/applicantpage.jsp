@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <title>구인자 메인화면</title>
+    <title>지원자정보</title>
 </head>
 <body>
     <div class="full">
@@ -92,6 +92,6 @@
         
     </div>  
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script type="text/javascript" src="/resources/navi.js"> </script>
+    <script type="text/javascript" src="/resources/applicantpage.js"> </script>
 </body>
 </html>

@@ -486,6 +486,7 @@ a{
   min-width: 64px;
   padding: 14px 27px 13px 28px;
   border-radius: 25px;
+  cursor:potinter;
 }
 button{
   margin: 0;
@@ -522,6 +523,7 @@ button{
   min-width: 64px;
   padding: 14px 27px 13px 28px;
   border-radius: 25px;
+  cursor:potinter;
 }
 
 .p-container{

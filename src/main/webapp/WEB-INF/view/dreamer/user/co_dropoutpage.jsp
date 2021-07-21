@@ -35,9 +35,27 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-6-ProfileName" type="button" href="mydreamer.html"
+                            <li><a id="nav3-6-ProfileName" type="button"
                                 style="color: white; font-size: 15px;">기업명</a></li>
                             <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/mainBefore'">드리머 홈</button></li>
+                        <!-- 마이페이지박스추가 -->
+                            <div>
+                                <div class="arrow_box">
+                                    <div class="blank">
+                                        <p></p>
+                                    </div><br>
+                                    <div class="logout"><a href="/user/logOut"
+                                            style="text-decoration: none;color: grey; font-size: 14px;">
+                                            로그아웃</a></div><br>
+                                             <!-- 고객센터추가 -->
+                                    <div class="servicecenter"><a href="/user/sevicecenter"
+                                        style="text-decoration: none;color: grey; font-size: 14px;">
+                                        고객센터</a></div><br>
+                                    <div class="blank">
+                                        <p></p><br>
+                                    </div>
+                                </div>
+                            </div>
                         </ul>
                     </nav>
                 </div>
@@ -69,6 +87,24 @@
                     <h4 style="display: inline-block; font-weight: bolder; text-decoration: underline;font-size: 16px; color: tomato;">공고 목록 페이지</h4>
                     <h4 style="display: inline-block;">에서 다운로드 해주세요.</h4></li>
                     <li style="list-style:disc"><h4 style="display: inline-block;">이상의 내용에 동의하여 탈퇴를 원하실 경우, 아래의 '동의하기' 버튼을 클릭 부탁드립니다.</h4></li>
+               		<!-- 마이페이지박스추가 -->
+                    <div>
+                        <div class="arrow_box">
+                            <div class="blank">
+                                <p></p>
+                            </div><br>
+                            <div class="logout"><a href="/user/logOut"
+                                    style="text-decoration: none;color: grey; font-size: 14px;">
+                                    로그아웃</a></div><br>
+                                     <!-- 고객센터추가 -->
+                            <div class="servicecenter"><a href="/user/sevicecenter"
+                                style="text-decoration: none;color: grey; font-size: 14px;">
+                                고객센터</a></div><br>
+                            <div class="blank">
+                                <p></p><br>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
                 <input type="submit" class="dropoutbtn" id="dropoutbtn" value="동의하기">
             </div>

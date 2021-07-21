@@ -92,7 +92,7 @@
                         <h5>배우 / 스턴트</h5>
                         <h5>2개</h5>
                     </div>
-                    <h5 style="margin-left: 28px;">염규현</h5>
+                    <h5 style="margin-left: 28px;"><a href="applicantpage">염규현</a></h5>
 
                     <div class="profile-img" style="background-image: url('https://lh3.googleusercontent.com/a/AATXAJxUk7k9zuTifNm76mAqm6ti2Ca9Z96pTotTHEv1=s96-c');"></div>
                     <div style="display: inline-block;">
@@ -105,7 +105,7 @@
                         <h5>조명 / 조명팀</h5>
                         <h5>6개</h5>
                     </div>
-                    <h5 style="margin-left: 28px;">이윤학</h5>
+                    <h5 style="margin-left: 28px;"><a href="applicantpage">이윤학</a></h5>
                 </div>
             </div>
         </div>    
