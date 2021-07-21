@@ -26,36 +26,36 @@ response.setHeader("Pragma", "no-cache");
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="/resources/images/Dreamer_W.png"
+                            <li class="nv-it"><a id="nav3-1-logo" href="/company/mainBefore"><img src="/resources/images/Dreamer_W.png"
                                         class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-2-announcement" type="button" href="recruitmentList.html">공고목록</a></li>
+                            <li><a id="nav3-2-announcement" type="button" href="/company/recruitmentList">공고목록</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-4-applicant_status" type="button" href="#">지원자 현황</a></li>
+                            <li><a id="nav3-4-applicant_status" type="button" href="/company/applicantstatus">지원자 현황</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-5-companyinfo" type="button" href="Company-info.html">회사정보</a></li>
+                            <li><a id="nav3-5-companyinfo" type="button" href="/company/companyInfo">회사정보</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-7-account" type="button" href="#">계정관리</a></li>
+                            <li><a id="nav3-7-account" type="button" href="/company/co_accountpage">계정관리</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-6-ProfileName" type="button"
                                     style="color: white; font-size: 15px;">기업명</a></li>
                             <li style="float: right;"><button class="home-btn" type="button"
-                                    onclick="location.href = 'user/mainBefore'">드리머 홈</button></li>
+                                    onclick="location.href = '/user/mainBefore'">드리머 홈</button></li>
                                     <!-- 마이페이지박스추가 -->
                             <div>
                                 <div class="arrow_box">
                                     <div class="blank">
                                         <p></p>
                                     </div><br>
-                                    <div class="logout"><a href="index.html"
+                                    <div class="logout"><a href="/user/logOut"
                                             style="text-decoration: none;color: grey; font-size: 14px;">
                                             로그아웃</a></div><br>
                                             <!-- 고객센터추가 -->
-                                    <div class="servicecenter"><a href="sevicecenter.html"
+                                    <div class="servicecenter"><a href="/user/sevicecenter"
                                         style="text-decoration: none;color: grey; font-size: 14px;">
                                         고객센터</a></div><br>
                                     <div class="blank">
@@ -83,7 +83,7 @@ response.setHeader("Pragma", "no-cache");
                     </div>
                     <!-- 우측 div -->
                     <div id="wrapper-right" style="width: 9%;">
-                        <a class="recruitment-registration-btn" href="recruitmentRegistration.html"><input
+                        <a class="recruitment-registration-btn" href="/company/recruitmentRegistration"><input
                                 class="recruitment-registration-input" type="button" value="공고 등록"></a>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -120,7 +120,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -137,7 +137,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -154,7 +154,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -171,7 +171,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -188,7 +188,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -205,7 +205,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -222,7 +222,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -239,7 +239,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -256,7 +256,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -273,7 +273,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -290,7 +290,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -307,7 +307,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -324,7 +324,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -341,7 +341,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -358,7 +358,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
@@ -375,7 +375,7 @@ response.setHeader("Pragma", "no-cache");
                             <ul>
                                 <li>
                                     <!-- 해당 기업공고글 list로 링크  -->
-                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                    <a class="company-href" href="/company/recruitmentOfCompany">
                                         <!-- 해당 기업이미지 걸기 -->
                                         <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>

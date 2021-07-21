@@ -22,11 +22,11 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="/company/companyMain"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
+                            <li class="nv-it"><a id="nav3-1-logo" href="/company/mainBefore"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-2-announcement" type="button" href="/company/recruitmentOfCompany">공고목록</a></li>
+                            <li><a id="nav3-2-announcement" type="button" href="/company/recruitmentList">공고목록</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-4-applicant_status" type="button" href="/company/applicantstatus">지원자 현황</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -38,7 +38,7 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-6-ProfileName" type="button"
                                 style="color: white; font-size: 15px;">기업명</a></li>
-                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/userMainBefore'">드리머 홈</button></li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/mainBefore'">드리머 홈</button></li>
                         <!-- 마이페이지박스추가 -->
                             <div>
                                 <div class="arrow_box">
@@ -64,8 +64,8 @@
         </header>
         <!-- 네비게이션바 END -->
         <div class="tab-container">
-            <a href="/resources/companyImage"> <!--이미지 수정페이지--><button class="img-btn">이미지</button></a>
-            <a href="/resources/companyInfo"> <!--정보 수정페이지--><button class="info-btn">정보</button></a>
+            <a href="/company/companyImage"> <!--이미지 수정페이지--><button class="img-btn">이미지</button></a>
+            <a href="/company/companyInfo"> <!--정보 수정페이지--><button class="info-btn">정보</button></a>
         </div>
         <div class="cp-info">
             <div class="sc-container">

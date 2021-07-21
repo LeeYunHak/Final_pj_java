@@ -26,7 +26,7 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-2-announcement" type="button" href="/company/recruitmentOfCompany">공고목록</a></li>
+                            <li><a id="nav3-2-announcement" type="button" href="/company/recruitmentList">공고목록</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-4-applicant_status" type="button" href="/company/applicantstatus">지원자 현황</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>

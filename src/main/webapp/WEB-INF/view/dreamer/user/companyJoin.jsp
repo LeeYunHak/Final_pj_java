@@ -21,7 +21,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
+                            <li class="nv-it"><a id="nav3-1-logo" href="/company/mainBefore"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -35,9 +35,9 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>               
                             <li><a id="nav3-2-login" type="button">채용담당자 로그인</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-3-join" type="button" href="/user/companyJoin">채용담당자 가입</a></li>
+                            <li><a id="nav3-3-join" type="button" href="/company/companyJoin">채용담당자 가입</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/userMainBefore'">드리머 홈</button></li>
+                            <li style="float: right;"><button class="home-btn" type="button" onclick="location.href = '/user/mainBefore'">드리머 홈</button></li>
                         </ul>
                     </nav>
                 </div>
@@ -154,7 +154,7 @@
                                 </form>
                                 <div>
                                     <input type="submit" id="upload" value="로그인"
-                                    onclick="javascript:location.href='loginCompanyPage.html'"></input>
+                                    onclick="javascript:location.href='/company/companyInfo'"></input>
                                     <input type="button" id="change" value="비밀번호 변경"></input>
                                 </div>  
                             </div>
@@ -163,7 +163,7 @@
                                 <div style="width: 96%;border-top: 1px solid #c8c8c8; padding-top: 20px; " ></div>
                                 <div style="position: absolute; left: 110px;">
                                     <h5 style="display: inline-block; color: #a8a8a8; font-size: 15px;">계정이 없으신가요?&nbsp;&nbsp;&nbsp;</h5>
-                                    <a href="#" style="display: inline-block; font-size: 15px; color: black; font-weight:bold;">채용담당자 계정 만들기</a>
+                                    <a href="/company/companyJoin" style="display: inline-block; font-size: 15px; color: black; font-weight:bold;">채용담당자 계정 만들기</a>
                                 </div>
                             </footer>
                     </div>        
@@ -181,7 +181,7 @@
                         </div>
                         <footer class="foot">          
                             <input type="submit" id="upload" value="완료"
-                            onclick="javascript:location.href='/user/companyMain'"></input>
+                            onclick="javascript:location.href='/company/mainBefore'"></input>
                     </footer>
                 </div>
             </div>

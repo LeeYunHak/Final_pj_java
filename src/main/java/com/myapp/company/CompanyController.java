@@ -48,10 +48,7 @@ public class CompanyController {
 		}
 	}
     // 로그인 전 - 채용담당자(기업) 가입[삽입] - 회사정보도같이 등록
-    @GetMapping("/companyJoin")
-    public String showJoinCompany() {
-        return "companyJoin";
-    }
+    
     @PostMapping("/joinCompany")
     public String joinCompany(Model model, Company company) {
         Company joinCompany = companyService.joinCompanyInsert(company);
@@ -79,13 +76,16 @@ public class CompanyController {
 
     
     
-    
     //회사정보
     @GetMapping("/companyInfo")
     public String companyInfo() {
         return "companyInfo";
     }
-    
+    //회사채용담당자가입
+    @GetMapping("/companyJoin")
+    public String companyJoin() {
+    	return "companyJoin";
+    }
     //회사이미지
     @GetMapping("/companyImage")
     public String companyImage() {
