@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
+<%
+response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Pragma", "no-cache");
+%>
 <html lang="en">
 
 <head>
@@ -8,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회사 채용공고글 작성</title>
-    <link rel="stylesheet" href="recruitmentRegistration.css">
+    <link rel="stylesheet" href="/resources/recruitmentRegistration.css">
 </head>
 
 <body>
@@ -19,7 +25,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="images/Dreamer_W.png"
+                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="/resources/images/Dreamer_W.png"
                                         class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -80,7 +86,7 @@
                                     <div>
                                         <div class="recruitment-ab-in">
                                             <textarea name="introduce" class="introduce-input-about" maxlength="2000"
-                                                placeholder="간단한 기업소개를 통해 인재를 찾아보세요. (3~5줄 권장) ${}"></textarea>
+                                                placeholder="간단한 기업소개를 통해 인재를 찾아보세요. (3~5줄 권장)"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -192,7 +198,7 @@
         </div>
     </div>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJPJok-ic-162wUIyxN5AcctNP3cNKOk&callback=initMap&region=kr"></script>
-    <script type="text/javascript" src="recruitmentRegistration.js"></script>
+    <script type="text/javascript" src="/resources/recruitmentRegistration.js"></script>
 </body>
 
 </html>

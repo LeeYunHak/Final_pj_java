@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회사 채용공고글</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="recruitmentOfCompany.css">
+    <link rel="stylesheet" href="/resources/recruitmentOfCompany.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="images/Dreamer_W.png"
+                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="/resources/images/Dreamer_W.png"
                                         class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -72,7 +72,7 @@
                     <!-- 회사 정보 내용 -->
                     <div>
                         <!-- 회사 이미지 -->
-                        <div><img class="company-image" src="images/movie.jpg">
+                        <div><img class="company-image" src="/resources/images/movie.jpg">
                         </div>
                         <div style="padding: 0px; width: 900px;">
                             <!-- 기업 소개글 -->
@@ -142,7 +142,7 @@
     </div>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJPJok-ic-162wUIyxN5AcctNP3cNKOk&callback=initMap&region=kr"></script>
-    <script type="text/javascript" src="recruitmentOfCompany.js"></script>
+    <script type="text/javascript" src="/resources/recruitmentOfCompany.js"></script>
 </body>
 
 </html>

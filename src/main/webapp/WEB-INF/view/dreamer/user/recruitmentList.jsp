@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
+<%
+response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Pragma", "no-cache");
+%>
 <html lang="en">
 
 <head>
@@ -9,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회사 채용공고 목록</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="recruitmentList.css">
+    <link rel="stylesheet" href="/resources/recruitmentList.css">
 </head>
 
 <body>
@@ -20,7 +26,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="images/Dreamer_W.png"
+                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="/resources/images/Dreamer_W.png"
                                         class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -98,12 +104,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -117,12 +122,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -135,12 +139,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -153,12 +156,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -171,12 +173,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -189,12 +190,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -207,12 +207,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -225,12 +224,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -243,12 +241,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -261,12 +258,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -279,12 +275,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -297,12 +292,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -315,12 +309,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -333,12 +326,11 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -351,12 +343,45 @@
                                     <!-- 해당 기업공고글 list로 링크  -->
                                     <a class="company-href" href="recruitmentOfCompany.html">
                                         <!-- 해당 기업이미지 걸기 -->
-                                        <div class="company-img" style="background-image: url(images/movie.jpg)" ;>
-                                        </div>
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
                                         <figcaption>
                                             <div id="text-job-card">
-                                                <div class="job-card-company-name">공고 명 : ${}</div><br>
-                                                <div class="job-card-recruitment-date">모집기간 : ${}</div>
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
+                                            </div>
+                                        </figcaption>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="company-margin">
+                            <ul>
+                                <li>
+                                    <!-- 해당 기업공고글 list로 링크  -->
+                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                        <!-- 해당 기업이미지 걸기 -->
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
+                                        <figcaption>
+                                            <div id="text-job-card">
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
+                                            </div>
+                                        </figcaption>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="company-margin">
+                            <ul>
+                                <li>
+                                    <!-- 해당 기업공고글 list로 링크  -->
+                                    <a class="company-href" href="recruitmentOfCompany.html">
+                                        <!-- 해당 기업이미지 걸기 -->
+                                        <div class="company-img" style="background-image: url(/resources/images/movie.jpg)"></div>
+                                        <figcaption>
+                                            <div id="text-job-card">
+                                                <div class="job-card-company-name">공고 명 :  </div><br>
+                                                <div class="job-card-recruitment-date">모집기간 :  </div>
                                             </div>
                                         </figcaption>
                                     </a>
@@ -370,7 +395,7 @@
         <!-- 공고 목록 및 공고등록버튼 END -->
         <!-- 최상위 div END -->
     </div>
-    <script type="text/javascript" src="recruitmentList.js"></script>
+    <script type="text/javascript" src="/resources/recruitmentList.js"></script>
 </body>
 
 </html>

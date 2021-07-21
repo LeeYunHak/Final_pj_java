@@ -22,7 +22,6 @@ import com.myapp.user.User;
 @RequestMapping("/company")
 @SessionAttributes("/company")
 public class CompanyController {
-
     // companyService 자동 변수
     @Autowired
     CompanyService companyService;
@@ -36,38 +35,22 @@ public class CompanyController {
     @PostMapping("/mainBefore")
     public String loginUser(Model model, String userEmail, String userPassword, User user, HttpSession session) {
 		Company loginUser = companyService.loginCompanySelect(userEmail, userPassword);
-		List<Bookmark> bookmarkList = companyService.mydreamerBookmarkList(userEmail);
-		List<Application> applicationList = companyService.mydreamerApplicationList(userEmail);
-		User userProfileEdit = companyService.selectUserProfile(userEmail);
-		List<JobPostingList> comList = companyService.mainCompanyJobPostingList();
-		model.addAttribute("comList", comList);
-		System.out.println(comList);
-		List<Resume> resumeList = companyService.selectResume(userEmail);
-		model.addAttribute("resumeList",resumeList);
+//		model.addAttribute("comList", comList);
+//		model.addAttribute("resumeList",resumeList);
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
 			return "userMainBeforePage";
 		} else {
 			session.setAttribute("loginUser", loginUser);
-			session.setAttribute("bookmarkList", bookmarkList);
-			session.setAttribute("applicationList", applicationList);
-			session.setAttribute("userProfileEdit", userProfileEdit);
-			session.setAttribute("resumeList", resumeList);
+
 			
 			return "loginUserPage";
 		}
 	}
-    
-    // 로그인 후 - 메인페이지
-    @GetMapping("/MainAfter")
-    public String mainAfter() {
-        return "companyMainAfterPage";
-    }
-
     // 로그인 전 - 채용담당자(기업) 가입[삽입] - 회사정보도같이 등록
-    @GetMapping("/joinCompany")
+    @GetMapping("/companyJoin")
     public String showJoinCompany() {
-        return "joinCompanyPage";
+        return "companyJoin";
     }
     @PostMapping("/joinCompany")
     public String joinCompany(Model model, Company company) {
@@ -75,7 +58,6 @@ public class CompanyController {
         model.addAttribute("joinCompany", joinCompany);
         return "companyMainBeforePage";
     }
-
     // 로그인 전 - 채용담당자 로그인[조회](이메일, 비밀번호 둘다 입력)
     @GetMapping("/loginCompany")
     public String showLoginCompany() {
@@ -87,7 +69,47 @@ public class CompanyController {
         model.addAttribute("loginCompany", loginCompany);
         return "companyMainAfterPage";
     }
+    
+    
+    // 로그인 후 - 메인페이지
+    @GetMapping("/MainAfter")
+    public String mainAfter() {
+        return "companyMainAfterPage";
+    }
 
+    
+    
+    
+    // 회사정보
+    @GetMapping("/companyInfo")
+    public String companyInfo() {
+        return "companyInfo";
+    }
+    
+    //회사이미지
+    @GetMapping("/companyImage")
+    public String companyImage() {
+        return "companyImage";
+    }
+    //회사구인리스트
+    @GetMapping("/recruitmentList")
+    public String recruitmentList() {
+        return "recruitmentList";
+    }
+    //회사구인리스트-
+    @GetMapping("/recruitmentOfCompany")
+    public String recruitmentOfCompany() {
+        return "recruitmentOfCompany";
+    }
+    //회사구인글
+    @GetMapping("/recruitmentRegistration")
+    public String recruitmentRegistration() {
+        return "recruitmentRegistration";
+    }
+
+    
+    
+    
     // 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃]
 
     // 로그인 후 - 회사정보(기업) 비번수정[업뎃] by email

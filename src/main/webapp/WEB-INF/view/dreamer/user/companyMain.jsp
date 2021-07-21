@@ -77,7 +77,6 @@ response.setHeader("Pragma", "no-cache");
 				<div style="height: 700px;">
 					<div
 						style="width: 150px; height: 100px; top: 70%; left: 10%; position: absolute; margin-top: -50px; display: inline-block; z-index: 1; line-height: 40px;">
-						<h1>드리머를 이용하는 이유</h1>
 					</div>
 					<div
 						style="width: 500px; height: 130px; top: 40%; left: 50%; position: absolute; margin-top: -70px; margin-left: -250px; display: inline-block; z-index: 1; color: white; line-height: 40px;">
@@ -87,7 +86,7 @@ response.setHeader("Pragma", "no-cache");
 						</h2>
 					</div>
 					<div style="width: 100%;">
-						<img src="images/movie.jpg"
+						<img src="/resources/images/movie.jpg"
 							style="width: 100%; height: 800px; top: 60%; position: absolute; margin-top: -300px;">
 					</div>
 				</div>
