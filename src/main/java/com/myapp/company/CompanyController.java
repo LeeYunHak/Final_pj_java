@@ -80,7 +80,7 @@ public class CompanyController {
     
     
     
-    // 회사정보
+    //회사정보
     @GetMapping("/companyInfo")
     public String companyInfo() {
         return "companyInfo";
@@ -106,8 +106,16 @@ public class CompanyController {
     public String recruitmentRegistration() {
         return "recruitmentRegistration";
     }
-
-    
+    //회사지원자현황
+    @GetMapping("/applicantstatus")
+    public String applicantstatus() {
+        return "applicantstatus";
+    }
+    //회사구인자메인화면
+    @GetMapping("/applicantpage")
+    public String applicantpage() {
+        return "applicantpage";
+    }
     
     
     // 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃]

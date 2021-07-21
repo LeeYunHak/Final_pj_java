@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지원자현황</title>
-    <link rel="stylesheet" href="applicantstatus.css">
+    <link rel="stylesheet" href="/resources/applicantstatus.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="images/Dreamer_W.png" class="logo"></a></li>
+                            <li class="nv-it"><a id="nav3-1-logo" href="co_index.html"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -110,6 +110,6 @@
             </div>
         </div>    
     </div>
-    <script type="text/javascript" src="applicantstatus.js"> </script>
+    <script type="text/javascript" src="/resources/applicantstatus.js"> </script>
 </body>
 </html>
