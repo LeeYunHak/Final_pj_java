@@ -13,7 +13,7 @@ response.setHeader("Pragma", "no-cache");
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" src="/resources/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="/resources/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/loginUserMain.css">
 <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
@@ -97,8 +97,7 @@ response.setHeader("Pragma", "no-cache");
 							</div>
 							<li><a id="nav3-6-ProfileName" type="button"
 								style="color: black; font-size: 15px;">${loginUser.userName }</a></li>
-							<li style="float: right;"><button class="home-btn"
-									type="button" onclick=" location.href='/company/mainBefore'">기업서비스</button></li>
+							<li style="float: right;"><button class="home-btn" type="button" onclick=" location.href='/company/mainBefore'">기업서비스</button></li>
 						</ul>
 					</nav>
 				</div>

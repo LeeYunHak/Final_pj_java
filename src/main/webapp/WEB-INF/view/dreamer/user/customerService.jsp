@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="customerService.css">
+    <link rel="stylesheet" href="/resources/customerService.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -22,11 +22,11 @@
                 <div style="width: 100%;">
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li><a id="nav3-1-logo" href="loginUserPage.html"><img class="logo"
-                                        src="images/Dreamer.png"></a>
+                            <li><a id="nav3-1-logo" href="/company/MainAfter"><img class="logo"
+                                        src="/resources/images/Dreamer.png"></a>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-2-customerService" href="customerService.html" type="button">고객센터</a></li>
+                            <li><a id="nav3-2-customerService" href="/company/customerService" type="button">고객센터</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -45,7 +45,7 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li>
                                 <button id="nav3-3-contactUs" class="home-btn" type="button"
-                                    onclick=" location.href='contactUs.html'">문의하기</button>
+                                    onclick=" location.href='/company/contactUs'">문의하기</button>
                             </li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -110,7 +110,7 @@
         </div>
         <!-- 하단 END -->
     </div>
-    <script type="text/javascript" src="customerService.js"></script>
+    <script type="text/javascript" src="/resources/customerService.js"></script>
 </body>
 
 </html>

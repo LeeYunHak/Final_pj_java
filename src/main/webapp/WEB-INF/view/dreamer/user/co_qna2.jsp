@@ -20,11 +20,11 @@
                 <div style="width: 100%;">
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li><a id="nav3-1-logo" href="loginUserPage.html"><img class="logo"
-                                        src="images/Dreamer.png"></a>
+                            <li><a id="nav3-1-logo" href="/company/MainAfter"><img class="logo"
+                                        src="/resources/images/Dreamer.png"></a>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
-                            <li><a id="nav3-2-customerService" href="customerService.html" type="button">고객센터</a></li>
+                            <li><a id="nav3-2-customerService" href="/company/customerService" type="button">고객센터</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -43,7 +43,7 @@
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li>
                                 <button id="nav3-3-contactUs" class="home-btn" type="button"
-                                    onclick=" location.href='contactUs.html'">문의하기</button>
+                                    onclick=" location.href='/company/contactUs'">문의하기</button>
                             </li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>

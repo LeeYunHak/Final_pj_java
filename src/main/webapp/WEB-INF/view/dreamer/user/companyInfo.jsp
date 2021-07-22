@@ -22,7 +22,7 @@
                 <div>
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li class="nv-it"><a id="nav3-1-logo" href="/company/mainBefore"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
+                            <li class="nv-it"><a id="nav3-1-logo" href="/company/MainAfter"><img src="/resources/images/Dreamer_W.png" class="logo"></a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
@@ -49,7 +49,7 @@
                                             style="text-decoration: none;color: grey; font-size: 14px;">
                                             로그아웃</a></div><br>
                                              <!-- 고객센터추가 -->
-                                    <div class="servicecenter"><a href="/user/sevicecenter"
+                                    <div class="servicecenter"><a href="/company/customerService"
                                         style="text-decoration: none;color: grey; font-size: 14px;">
                                         고객센터</a></div><br>
                                     <div class="blank">
