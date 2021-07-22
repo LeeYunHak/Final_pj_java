@@ -106,19 +106,18 @@ response.setHeader("Pragma", "no-cache");
 			<div class="ModalBody2">
 				<div>
 					<h4 style="text-align: left; margin-left: 20px;">지원 정보</h4>
-					<form name="info" action="/user/companyMain" method="POST">
+					<form name="info" action="/company/mainBefore" method="POST">
 						<div style="margin-top: 20px;">
-							<label><input required id="email" type="email"
+							<label><input required id="email" type="email" name="companyEmail"
 								placeholder="회사 이메일 (로그인 아이디로 사용됩니다.)" autocomplete="off"></label>
-							<label><input required id="pwd" type="password"
+							<label><input required id="pwd" type="password" name="companyPassword"
 								placeholder="비밀번호" autocomplete="off"></label>
 						</div>
-					</form>
 					<div>
-						<input type="submit" id="upload" value="로그인"
-							onclick="javascript:location.href='/company/companyInfo'"></input>
+						<input type="submit" id="upload" value="로그인"></input>
 						<input type="button" id="change" value="비밀번호 변경"></input>
 					</div>
+					</form>
 				</div>
 			</div>
 			<footer class="foot">
@@ -159,5 +158,10 @@ response.setHeader("Pragma", "no-cache");
 	<script type="text/javascript" src="/resources/companyMain.js">
 		
 	</script>
+	<c:if test="${loginUser eq '없음' }">
+		<script>
+			alert("일치하는 회원이 없습니다.");
+		</script>
+	</c:if>
 </body>
 </html>

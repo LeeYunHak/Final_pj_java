@@ -33,18 +33,18 @@ public class CompanyController {
     }
 
     @PostMapping("/mainBefore")
-    public String loginUser(Model model, String userEmail, String userPassword, User user, HttpSession session) {
-		Company loginUser = companyService.loginCompanySelect(userEmail, userPassword);
+    public String loginUser(Model model, String companyEmail, String companyPassword, User user, HttpSession session) {
+		Company loginUser = companyService.loginCompanySelect(companyEmail, companyPassword);
 //		model.addAttribute("comList", comList);
 //		model.addAttribute("resumeList",resumeList);
 		if (loginUser == null) {
 			model.addAttribute("loginUser", "없음");
-			return "userMainBeforePage";
+			return "companyMain";
 		} else {
 			session.setAttribute("loginUser", loginUser);
 
 			
-			return "loginUserPage";
+			return "companyMainAfterPage";
 		}
 	}
     // 로그인 전 - 채용담당자(기업) 가입[삽입] - 회사정보도같이 등록
@@ -141,51 +141,6 @@ public class CompanyController {
     @GetMapping("/co_qna1")
     public String co_qna1() {
         return "co_qna1";
-    }
-    //고객센터 페이지
-    @GetMapping("/co_qna2")
-    public String co_qna2() {
-    	return "co_qna2";
-    }
-    //고객센터 페이지
-    @GetMapping("/co_qna3")
-    public String co_qna3() {
-    	return "co_qna3";
-    }
-    //고객센터 페이지
-    @GetMapping("/co_qna4")
-    public String co_qna4() {
-    	return "co_qna4";
-    }
-    //고객센터 페이지
-    @GetMapping("/co_qna5")
-    public String co_qna5() {
-    	return "co_qna5";
-    }
-    //고객센터 페이지
-    @GetMapping("/qna1")
-    public String qna1() {
-    	return "qna1";
-    }
-    //고객센터 페이지
-    @GetMapping("/qna2")
-    public String qna2() {
-    	return "qna2";
-    }
-    //고객센터 페이지
-    @GetMapping("/qna3")
-    public String qna3() {
-    	return "qna3";
-    }
-    //고객센터 페이지
-    @GetMapping("/qna4")
-    public String qna4() {
-    	return "qna4";
-    }
-    //고객센터 페이지
-    @GetMapping("/qna5")
-    public String qna5() {
-    	return "qna5";
     }
     
     // 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃]

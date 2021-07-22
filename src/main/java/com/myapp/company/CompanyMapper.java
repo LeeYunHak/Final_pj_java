@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -34,7 +35,7 @@ public interface CompanyMapper {
 	// 로그인 전 - 채용담당자 로그인[조회](이메일, 비밀번호 둘다 입력)
 	@Select("select company_password, company_password from company"
 			+ " where company_email=#{companyEmail} and company_password=#{companyPassword}")
-	public Company joinCompanyEmailPassword(String companyEmail, String companyPassword);
+	public Company joinCompanyEmailPassword(@Param("companyEmail")String companyEmail,@Param("companyPassword") String companyPassword);
 	
 	// 정보수정
 	// 로그인 후 - 회사정보(기업) 로그인중 수정[업뎃] - 비번수정[업뎃] 제외
