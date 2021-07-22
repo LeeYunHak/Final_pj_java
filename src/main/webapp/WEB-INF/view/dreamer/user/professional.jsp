@@ -54,7 +54,7 @@
                                             style="text-decoration: none;color: #00cec9; font-size: 14px;">
                                             로그아웃</a></div><br>
                                             <!-- 고객센터추가 -->
-                                    <div class="servicecenter"><a href="/user/sevicecenter"
+                                    <div class="servicecenter"><a href="/company/customerService"
                                         style="text-decoration: none;color: #00cec9; font-size: 14px;">
                                         고객센터</a></div><br>
                                     <div class="blank">

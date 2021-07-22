@@ -75,21 +75,21 @@
                         <div style="width: 600px; max-width: 100%; height: 100px;display: inline-block; background-color: rgba(0, 82, 233, 0.678); text-align: center;
                         font-size: 24px; color: white; font-weight: bold; padding-top: 34px; border-radius: 5px;">
                             개인회원 자주 묻는 질문</div><br><br>
-                        <a href="qna1.html">지원한 회사에서 피드백이 없습니다. 어떻게 하면 되나요?</a><br><br>
-                        <a href="qna2.html">서류 전형에 합격했습니다. 이후 절차는 어떻게 되나요?</a><br><br>
-                        <a href="qna3.html">제출하기 버튼이 비활성화(회색)되어 있어요.</a><br><br>
-                        <a href="qna4.html">작성 중 목록을 삭제하고 싶어요.</a><br><br>
-                        <a href="qna5.html">이메일 변경 시 작성 중 목록 내 이메일이 변경되지 않아요.</a><br><br>
+                        <a href="/company/qna1">지원한 회사에서 피드백이 없습니다. 어떻게 하면 되나요?</a><br><br>
+                        <a href="/company/qna2">서류 전형에 합격했습니다. 이후 절차는 어떻게 되나요?</a><br><br>
+                        <a href="/company/qna3">제출하기 버튼이 비활성화(회색)되어 있어요.</a><br><br>
+                        <a href="/company/qna4">작성 중 목록을 삭제하고 싶어요.</a><br><br>
+                        <a href="/company/qna5">이메일 변경 시 작성 중 목록 내 이메일이 변경되지 않아요.</a><br><br>
                     </div>
                     <!-- 우측 div -->
                     <div id="detail-wrapper-right" style="width: 50%;display: inline-block;">
                         <div style="width: 600px; max-width: 100%; height: 100px; display: inline-block; background-color: rgba(0, 82, 233, 0.678); text-align: center;
                         font-size: 24px;color: white; font-weight: bold; padding-top: 34px; border-radius: 5px;">기업회원 자주 묻는 질문</div><br><br>
-                        <a href="co_qna1.html">기업 서비스 가입, 이용 절차가 궁금합니다.</a><br><br>
-                        <a href="co_qna2.html">공고 등록을 대행해 주시나요?</a><br><br>
-                        <a href="co_qna3.html">서류 통과 후 면접 진행은 어떻게 하나요?</a><br><br>
-                        <a href="co_qna4.html">등록된 기업 정보는 어디에 노출되나요?</a><br><br>
-                        <a href="co_qna5.html">기업 계정 회원을 탈퇴하고 싶어요.</a><br><br>
+                        <a href="/company/co_qna1">기업 서비스 가입, 이용 절차가 궁금합니다.</a><br><br>
+                        <a href="/company/co_qna2">공고 등록을 대행해 주시나요?</a><br><br>
+                        <a href="/company/co_qna3">서류 통과 후 면접 진행은 어떻게 하나요?</a><br><br>
+                        <a href="/company/co_qna4">등록된 기업 정보는 어디에 노출되나요?</a><br><br>
+                        <a href="/company/co_qna5">기업 계정 회원을 탈퇴하고 싶어요.</a><br><br>
                     </div>
                 </div>
             </div>

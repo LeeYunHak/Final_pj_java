@@ -84,7 +84,7 @@ response.setHeader("Pragma", "no-cache");
 									<br>
 									<!-- 고객센터추가 -->
 									<div class="servicecenter">
-										<a href="/user/sevicecenter"
+										<a href="/company/customerService"
 											style="text-decoration: none; color: #00cec9; font-size: 14px;">
 											고객센터</a>
 									</div>
