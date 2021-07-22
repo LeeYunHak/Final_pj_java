@@ -22,7 +22,7 @@
                 <div style="width: 100%;">
                     <nav class="nv">
                         <ul class="nv-st">
-                            <li><a id="nav3-1-logo" href="/company/MainAfter"><img class="logo"
+                            <li><a id="nav3-1-logo" href="/company/mainBefore"><img class="logo"
                                         src="/resources/images/Dreamer.png"></a>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
                             <li><a id="nav3-1-blank" type="button">&nbsp;</a></li>
