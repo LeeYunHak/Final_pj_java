@@ -59,7 +59,7 @@
         <!-- 고객센터 img START -->
         <div>
             <div>
-                <img src="images/movie.jpg" alt=""
+                <img src="/resources/images/movie.jpg" alt=""
                     style="width: 1280px; height: 500px; margin: 100px 300px 50px 300px;">
             </div>
         </div>
