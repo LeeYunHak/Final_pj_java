@@ -120,7 +120,15 @@ response.setHeader("Pragma", "no-cache");
 						</div>
 					</form>
 					<div>
-						<a href="/user/joinUser"><button id="joinBtn" style="cursor:pointer; margin-bottom:50px;">드리머 회원가입 하기
+					<div class="modal-text">SNS계정으로 간편하게 로그인 하세요.</div>
+						<div class="sns_login">
+							<a id="kakaoLoginBtn" class="sns-btn-kakao"> <img
+								src="/resources/images/kakao_logo.png" alt="kakao_icon">
+							</a> <a id="googleLoginBtn" class="sns-btn-google"> <img
+								src="/resources/images/google_logo.png" alt="google_icon">
+							</a>
+						</div>
+						<a href="/user/joinUser"><button id="joinBtn" style="cursor:pointer;">드리머 회원가입 하기
 							</button></a>
 					</div>
 				</div>
